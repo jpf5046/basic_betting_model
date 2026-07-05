@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+# raw API feed cache (large, refetchable)
+data/raw/

@@ -59,9 +59,12 @@ drop-in swap later. Core tables:
 
 **TODO:**
 - [ ] Define schema as versioned migrations (plain SQL files + tiny migration runner).
-- [ ] Team ID mapping tables for MLB Stats API, NBA Stats API, NHL API (the #1 source of
-      silent bugs is team-name mismatches — make unmapped teams a loud error).
-- [ ] Include venue lat/lon + timezone in `teams` from day one (free enabler for the future
+- [x] Team registry with ID mapping — shipped as a flat file, `data/teams.csv` (275 teams:
+      NFL, NBA, MLB, NHL, WNBA, CFB/FBS 2026), validated by `scripts/validate_teams.py`.
+      The CSV is the source of truth; the future `teams` table seeds from it. Unmapped
+      teams (empty `external_ids`) must be a loud error in adapters. Still open: CBB/WCBB
+      rows and WNBA/CFB external ids — see `data/README.md` for the refresh path.
+- [x] Venue lat/lon + timezone included from day one (free enabler for the future
       travel-time feature — no schema change needed later).
 
 ---
@@ -340,7 +343,7 @@ data/                  # sqlite db, raw API cache, parquet frames (gitignored)
 
 | # | Item | Depends on | Definition of done |
 |---|---|---|---|
-| 1 | Schema + migrations + team registry | — | `model.db` created; all three leagues' teams mapped with venue lat/lon |
+| 1 | Schema + migrations + team registry | — | `model.db` created; teams mapped with venue lat/lon. **Registry half done:** `data/teams.csv` covers NFL/NBA/MLB/NHL/WNBA/CFB with coordinates + timezones; schema/migrations still open |
 | 2 | MLB adapter + raw cache | 1 | Schedule, results, standings, game logs land in tables for any date |
 | 3 | Feature registry + the 6 core features | 1 | Features computable as-of any date, cached in `feature_values`, unit-tested |
 | 4 | `my_model` v1 + pick policy + config loader | 3 | Reproduces `my_model.md` exactly on fixture data |

@@ -83,7 +83,9 @@ class SourceAdapter(Protocol):
     def fetch_game_logs(self, team, season) -> list[LogEntry]
 ```
 
-Planned adapters: `mlb_statsapi`, `nba_statsapi`, `nhl_api`. Later: `weather_api` (Open-Meteo
+Planned adapters: `mlb_statsapi`, `nba_statsapi`, `nhl_api`. **Built: `wnba`**
+(`pipeline/ingest/wnba.py` — cdn.wnba.com schedule feed; today's slate, season scores,
+common-opponent inputs; raw-cache + offline tests). Later: `weather_api` (Open-Meteo
 or similar, keyed by venue lat/lon + start time), `odds_api` (optional — My Model doesn't use
 odds, but grading totals against a real line and computing true ROI eventually will).
 

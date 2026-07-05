@@ -1,0 +1,281 @@
+{
+  "copyright": "sample fixture in the shape of statsapi.mlb.com/api/v1/schedule",
+  "totalItems": 13,
+  "totalGames": 13,
+  "dates": [
+    {
+      "date": "2026-03-15",
+      "totalGames": 1,
+      "games": [
+        {
+          "gamePk": 813010,
+          "gameType": "S",
+          "season": "2026",
+          "gameDate": "2026-03-15T17:05:00Z",
+          "officialDate": "2026-03-15",
+          "status": {"abstractGameState": "Final", "codedGameState": "F", "detailedState": "Final", "statusCode": "F"},
+          "teams": {
+            "away": {"score": 10, "team": {"id": 147, "name": "New York Yankees"}, "isWinner": true},
+            "home": {"score": 2, "team": {"id": 111, "name": "Boston Red Sox"}, "isWinner": false}
+          },
+          "venue": {"id": 2523, "name": "JetBlue Park"},
+          "doubleHeader": "N",
+          "gameNumber": 1,
+          "seriesDescription": "Spring Training"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-20",
+      "totalGames": 1,
+      "games": [
+        {
+          "gamePk": 813013,
+          "gameType": "E",
+          "season": "2026",
+          "gameDate": "2026-03-20T17:05:00Z",
+          "officialDate": "2026-03-20",
+          "status": {"abstractGameState": "Final", "codedGameState": "F", "detailedState": "Final", "statusCode": "F"},
+          "teams": {
+            "away": {"score": 3, "team": {"id": 5061, "name": "Florida Gators"}, "isWinner": false},
+            "home": {"score": 9, "team": {"id": 121, "name": "New York Mets"}, "isWinner": true}
+          },
+          "venue": {"id": 2856, "name": "Clover Park"},
+          "doubleHeader": "N",
+          "gameNumber": 1,
+          "seriesDescription": "Exhibition"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-01",
+      "totalGames": 1,
+      "games": [
+        {
+          "gamePk": 813001,
+          "gameType": "R",
+          "season": "2026",
+          "gameDate": "2026-06-01T23:10:00Z",
+          "officialDate": "2026-06-01",
+          "status": {"abstractGameState": "Final", "codedGameState": "F", "detailedState": "Final", "statusCode": "F"},
+          "teams": {
+            "away": {"score": 5, "team": {"id": 147, "name": "New York Yankees"}, "isWinner": true},
+            "home": {"score": 3, "team": {"id": 139, "name": "Tampa Bay Rays"}, "isWinner": false}
+          },
+          "venue": {"id": 12, "name": "Tropicana Field"},
+          "doubleHeader": "N",
+          "gameNumber": 1,
+          "seriesDescription": "Regular Season"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-02",
+      "totalGames": 1,
+      "games": [
+        {
+          "gamePk": 813002,
+          "gameType": "R",
+          "season": "2026",
+          "gameDate": "2026-06-02T23:10:00Z",
+          "officialDate": "2026-06-02",
+          "status": {"abstractGameState": "Final", "codedGameState": "F", "detailedState": "Final", "statusCode": "F"},
+          "teams": {
+            "away": {"score": 2, "team": {"id": 147, "name": "New York Yankees"}, "isWinner": false},
+            "home": {"score": 6, "team": {"id": 139, "name": "Tampa Bay Rays"}, "isWinner": true}
+          },
+          "venue": {"id": 12, "name": "Tropicana Field"},
+          "doubleHeader": "N",
+          "gameNumber": 1,
+          "seriesDescription": "Regular Season"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-03",
+      "totalGames": 1,
+      "games": [
+        {
+          "gamePk": 813003,
+          "gameType": "R",
+          "season": "2026",
+          "gameDate": "2026-06-03T23:10:00Z",
+          "officialDate": "2026-06-03",
+          "status": {"abstractGameState": "Final", "codedGameState": "F", "detailedState": "Final", "statusCode": "F"},
+          "teams": {
+            "away": {"score": 7, "team": {"id": 111, "name": "Boston Red Sox"}, "isWinner": true},
+            "home": {"score": 4, "team": {"id": 139, "name": "Tampa Bay Rays"}, "isWinner": false}
+          },
+          "venue": {"id": 12, "name": "Tropicana Field"},
+          "doubleHeader": "N",
+          "gameNumber": 1,
+          "seriesDescription": "Regular Season"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-04",
+      "totalGames": 1,
+      "games": [
+        {
+          "gamePk": 813004,
+          "gameType": "R",
+          "season": "2026",
+          "gameDate": "2026-06-04T23:05:00Z",
+          "officialDate": "2026-06-04",
+          "status": {"abstractGameState": "Final", "codedGameState": "F", "detailedState": "Final", "statusCode": "F"},
+          "teams": {
+            "away": {"score": 1, "team": {"id": 110, "name": "Baltimore Orioles"}, "isWinner": false},
+            "home": {"score": 4, "team": {"id": 147, "name": "New York Yankees"}, "isWinner": true}
+          },
+          "venue": {"id": 3313, "name": "Yankee Stadium"},
+          "doubleHeader": "N",
+          "gameNumber": 1,
+          "seriesDescription": "Regular Season"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-05",
+      "totalGames": 2,
+      "games": [
+        {
+          "gamePk": 813005,
+          "gameType": "R",
+          "season": "2026",
+          "gameDate": "2026-06-05T17:05:00Z",
+          "officialDate": "2026-06-05",
+          "status": {"abstractGameState": "Final", "codedGameState": "F", "detailedState": "Final", "statusCode": "F"},
+          "teams": {
+            "away": {"score": 3, "team": {"id": 110, "name": "Baltimore Orioles"}, "isWinner": false},
+            "home": {"score": 5, "team": {"id": 111, "name": "Boston Red Sox"}, "isWinner": true}
+          },
+          "venue": {"id": 3, "name": "Fenway Park"},
+          "doubleHeader": "Y",
+          "gameNumber": 1,
+          "seriesDescription": "Regular Season"
+        },
+        {
+          "gamePk": 813006,
+          "gameType": "R",
+          "season": "2026",
+          "gameDate": "2026-06-05T23:10:00Z",
+          "officialDate": "2026-06-05",
+          "status": {"abstractGameState": "Final", "codedGameState": "F", "detailedState": "Final", "statusCode": "F"},
+          "teams": {
+            "away": {"score": 8, "team": {"id": 110, "name": "Baltimore Orioles"}, "isWinner": true},
+            "home": {"score": 2, "team": {"id": 111, "name": "Boston Red Sox"}, "isWinner": false}
+          },
+          "venue": {"id": 3, "name": "Fenway Park"},
+          "doubleHeader": "Y",
+          "gameNumber": 2,
+          "seriesDescription": "Regular Season"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-06",
+      "totalGames": 1,
+      "games": [
+        {
+          "gamePk": 813007,
+          "gameType": "R",
+          "season": "2026",
+          "gameDate": "2026-06-06T23:10:00Z",
+          "officialDate": "2026-06-06",
+          "status": {"abstractGameState": "Final", "codedGameState": "F", "detailedState": "Final", "statusCode": "F"},
+          "teams": {
+            "away": {"score": 3, "team": {"id": 147, "name": "New York Yankees"}, "isWinner": false},
+            "home": {"score": 4, "team": {"id": 111, "name": "Boston Red Sox"}, "isWinner": true}
+          },
+          "venue": {"id": 3, "name": "Fenway Park"},
+          "doubleHeader": "N",
+          "gameNumber": 1,
+          "seriesDescription": "Regular Season"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-07",
+      "totalGames": 1,
+      "games": [
+        {
+          "gamePk": 813008,
+          "gameType": "R",
+          "season": "2026",
+          "gameDate": "2026-06-07T17:35:00Z",
+          "officialDate": "2026-06-07",
+          "status": {"abstractGameState": "Final", "codedGameState": "F", "detailedState": "Final", "statusCode": "F"},
+          "teams": {
+            "away": {"score": 5, "team": {"id": 141, "name": "Toronto Blue Jays"}, "isWinner": true},
+            "home": {"score": 1, "team": {"id": 139, "name": "Tampa Bay Rays"}, "isWinner": false}
+          },
+          "venue": {"id": 12, "name": "Tropicana Field"},
+          "doubleHeader": "N",
+          "gameNumber": 1,
+          "seriesDescription": "Regular Season"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-08",
+      "totalGames": 1,
+      "games": [
+        {
+          "gamePk": 813009,
+          "gameType": "R",
+          "season": "2026",
+          "gameDate": "2026-06-08T23:10:00Z",
+          "officialDate": "2026-06-08",
+          "status": {"abstractGameState": "Final", "codedGameState": "D", "detailedState": "Postponed", "statusCode": "DR", "reason": "Rain"},
+          "teams": {
+            "away": {"team": {"id": 147, "name": "New York Yankees"}},
+            "home": {"team": {"id": 111, "name": "Boston Red Sox"}}
+          },
+          "venue": {"id": 3, "name": "Fenway Park"},
+          "doubleHeader": "N",
+          "gameNumber": 1,
+          "seriesDescription": "Regular Season"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-05",
+      "totalGames": 2,
+      "games": [
+        {
+          "gamePk": 813011,
+          "gameType": "R",
+          "season": "2026",
+          "gameDate": "2026-07-05T17:35:00Z",
+          "officialDate": "2026-07-05",
+          "status": {"abstractGameState": "Preview", "codedGameState": "S", "detailedState": "Scheduled", "statusCode": "S", "startTimeTBD": false},
+          "teams": {
+            "away": {"team": {"id": 111, "name": "Boston Red Sox"}},
+            "home": {"team": {"id": 147, "name": "New York Yankees"}}
+          },
+          "venue": {"id": 3313, "name": "Yankee Stadium"},
+          "doubleHeader": "N",
+          "gameNumber": 1,
+          "seriesDescription": "Regular Season"
+        },
+        {
+          "gamePk": 813012,
+          "gameType": "R",
+          "season": "2026",
+          "gameDate": "2026-07-05T23:05:00Z",
+          "officialDate": "2026-07-05",
+          "status": {"abstractGameState": "Preview", "codedGameState": "S", "detailedState": "Scheduled", "statusCode": "S", "startTimeTBD": false},
+          "teams": {
+            "away": {"team": {"id": 139, "name": "Tampa Bay Rays"}},
+            "home": {"team": {"id": 110, "name": "Baltimore Orioles"}}
+          },
+          "venue": {"id": 2, "name": "Oriole Park at Camden Yards"},
+          "doubleHeader": "N",
+          "gameNumber": 1,
+          "seriesDescription": "Regular Season"
+        }
+      ]
+    }
+  ]
+}

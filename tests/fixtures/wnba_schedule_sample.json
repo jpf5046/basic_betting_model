@@ -1,0 +1,208 @@
+{
+  "meta": {"version": 1, "request": "scheduleleaguev2_1", "time": "2026-07-05 08:00:00"},
+  "leagueSchedule": {
+    "seasonYear": "2026",
+    "leagueId": "10",
+    "gameDates": [
+      {
+        "gameDate": "05/01/2026 00:00:00",
+        "games": [
+          {
+            "gameId": "1012600001",
+            "gameCode": "20260501/NYLCONN",
+            "gameStatus": 3,
+            "gameStatusText": "Final",
+            "gameLabel": "Preseason",
+            "gameDateEst": "2026-05-01T00:00:00Z",
+            "gameDateTimeUTC": "2026-05-01T23:00:00Z",
+            "arenaName": "Mohegan Sun Arena",
+            "awayTeam": {"teamId": 1611661313, "teamCity": "New York", "teamName": "Liberty", "teamTricode": "NYL", "score": 60, "wins": 0, "losses": 0},
+            "homeTeam": {"teamId": 1611661323, "teamCity": "Connecticut", "teamName": "Sun", "teamTricode": "CONN", "score": 59, "wins": 0, "losses": 0}
+          }
+        ]
+      },
+      {
+        "gameDate": "06/01/2026 00:00:00",
+        "games": [
+          {
+            "gameId": "1022600101",
+            "gameCode": "20260601/NYLIND",
+            "gameStatus": 3,
+            "gameStatusText": "Final",
+            "gameLabel": "",
+            "gameDateEst": "2026-06-01T00:00:00Z",
+            "gameDateTimeUTC": "2026-06-01T23:00:00Z",
+            "arenaName": "Gainbridge Fieldhouse",
+            "awayTeam": {"teamId": 1611661313, "teamCity": "New York", "teamName": "Liberty", "teamTricode": "NYL", "score": 90, "wins": 1, "losses": 0},
+            "homeTeam": {"teamId": 1611661325, "teamCity": "Indiana", "teamName": "Fever", "teamTricode": "IND", "score": 80, "wins": 0, "losses": 1}
+          }
+        ]
+      },
+      {
+        "gameDate": "06/03/2026 00:00:00",
+        "games": [
+          {
+            "gameId": "1022600108",
+            "gameCode": "20260603/INDNYL",
+            "gameStatus": 3,
+            "gameStatusText": "Final",
+            "gameLabel": "",
+            "gameDateEst": "2026-06-03T00:00:00Z",
+            "gameDateTimeUTC": "2026-06-03T23:30:00Z",
+            "arenaName": "Barclays Center",
+            "awayTeam": {"teamId": 1611661325, "teamCity": "Indiana", "teamName": "Fever", "teamTricode": "IND", "score": 75, "wins": 0, "losses": 2},
+            "homeTeam": {"teamId": 1611661313, "teamCity": "New York", "teamName": "Liberty", "teamTricode": "NYL", "score": 85, "wins": 2, "losses": 0}
+          }
+        ]
+      },
+      {
+        "gameDate": "06/05/2026 00:00:00",
+        "games": [
+          {
+            "gameId": "1022600115",
+            "gameCode": "20260605/LVAIND",
+            "gameStatus": 3,
+            "gameStatusText": "Final",
+            "gameLabel": "",
+            "gameDateEst": "2026-06-05T00:00:00Z",
+            "gameDateTimeUTC": "2026-06-05T23:00:00Z",
+            "arenaName": "Gainbridge Fieldhouse",
+            "awayTeam": {"teamId": 1611661319, "teamCity": "Las Vegas", "teamName": "Aces", "teamTricode": "LVA", "score": 88, "wins": 1, "losses": 0},
+            "homeTeam": {"teamId": 1611661325, "teamCity": "Indiana", "teamName": "Fever", "teamTricode": "IND", "score": 84, "wins": 0, "losses": 3}
+          }
+        ]
+      },
+      {
+        "gameDate": "06/07/2026 00:00:00",
+        "games": [
+          {
+            "gameId": "1022600122",
+            "gameCode": "20260607/ATLNYL",
+            "gameStatus": 3,
+            "gameStatusText": "Final",
+            "gameLabel": "",
+            "gameDateEst": "2026-06-07T00:00:00Z",
+            "gameDateTimeUTC": "2026-06-07T19:00:00Z",
+            "arenaName": "Barclays Center",
+            "awayTeam": {"teamId": 1611661330, "teamCity": "Atlanta", "teamName": "Dream", "teamTricode": "ATL", "score": 70, "wins": 0, "losses": 1},
+            "homeTeam": {"teamId": 1611661313, "teamCity": "New York", "teamName": "Liberty", "teamTricode": "NYL", "score": 92, "wins": 3, "losses": 0}
+          }
+        ]
+      },
+      {
+        "gameDate": "06/09/2026 00:00:00",
+        "games": [
+          {
+            "gameId": "1022600129",
+            "gameCode": "20260609/LVAATL",
+            "gameStatus": 3,
+            "gameStatusText": "Final",
+            "gameLabel": "",
+            "gameDateEst": "2026-06-09T00:00:00Z",
+            "gameDateTimeUTC": "2026-06-09T23:00:00Z",
+            "arenaName": "Gateway Center Arena",
+            "awayTeam": {"teamId": 1611661319, "teamCity": "Las Vegas", "teamName": "Aces", "teamTricode": "LVA", "score": 95, "wins": 2, "losses": 0},
+            "homeTeam": {"teamId": 1611661330, "teamCity": "Atlanta", "teamName": "Dream", "teamTricode": "ATL", "score": 90, "wins": 0, "losses": 2}
+          }
+        ]
+      },
+      {
+        "gameDate": "06/11/2026 00:00:00",
+        "games": [
+          {
+            "gameId": "1022600136",
+            "gameCode": "20260611/ATLLVA",
+            "gameStatus": 3,
+            "gameStatusText": "Final",
+            "gameLabel": "",
+            "gameDateEst": "2026-06-11T00:00:00Z",
+            "gameDateTimeUTC": "2026-06-12T02:00:00Z",
+            "arenaName": "Michelob Ultra Arena",
+            "awayTeam": {"teamId": 1611661330, "teamCity": "Atlanta", "teamName": "Dream", "teamTricode": "ATL", "score": 82, "wins": 0, "losses": 3},
+            "homeTeam": {"teamId": 1611661319, "teamCity": "Las Vegas", "teamName": "Aces", "teamTricode": "LVA", "score": 100, "wins": 3, "losses": 0}
+          }
+        ]
+      },
+      {
+        "gameDate": "06/13/2026 00:00:00",
+        "games": [
+          {
+            "gameId": "1022600143",
+            "gameCode": "20260613/NYLLVA",
+            "gameStatus": 3,
+            "gameStatusText": "Final",
+            "gameLabel": "",
+            "gameDateEst": "2026-06-13T00:00:00Z",
+            "gameDateTimeUTC": "2026-06-14T02:00:00Z",
+            "arenaName": "Michelob Ultra Arena",
+            "awayTeam": {"teamId": 1611661313, "teamCity": "New York", "teamName": "Liberty", "teamTricode": "NYL", "score": 87, "wins": 3, "losses": 1},
+            "homeTeam": {"teamId": 1611661319, "teamCity": "Las Vegas", "teamName": "Aces", "teamTricode": "LVA", "score": 89, "wins": 4, "losses": 0}
+          }
+        ]
+      },
+      {
+        "gameDate": "06/15/2026 00:00:00",
+        "games": [
+          {
+            "gameId": "1022600150",
+            "gameCode": "20260615/CONNPHO",
+            "gameStatus": 3,
+            "gameStatusText": "Final",
+            "gameLabel": "",
+            "gameDateEst": "2026-06-15T00:00:00Z",
+            "gameDateTimeUTC": "2026-06-16T01:00:00Z",
+            "arenaName": "Mortgage Matchup Center",
+            "awayTeam": {"teamId": 1611661323, "teamCity": "Connecticut", "teamName": "Sun", "teamTricode": "CONN", "score": 70, "wins": 1, "losses": 1},
+            "homeTeam": {"teamId": 1611661317, "teamCity": "Phoenix", "teamName": "Mercury", "teamTricode": "PHO", "score": 77, "wins": 1, "losses": 1}
+          }
+        ]
+      },
+      {
+        "gameDate": "07/01/2026 00:00:00",
+        "games": [
+          {
+            "gameId": "1032600001",
+            "gameCode": "20260701/STWWLS",
+            "gameStatus": 3,
+            "gameStatusText": "Final",
+            "gameLabel": "All-Star Game",
+            "gameDateEst": "2026-07-01T00:00:00Z",
+            "gameDateTimeUTC": "2026-07-02T00:00:00Z",
+            "arenaName": "Footprint Center",
+            "awayTeam": {"teamId": 1631000001, "teamCity": "Team", "teamName": "Stewart", "teamTricode": "STW", "score": 134, "wins": 0, "losses": 0},
+            "homeTeam": {"teamId": 1631000002, "teamCity": "Team", "teamName": "Wilson", "teamTricode": "WLS", "score": 131, "wins": 0, "losses": 0}
+          }
+        ]
+      },
+      {
+        "gameDate": "07/05/2026 00:00:00",
+        "games": [
+          {
+            "gameId": "1022600201",
+            "gameCode": "20260705/NYLLVA",
+            "gameStatus": 1,
+            "gameStatusText": "10:00 pm ET",
+            "gameLabel": "",
+            "gameDateEst": "2026-07-05T00:00:00Z",
+            "gameDateTimeUTC": "2026-07-06T02:00:00Z",
+            "arenaName": "Michelob Ultra Arena",
+            "awayTeam": {"teamId": 1611661313, "teamCity": "New York", "teamName": "Liberty", "teamTricode": "NYL", "score": 0, "wins": 3, "losses": 1},
+            "homeTeam": {"teamId": 1611661319, "teamCity": "Las Vegas", "teamName": "Aces", "teamTricode": "LVA", "score": 0, "wins": 4, "losses": 0}
+          },
+          {
+            "gameId": "1022600202",
+            "gameCode": "20260705/PHOSEA",
+            "gameStatus": 1,
+            "gameStatusText": "8:00 pm ET",
+            "gameLabel": "",
+            "gameDateEst": "2026-07-05T00:00:00Z",
+            "gameDateTimeUTC": "2026-07-06T00:00:00Z",
+            "arenaName": "Climate Pledge Arena",
+            "awayTeam": {"teamId": 1611661317, "teamCity": "Phoenix", "teamName": "Mercury", "teamTricode": "PHO", "score": 0, "wins": 1, "losses": 1},
+            "homeTeam": {"teamId": 1611661328, "teamCity": "Seattle", "teamName": "Storm", "teamTricode": "SEA", "score": 0, "wins": 2, "losses": 1}
+          }
+        ]
+      }
+    ]
+  }
+}

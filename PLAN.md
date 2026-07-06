@@ -298,9 +298,10 @@ Implementation notes:
   `python -m pipeline daily --date 2026-07-03`.
 - Off-season handling: a sport with no games short-circuits to "off-season" status (the UI's
   off-season card), not an error.
-- Grading edge cases to spec out: postponed/suspended games (VOID, $0), MLB doubleheaders
-  (game_id must include game number), NHL OT/SO (counts as win for ML), totals push when
-  final total equals the model's threshold line exactly.
+- Grading edge cases — **built** (`pipeline/grading/`, item 5): postponed/suspended/
+  cancelled → VOID $0; not-final-yet → PENDING (re-run after the next fetch); MLB
+  doubleheaders grade independently via unique game ids; NHL OT/SO counts as a plain ML
+  win; totals landing exactly on a whole-number line push.
 
 **Wish list for the daily run:**
 - [ ] **Shadow mode:** run 1–3 non-live candidate configs every day alongside the live one,
@@ -376,8 +377,8 @@ data/
 | 2 | ✅ | Sport adapters + raw cache | 1 | WNBA/MLB/NBA/NHL built on shared `ingest/core.py` (PRs #3–#7); schedule + results + game logs flowing. **Open:** standings snapshots, backfill job |
 | 3 | ✅ | Feature registry + core features | 1 | `pipeline/features/` (PR #8): point-in-time context, 6 core features, frame CLI. Cache deferred until backtester needs it |
 | 4 | ✅ | `my_model` v1 + pick policy + config loader | 3 | `pipeline/models/` (PR #9): reproduces `my_model.md` on hand-computed fixtures; pick sheet CLI works. WNBA constants provisional |
-| 5 | ⬜ next | Grader | 2 | Yesterday's picks graded incl. postponement/doubleheader/OT edge cases |
-| 6 | ⬜ | Daily orchestrator + GitHub Actions cron | 2,3,4,5 | Unattended morning run produces pick sheet + grade card |
+| 5 | ✅ | Grader | 2 | `pipeline/grading/`: WIN/LOSS/PUSH at flat $100 plus VOID (postponed/suspended/cancelled) and PENDING (not final yet); doubleheaders via unique game ids; NHL OT/SO = plain ML win; whole-number totals push |
+| 6 | ⬜ next | Daily orchestrator + GitHub Actions cron | 2,3,4,5 | Unattended morning run produces pick sheet + grade card |
 | 7 | ⬜ | Season backfill (WNBA/MLB 2026) | 2,3 | Full labeled canonical frame for the season to date |
 | 8 | ⬜ | `build_frame()` + parquet export | 7 | One call returns the leak-free modeling dataframe (frame.py is the seed) |
 | 9 | ⬜ | Backtester + metrics + CLI | 8 | Any config backtested vs factory baseline; results persisted |

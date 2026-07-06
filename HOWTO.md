@@ -1,7 +1,8 @@
 # HOWTO — running the pipeline
 
 Everything that exists in this repo today and how to run it, in the order the
-daily process will eventually run it: **ingest → inspect → features → predict**.
+daily process will eventually run it: **ingest → inspect → features → predict
+→ grade**.
 For the architecture and what's coming next, see [`PLAN.md`](PLAN.md).
 
 ## Prerequisites
@@ -130,7 +131,31 @@ Overrides deep-merge over the defaults; validation enforces the invariants
 (weights sum to 1.000, strong > lean > 0.5, over > under) and lists every
 violation at once.
 
-## 5. Run the tests
+## 5. Grade yesterday's picks
+
+```bash
+python3 -m pipeline.ingest.wnba fetch          # pull in the finals first
+python3 -m pipeline.grading grade --sport WNBA # defaults to yesterday
+# 2026-07-05  TOTAL OVER 168    WIN      92-88  $+100
+# record 1-0-0, P&L $+100 at flat $100 stakes
+```
+
+Grades the picks published for a date (`--date` for any day) against the
+current games CSV and writes `grades_<date>.csv` next to the picks file.
+Every pick resolves to one of:
+
+| Result | Means | P&L |
+|---|---|---|
+| WIN / LOSS | graded at a flat $100 stake (no odds in the system yet) | +100 / −100 |
+| PUSH | totals landing exactly on a whole-number line | 0 |
+| VOID | game postponed / suspended / cancelled — stake returned | 0 |
+| PENDING | game not final yet (or games CSV not refreshed) — re-run after the next fetch | 0 |
+
+VOID and PENDING are reported but never counted in the record. Doubleheaders
+grade independently (picks reference the unique per-game id), and NHL OT/SO
+finals count as plain moneyline wins.
+
+## 6. Run the tests
 
 ```bash
 python3 -m unittest discover -s tests          # all (offline, no network)
@@ -145,14 +170,14 @@ All suites run from committed fixture feeds — no fetch required.
 
 ```bash
 python3 -m pipeline.ingest.wnba fetch                 # yesterday's finals + today's slate
-python3 -m pipeline.ingest.wnba scores --last 6       # eyeball yesterday
+python3 -m pipeline.grading grade --sport WNBA        # grade yesterday's picks
 python3 -m pipeline.models predict --sport WNBA       # today's pick sheet
 ```
 
-The grader (scoring yesterday's picks WIN/LOSS/PUSH at flat $100) and the
-orchestrator that chains these steps on a schedule are the next build items —
-see `PLAN.md` §7 and §10. This section becomes one command
-(`python3 -m pipeline daily`) when they land.
+That's the whole daily loop, by hand. The orchestrator that chains these
+steps on a schedule (plus standings snapshots and a daily report) is the next
+build item — see `PLAN.md` §7 and §10. This section becomes one command
+(`python3 -m pipeline daily`) when it lands.
 
 ## Where files live
 
@@ -164,6 +189,7 @@ see `PLAN.md` §7 and §10. This section becomes one command
 | `data/features/<sport>/features_<date>.csv` | per-slate feature frames | regenerated |
 | `data/predictions/<sport>/predictions_<date>.csv` | full model output per slate | regenerated |
 | `data/predictions/<sport>/picks_<date>.csv` | published pick sheet | regenerated |
+| `data/predictions/<sport>/grades_<date>.csv` | graded picks (WIN/LOSS/PUSH/VOID/PENDING) | regenerated |
 
 ## Troubleshooting
 
@@ -175,3 +201,5 @@ see `PLAN.md` §7 and §10. This section becomes one command
 | `unexpected feed shape…` | League changed its JSON; the message names the cached raw file to inspect |
 | `no <SPORT> games on <date>` | Off-season or an off day — check `today --date` on a known game day |
 | `NO PREDICTION (insufficient data)` | A team has no completed regular-season games yet (early season); the model refuses to guess |
+| `picks_<date>.csv not found` when grading | `predict` was never run for that date — the grader only grades what was actually published |
+| Grades stuck on `PENDING` | The games CSV predates the final — run the sport's `fetch` again, then re-grade |

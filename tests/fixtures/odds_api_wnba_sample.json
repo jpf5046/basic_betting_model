@@ -1,0 +1,87 @@
+[
+  {
+    "id": "aaa111",
+    "sport_key": "basketball_wnba",
+    "sport_title": "WNBA",
+    "commence_time": "2026-07-06T02:00:00Z",
+    "home_team": "Las Vegas Aces",
+    "away_team": "New York Liberty",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2026-07-05T12:00:00Z",
+        "markets": [
+          {"key": "h2h", "outcomes": [
+            {"name": "Las Vegas Aces", "price": -130},
+            {"name": "New York Liberty", "price": 110}
+          ]},
+          {"key": "totals", "outcomes": [
+            {"name": "Over", "price": -110, "point": 165.5},
+            {"name": "Under", "price": -110, "point": 165.5}
+          ]}
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2026-07-05T12:00:00Z",
+        "markets": [
+          {"key": "h2h", "outcomes": [
+            {"name": "Las Vegas Aces", "price": -125},
+            {"name": "New York Liberty", "price": 105}
+          ]},
+          {"key": "totals", "outcomes": [
+            {"name": "Over", "price": -112, "point": 165.5},
+            {"name": "Under", "price": -108, "point": 165.5}
+          ]}
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "last_update": "2026-07-05T12:00:00Z",
+        "markets": [
+          {"key": "h2h", "outcomes": [
+            {"name": "Las Vegas Aces", "price": -135},
+            {"name": "New York Liberty", "price": 115}
+          ]},
+          {"key": "totals", "outcomes": [
+            {"name": "Over", "price": -110, "point": 166.0},
+            {"name": "Under", "price": -110, "point": 166.0}
+          ]}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bbb222",
+    "sport_key": "basketball_wnba",
+    "sport_title": "WNBA",
+    "commence_time": "2026-07-06T00:00:00Z",
+    "home_team": "Seattle Storm",
+    "away_team": "Phoenix Mercury",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2026-07-05T12:00:00Z",
+        "markets": [
+          {"key": "h2h", "outcomes": [
+            {"name": "Seattle Storm", "price": -150},
+            {"name": "Phoenix Mercury", "price": 130}
+          ]}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ccc333",
+    "sport_key": "basketball_wnba",
+    "sport_title": "WNBA",
+    "commence_time": "2026-07-07T00:00:00Z",
+    "home_team": "Springfield Isotopes",
+    "away_team": "New York Liberty",
+    "bookmakers": []
+  }
+]

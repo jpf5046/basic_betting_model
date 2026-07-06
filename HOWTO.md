@@ -2,7 +2,7 @@
 
 Everything that exists in this repo today and how to run it, in the order the
 daily process will eventually run it: **ingest → inspect → features → predict
-→ grade**.
+→ odds → grade**.
 For the architecture and what's coming next, see [`PLAN.md`](PLAN.md).
 
 ## Prerequisites
@@ -12,6 +12,9 @@ For the architecture and what's coming next, see [`PLAN.md`](PLAN.md).
 - `fetch` commands need normal internet access (they hit the leagues' public,
   key-less APIs). Everything else — queries, features, predictions, tests —
   works offline from previously fetched files.
+- Odds commands additionally need `export ODDS_API_KEY=...` (The Odds API,
+  https://the-odds-api.com). The key is read from the environment only —
+  never commit it.
 
 The four sports and their sources:
 
@@ -131,23 +134,63 @@ Overrides deep-merge over the defaults; validation enforces the invariants
 (weights sum to 1.000, strong > lean > 0.5, over > under) and lists every
 violation at once.
 
-## 5. Grade yesterday's picks
+## 5. Pull odds and find the edge
+
+The model predicts **odds-blind** on purpose — these commands join the market
+on afterward, so the edge (model vs market) is measurable:
+
+```bash
+export ODDS_API_KEY=your-key
+python3 -m pipeline.odds fetch --sport WNBA        # odds + auto-match to our games
+python3 -m pipeline.odds edge  --sport WNBA --date 2026-07-05
+# ML    wnba-lva  model 0.54 vs implied 0.57 @ -130 (3 books)  edge -0.025  EV $-4.46/100
+# TOTAL OVER      model 172.85 vs market 165.5 @ -110 (3 books)  +7.35 units off the line
+```
+
+What `fetch` does: pulls h2h + totals odds, caches the raw response
+(`data/raw/odds/`), normalizes to one row per event/bookmaker/market/outcome
+keyed by our team ids (`data/odds/<sport>/snapshots_*.csv`), and **syncs the
+event map** — `data/odds/<sport>/event_map.csv`, the durable
+`game_id ↔ event_id` join. Matching is by sport + home + away + date, with
+start-time proximity used only to break ties (MLB doubleheaders). It works
+identically for future events, live odds, and historic snapshots, so odds
+pulled at any time join to games through this one file. Consensus prices are
+the **median across bookmakers** (taken in decimal space) at the latest
+pre-game snapshot.
+
+Also available:
+
+```bash
+python3 -m pipeline.odds sports                                    # every sport key the API offers
+python3 -m pipeline.odds events --sport-key soccer_fifa_world_cup  # upcoming games, no ingester needed
+python3 -m pipeline.odds fetch --sport MLB --historical 2026-06-05T16:00:00Z  # paid plans: point-in-time snapshot
+python3 -m pipeline.odds match --sport MLB                         # re-run matching from cached snapshots
+```
+
+`--historical` is how historic odds meet historic games: pull the snapshot as
+of a past instant and the same matcher fills the same event map. Every fetch
+prints the API quota remaining.
+
+## 6. Grade yesterday's picks
 
 ```bash
 python3 -m pipeline.ingest.wnba fetch          # pull in the finals first
 python3 -m pipeline.grading grade --sport WNBA # defaults to yesterday
-# 2026-07-05  TOTAL OVER 168    WIN      92-88  $+100
-# record 1-0-0, P&L $+100 at flat $100 stakes
+# 2026-07-05  TOTAL OVER 165.5  @ -110   WIN      92-88  $+90.91
+# record 1-0-0, P&L $+90.91 — 1/1 picks at market prices
 ```
 
 Grades the picks published for a date (`--date` for any day) against the
 current games CSV and writes `grades_<date>.csv` next to the picks file.
-Every pick resolves to one of:
+**When matched odds exist** (section 5), wins pay the real consensus-price
+payout and totals grade against the *market* line — the actual bettable
+proposition — with the price recorded on each grade. Without odds (or with
+`--no-odds`) grading falls back to flat $100. Every pick resolves to one of:
 
 | Result | Means | P&L |
 |---|---|---|
-| WIN / LOSS | graded at a flat $100 stake (no odds in the system yet) | +100 / −100 |
-| PUSH | totals landing exactly on a whole-number line | 0 |
+| WIN / LOSS | at the consensus market price when matched, else flat $100 | payout / −100 |
+| PUSH | total landing exactly on the graded line | 0 |
 | VOID | game postponed / suspended / cancelled — stake returned | 0 |
 | PENDING | game not final yet (or games CSV not refreshed) — re-run after the next fetch | 0 |
 
@@ -155,7 +198,7 @@ VOID and PENDING are reported but never counted in the record. Doubleheaders
 grade independently (picks reference the unique per-game id), and NHL OT/SO
 finals count as plain moneyline wins.
 
-## 6. Run the tests
+## 7. Run the tests
 
 ```bash
 python3 -m unittest discover -s tests          # all (offline, no network)
@@ -170,8 +213,10 @@ All suites run from committed fixture feeds — no fetch required.
 
 ```bash
 python3 -m pipeline.ingest.wnba fetch                 # yesterday's finals + today's slate
-python3 -m pipeline.grading grade --sport WNBA        # grade yesterday's picks
-python3 -m pipeline.models predict --sport WNBA       # today's pick sheet
+python3 -m pipeline.grading grade --sport WNBA        # grade yesterday at market prices
+python3 -m pipeline.models predict --sport WNBA       # today's pick sheet (odds-blind)
+python3 -m pipeline.odds fetch --sport WNBA           # today's odds + event matching
+python3 -m pipeline.odds edge --sport WNBA --date "$(date +%F)"   # where's the edge?
 ```
 
 That's the whole daily loop, by hand. The orchestrator that chains these
@@ -190,6 +235,9 @@ build item — see `PLAN.md` §7 and §10. This section becomes one command
 | `data/predictions/<sport>/predictions_<date>.csv` | full model output per slate | regenerated |
 | `data/predictions/<sport>/picks_<date>.csv` | published pick sheet | regenerated |
 | `data/predictions/<sport>/grades_<date>.csv` | graded picks (WIN/LOSS/PUSH/VOID/PENDING) | regenerated |
+| `data/predictions/<sport>/edges_<date>.csv` | model-vs-market edge rows | regenerated |
+| `data/odds/<sport>/snapshots_*.csv` | normalized odds, one row per event/book/market/outcome | regenerated |
+| `data/odds/<sport>/event_map.csv` | durable game_id ↔ event_id join | **worth committing** — it's state |
 
 ## Troubleshooting
 
@@ -203,3 +251,7 @@ build item — see `PLAN.md` §7 and §10. This section becomes one command
 | `NO PREDICTION (insufficient data)` | A team has no completed regular-season games yet (early season); the model refuses to guess |
 | `picks_<date>.csv not found` when grading | `predict` was never run for that date — the grader only grades what was actually published |
 | Grades stuck on `PENDING` | The games CSV predates the final — run the sport's `fetch` again, then re-grade |
+| `no API key: set ODDS_API_KEY…` | `export ODDS_API_KEY=...` before any odds command |
+| `unmapped team names (add to NAME_ALIASES?)` | The Odds API spells a team differently — add the alias in `pipeline/odds/normalize.py` |
+| `AMBIGUOUS: … multiple candidates` | Doubleheader whose start times couldn't break the tie — check the games CSV has `start_time_utc` for both games |
+| `no matched odds event` in edge/grading | Run `python3 -m pipeline.odds fetch` (or `match`) after the games CSV exists |

@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """Grader — PLAN.md §7 stage 2: score published picks against final scores.
 
-Every pick is graded WIN / LOSS / PUSH at a flat $100 stake (+100 / −100 /
-0 — no odds in the system yet, matching my_model.md's grading convention),
-or resolved as one of two non-bet outcomes:
+Every pick is graded WIN / LOSS / PUSH, or resolved as one of two non-bet
+outcomes:
 
   VOID    — the game was postponed / suspended / cancelled: stake returned,
             $0, counted separately from the record
@@ -11,14 +10,22 @@ or resolved as one of two non-bet outcomes:
             games CSV hasn't been refreshed): not graded, run again after
             the next fetch
 
+Stakes are a flat $100 per pick. When a consensus market price is
+attached (via the odds package's event map), a WIN pays the real payout
+at that American price and the price is recorded on the grade; without
+odds a WIN pays flat +100. A LOSS always costs the $100 stake. Totals
+picks graded with odds use the MARKET line (the actual bettable
+proposition) rather than the model's internal threshold; the line used
+is recorded either way.
+
 Rules:
   * Moneyline: the pick wins if the selected team scored more. NHL OT/SO
     finals count as plain wins — the final score already names the winner.
     A tied final (impossible in these leagues, defensive only) is a PUSH.
-  * Totals: actual combined score vs the pick's line. Strictly over the
-    line wins an OVER, strictly under wins an UNDER, exactly equal is a
-    PUSH (possible on whole-number lines like NBA 225, impossible on
-    fractional ones like MLB 9.2).
+  * Totals: actual combined score vs the graded line. Strictly over wins
+    an OVER, strictly under wins an UNDER, exactly equal is a PUSH
+    (possible on whole/half-point market lines like 225, impossible on
+    fractional model thresholds like MLB 9.2).
   * Doubleheaders need no special handling here: picks reference the
     unique per-game id (MLB gamePk), so game 1 and game 2 grade
     independently.
@@ -31,6 +38,7 @@ from dataclasses import dataclass, fields
 from pathlib import Path
 
 from pipeline.ingest.core import Game
+from pipeline.odds.money import payout_per_100
 
 STAKE = 100  # flat stake per pick, dollars
 
@@ -47,23 +55,32 @@ class Grade:
     bet_type: str      # ML | TOTAL
     selection: str     # team_id or OVER/UNDER
     confidence: str
-    line: str
+    line: str          # the line this bet was graded against
     game_status: str   # the game status the grade was based on
     actual_away: str   # final scores ("" unless final)
     actual_home: str
     result: str        # WIN | LOSS | PUSH | VOID | PENDING
-    pnl: int           # +100 / -100 / 0
+    pnl: float         # market payout on WIN when price known, else +/-100
+    price_american: str = ""  # consensus price used ("" = flat $100 grading)
 
 
 GRADE_FIELDS = [f.name for f in fields(Grade)]
 
 
-def grade_pick(pick: dict, game: Game | None) -> Grade:
-    """Grade one pick row (a picks CSV dict) against its game."""
+def grade_pick(pick: dict, game: Game | None,
+               price_american: float | None = None,
+               market_point: float | None = None) -> Grade:
+    """Grade one pick row (a picks CSV dict) against its game, optionally
+    at a market price / market total line."""
+    line = pick.get("line", "")
+    if market_point is not None and pick["bet_type"] == "TOTAL":
+        line = f"{market_point:g}"
+    price_str = f"{price_american:g}" if price_american is not None else ""
     base = dict(
         game_id=pick["game_id"], sport=pick["sport"], date=pick["date"],
         bet_type=pick["bet_type"], selection=pick["selection"],
-        confidence=pick.get("confidence", ""), line=pick.get("line", ""),
+        confidence=pick.get("confidence", ""), line=line,
+        price_american=price_str,
     )
 
     if game is None:
@@ -89,24 +106,32 @@ def grade_pick(pick: dict, game: Game | None) -> Grade:
             winner = game.away_team_id if away > home else game.home_team_id
             result = "WIN" if pick["selection"] == winner else "LOSS"
     elif pick["bet_type"] == "TOTAL":
-        total, line = away + home, float(pick["line"])
-        if total == line:
+        total, graded_line = away + home, float(line)
+        if total == graded_line:
             result = "PUSH"
         elif pick["selection"] == "OVER":
-            result = "WIN" if total > line else "LOSS"
+            result = "WIN" if total > graded_line else "LOSS"
         else:  # UNDER
-            result = "WIN" if total < line else "LOSS"
+            result = "WIN" if total < graded_line else "LOSS"
     else:
         raise ValueError(f"unknown bet_type {pick['bet_type']!r} on game {pick['game_id']}")
 
-    pnl = {"WIN": STAKE, "LOSS": -STAKE, "PUSH": 0}[result]
+    win_amount = payout_per_100(price_american) if price_american is not None else STAKE
+    pnl = {"WIN": win_amount, "LOSS": -STAKE, "PUSH": 0}[result]
     return Grade(**base, game_status=game.status, actual_away=str(away),
-                 actual_home=str(home), result=result, pnl=pnl)
+                 actual_home=str(home), result=result, pnl=round(pnl, 2))
 
 
-def grade_picks(picks: list[dict], games: list[Game]) -> list[Grade]:
+def grade_picks(picks: list[dict], games: list[Game],
+                odds_lookup=None) -> list[Grade]:
+    """odds_lookup: optional fn(pick) -> (price_american|None,
+    market_point|None), e.g. pipeline.odds joins. Absent odds => flat $100."""
     by_id = {g.game_id: g for g in games}
-    return [grade_pick(p, by_id.get(p["game_id"])) for p in picks]
+    grades = []
+    for p in picks:
+        price, point = odds_lookup(p) if odds_lookup else (None, None)
+        grades.append(grade_pick(p, by_id.get(p["game_id"]), price, point))
+    return grades
 
 
 def summarize(grades: list[Grade]) -> dict:
@@ -120,7 +145,7 @@ def summarize(grades: list[Grade]) -> dict:
             "pushes": sum(1 for g in rows if g.result == "PUSH"),
             "voids": sum(1 for g in rows if g.result == "VOID"),
             "pending": sum(1 for g in rows if g.result == "PENDING"),
-            "pnl": sum(g.pnl for g in rows),
+            "pnl": round(sum(g.pnl for g in rows), 2),
         }
 
     out = {"overall": bucket(grades)}

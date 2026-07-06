@@ -14,7 +14,9 @@ The three files already in this repo define the vision:
 | `researcher-console-design.html` | Interactive design reference for that UI. |
 
 The rest of this document is the backend design. Each numbered section is a work item we
-will tackle one by one.
+will tackle one by one. **For how to run what's already built, see [`HOWTO.md`](HOWTO.md)**
+— fetch, inspect, feature frames, predictions, configs, tests. Progress at a glance lives
+in the §10 build-order table.
 
 ---
 
@@ -329,48 +331,62 @@ what the Researcher Console needs — everything below already exists in the tab
 
 ---
 
-## 9. Proposed repo layout
+## 9. Repo layout (current, with planned pieces marked)
 
 ```
+HOWTO.md               # how to run everything that exists today
 pipeline/
-  __main__.py          # CLI: daily, backfill, backtest, grade, sweep
-  orchestrator.py      # the daily DAG (§7)
-  db/                  # schema.sql migrations, connection, repositories
-  ingest/              # base adapter + mlb/, nba/, nhl/, weather/ (§2)
-  features/            # registry.py + one file per feature (§3)
-  models/              # registry.py, my_model.py, pick_policy.py (§4)
-  frame/               # build_frame(), parquet export (§5)
-  backtest/            # runner, metrics, sweep (§6)
-  grading/             # grader + edge cases (§7.2)
-  api/                 # FastAPI layer, later (§8)
-tests/
-  fixtures/            # frozen game logs & standings for deterministic tests
-data/                  # sqlite db, raw API cache, parquet frames (gitignored)
-.github/workflows/
-  daily.yml            # cron: run the pipeline every morning
+  ingest/
+    core.py            # shared Game record, queries, CSV io, HTTP retry, CLI
+    wnba.py mlb.py
+    nba.py nhl.py      # one adapter per sport (§2) — feed URLs, mapping, parsing
+  features/
+    registry.py        # @register decorator, per-sport lookup (§3)
+    context.py         # point-in-time FeatureContext — the anti-leakage boundary
+    frame.py           # wide per-slate feature CSV (proto §5 dataframe)
+    defs/              # ONE FILE PER FEATURE (7 shipped, incl. travel_km canary)
+  models/
+    registry.py        # @register_model (§4)
+    base.py            # Prediction / Pick dataclasses, gather_features
+    config.py          # factory defaults per sport, validation, JSON overrides
+    picks.py           # pick policy: ML gates + totals thresholds
+    defs/my_model.py   # ONE FILE PER MODEL (my_model.md v1 shipped)
+  grading/             # (planned) grader + edge cases (§7)
+  orchestrator.py      # (planned) the daily DAG (§7)
+  backtest/            # (planned) runner, metrics, sweep (§6)
+  db/                  # (planned) SQLite schema when flat files outgrow (§1)
+  api/                 # (planned) FastAPI layer (§8)
+scripts/
+  validate_teams.py    # registry checks
+tests/                 # 82 offline tests; fixtures/ holds frozen feeds
+data/
+  teams.csv            # canonical team registry (committed)
+  raw/                 # timestamped API responses (gitignored)
+  <sport>/ features/ predictions/   # regenerated artifacts
+.github/workflows/     # (planned) daily.yml cron
 ```
 
 ---
 
 ## 10. Build order (tackle one by one)
 
-| # | Item | Depends on | Definition of done |
-|---|---|---|---|
-| 1 | Schema + migrations + team registry | — | `model.db` created; teams mapped with venue lat/lon. **Registry half done:** `data/teams.csv` covers NFL/NBA/MLB/NHL/WNBA/CFB with coordinates + timezones; schema/migrations still open |
-| 2 | MLB adapter + raw cache | 1 | Schedule, results, standings, game logs land in tables for any date |
-| 3 | Feature registry + the 6 core features | 1 | Features computable as-of any date, cached in `feature_values`, unit-tested |
-| 4 | `my_model` v1 + pick policy + config loader | 3 | Reproduces `my_model.md` exactly on fixture data |
-| 5 | Grader | 2 | Yesterday's picks graded incl. postponement/doubleheader/OT edge cases |
-| 6 | Daily orchestrator + GitHub Actions cron | 2,3,4,5 | Unattended morning run produces pick sheet + grade card for MLB |
-| 7 | Season backfill (MLB 2026) | 2,3 | Full labeled canonical frame for the season to date |
-| 8 | `build_frame()` + parquet export | 7 | One call returns the leak-free modeling dataframe |
-| 9 | Backtester + metrics + CLI | 8 | Any config backtested vs factory baseline; results persisted |
-| 10 | NBA + NHL adapters (when seasons start) | 2 pattern | Same pipeline, two more sports |
-| 11 | Shadow mode + sweep + walk-forward | 9 | Candidate configs accumulate live evidence |
-| 12 | Travel-time feature (the canary) | 3,8 | Added as one new file; appears in frame; backtestable in a model variant |
-| 13 | Weather adapter + features | 3 | MLB outdoor games get temp/wind features |
-| 14 | API layer | 6,9 | Endpoints for everything in §8 |
-| 15 | Researcher Console UI | 14 | Rebuild `researcher-console-design.html` against the real API |
+| # | Status | Item | Depends on | Definition of done |
+|---|---|---|---|---|
+| 1 | 🟡 half | Schema + migrations + team registry | — | **Done:** `data/teams.csv` (275 teams, venue lat/lon, timezones, native ids) + validator. **Open:** SQLite schema/migrations, deferred until flat files pinch |
+| 2 | ✅ | Sport adapters + raw cache | 1 | WNBA/MLB/NBA/NHL built on shared `ingest/core.py` (PRs #3–#7); schedule + results + game logs flowing. **Open:** standings snapshots, backfill job |
+| 3 | ✅ | Feature registry + core features | 1 | `pipeline/features/` (PR #8): point-in-time context, 6 core features, frame CLI. Cache deferred until backtester needs it |
+| 4 | ✅ | `my_model` v1 + pick policy + config loader | 3 | `pipeline/models/` (PR #9): reproduces `my_model.md` on hand-computed fixtures; pick sheet CLI works. WNBA constants provisional |
+| 5 | ⬜ next | Grader | 2 | Yesterday's picks graded incl. postponement/doubleheader/OT edge cases |
+| 6 | ⬜ | Daily orchestrator + GitHub Actions cron | 2,3,4,5 | Unattended morning run produces pick sheet + grade card |
+| 7 | ⬜ | Season backfill (WNBA/MLB 2026) | 2,3 | Full labeled canonical frame for the season to date |
+| 8 | ⬜ | `build_frame()` + parquet export | 7 | One call returns the leak-free modeling dataframe (frame.py is the seed) |
+| 9 | ⬜ | Backtester + metrics + CLI | 8 | Any config backtested vs factory baseline; results persisted |
+| 10 | ✅ | NBA + NHL adapters | 2 pattern | Shipped early alongside item 2 (PRs #5, #6) |
+| 11 | ⬜ | Shadow mode + sweep + walk-forward | 9 | Candidate configs accumulate live evidence |
+| 12 | ✅ | Travel-time feature (the canary) | 3 | Shipped early inside PR #8 as one new file — the design claim held. **Open:** backtest it in a model variant once item 9 lands |
+| 13 | ⬜ | Weather adapter + features | 3 | MLB outdoor games get temp/wind features |
+| 14 | ⬜ | API layer | 6,9 | Endpoints for everything in §8 |
+| 15 | ⬜ | Researcher Console UI | 14 | Rebuild `researcher-console-design.html` against the real API |
 
 ---
 

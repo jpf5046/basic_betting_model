@@ -50,6 +50,7 @@ from pipeline.ingest.core import (  # noqa: F401  (query names re-exported for t
     REPO_ROOT,
     TEAMS_CSV,
     Game,
+    HttpStatusError,
     UnmappedTeamError,
     common_opponents,
     completed_regular_season,
@@ -130,11 +131,20 @@ def fetch_raw(season: str, offline: bool = False) -> list[Path]:
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     paths = []
     for tri in tricodes:
-        body = http_get(SCHEDULE_URL.format(tricode=tri, season=season), delays=(0, 2, 4, 8))
+        try:
+            body = http_get(SCHEDULE_URL.format(tricode=tri, season=season),
+                            delays=(0, 2, 4, 8))
+        except HttpStatusError as e:
+            if e.status == 404:
+                # Club didn't exist that season (UTA before 2024-25, SEA
+                # before 2021-22, ARI after 2023-24) — expected in backfill.
+                print(f"  {tri}: no {season} schedule (404) — skipped")
+                continue
+            raise
         path = RAW_DIR / f"club-schedule-season.{tri}.{season}.{stamp}.json"
         path.write_bytes(body)
         paths.append(path)
-        time.sleep(0.3)  # politeness between the 32 requests
+        time.sleep(0.3)  # politeness between the requests
     return paths
 
 
@@ -216,23 +226,40 @@ def games_csv_path(season: str) -> Path:
     return OUT_DIR / f"games_{season}.csv"
 
 
+def past_seasons(back: int) -> list[str]:
+    """The `back` seasons before the current one, newest first. The
+    club-schedule-season endpoint serves any past seasonId directly."""
+    start = int(default_season()[:4])
+    return [f"{start - i}{start - i + 1}" for i in range(1, back + 1)]
+
+
+def run_fetch(season: str | None = None, offline: bool = False) -> tuple[list[Game], Path]:
+    """The backfill contract: fetch ANY season into its games CSV.
+    Clubs that didn't exist that season 404 and are skipped; historic
+    clubs (Arizona Coyotes) map via inactive data/teams.csv rows."""
+    season = season or default_season()
+    by_nhl_id, by_abbrev = load_team_maps()
+    raws = fetch_raw(season, offline=offline)
+    docs = [json.loads(p_.read_text()) for p_ in raws]
+    games = parse_games(docs, by_nhl_id, by_abbrev)
+    print(f"raw feeds: {len(raws)} files in {RAW_DIR}")
+    path = write_games_csv(games, games_csv_path(season))
+    return games, path
+
+
 def main(argv: list[str] | None = None) -> None:
     p = make_parser(
         prog="python3 -m pipeline.ingest.nhl",
         description=__doc__,
         season_default=default_season(),
-        season_help='NHL seasonId, e.g. "20252026"',
+        season_help='NHL seasonId, e.g. "20252026" (any past season works too)',
     )
     args = p.parse_args(argv)
     by_nhl_id, by_abbrev = load_team_maps()
 
     if args.cmd == "fetch":
-        raws = fetch_raw(args.season, offline=args.offline)
-        docs = [json.loads(p_.read_text()) for p_ in raws]
-        games = parse_games(docs, by_nhl_id, by_abbrev)
-        path = write_games_csv(games, games_csv_path(games[0].season))
+        games, path = run_fetch(args.season, offline=args.offline)
         finals = sum(1 for g in games if g.status == "final")
-        print(f"raw feeds: {len(raws)} files in {RAW_DIR}")
         print(f"wrote {len(games)} games -> {path} ({finals} final, {len(todays_games(games))} today)")
         return
 

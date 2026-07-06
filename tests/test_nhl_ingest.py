@@ -32,11 +32,13 @@ def load_fixture_games():
 
 
 class TestTeamMaps(unittest.TestCase):
-    def test_all_32_teams_mapped(self):
+    def test_all_teams_mapped(self):
+        # 32 active franchises + 1 historic (Arizona Coyotes, for backfill).
         by_nhl_id, by_abbrev = load_team_maps()
-        self.assertEqual(len(by_nhl_id), 32)
-        self.assertEqual(len(by_abbrev), 32)
+        self.assertEqual(len(by_nhl_id), 33)
+        self.assertEqual(len(by_abbrev), 33)
         self.assertEqual(by_nhl_id[6], ("nhl-bos", "BOS"))
+        self.assertEqual(by_nhl_id[53], ("nhl-ari", "ARI"))
         self.assertEqual(by_abbrev["TOR"], "nhl-tor")
 
     def test_default_season_spans_years(self):

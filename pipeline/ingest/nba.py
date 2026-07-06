@@ -40,6 +40,7 @@ import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
 
+from pipeline.ingest import leaguegamelog
 from pipeline.ingest.core import (  # noqa: F401  (query names re-exported for tests/callers)
     EASTERN,
     REPO_ROOT,
@@ -190,23 +191,69 @@ def games_csv_path(season: str) -> Path:
     return OUT_DIR / f"games_{season}.csv"
 
 
+def past_seasons(back: int) -> list[str]:
+    """The `back` seasons before the current one, newest first."""
+    start = int(default_season()[:4])
+    return [f"{start - i}-{(start - i + 1) % 100:02d}" for i in range(1, back + 1)]
+
+
+def fetch_raw_historic(season: str, season_type: str, offline: bool = False) -> Path:
+    """Historic seasons come from stats.nba.com leaguegamelog — the CDN
+    schedule feed only serves the current season."""
+    RAW_DIR.mkdir(parents=True, exist_ok=True)
+    slug = season_type.replace(" ", "_")
+    if offline:
+        cached = sorted(RAW_DIR.glob(f"leaguegamelog.{season}.{slug}.*.json"))
+        if not cached:
+            sys.exit(f"no cached leaguegamelog for {season} in {RAW_DIR}")
+        return cached[-1]
+    url = leaguegamelog.log_url("stats.nba.com", "00", season, season_type)
+    body = http_get(url, headers=leaguegamelog.referer_headers("www.nba.com"))
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    path = RAW_DIR / f"leaguegamelog.{season}.{slug}.{stamp}.json"
+    path.write_bytes(body)
+    return path
+
+
+def run_fetch(season: str | None = None, offline: bool = False) -> tuple[list[Game], Path]:
+    """The backfill contract: fetch ANY season into its games CSV.
+    Current season -> CDN schedule feed; past seasons -> leaguegamelog."""
+    season = season or default_season()
+    by_nba_id, _ = load_team_maps()
+    if season == default_season():
+        raw = fetch_raw(offline=offline)
+        games = parse_games(json.loads(raw.read_text()), by_nba_id)
+        print(f"raw feed: {raw}")
+    else:
+        def resolve(team_id, abbrev):
+            return by_nba_id.get(int(team_id)) if team_id else None
+
+        games = []
+        for season_type in ("Regular Season", "Playoffs"):
+            raw = fetch_raw_historic(season, season_type, offline=offline)
+            got, skipped = leaguegamelog.build_games(
+                json.loads(raw.read_text()), SPORT, season, season_type, resolve)
+            games.extend(got)
+            if skipped:
+                print(f"  {season} {season_type}: skipped {skipped} unpaired log rows")
+        games.sort(key=lambda g: (g.date, g.game_id))
+    path = write_games_csv(games, games_csv_path(season))
+    return games, path
+
+
 def main(argv: list[str] | None = None) -> None:
     p = make_parser(
         prog="python3 -m pipeline.ingest.nba",
         description=__doc__,
         season_default=default_season(),
-        season_help='e.g. "2025-26"',
+        season_help='e.g. "2025-26" (past seasons fetch via stats.nba.com)',
     )
     args = p.parse_args(argv)
-    by_nba_id, by_abbrev = load_team_maps()
+    _, by_abbrev = load_team_maps()
 
     if args.cmd == "fetch":
-        raw = fetch_raw(offline=args.offline)
-        doc = json.loads(raw.read_text())
-        games = parse_games(doc, by_nba_id)
-        path = write_games_csv(games, games_csv_path(games[0].season))
+        games, path = run_fetch(args.season, offline=args.offline)
         finals = sum(1 for g in games if g.status == "final")
-        print(f"raw feed: {raw}")
         print(f"wrote {len(games)} games -> {path} ({finals} final, {len(todays_games(games))} today)")
         return
 

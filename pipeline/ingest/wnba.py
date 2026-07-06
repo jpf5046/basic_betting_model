@@ -32,6 +32,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+from pipeline.ingest import leaguegamelog
 from pipeline.ingest.core import (  # noqa: F401  (query names re-exported for tests/callers)
     EASTERN,
     REPO_ROOT,
@@ -183,23 +184,81 @@ def games_csv_path(season: str) -> Path:
     return OUT_DIR / f"games_{season}.csv"
 
 
+def current_season() -> str:
+    return str(datetime.now(EASTERN).year)
+
+
+def past_seasons(back: int) -> list[str]:
+    """The `back` seasons before the current one, newest first."""
+    year = int(current_season())
+    return [str(year - i) for i in range(1, back + 1)]
+
+
+def _historic_resolver():
+    team_map = load_team_map()
+    canonical = {v: k for k, v in team_map.items() if k not in TRICODE_ALIASES}
+
+    def resolve(team_id, abbrev):
+        tid = team_map.get((abbrev or "").upper())
+        return (tid, canonical.get(tid, abbrev)) if tid else None
+
+    return resolve
+
+
+def fetch_raw_historic(season: str, season_type: str, offline: bool = False) -> Path:
+    """Historic seasons come from stats.wnba.com leaguegamelog — the CDN
+    schedule feed only serves the current season."""
+    RAW_DIR.mkdir(parents=True, exist_ok=True)
+    slug = season_type.replace(" ", "_")
+    if offline:
+        cached = sorted(RAW_DIR.glob(f"leaguegamelog.{season}.{slug}.*.json"))
+        if not cached:
+            sys.exit(f"no cached leaguegamelog for {season} in {RAW_DIR}")
+        return cached[-1]
+    url = leaguegamelog.log_url("stats.wnba.com", "10", season, season_type)
+    body = http_get(url, headers=leaguegamelog.referer_headers("www.wnba.com"))
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    path = RAW_DIR / f"leaguegamelog.{season}.{slug}.{stamp}.json"
+    path.write_bytes(body)
+    return path
+
+
+def run_fetch(season: str | None = None, offline: bool = False) -> tuple[list[Game], Path]:
+    """The backfill contract: fetch ANY season into its games CSV.
+    Current season -> CDN schedule feed; past seasons -> leaguegamelog."""
+    season = season or current_season()
+    if season == current_season():
+        raw = fetch_raw(offline=offline)
+        games = parse_games(json.loads(raw.read_text()), load_team_map())
+        print(f"raw feed: {raw}")
+    else:
+        resolve = _historic_resolver()
+        games = []
+        for season_type in ("Regular Season", "Playoffs"):
+            raw = fetch_raw_historic(season, season_type, offline=offline)
+            got, skipped = leaguegamelog.build_games(
+                json.loads(raw.read_text()), SPORT, season, season_type, resolve)
+            games.extend(got)
+            if skipped:
+                print(f"  {season} {season_type}: skipped {skipped} unpaired log rows")
+        games.sort(key=lambda g: (g.date, g.game_id))
+    path = write_games_csv(games, games_csv_path(season))
+    return games, path
+
+
 def main(argv: list[str] | None = None) -> None:
     p = make_parser(
         prog="python3 -m pipeline.ingest.wnba",
         description=__doc__,
-        season_default=str(datetime.now(EASTERN).year),
-        season_help="season year, e.g. 2026",
+        season_default=current_season(),
+        season_help="season year, e.g. 2026 (past seasons fetch via stats.wnba.com)",
     )
     args = p.parse_args(argv)
     team_map = load_team_map()
 
     if args.cmd == "fetch":
-        raw = fetch_raw(offline=args.offline)
-        doc = json.loads(raw.read_text())
-        games = parse_games(doc, team_map)
-        path = write_games_csv(games, games_csv_path(games[0].season))
+        games, path = run_fetch(args.season, offline=args.offline)
         finals = sum(1 for g in games if g.status == "final")
-        print(f"raw feed: {raw}")
         print(f"wrote {len(games)} games -> {path} ({finals} final, {len(todays_games(games))} today)")
         return
 

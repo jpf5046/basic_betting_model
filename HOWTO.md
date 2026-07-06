@@ -38,9 +38,10 @@ python3 scripts/validate_teams.py
 ```
 
 `data/teams.csv` is the canonical team registry (ids, conference/division,
-venue coordinates, timezones, native API ids). Everything downstream keys off
-its `team_id` values (`wnba-nyl`, `mlb-nyy`, …). Run the validator after any
-hand edit.
+venue coordinates, timezones, native API ids, and an `active` flag —
+`active=0` rows are historic franchises kept so backfilled seasons map).
+Everything downstream keys off its `team_id` values (`wnba-nyl`,
+`mlb-nyy`, …). Run the validator after any hand edit.
 
 ## 1. Fetch a sport's season (schedule + scores)
 
@@ -62,6 +63,34 @@ Each fetch:
 
 One fetch per day is plenty: the feed contains the whole season, so
 yesterday's finals and today's slate arrive together.
+
+### Historic backfill
+
+```bash
+python3 -m pipeline.backfill --sport all --back 3        # current + last 3 seasons, every sport
+python3 -m pipeline.backfill --sport WNBA --seasons 2024,2023
+```
+
+Backfill writes the same per-season CSVs (`data/<sport>/games_2024.csv`, …),
+so features, predictions, grading, and odds matching read history through
+the exact same code path as today's slate. Sources per sport: MLB and NHL
+reuse their normal endpoints with a past season key; NBA and WNBA switch to
+the leagues' stats APIs (`leaguegamelog`) because the CDN schedule feeds
+only serve the current season. Historic games carry no tip-off times —
+odds matching for them is by teams + date, which is the matcher's primary
+key anyway (only MLB doubleheaders need times, and those are rare).
+
+Defunct franchises live in `data/teams.csv` as `active=0` rows (e.g. the
+Arizona Coyotes) so old games map cleanly; clubs that didn't exist in a
+season (Utah before 2024-25) 404 and are skipped with a note. Historic
+**odds** are a separate, quota-costing step:
+`python3 -m pipeline.odds fetch --sport X --historical <ISO>` joins them to
+backfilled games through the same event map.
+
+**Adding a new sport? Backfill is part of the definition of done.** Every
+adapter must implement `run_fetch(season)` (any season, not just the
+current one) and `past_seasons(back)` — `pipeline/backfill.py` is generic
+over that contract and fails loudly on adapters that skip it.
 
 **If a fetch errors:** an "unexpected feed shape" message means the league
 changed its JSON — the raw file it points at is what's needed to fix the

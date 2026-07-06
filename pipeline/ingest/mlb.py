@@ -194,23 +194,42 @@ def games_csv_path(season: str) -> Path:
     return OUT_DIR / f"games_{season}.csv"
 
 
+def current_season() -> str:
+    return str(datetime.now(EASTERN).year)
+
+
+def past_seasons(back: int) -> list[str]:
+    """The `back` seasons before the current one, newest first. The
+    statsapi schedule endpoint serves any past season directly."""
+    year = int(current_season())
+    return [str(year - i) for i in range(1, back + 1)]
+
+
+def run_fetch(season: str | None = None, offline: bool = False) -> tuple[list[Game], Path]:
+    """The backfill contract: fetch ANY season into its games CSV —
+    for MLB the regular fetch already works for every past season."""
+    season = season or current_season()
+    by_mlb_id, _ = load_team_maps()
+    raw = fetch_raw(season, offline=offline)
+    games = parse_games(json.loads(raw.read_text()), by_mlb_id)
+    print(f"raw feed: {raw}")
+    path = write_games_csv(games, games_csv_path(season))
+    return games, path
+
+
 def main(argv: list[str] | None = None) -> None:
     p = make_parser(
         prog="python3 -m pipeline.ingest.mlb",
         description=__doc__,
-        season_default=str(datetime.now(EASTERN).year),
-        season_help="season year, e.g. 2026",
+        season_default=current_season(),
+        season_help="season year, e.g. 2026 (any past season works too)",
     )
     args = p.parse_args(argv)
-    by_mlb_id, by_abbrev = load_team_maps()
+    _, by_abbrev = load_team_maps()
 
     if args.cmd == "fetch":
-        raw = fetch_raw(args.season, offline=args.offline)
-        doc = json.loads(raw.read_text())
-        games = parse_games(doc, by_mlb_id)
-        path = write_games_csv(games, games_csv_path(games[0].season))
+        games, path = run_fetch(args.season, offline=args.offline)
         finals = sum(1 for g in games if g.status == "final")
-        print(f"raw feed: {raw}")
         print(f"wrote {len(games)} games -> {path} ({finals} final, {len(todays_games(games))} today)")
         return
 

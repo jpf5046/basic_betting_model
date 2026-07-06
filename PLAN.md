@@ -102,8 +102,12 @@ Predictions stay odds-blind by design — odds join on afterward. Later: `weathe
 **TODO:**
 - [x] League adapters with retry/backoff and raw-response caching to disk — WNBA, MLB,
       NBA, NHL built on the shared `core.py`; standings ingestion still open below.
-- [ ] Backfill job: pull full current-season game logs + daily standings for all three
-      leagues to seed history for backtesting.
+- [x] Backfill job — `python3 -m pipeline.backfill` (current + N past seasons into the
+      same per-season games CSVs). **Contract:** every adapter implements
+      `run_fetch(season)` + `past_seasons(back)`, so a new sport is backfillable the day
+      it lands. MLB/NHL reuse their endpoints; NBA/WNBA use stats leaguegamelog for past
+      seasons; defunct teams live as `active=0` registry rows (Arizona Coyotes).
+      Still open: daily standings snapshots (below).
 - [ ] Nightly ingest writes `standings_snapshots` keyed by `as_of_date` — never overwrite;
       snapshots are the point-in-time backbone.
 - [ ] Weather adapter (wish list): temp, wind speed/direction, precipitation for outdoor
@@ -385,7 +389,7 @@ data/
 | 5 | ✅ | Grader | 2 | `pipeline/grading/`: WIN/LOSS/PUSH plus VOID (postponed/suspended/cancelled) and PENDING (not final yet); doubleheaders via unique game ids; NHL OT/SO = plain ML win; whole-number totals push |
 | 5a | ✅ | Odds adapter + event matching + edge + real payouts | 2,4,5 | `pipeline/odds/` (moved up by request): The Odds API v4 fetch/historical, game↔event map, consensus closing prices, model-vs-market edge report, grading at market prices vs market total lines |
 | 6 | ⬜ next | Daily orchestrator + GitHub Actions cron | 2,3,4,5 | Unattended morning run produces pick sheet + grade card |
-| 7 | ⬜ | Season backfill (WNBA/MLB 2026) | 2,3 | Full labeled canonical frame for the season to date |
+| 7 | ✅ | Season backfill (all four sports) | 2,3 | `pipeline/backfill.py`: current + N past seasons per sport via the `run_fetch(season)` / `past_seasons(back)` adapter contract; features/predictions/odds read history through the same per-season CSVs. Historic odds join via `odds fetch --historical` |
 | 8 | ⬜ | `build_frame()` + parquet export | 7 | One call returns the leak-free modeling dataframe (frame.py is the seed) |
 | 9 | ⬜ | Backtester + metrics + CLI | 8 | Any config backtested vs factory baseline; results persisted |
 | 10 | ✅ | NBA + NHL adapters | 2 pattern | Shipped early alongside item 2 (PRs #5, #6) |

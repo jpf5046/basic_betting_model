@@ -1,276 +1,277 @@
-team_id,sport,name,abbrev,conference,division,external_ids,venue_name,venue_lat,venue_lon,timezone
-nfl-buf,NFL,Buffalo Bills,BUF,AFC,East,"{""espn"":2}",Highmark Stadium,42.7738,-78.7870,America/New_York
-nfl-mia,NFL,Miami Dolphins,MIA,AFC,East,"{""espn"":15}",Hard Rock Stadium,25.9580,-80.2389,America/New_York
-nfl-ne,NFL,New England Patriots,NE,AFC,East,"{""espn"":17}",Gillette Stadium,42.0909,-71.2643,America/New_York
-nfl-nyj,NFL,New York Jets,NYJ,AFC,East,"{""espn"":20}",MetLife Stadium,40.8135,-74.0745,America/New_York
-nfl-bal,NFL,Baltimore Ravens,BAL,AFC,North,"{""espn"":33}",M&T Bank Stadium,39.2780,-76.6227,America/New_York
-nfl-cin,NFL,Cincinnati Bengals,CIN,AFC,North,"{""espn"":4}",Paycor Stadium,39.0955,-84.5161,America/New_York
-nfl-cle,NFL,Cleveland Browns,CLE,AFC,North,"{""espn"":5}",Huntington Bank Field,41.5061,-81.6995,America/New_York
-nfl-pit,NFL,Pittsburgh Steelers,PIT,AFC,North,"{""espn"":23}",Acrisure Stadium,40.4468,-80.0158,America/New_York
-nfl-hou,NFL,Houston Texans,HOU,AFC,South,"{""espn"":34}",NRG Stadium,29.6847,-95.4107,America/Chicago
-nfl-ind,NFL,Indianapolis Colts,IND,AFC,South,"{""espn"":11}",Lucas Oil Stadium,39.7601,-86.1639,America/Indiana/Indianapolis
-nfl-jax,NFL,Jacksonville Jaguars,JAX,AFC,South,"{""espn"":30}",EverBank Stadium,30.3239,-81.6373,America/New_York
-nfl-ten,NFL,Tennessee Titans,TEN,AFC,South,"{""espn"":10}",Nissan Stadium,36.1665,-86.7713,America/Chicago
-nfl-den,NFL,Denver Broncos,DEN,AFC,West,"{""espn"":7}",Empower Field at Mile High,39.7439,-105.0201,America/Denver
-nfl-kc,NFL,Kansas City Chiefs,KC,AFC,West,"{""espn"":12}",GEHA Field at Arrowhead Stadium,39.0489,-94.4839,America/Chicago
-nfl-lv,NFL,Las Vegas Raiders,LV,AFC,West,"{""espn"":13}",Allegiant Stadium,36.0909,-115.1833,America/Los_Angeles
-nfl-lac,NFL,Los Angeles Chargers,LAC,AFC,West,"{""espn"":24}",SoFi Stadium,33.9535,-118.3392,America/Los_Angeles
-nfl-dal,NFL,Dallas Cowboys,DAL,NFC,East,"{""espn"":6}",AT&T Stadium,32.7478,-97.0929,America/Chicago
-nfl-nyg,NFL,New York Giants,NYG,NFC,East,"{""espn"":19}",MetLife Stadium,40.8135,-74.0745,America/New_York
-nfl-phi,NFL,Philadelphia Eagles,PHI,NFC,East,"{""espn"":21}",Lincoln Financial Field,39.9008,-75.1675,America/New_York
-nfl-wsh,NFL,Washington Commanders,WSH,NFC,East,"{""espn"":28}",Northwest Stadium,38.9077,-76.8645,America/New_York
-nfl-chi,NFL,Chicago Bears,CHI,NFC,North,"{""espn"":3}",Soldier Field,41.8623,-87.6167,America/Chicago
-nfl-det,NFL,Detroit Lions,DET,NFC,North,"{""espn"":8}",Ford Field,42.3400,-83.0456,America/Detroit
-nfl-gb,NFL,Green Bay Packers,GB,NFC,North,"{""espn"":9}",Lambeau Field,44.5013,-88.0622,America/Chicago
-nfl-min,NFL,Minnesota Vikings,MIN,NFC,North,"{""espn"":16}",U.S. Bank Stadium,44.9738,-93.2577,America/Chicago
-nfl-atl,NFL,Atlanta Falcons,ATL,NFC,South,"{""espn"":1}",Mercedes-Benz Stadium,33.7554,-84.4009,America/New_York
-nfl-car,NFL,Carolina Panthers,CAR,NFC,South,"{""espn"":29}",Bank of America Stadium,35.2258,-80.8528,America/New_York
-nfl-no,NFL,New Orleans Saints,NO,NFC,South,"{""espn"":18}",Caesars Superdome,29.9511,-90.0812,America/Chicago
-nfl-tb,NFL,Tampa Bay Buccaneers,TB,NFC,South,"{""espn"":27}",Raymond James Stadium,27.9759,-82.5033,America/New_York
-nfl-ari,NFL,Arizona Cardinals,ARI,NFC,West,"{""espn"":22}",State Farm Stadium,33.5276,-112.2626,America/Phoenix
-nfl-lar,NFL,Los Angeles Rams,LAR,NFC,West,"{""espn"":14}",SoFi Stadium,33.9535,-118.3392,America/Los_Angeles
-nfl-sf,NFL,San Francisco 49ers,SF,NFC,West,"{""espn"":25}",Levi's Stadium,37.4032,-121.9698,America/Los_Angeles
-nfl-sea,NFL,Seattle Seahawks,SEA,NFC,West,"{""espn"":26}",Lumen Field,47.5952,-122.3316,America/Los_Angeles
-nba-bos,NBA,Boston Celtics,BOS,Eastern,Atlantic,"{""nba"":1610612738}",TD Garden,42.3662,-71.0621,America/New_York
-nba-bkn,NBA,Brooklyn Nets,BKN,Eastern,Atlantic,"{""nba"":1610612751}",Barclays Center,40.6826,-73.9754,America/New_York
-nba-nyk,NBA,New York Knicks,NYK,Eastern,Atlantic,"{""nba"":1610612752}",Madison Square Garden,40.7505,-73.9934,America/New_York
-nba-phi,NBA,Philadelphia 76ers,PHI,Eastern,Atlantic,"{""nba"":1610612755}",Xfinity Mobile Arena,39.9012,-75.1720,America/New_York
-nba-tor,NBA,Toronto Raptors,TOR,Eastern,Atlantic,"{""nba"":1610612761}",Scotiabank Arena,43.6435,-79.3791,America/Toronto
-nba-chi,NBA,Chicago Bulls,CHI,Eastern,Central,"{""nba"":1610612741}",United Center,41.8807,-87.6742,America/Chicago
-nba-cle,NBA,Cleveland Cavaliers,CLE,Eastern,Central,"{""nba"":1610612739}",Rocket Arena,41.4965,-81.6882,America/New_York
-nba-det,NBA,Detroit Pistons,DET,Eastern,Central,"{""nba"":1610612765}",Little Caesars Arena,42.3410,-83.0552,America/Detroit
-nba-ind,NBA,Indiana Pacers,IND,Eastern,Central,"{""nba"":1610612754}",Gainbridge Fieldhouse,39.7640,-86.1555,America/Indiana/Indianapolis
-nba-mil,NBA,Milwaukee Bucks,MIL,Eastern,Central,"{""nba"":1610612749}",Fiserv Forum,43.0451,-87.9172,America/Chicago
-nba-atl,NBA,Atlanta Hawks,ATL,Eastern,Southeast,"{""nba"":1610612737}",State Farm Arena,33.7573,-84.3963,America/New_York
-nba-cha,NBA,Charlotte Hornets,CHA,Eastern,Southeast,"{""nba"":1610612766}",Spectrum Center,35.2251,-80.8392,America/New_York
-nba-mia,NBA,Miami Heat,MIA,Eastern,Southeast,"{""nba"":1610612748}",Kaseya Center,25.7814,-80.1870,America/New_York
-nba-orl,NBA,Orlando Magic,ORL,Eastern,Southeast,"{""nba"":1610612753}",Kia Center,28.5392,-81.3839,America/New_York
-nba-was,NBA,Washington Wizards,WAS,Eastern,Southeast,"{""nba"":1610612764}",Capital One Arena,38.8981,-77.0209,America/New_York
-nba-den,NBA,Denver Nuggets,DEN,Western,Northwest,"{""nba"":1610612743}",Ball Arena,39.7487,-105.0077,America/Denver
-nba-min,NBA,Minnesota Timberwolves,MIN,Western,Northwest,"{""nba"":1610612750}",Target Center,44.9795,-93.2760,America/Chicago
-nba-okc,NBA,Oklahoma City Thunder,OKC,Western,Northwest,"{""nba"":1610612760}",Paycom Center,35.4634,-97.5151,America/Chicago
-nba-por,NBA,Portland Trail Blazers,POR,Western,Northwest,"{""nba"":1610612757}",Moda Center,45.5316,-122.6668,America/Los_Angeles
-nba-uta,NBA,Utah Jazz,UTA,Western,Northwest,"{""nba"":1610612762}",Delta Center,40.7683,-111.9011,America/Denver
-nba-gsw,NBA,Golden State Warriors,GSW,Western,Pacific,"{""nba"":1610612744}",Chase Center,37.7680,-122.3877,America/Los_Angeles
-nba-lac,NBA,LA Clippers,LAC,Western,Pacific,"{""nba"":1610612746}",Intuit Dome,33.9447,-118.3416,America/Los_Angeles
-nba-lal,NBA,Los Angeles Lakers,LAL,Western,Pacific,"{""nba"":1610612747}",Crypto.com Arena,34.0430,-118.2673,America/Los_Angeles
-nba-phx,NBA,Phoenix Suns,PHX,Western,Pacific,"{""nba"":1610612756}",Mortgage Matchup Center,33.4457,-112.0712,America/Phoenix
-nba-sac,NBA,Sacramento Kings,SAC,Western,Pacific,"{""nba"":1610612758}",Golden 1 Center,38.5802,-121.4997,America/Los_Angeles
-nba-dal,NBA,Dallas Mavericks,DAL,Western,Southwest,"{""nba"":1610612742}",American Airlines Center,32.7905,-96.8103,America/Chicago
-nba-hou,NBA,Houston Rockets,HOU,Western,Southwest,"{""nba"":1610612745}",Toyota Center,29.7508,-95.3621,America/Chicago
-nba-mem,NBA,Memphis Grizzlies,MEM,Western,Southwest,"{""nba"":1610612763}",FedExForum,35.1382,-90.0506,America/Chicago
-nba-nop,NBA,New Orleans Pelicans,NOP,Western,Southwest,"{""nba"":1610612740}",Smoothie King Center,29.9490,-90.0821,America/Chicago
-nba-sas,NBA,San Antonio Spurs,SAS,Western,Southwest,"{""nba"":1610612759}",Frost Bank Center,29.4270,-98.4375,America/Chicago
-mlb-bal,MLB,Baltimore Orioles,BAL,AL,East,"{""mlb"":110}",Oriole Park at Camden Yards,39.2839,-76.6217,America/New_York
-mlb-bos,MLB,Boston Red Sox,BOS,AL,East,"{""mlb"":111}",Fenway Park,42.3467,-71.0972,America/New_York
-mlb-nyy,MLB,New York Yankees,NYY,AL,East,"{""mlb"":147}",Yankee Stadium,40.8296,-73.9262,America/New_York
-mlb-tb,MLB,Tampa Bay Rays,TB,AL,East,"{""mlb"":139}",Tropicana Field,27.7683,-82.6534,America/New_York
-mlb-tor,MLB,Toronto Blue Jays,TOR,AL,East,"{""mlb"":141}",Rogers Centre,43.6414,-79.3894,America/Toronto
-mlb-cws,MLB,Chicago White Sox,CWS,AL,Central,"{""mlb"":145}",Rate Field,41.8299,-87.6338,America/Chicago
-mlb-cle,MLB,Cleveland Guardians,CLE,AL,Central,"{""mlb"":114}",Progressive Field,41.4962,-81.6852,America/New_York
-mlb-det,MLB,Detroit Tigers,DET,AL,Central,"{""mlb"":116}",Comerica Park,42.3390,-83.0485,America/Detroit
-mlb-kc,MLB,Kansas City Royals,KC,AL,Central,"{""mlb"":118}",Kauffman Stadium,39.0517,-94.4803,America/Chicago
-mlb-min,MLB,Minnesota Twins,MIN,AL,Central,"{""mlb"":142}",Target Field,44.9817,-93.2776,America/Chicago
-mlb-ath,MLB,Athletics,ATH,AL,West,"{""mlb"":133}",Sutter Health Park,38.5804,-121.5133,America/Los_Angeles
-mlb-hou,MLB,Houston Astros,HOU,AL,West,"{""mlb"":117}",Daikin Park,29.7573,-95.3555,America/Chicago
-mlb-laa,MLB,Los Angeles Angels,LAA,AL,West,"{""mlb"":108}",Angel Stadium,33.8003,-117.8827,America/Los_Angeles
-mlb-sea,MLB,Seattle Mariners,SEA,AL,West,"{""mlb"":136}",T-Mobile Park,47.5914,-122.3325,America/Los_Angeles
-mlb-tex,MLB,Texas Rangers,TEX,AL,West,"{""mlb"":140}",Globe Life Field,32.7473,-97.0842,America/Chicago
-mlb-atl,MLB,Atlanta Braves,ATL,NL,East,"{""mlb"":144}",Truist Park,33.8907,-84.4677,America/New_York
-mlb-mia,MLB,Miami Marlins,MIA,NL,East,"{""mlb"":146}",loanDepot park,25.7781,-80.2196,America/New_York
-mlb-nym,MLB,New York Mets,NYM,NL,East,"{""mlb"":121}",Citi Field,40.7571,-73.8458,America/New_York
-mlb-phi,MLB,Philadelphia Phillies,PHI,NL,East,"{""mlb"":143}",Citizens Bank Park,39.9061,-75.1665,America/New_York
-mlb-wsh,MLB,Washington Nationals,WSH,NL,East,"{""mlb"":120}",Nationals Park,38.8730,-77.0074,America/New_York
-mlb-chc,MLB,Chicago Cubs,CHC,NL,Central,"{""mlb"":112}",Wrigley Field,41.9484,-87.6553,America/Chicago
-mlb-cin,MLB,Cincinnati Reds,CIN,NL,Central,"{""mlb"":113}",Great American Ball Park,39.0975,-84.5066,America/New_York
-mlb-mil,MLB,Milwaukee Brewers,MIL,NL,Central,"{""mlb"":158}",American Family Field,43.0280,-87.9712,America/Chicago
-mlb-pit,MLB,Pittsburgh Pirates,PIT,NL,Central,"{""mlb"":134}",PNC Park,40.4469,-80.0057,America/New_York
-mlb-stl,MLB,St. Louis Cardinals,STL,NL,Central,"{""mlb"":138}",Busch Stadium,38.6226,-90.1928,America/Chicago
-mlb-ari,MLB,Arizona Diamondbacks,ARI,NL,West,"{""mlb"":109}",Chase Field,33.4453,-112.0667,America/Phoenix
-mlb-col,MLB,Colorado Rockies,COL,NL,West,"{""mlb"":115}",Coors Field,39.7559,-104.9942,America/Denver
-mlb-lad,MLB,Los Angeles Dodgers,LAD,NL,West,"{""mlb"":119}",Dodger Stadium,34.0739,-118.2400,America/Los_Angeles
-mlb-sd,MLB,San Diego Padres,SD,NL,West,"{""mlb"":135}",Petco Park,32.7073,-117.1566,America/Los_Angeles
-mlb-sf,MLB,San Francisco Giants,SF,NL,West,"{""mlb"":137}",Oracle Park,37.7786,-122.3893,America/Los_Angeles
-nhl-bos,NHL,Boston Bruins,BOS,Eastern,Atlantic,"{""nhl"":6}",TD Garden,42.3662,-71.0621,America/New_York
-nhl-buf,NHL,Buffalo Sabres,BUF,Eastern,Atlantic,"{""nhl"":7}",KeyBank Center,42.8750,-78.8765,America/New_York
-nhl-det,NHL,Detroit Red Wings,DET,Eastern,Atlantic,"{""nhl"":17}",Little Caesars Arena,42.3410,-83.0552,America/Detroit
-nhl-fla,NHL,Florida Panthers,FLA,Eastern,Atlantic,"{""nhl"":13}",Amerant Bank Arena,26.1585,-80.3255,America/New_York
-nhl-mtl,NHL,Montreal Canadiens,MTL,Eastern,Atlantic,"{""nhl"":8}",Bell Centre,45.4961,-73.5693,America/Toronto
-nhl-ott,NHL,Ottawa Senators,OTT,Eastern,Atlantic,"{""nhl"":9}",Canadian Tire Centre,45.2969,-75.9273,America/Toronto
-nhl-tbl,NHL,Tampa Bay Lightning,TBL,Eastern,Atlantic,"{""nhl"":14}",Amalie Arena,27.9427,-82.4518,America/New_York
-nhl-tor,NHL,Toronto Maple Leafs,TOR,Eastern,Atlantic,"{""nhl"":10}",Scotiabank Arena,43.6435,-79.3791,America/Toronto
-nhl-car,NHL,Carolina Hurricanes,CAR,Eastern,Metropolitan,"{""nhl"":12}",Lenovo Center,35.8033,-78.7219,America/New_York
-nhl-cbj,NHL,Columbus Blue Jackets,CBJ,Eastern,Metropolitan,"{""nhl"":29}",Nationwide Arena,39.9694,-83.0061,America/New_York
-nhl-njd,NHL,New Jersey Devils,NJD,Eastern,Metropolitan,"{""nhl"":1}",Prudential Center,40.7336,-74.1711,America/New_York
-nhl-nyi,NHL,New York Islanders,NYI,Eastern,Metropolitan,"{""nhl"":2}",UBS Arena,40.7122,-73.7273,America/New_York
-nhl-nyr,NHL,New York Rangers,NYR,Eastern,Metropolitan,"{""nhl"":3}",Madison Square Garden,40.7505,-73.9934,America/New_York
-nhl-phi,NHL,Philadelphia Flyers,PHI,Eastern,Metropolitan,"{""nhl"":4}",Xfinity Mobile Arena,39.9012,-75.1720,America/New_York
-nhl-pit,NHL,Pittsburgh Penguins,PIT,Eastern,Metropolitan,"{""nhl"":5}",PPG Paints Arena,40.4395,-79.9896,America/New_York
-nhl-wsh,NHL,Washington Capitals,WSH,Eastern,Metropolitan,"{""nhl"":15}",Capital One Arena,38.8981,-77.0209,America/New_York
-nhl-chi,NHL,Chicago Blackhawks,CHI,Western,Central,"{""nhl"":16}",United Center,41.8807,-87.6742,America/Chicago
-nhl-col,NHL,Colorado Avalanche,COL,Western,Central,"{""nhl"":21}",Ball Arena,39.7487,-105.0077,America/Denver
-nhl-dal,NHL,Dallas Stars,DAL,Western,Central,"{""nhl"":25}",American Airlines Center,32.7905,-96.8103,America/Chicago
-nhl-min,NHL,Minnesota Wild,MIN,Western,Central,"{""nhl"":30}",Grand Casino Arena,44.9447,-93.1011,America/Chicago
-nhl-nsh,NHL,Nashville Predators,NSH,Western,Central,"{""nhl"":18}",Bridgestone Arena,36.1593,-86.7785,America/Chicago
-nhl-stl,NHL,St. Louis Blues,STL,Western,Central,"{""nhl"":19}",Enterprise Center,38.6268,-90.2027,America/Chicago
-nhl-uta,NHL,Utah Mammoth,UTA,Western,Central,"{""nhl"":59}",Delta Center,40.7683,-111.9011,America/Denver
-nhl-wpg,NHL,Winnipeg Jets,WPG,Western,Central,"{""nhl"":52}",Canada Life Centre,49.8928,-97.1436,America/Winnipeg
-nhl-ana,NHL,Anaheim Ducks,ANA,Western,Pacific,"{""nhl"":24}",Honda Center,33.8078,-117.8766,America/Los_Angeles
-nhl-cgy,NHL,Calgary Flames,CGY,Western,Pacific,"{""nhl"":20}",Scotiabank Saddledome,51.0374,-114.0519,America/Edmonton
-nhl-edm,NHL,Edmonton Oilers,EDM,Western,Pacific,"{""nhl"":22}",Rogers Place,53.5469,-113.4979,America/Edmonton
-nhl-lak,NHL,Los Angeles Kings,LAK,Western,Pacific,"{""nhl"":26}",Crypto.com Arena,34.0430,-118.2673,America/Los_Angeles
-nhl-sjs,NHL,San Jose Sharks,SJS,Western,Pacific,"{""nhl"":28}",SAP Center,37.3327,-121.9012,America/Los_Angeles
-nhl-sea,NHL,Seattle Kraken,SEA,Western,Pacific,"{""nhl"":55}",Climate Pledge Arena,47.6221,-122.3540,America/Los_Angeles
-nhl-van,NHL,Vancouver Canucks,VAN,Western,Pacific,"{""nhl"":23}",Rogers Arena,49.2778,-123.1089,America/Vancouver
-nhl-vgk,NHL,Vegas Golden Knights,VGK,Western,Pacific,"{""nhl"":54}",T-Mobile Arena,36.1029,-115.1784,America/Los_Angeles
-wnba-atl,WNBA,Atlanta Dream,ATL,Eastern,,{},Gateway Center Arena,33.6300,-84.4580,America/New_York
-wnba-chi,WNBA,Chicago Sky,CHI,Eastern,,{},Wintrust Arena,41.8531,-87.6190,America/Chicago
-wnba-con,WNBA,Connecticut Sun,CON,Eastern,,{},Mohegan Sun Arena,41.4912,-72.0910,America/New_York
-wnba-ind,WNBA,Indiana Fever,IND,Eastern,,{},Gainbridge Fieldhouse,39.7640,-86.1555,America/Indiana/Indianapolis
-wnba-nyl,WNBA,New York Liberty,NYL,Eastern,,{},Barclays Center,40.6826,-73.9754,America/New_York
-wnba-tor,WNBA,Toronto Tempo,TOR,Eastern,,{},Coca-Cola Coliseum,43.6353,-79.4184,America/Toronto
-wnba-was,WNBA,Washington Mystics,WAS,Eastern,,{},CareFirst Arena,38.8671,-76.9953,America/New_York
-wnba-dal,WNBA,Dallas Wings,DAL,Western,,{},College Park Center,32.7300,-97.1081,America/Chicago
-wnba-gsv,WNBA,Golden State Valkyries,GSV,Western,,{},Chase Center,37.7680,-122.3877,America/Los_Angeles
-wnba-lva,WNBA,Las Vegas Aces,LVA,Western,,{},Michelob Ultra Arena,36.0919,-115.1761,America/Los_Angeles
-wnba-las,WNBA,Los Angeles Sparks,LAS,Western,,{},Crypto.com Arena,34.0430,-118.2673,America/Los_Angeles
-wnba-min,WNBA,Minnesota Lynx,MIN,Western,,{},Target Center,44.9795,-93.2760,America/Chicago
-wnba-phx,WNBA,Phoenix Mercury,PHX,Western,,{},Mortgage Matchup Center,33.4457,-112.0712,America/Phoenix
-wnba-por,WNBA,Portland Fire,POR,Western,,{},Moda Center,45.5316,-122.6668,America/Los_Angeles
-wnba-sea,WNBA,Seattle Storm,SEA,Western,,{},Climate Pledge Arena,47.6221,-122.3540,America/Los_Angeles
-cfb-alabama,CFB,Alabama Crimson Tide,ALA,SEC,,{},Bryant-Denny Stadium,33.2083,-87.5504,America/Chicago
-cfb-arkansas,CFB,Arkansas Razorbacks,ARK,SEC,,{},Donald W. Reynolds Razorback Stadium,36.0680,-94.1789,America/Chicago
-cfb-auburn,CFB,Auburn Tigers,AUB,SEC,,{},Jordan-Hare Stadium,32.6025,-85.4890,America/Chicago
-cfb-florida,CFB,Florida Gators,FLA,SEC,,{},Ben Hill Griffin Stadium,29.6500,-82.3487,America/New_York
-cfb-georgia,CFB,Georgia Bulldogs,UGA,SEC,,{},Sanford Stadium,33.9497,-83.3733,America/New_York
-cfb-kentucky,CFB,Kentucky Wildcats,UK,SEC,,{},Kroger Field,38.0220,-84.5053,America/New_York
-cfb-lsu,CFB,LSU Tigers,LSU,SEC,,{},Tiger Stadium,30.4118,-91.1836,America/Chicago
-cfb-mississippi-state,CFB,Mississippi State Bulldogs,MSST,SEC,,{},Davis Wade Stadium,33.4564,-88.7935,America/Chicago
-cfb-missouri,CFB,Missouri Tigers,MIZ,SEC,,{},Faurot Field at Memorial Stadium,38.9360,-92.3331,America/Chicago
-cfb-oklahoma,CFB,Oklahoma Sooners,OU,SEC,,{},Gaylord Family Oklahoma Memorial Stadium,35.2059,-97.4422,America/Chicago
-cfb-ole-miss,CFB,Ole Miss Rebels,MISS,SEC,,{},Vaught-Hemingway Stadium,34.3620,-89.5340,America/Chicago
-cfb-south-carolina,CFB,South Carolina Gamecocks,SCAR,SEC,,{},Williams-Brice Stadium,33.9730,-81.0190,America/New_York
-cfb-tennessee,CFB,Tennessee Volunteers,TENN,SEC,,{},Neyland Stadium,35.9550,-83.9250,America/New_York
-cfb-texas,CFB,Texas Longhorns,TEX,SEC,,{},Darrell K Royal-Texas Memorial Stadium,30.2837,-97.7324,America/Chicago
-cfb-texas-am,CFB,Texas A&M Aggies,TAMU,SEC,,{},Kyle Field,30.6100,-96.3400,America/Chicago
-cfb-vanderbilt,CFB,Vanderbilt Commodores,VAN,SEC,,{},FirstBank Stadium,36.1440,-86.8090,America/Chicago
-cfb-illinois,CFB,Illinois Fighting Illini,ILL,Big Ten,,{},Memorial Stadium,40.0992,-88.2358,America/Chicago
-cfb-indiana,CFB,Indiana Hoosiers,IU,Big Ten,,{},Memorial Stadium,39.1810,-86.5260,America/Indiana/Indianapolis
-cfb-iowa,CFB,Iowa Hawkeyes,IOWA,Big Ten,,{},Kinnick Stadium,41.6586,-91.5511,America/Chicago
-cfb-maryland,CFB,Maryland Terrapins,MD,Big Ten,,{},SECU Stadium,38.9903,-76.9474,America/New_York
-cfb-michigan,CFB,Michigan Wolverines,MICH,Big Ten,,{},Michigan Stadium,42.2658,-83.7487,America/Detroit
-cfb-michigan-state,CFB,Michigan State Spartans,MSU,Big Ten,,{},Spartan Stadium,42.7281,-84.4848,America/Detroit
-cfb-minnesota,CFB,Minnesota Golden Gophers,MINN,Big Ten,,{},Huntington Bank Stadium,44.9765,-93.2245,America/Chicago
-cfb-nebraska,CFB,Nebraska Cornhuskers,NEB,Big Ten,,{},Memorial Stadium,40.8206,-96.7056,America/Chicago
-cfb-northwestern,CFB,Northwestern Wildcats,NW,Big Ten,,{},Ryan Field,42.0655,-87.6924,America/Chicago
-cfb-ohio-state,CFB,Ohio State Buckeyes,OSU,Big Ten,,{},Ohio Stadium,40.0017,-83.0197,America/New_York
-cfb-oregon,CFB,Oregon Ducks,ORE,Big Ten,,{},Autzen Stadium,44.0583,-123.0684,America/Los_Angeles
-cfb-penn-state,CFB,Penn State Nittany Lions,PSU,Big Ten,,{},Beaver Stadium,40.8122,-77.8560,America/New_York
-cfb-purdue,CFB,Purdue Boilermakers,PUR,Big Ten,,{},Ross-Ade Stadium,40.4353,-86.9188,America/Indiana/Indianapolis
-cfb-rutgers,CFB,Rutgers Scarlet Knights,RUTG,Big Ten,,{},SHI Stadium,40.5140,-74.4648,America/New_York
-cfb-ucla,CFB,UCLA Bruins,UCLA,Big Ten,,{},Rose Bowl,34.1613,-118.1676,America/Los_Angeles
-cfb-usc,CFB,USC Trojans,USC,Big Ten,,{},Los Angeles Memorial Coliseum,34.0141,-118.2879,America/Los_Angeles
-cfb-washington,CFB,Washington Huskies,WASH,Big Ten,,{},Husky Stadium,47.6503,-122.3016,America/Los_Angeles
-cfb-wisconsin,CFB,Wisconsin Badgers,WIS,Big Ten,,{},Camp Randall Stadium,43.0700,-89.4127,America/Chicago
-cfb-boston-college,CFB,Boston College Eagles,BC,ACC,,{},Alumni Stadium,42.3350,-71.1665,America/New_York
-cfb-california,CFB,California Golden Bears,CAL,ACC,,{},California Memorial Stadium,37.8712,-122.2508,America/Los_Angeles
-cfb-clemson,CFB,Clemson Tigers,CLEM,ACC,,{},Memorial Stadium,34.6786,-82.8432,America/New_York
-cfb-duke,CFB,Duke Blue Devils,DUKE,ACC,,{},Wallace Wade Stadium,35.9952,-78.9421,America/New_York
-cfb-florida-state,CFB,Florida State Seminoles,FSU,ACC,,{},Doak Campbell Stadium,30.4382,-84.3044,America/New_York
-cfb-georgia-tech,CFB,Georgia Tech Yellow Jackets,GT,ACC,,{},Bobby Dodd Stadium,33.7725,-84.3928,America/New_York
-cfb-louisville,CFB,Louisville Cardinals,LOU,ACC,,{},L&N Federal Credit Union Stadium,38.2058,-85.7585,America/Kentucky/Louisville
-cfb-miami,CFB,Miami Hurricanes,MIA,ACC,,{},Hard Rock Stadium,25.9580,-80.2389,America/New_York
-cfb-nc-state,CFB,NC State Wolfpack,NCST,ACC,,{},Carter-Finley Stadium,35.8003,-78.7190,America/New_York
-cfb-north-carolina,CFB,North Carolina Tar Heels,UNC,ACC,,{},Kenan Memorial Stadium,35.9070,-79.0479,America/New_York
-cfb-pittsburgh,CFB,Pittsburgh Panthers,PITT,ACC,,{},Acrisure Stadium,40.4468,-80.0158,America/New_York
-cfb-smu,CFB,SMU Mustangs,SMU,ACC,,{},Gerald J. Ford Stadium,32.8360,-96.7844,America/Chicago
-cfb-stanford,CFB,Stanford Cardinal,STAN,ACC,,{},Stanford Stadium,37.4344,-122.1610,America/Los_Angeles
-cfb-syracuse,CFB,Syracuse Orange,SYR,ACC,,{},JMA Wireless Dome,43.0361,-76.1363,America/New_York
-cfb-virginia,CFB,Virginia Cavaliers,UVA,ACC,,{},Scott Stadium,38.0312,-78.5138,America/New_York
-cfb-virginia-tech,CFB,Virginia Tech Hokies,VT,ACC,,{},Lane Stadium,37.2200,-80.4181,America/New_York
-cfb-wake-forest,CFB,Wake Forest Demon Deacons,WAKE,ACC,,{},Allegacy Federal Credit Union Stadium,36.1305,-80.2554,America/New_York
-cfb-arizona,CFB,Arizona Wildcats,ARIZ,Big 12,,{},Arizona Stadium,32.2288,-110.9488,America/Phoenix
-cfb-arizona-state,CFB,Arizona State Sun Devils,ASU,Big 12,,{},Mountain America Stadium,33.4264,-111.9325,America/Phoenix
-cfb-baylor,CFB,Baylor Bears,BAY,Big 12,,{},McLane Stadium,31.5588,-97.1155,America/Chicago
-cfb-byu,CFB,BYU Cougars,BYU,Big 12,,{},LaVell Edwards Stadium,40.2582,-111.6544,America/Denver
-cfb-cincinnati,CFB,Cincinnati Bearcats,CIN,Big 12,,{},Nippert Stadium,39.1312,-84.5163,America/New_York
-cfb-colorado,CFB,Colorado Buffaloes,COLO,Big 12,,{},Folsom Field,40.0094,-105.2669,America/Denver
-cfb-houston,CFB,Houston Cougars,HOU,Big 12,,{},TDECU Stadium,29.7222,-95.3494,America/Chicago
-cfb-iowa-state,CFB,Iowa State Cyclones,ISU,Big 12,,{},Jack Trice Stadium,42.0140,-93.6357,America/Chicago
-cfb-kansas,CFB,Kansas Jayhawks,KU,Big 12,,{},David Booth Kansas Memorial Stadium,38.9628,-95.2467,America/Chicago
-cfb-kansas-state,CFB,Kansas State Wildcats,KSU,Big 12,,{},Bill Snyder Family Stadium,39.2020,-96.5939,America/Chicago
-cfb-oklahoma-state,CFB,Oklahoma State Cowboys,OKST,Big 12,,{},Boone Pickens Stadium,36.1257,-97.0665,America/Chicago
-cfb-tcu,CFB,TCU Horned Frogs,TCU,Big 12,,{},Amon G. Carter Stadium,32.7100,-97.3680,America/Chicago
-cfb-texas-tech,CFB,Texas Tech Red Raiders,TTU,Big 12,,{},Jones AT&T Stadium,33.5910,-101.8727,America/Chicago
-cfb-ucf,CFB,UCF Knights,UCF,Big 12,,{},FBC Mortgage Stadium,28.6082,-81.1926,America/New_York
-cfb-utah,CFB,Utah Utes,UTAH,Big 12,,{},Rice-Eccles Stadium,40.7601,-111.8489,America/Denver
-cfb-west-virginia,CFB,West Virginia Mountaineers,WVU,Big 12,,{},Milan Puskar Stadium,39.6489,-79.9545,America/New_York
-cfb-boise-state,CFB,Boise State Broncos,BSU,Pac-12,,{},Albertsons Stadium,43.6028,-116.1957,America/Boise
-cfb-colorado-state,CFB,Colorado State Rams,CSU,Pac-12,,{},Canvas Stadium,40.5679,-105.0888,America/Denver
-cfb-fresno-state,CFB,Fresno State Bulldogs,FRES,Pac-12,,{},Valley Children's Stadium,36.8130,-119.7590,America/Los_Angeles
-cfb-oregon-state,CFB,Oregon State Beavers,ORST,Pac-12,,{},Reser Stadium,44.5596,-123.2814,America/Los_Angeles
-cfb-san-diego-state,CFB,San Diego State Aztecs,SDSU,Pac-12,,{},Snapdragon Stadium,32.7831,-117.1196,America/Los_Angeles
-cfb-texas-state,CFB,Texas State Bobcats,TXST,Pac-12,,{},UFCU Stadium,29.8900,-97.9250,America/Chicago
-cfb-utah-state,CFB,Utah State Aggies,USU,Pac-12,,{},Maverik Stadium,41.7513,-111.8122,America/Denver
-cfb-washington-state,CFB,Washington State Cougars,WSU,Pac-12,,{},Martin Stadium,46.7320,-117.1600,America/Los_Angeles
-cfb-air-force,CFB,Air Force Falcons,AFA,Mountain West,,{},Falcon Stadium,38.9970,-104.8436,America/Denver
-cfb-hawaii,CFB,Hawai'i Rainbow Warriors,HAW,Mountain West,,{},Clarence T.C. Ching Athletics Complex,21.2970,-157.8170,Pacific/Honolulu
-cfb-nevada,CFB,Nevada Wolf Pack,NEV,Mountain West,,{},Mackay Stadium,39.5470,-119.8180,America/Los_Angeles
-cfb-new-mexico,CFB,New Mexico Lobos,UNM,Mountain West,,{},University Stadium,35.0670,-106.6280,America/Denver
-cfb-northern-illinois,CFB,Northern Illinois Huskies,NIU,Mountain West,,{},Huskie Stadium,41.9340,-88.7780,America/Chicago
-cfb-san-jose-state,CFB,San Jose State Spartans,SJSU,Mountain West,,{},CEFCU Stadium,37.3200,-121.8680,America/Los_Angeles
-cfb-unlv,CFB,UNLV Rebels,UNLV,Mountain West,,{},Allegiant Stadium,36.0909,-115.1833,America/Los_Angeles
-cfb-utep,CFB,UTEP Miners,UTEP,Mountain West,,{},Sun Bowl,31.7740,-106.5100,America/Denver
-cfb-wyoming,CFB,Wyoming Cowboys,WYO,Mountain West,,{},War Memorial Stadium,41.3110,-105.5690,America/Denver
-cfb-army,CFB,Army Black Knights,ARMY,American,,{},Michie Stadium,41.3890,-73.9640,America/New_York
-cfb-charlotte,CFB,Charlotte 49ers,CLT,American,,{},Jerry Richardson Stadium,35.3100,-80.7400,America/New_York
-cfb-east-carolina,CFB,East Carolina Pirates,ECU,American,,{},Dowdy-Ficklen Stadium,35.5960,-77.3650,America/New_York
-cfb-florida-atlantic,CFB,Florida Atlantic Owls,FAU,American,,{},FAU Stadium,26.3750,-80.1010,America/New_York
-cfb-memphis,CFB,Memphis Tigers,MEM,American,,{},Simmons Bank Liberty Stadium,35.1210,-89.9770,America/Chicago
-cfb-navy,CFB,Navy Midshipmen,NAVY,American,,{},Navy-Marine Corps Memorial Stadium,38.9850,-76.5070,America/New_York
-cfb-north-texas,CFB,North Texas Mean Green,UNT,American,,{},DATCU Stadium,33.2040,-97.1590,America/Chicago
-cfb-rice,CFB,Rice Owls,RICE,American,,{},Rice Stadium,29.7160,-95.4090,America/Chicago
-cfb-south-florida,CFB,South Florida Bulls,USF,American,,{},Raymond James Stadium,27.9759,-82.5033,America/New_York
-cfb-temple,CFB,Temple Owls,TEM,American,,{},Lincoln Financial Field,39.9008,-75.1675,America/New_York
-cfb-tulane,CFB,Tulane Green Wave,TULN,American,,{},Yulman Stadium,29.9450,-90.1170,America/Chicago
-cfb-tulsa,CFB,Tulsa Golden Hurricane,TLSA,American,,{},H.A. Chapman Stadium,36.1460,-95.9450,America/Chicago
-cfb-uab,CFB,UAB Blazers,UAB,American,,{},Protective Stadium,33.5310,-86.8020,America/Chicago
-cfb-utsa,CFB,UTSA Roadrunners,UTSA,American,,{},Alamodome,29.4170,-98.4790,America/Chicago
-cfb-delaware,CFB,Delaware Blue Hens,DEL,Conference USA,,{},Delaware Stadium,39.6600,-75.7470,America/New_York
-cfb-fiu,CFB,FIU Panthers,FIU,Conference USA,,{},Pitbull Stadium,25.7520,-80.3770,America/New_York
-cfb-jacksonville-state,CFB,Jacksonville State Gamecocks,JVST,Conference USA,,{},AmFirst Stadium at Burgess-Snow Field,33.8200,-85.7660,America/Chicago
-cfb-kennesaw-state,CFB,Kennesaw State Owls,KENN,Conference USA,,{},Fifth Third Stadium,34.0290,-84.5660,America/New_York
-cfb-liberty,CFB,Liberty Flames,LIB,Conference USA,,{},Williams Stadium,37.3520,-79.1710,America/New_York
-cfb-louisiana-tech,CFB,Louisiana Tech Bulldogs,LT,Conference USA,,{},Joe Aillet Stadium,32.5360,-92.6560,America/Chicago
-cfb-middle-tennessee,CFB,Middle Tennessee Blue Raiders,MTSU,Conference USA,,{},Johnny 'Red' Floyd Stadium,35.8510,-86.3680,America/Chicago
-cfb-missouri-state,CFB,Missouri State Bears,MOST,Conference USA,,{},Robert W. Plaster Stadium,37.2030,-93.2810,America/Chicago
-cfb-new-mexico-state,CFB,New Mexico State Aggies,NMSU,Conference USA,,{},Aggie Memorial Stadium,32.2790,-106.7440,America/Denver
-cfb-sam-houston,CFB,Sam Houston Bearkats,SHSU,Conference USA,,{},Bowers Stadium,30.7180,-95.5480,America/Chicago
-cfb-western-kentucky,CFB,Western Kentucky Hilltoppers,WKU,Conference USA,,{},Houchens Industries-L.T. Smith Stadium,36.9840,-86.4590,America/Chicago
-cfb-akron,CFB,Akron Zips,AKR,MAC,,{},InfoCision Stadium,41.0720,-81.5080,America/New_York
-cfb-ball-state,CFB,Ball State Cardinals,BALL,MAC,,{},Scheumann Stadium,40.2170,-85.4160,America/Indiana/Indianapolis
-cfb-bowling-green,CFB,Bowling Green Falcons,BGSU,MAC,,{},Doyt Perry Stadium,41.3770,-83.6260,America/New_York
-cfb-buffalo,CFB,Buffalo Bulls,BUFF,MAC,,{},UB Stadium,43.0000,-78.7800,America/New_York
-cfb-central-michigan,CFB,Central Michigan Chippewas,CMU,MAC,,{},Kelly/Shorts Stadium,43.5730,-84.7840,America/Detroit
-cfb-eastern-michigan,CFB,Eastern Michigan Eagles,EMU,MAC,,{},Rynearson Stadium,42.2460,-83.6280,America/Detroit
-cfb-kent-state,CFB,Kent State Golden Flashes,KENT,MAC,,{},Dix Stadium,41.1390,-81.3310,America/New_York
-cfb-miami-oh,CFB,Miami (OH) RedHawks,M-OH,MAC,,{},Yager Stadium,39.5170,-84.7350,America/New_York
-cfb-ohio,CFB,Ohio Bobcats,OHIO,MAC,,{},Peden Stadium,39.3200,-82.1060,America/New_York
-cfb-toledo,CFB,Toledo Rockets,TOL,MAC,,{},Glass Bowl,41.6570,-83.6130,America/New_York
-cfb-umass,CFB,UMass Minutemen,MASS,MAC,,{},Warren McGuirk Alumni Stadium,42.3770,-72.5360,America/New_York
-cfb-western-michigan,CFB,Western Michigan Broncos,WMU,MAC,,{},Waldo Stadium,42.2850,-85.6010,America/Detroit
-cfb-appalachian-state,CFB,Appalachian State Mountaineers,APP,Sun Belt,,{},Kidd Brewer Stadium,36.2110,-81.6850,America/New_York
-cfb-arkansas-state,CFB,Arkansas State Red Wolves,ARST,Sun Belt,,{},Centennial Bank Stadium,35.8490,-90.6670,America/Chicago
-cfb-coastal-carolina,CFB,Coastal Carolina Chanticleers,CCU,Sun Belt,,{},Brooks Stadium,33.7930,-79.0120,America/New_York
-cfb-georgia-southern,CFB,Georgia Southern Eagles,GASO,Sun Belt,,{},Paulson Stadium,32.4120,-81.7840,America/New_York
-cfb-georgia-state,CFB,Georgia State Panthers,GAST,Sun Belt,,{},Center Parc Stadium,33.7350,-84.3890,America/New_York
-cfb-james-madison,CFB,James Madison Dukes,JMU,Sun Belt,,{},Bridgeforth Stadium,38.4350,-78.8700,America/New_York
-cfb-louisiana,CFB,Louisiana Ragin' Cajuns,ULL,Sun Belt,,{},Cajun Field,30.2160,-92.0420,America/Chicago
-cfb-ul-monroe,CFB,UL Monroe Warhawks,ULM,Sun Belt,,{},Malone Stadium,32.5310,-92.0660,America/Chicago
-cfb-marshall,CFB,Marshall Thundering Herd,MRSH,Sun Belt,,{},Joan C. Edwards Stadium,38.4240,-82.4260,America/New_York
-cfb-old-dominion,CFB,Old Dominion Monarchs,ODU,Sun Belt,,{},S.B. Ballard Stadium,36.8860,-76.3060,America/New_York
-cfb-south-alabama,CFB,South Alabama Jaguars,USA,Sun Belt,,{},Hancock Whitney Stadium,30.6990,-88.1830,America/Chicago
-cfb-southern-miss,CFB,Southern Miss Golden Eagles,USM,Sun Belt,,{},M.M. Roberts Stadium,31.3280,-89.3330,America/Chicago
-cfb-troy,CFB,Troy Trojans,TROY,Sun Belt,,{},Veterans Memorial Stadium,31.8000,-85.9550,America/Chicago
-cfb-notre-dame,CFB,Notre Dame Fighting Irish,ND,FBS Independent,,{},Notre Dame Stadium,41.6980,-86.2340,America/Indiana/Indianapolis
-cfb-uconn,CFB,UConn Huskies,CONN,FBS Independent,,{},Pratt & Whitney Stadium at Rentschler Field,41.7600,-72.6520,America/New_York
+team_id,sport,name,abbrev,conference,division,external_ids,venue_name,venue_lat,venue_lon,timezone,active
+nfl-buf,NFL,Buffalo Bills,BUF,AFC,East,"{""espn"":2}",Highmark Stadium,42.7738,-78.7870,America/New_York,1
+nfl-mia,NFL,Miami Dolphins,MIA,AFC,East,"{""espn"":15}",Hard Rock Stadium,25.9580,-80.2389,America/New_York,1
+nfl-ne,NFL,New England Patriots,NE,AFC,East,"{""espn"":17}",Gillette Stadium,42.0909,-71.2643,America/New_York,1
+nfl-nyj,NFL,New York Jets,NYJ,AFC,East,"{""espn"":20}",MetLife Stadium,40.8135,-74.0745,America/New_York,1
+nfl-bal,NFL,Baltimore Ravens,BAL,AFC,North,"{""espn"":33}",M&T Bank Stadium,39.2780,-76.6227,America/New_York,1
+nfl-cin,NFL,Cincinnati Bengals,CIN,AFC,North,"{""espn"":4}",Paycor Stadium,39.0955,-84.5161,America/New_York,1
+nfl-cle,NFL,Cleveland Browns,CLE,AFC,North,"{""espn"":5}",Huntington Bank Field,41.5061,-81.6995,America/New_York,1
+nfl-pit,NFL,Pittsburgh Steelers,PIT,AFC,North,"{""espn"":23}",Acrisure Stadium,40.4468,-80.0158,America/New_York,1
+nfl-hou,NFL,Houston Texans,HOU,AFC,South,"{""espn"":34}",NRG Stadium,29.6847,-95.4107,America/Chicago,1
+nfl-ind,NFL,Indianapolis Colts,IND,AFC,South,"{""espn"":11}",Lucas Oil Stadium,39.7601,-86.1639,America/Indiana/Indianapolis,1
+nfl-jax,NFL,Jacksonville Jaguars,JAX,AFC,South,"{""espn"":30}",EverBank Stadium,30.3239,-81.6373,America/New_York,1
+nfl-ten,NFL,Tennessee Titans,TEN,AFC,South,"{""espn"":10}",Nissan Stadium,36.1665,-86.7713,America/Chicago,1
+nfl-den,NFL,Denver Broncos,DEN,AFC,West,"{""espn"":7}",Empower Field at Mile High,39.7439,-105.0201,America/Denver,1
+nfl-kc,NFL,Kansas City Chiefs,KC,AFC,West,"{""espn"":12}",GEHA Field at Arrowhead Stadium,39.0489,-94.4839,America/Chicago,1
+nfl-lv,NFL,Las Vegas Raiders,LV,AFC,West,"{""espn"":13}",Allegiant Stadium,36.0909,-115.1833,America/Los_Angeles,1
+nfl-lac,NFL,Los Angeles Chargers,LAC,AFC,West,"{""espn"":24}",SoFi Stadium,33.9535,-118.3392,America/Los_Angeles,1
+nfl-dal,NFL,Dallas Cowboys,DAL,NFC,East,"{""espn"":6}",AT&T Stadium,32.7478,-97.0929,America/Chicago,1
+nfl-nyg,NFL,New York Giants,NYG,NFC,East,"{""espn"":19}",MetLife Stadium,40.8135,-74.0745,America/New_York,1
+nfl-phi,NFL,Philadelphia Eagles,PHI,NFC,East,"{""espn"":21}",Lincoln Financial Field,39.9008,-75.1675,America/New_York,1
+nfl-wsh,NFL,Washington Commanders,WSH,NFC,East,"{""espn"":28}",Northwest Stadium,38.9077,-76.8645,America/New_York,1
+nfl-chi,NFL,Chicago Bears,CHI,NFC,North,"{""espn"":3}",Soldier Field,41.8623,-87.6167,America/Chicago,1
+nfl-det,NFL,Detroit Lions,DET,NFC,North,"{""espn"":8}",Ford Field,42.3400,-83.0456,America/Detroit,1
+nfl-gb,NFL,Green Bay Packers,GB,NFC,North,"{""espn"":9}",Lambeau Field,44.5013,-88.0622,America/Chicago,1
+nfl-min,NFL,Minnesota Vikings,MIN,NFC,North,"{""espn"":16}",U.S. Bank Stadium,44.9738,-93.2577,America/Chicago,1
+nfl-atl,NFL,Atlanta Falcons,ATL,NFC,South,"{""espn"":1}",Mercedes-Benz Stadium,33.7554,-84.4009,America/New_York,1
+nfl-car,NFL,Carolina Panthers,CAR,NFC,South,"{""espn"":29}",Bank of America Stadium,35.2258,-80.8528,America/New_York,1
+nfl-no,NFL,New Orleans Saints,NO,NFC,South,"{""espn"":18}",Caesars Superdome,29.9511,-90.0812,America/Chicago,1
+nfl-tb,NFL,Tampa Bay Buccaneers,TB,NFC,South,"{""espn"":27}",Raymond James Stadium,27.9759,-82.5033,America/New_York,1
+nfl-ari,NFL,Arizona Cardinals,ARI,NFC,West,"{""espn"":22}",State Farm Stadium,33.5276,-112.2626,America/Phoenix,1
+nfl-lar,NFL,Los Angeles Rams,LAR,NFC,West,"{""espn"":14}",SoFi Stadium,33.9535,-118.3392,America/Los_Angeles,1
+nfl-sf,NFL,San Francisco 49ers,SF,NFC,West,"{""espn"":25}",Levi's Stadium,37.4032,-121.9698,America/Los_Angeles,1
+nfl-sea,NFL,Seattle Seahawks,SEA,NFC,West,"{""espn"":26}",Lumen Field,47.5952,-122.3316,America/Los_Angeles,1
+nba-bos,NBA,Boston Celtics,BOS,Eastern,Atlantic,"{""nba"":1610612738}",TD Garden,42.3662,-71.0621,America/New_York,1
+nba-bkn,NBA,Brooklyn Nets,BKN,Eastern,Atlantic,"{""nba"":1610612751}",Barclays Center,40.6826,-73.9754,America/New_York,1
+nba-nyk,NBA,New York Knicks,NYK,Eastern,Atlantic,"{""nba"":1610612752}",Madison Square Garden,40.7505,-73.9934,America/New_York,1
+nba-phi,NBA,Philadelphia 76ers,PHI,Eastern,Atlantic,"{""nba"":1610612755}",Xfinity Mobile Arena,39.9012,-75.1720,America/New_York,1
+nba-tor,NBA,Toronto Raptors,TOR,Eastern,Atlantic,"{""nba"":1610612761}",Scotiabank Arena,43.6435,-79.3791,America/Toronto,1
+nba-chi,NBA,Chicago Bulls,CHI,Eastern,Central,"{""nba"":1610612741}",United Center,41.8807,-87.6742,America/Chicago,1
+nba-cle,NBA,Cleveland Cavaliers,CLE,Eastern,Central,"{""nba"":1610612739}",Rocket Arena,41.4965,-81.6882,America/New_York,1
+nba-det,NBA,Detroit Pistons,DET,Eastern,Central,"{""nba"":1610612765}",Little Caesars Arena,42.3410,-83.0552,America/Detroit,1
+nba-ind,NBA,Indiana Pacers,IND,Eastern,Central,"{""nba"":1610612754}",Gainbridge Fieldhouse,39.7640,-86.1555,America/Indiana/Indianapolis,1
+nba-mil,NBA,Milwaukee Bucks,MIL,Eastern,Central,"{""nba"":1610612749}",Fiserv Forum,43.0451,-87.9172,America/Chicago,1
+nba-atl,NBA,Atlanta Hawks,ATL,Eastern,Southeast,"{""nba"":1610612737}",State Farm Arena,33.7573,-84.3963,America/New_York,1
+nba-cha,NBA,Charlotte Hornets,CHA,Eastern,Southeast,"{""nba"":1610612766}",Spectrum Center,35.2251,-80.8392,America/New_York,1
+nba-mia,NBA,Miami Heat,MIA,Eastern,Southeast,"{""nba"":1610612748}",Kaseya Center,25.7814,-80.1870,America/New_York,1
+nba-orl,NBA,Orlando Magic,ORL,Eastern,Southeast,"{""nba"":1610612753}",Kia Center,28.5392,-81.3839,America/New_York,1
+nba-was,NBA,Washington Wizards,WAS,Eastern,Southeast,"{""nba"":1610612764}",Capital One Arena,38.8981,-77.0209,America/New_York,1
+nba-den,NBA,Denver Nuggets,DEN,Western,Northwest,"{""nba"":1610612743}",Ball Arena,39.7487,-105.0077,America/Denver,1
+nba-min,NBA,Minnesota Timberwolves,MIN,Western,Northwest,"{""nba"":1610612750}",Target Center,44.9795,-93.2760,America/Chicago,1
+nba-okc,NBA,Oklahoma City Thunder,OKC,Western,Northwest,"{""nba"":1610612760}",Paycom Center,35.4634,-97.5151,America/Chicago,1
+nba-por,NBA,Portland Trail Blazers,POR,Western,Northwest,"{""nba"":1610612757}",Moda Center,45.5316,-122.6668,America/Los_Angeles,1
+nba-uta,NBA,Utah Jazz,UTA,Western,Northwest,"{""nba"":1610612762}",Delta Center,40.7683,-111.9011,America/Denver,1
+nba-gsw,NBA,Golden State Warriors,GSW,Western,Pacific,"{""nba"":1610612744}",Chase Center,37.7680,-122.3877,America/Los_Angeles,1
+nba-lac,NBA,LA Clippers,LAC,Western,Pacific,"{""nba"":1610612746}",Intuit Dome,33.9447,-118.3416,America/Los_Angeles,1
+nba-lal,NBA,Los Angeles Lakers,LAL,Western,Pacific,"{""nba"":1610612747}",Crypto.com Arena,34.0430,-118.2673,America/Los_Angeles,1
+nba-phx,NBA,Phoenix Suns,PHX,Western,Pacific,"{""nba"":1610612756}",Mortgage Matchup Center,33.4457,-112.0712,America/Phoenix,1
+nba-sac,NBA,Sacramento Kings,SAC,Western,Pacific,"{""nba"":1610612758}",Golden 1 Center,38.5802,-121.4997,America/Los_Angeles,1
+nba-dal,NBA,Dallas Mavericks,DAL,Western,Southwest,"{""nba"":1610612742}",American Airlines Center,32.7905,-96.8103,America/Chicago,1
+nba-hou,NBA,Houston Rockets,HOU,Western,Southwest,"{""nba"":1610612745}",Toyota Center,29.7508,-95.3621,America/Chicago,1
+nba-mem,NBA,Memphis Grizzlies,MEM,Western,Southwest,"{""nba"":1610612763}",FedExForum,35.1382,-90.0506,America/Chicago,1
+nba-nop,NBA,New Orleans Pelicans,NOP,Western,Southwest,"{""nba"":1610612740}",Smoothie King Center,29.9490,-90.0821,America/Chicago,1
+nba-sas,NBA,San Antonio Spurs,SAS,Western,Southwest,"{""nba"":1610612759}",Frost Bank Center,29.4270,-98.4375,America/Chicago,1
+mlb-bal,MLB,Baltimore Orioles,BAL,AL,East,"{""mlb"":110}",Oriole Park at Camden Yards,39.2839,-76.6217,America/New_York,1
+mlb-bos,MLB,Boston Red Sox,BOS,AL,East,"{""mlb"":111}",Fenway Park,42.3467,-71.0972,America/New_York,1
+mlb-nyy,MLB,New York Yankees,NYY,AL,East,"{""mlb"":147}",Yankee Stadium,40.8296,-73.9262,America/New_York,1
+mlb-tb,MLB,Tampa Bay Rays,TB,AL,East,"{""mlb"":139}",Tropicana Field,27.7683,-82.6534,America/New_York,1
+mlb-tor,MLB,Toronto Blue Jays,TOR,AL,East,"{""mlb"":141}",Rogers Centre,43.6414,-79.3894,America/Toronto,1
+mlb-cws,MLB,Chicago White Sox,CWS,AL,Central,"{""mlb"":145}",Rate Field,41.8299,-87.6338,America/Chicago,1
+mlb-cle,MLB,Cleveland Guardians,CLE,AL,Central,"{""mlb"":114}",Progressive Field,41.4962,-81.6852,America/New_York,1
+mlb-det,MLB,Detroit Tigers,DET,AL,Central,"{""mlb"":116}",Comerica Park,42.3390,-83.0485,America/Detroit,1
+mlb-kc,MLB,Kansas City Royals,KC,AL,Central,"{""mlb"":118}",Kauffman Stadium,39.0517,-94.4803,America/Chicago,1
+mlb-min,MLB,Minnesota Twins,MIN,AL,Central,"{""mlb"":142}",Target Field,44.9817,-93.2776,America/Chicago,1
+mlb-ath,MLB,Athletics,ATH,AL,West,"{""mlb"":133}",Sutter Health Park,38.5804,-121.5133,America/Los_Angeles,1
+mlb-hou,MLB,Houston Astros,HOU,AL,West,"{""mlb"":117}",Daikin Park,29.7573,-95.3555,America/Chicago,1
+mlb-laa,MLB,Los Angeles Angels,LAA,AL,West,"{""mlb"":108}",Angel Stadium,33.8003,-117.8827,America/Los_Angeles,1
+mlb-sea,MLB,Seattle Mariners,SEA,AL,West,"{""mlb"":136}",T-Mobile Park,47.5914,-122.3325,America/Los_Angeles,1
+mlb-tex,MLB,Texas Rangers,TEX,AL,West,"{""mlb"":140}",Globe Life Field,32.7473,-97.0842,America/Chicago,1
+mlb-atl,MLB,Atlanta Braves,ATL,NL,East,"{""mlb"":144}",Truist Park,33.8907,-84.4677,America/New_York,1
+mlb-mia,MLB,Miami Marlins,MIA,NL,East,"{""mlb"":146}",loanDepot park,25.7781,-80.2196,America/New_York,1
+mlb-nym,MLB,New York Mets,NYM,NL,East,"{""mlb"":121}",Citi Field,40.7571,-73.8458,America/New_York,1
+mlb-phi,MLB,Philadelphia Phillies,PHI,NL,East,"{""mlb"":143}",Citizens Bank Park,39.9061,-75.1665,America/New_York,1
+mlb-wsh,MLB,Washington Nationals,WSH,NL,East,"{""mlb"":120}",Nationals Park,38.8730,-77.0074,America/New_York,1
+mlb-chc,MLB,Chicago Cubs,CHC,NL,Central,"{""mlb"":112}",Wrigley Field,41.9484,-87.6553,America/Chicago,1
+mlb-cin,MLB,Cincinnati Reds,CIN,NL,Central,"{""mlb"":113}",Great American Ball Park,39.0975,-84.5066,America/New_York,1
+mlb-mil,MLB,Milwaukee Brewers,MIL,NL,Central,"{""mlb"":158}",American Family Field,43.0280,-87.9712,America/Chicago,1
+mlb-pit,MLB,Pittsburgh Pirates,PIT,NL,Central,"{""mlb"":134}",PNC Park,40.4469,-80.0057,America/New_York,1
+mlb-stl,MLB,St. Louis Cardinals,STL,NL,Central,"{""mlb"":138}",Busch Stadium,38.6226,-90.1928,America/Chicago,1
+mlb-ari,MLB,Arizona Diamondbacks,ARI,NL,West,"{""mlb"":109}",Chase Field,33.4453,-112.0667,America/Phoenix,1
+mlb-col,MLB,Colorado Rockies,COL,NL,West,"{""mlb"":115}",Coors Field,39.7559,-104.9942,America/Denver,1
+mlb-lad,MLB,Los Angeles Dodgers,LAD,NL,West,"{""mlb"":119}",Dodger Stadium,34.0739,-118.2400,America/Los_Angeles,1
+mlb-sd,MLB,San Diego Padres,SD,NL,West,"{""mlb"":135}",Petco Park,32.7073,-117.1566,America/Los_Angeles,1
+mlb-sf,MLB,San Francisco Giants,SF,NL,West,"{""mlb"":137}",Oracle Park,37.7786,-122.3893,America/Los_Angeles,1
+nhl-bos,NHL,Boston Bruins,BOS,Eastern,Atlantic,"{""nhl"":6}",TD Garden,42.3662,-71.0621,America/New_York,1
+nhl-buf,NHL,Buffalo Sabres,BUF,Eastern,Atlantic,"{""nhl"":7}",KeyBank Center,42.8750,-78.8765,America/New_York,1
+nhl-det,NHL,Detroit Red Wings,DET,Eastern,Atlantic,"{""nhl"":17}",Little Caesars Arena,42.3410,-83.0552,America/Detroit,1
+nhl-fla,NHL,Florida Panthers,FLA,Eastern,Atlantic,"{""nhl"":13}",Amerant Bank Arena,26.1585,-80.3255,America/New_York,1
+nhl-mtl,NHL,Montreal Canadiens,MTL,Eastern,Atlantic,"{""nhl"":8}",Bell Centre,45.4961,-73.5693,America/Toronto,1
+nhl-ott,NHL,Ottawa Senators,OTT,Eastern,Atlantic,"{""nhl"":9}",Canadian Tire Centre,45.2969,-75.9273,America/Toronto,1
+nhl-tbl,NHL,Tampa Bay Lightning,TBL,Eastern,Atlantic,"{""nhl"":14}",Amalie Arena,27.9427,-82.4518,America/New_York,1
+nhl-tor,NHL,Toronto Maple Leafs,TOR,Eastern,Atlantic,"{""nhl"":10}",Scotiabank Arena,43.6435,-79.3791,America/Toronto,1
+nhl-car,NHL,Carolina Hurricanes,CAR,Eastern,Metropolitan,"{""nhl"":12}",Lenovo Center,35.8033,-78.7219,America/New_York,1
+nhl-cbj,NHL,Columbus Blue Jackets,CBJ,Eastern,Metropolitan,"{""nhl"":29}",Nationwide Arena,39.9694,-83.0061,America/New_York,1
+nhl-njd,NHL,New Jersey Devils,NJD,Eastern,Metropolitan,"{""nhl"":1}",Prudential Center,40.7336,-74.1711,America/New_York,1
+nhl-nyi,NHL,New York Islanders,NYI,Eastern,Metropolitan,"{""nhl"":2}",UBS Arena,40.7122,-73.7273,America/New_York,1
+nhl-nyr,NHL,New York Rangers,NYR,Eastern,Metropolitan,"{""nhl"":3}",Madison Square Garden,40.7505,-73.9934,America/New_York,1
+nhl-phi,NHL,Philadelphia Flyers,PHI,Eastern,Metropolitan,"{""nhl"":4}",Xfinity Mobile Arena,39.9012,-75.1720,America/New_York,1
+nhl-pit,NHL,Pittsburgh Penguins,PIT,Eastern,Metropolitan,"{""nhl"":5}",PPG Paints Arena,40.4395,-79.9896,America/New_York,1
+nhl-wsh,NHL,Washington Capitals,WSH,Eastern,Metropolitan,"{""nhl"":15}",Capital One Arena,38.8981,-77.0209,America/New_York,1
+nhl-chi,NHL,Chicago Blackhawks,CHI,Western,Central,"{""nhl"":16}",United Center,41.8807,-87.6742,America/Chicago,1
+nhl-col,NHL,Colorado Avalanche,COL,Western,Central,"{""nhl"":21}",Ball Arena,39.7487,-105.0077,America/Denver,1
+nhl-dal,NHL,Dallas Stars,DAL,Western,Central,"{""nhl"":25}",American Airlines Center,32.7905,-96.8103,America/Chicago,1
+nhl-min,NHL,Minnesota Wild,MIN,Western,Central,"{""nhl"":30}",Grand Casino Arena,44.9447,-93.1011,America/Chicago,1
+nhl-nsh,NHL,Nashville Predators,NSH,Western,Central,"{""nhl"":18}",Bridgestone Arena,36.1593,-86.7785,America/Chicago,1
+nhl-stl,NHL,St. Louis Blues,STL,Western,Central,"{""nhl"":19}",Enterprise Center,38.6268,-90.2027,America/Chicago,1
+nhl-uta,NHL,Utah Mammoth,UTA,Western,Central,"{""nhl"":59}",Delta Center,40.7683,-111.9011,America/Denver,1
+nhl-wpg,NHL,Winnipeg Jets,WPG,Western,Central,"{""nhl"":52}",Canada Life Centre,49.8928,-97.1436,America/Winnipeg,1
+nhl-ana,NHL,Anaheim Ducks,ANA,Western,Pacific,"{""nhl"":24}",Honda Center,33.8078,-117.8766,America/Los_Angeles,1
+nhl-cgy,NHL,Calgary Flames,CGY,Western,Pacific,"{""nhl"":20}",Scotiabank Saddledome,51.0374,-114.0519,America/Edmonton,1
+nhl-edm,NHL,Edmonton Oilers,EDM,Western,Pacific,"{""nhl"":22}",Rogers Place,53.5469,-113.4979,America/Edmonton,1
+nhl-lak,NHL,Los Angeles Kings,LAK,Western,Pacific,"{""nhl"":26}",Crypto.com Arena,34.0430,-118.2673,America/Los_Angeles,1
+nhl-sjs,NHL,San Jose Sharks,SJS,Western,Pacific,"{""nhl"":28}",SAP Center,37.3327,-121.9012,America/Los_Angeles,1
+nhl-sea,NHL,Seattle Kraken,SEA,Western,Pacific,"{""nhl"":55}",Climate Pledge Arena,47.6221,-122.3540,America/Los_Angeles,1
+nhl-van,NHL,Vancouver Canucks,VAN,Western,Pacific,"{""nhl"":23}",Rogers Arena,49.2778,-123.1089,America/Vancouver,1
+nhl-vgk,NHL,Vegas Golden Knights,VGK,Western,Pacific,"{""nhl"":54}",T-Mobile Arena,36.1029,-115.1784,America/Los_Angeles,1
+wnba-atl,WNBA,Atlanta Dream,ATL,Eastern,,{},Gateway Center Arena,33.6300,-84.4580,America/New_York,1
+wnba-chi,WNBA,Chicago Sky,CHI,Eastern,,{},Wintrust Arena,41.8531,-87.6190,America/Chicago,1
+wnba-con,WNBA,Connecticut Sun,CON,Eastern,,{},Mohegan Sun Arena,41.4912,-72.0910,America/New_York,1
+wnba-ind,WNBA,Indiana Fever,IND,Eastern,,{},Gainbridge Fieldhouse,39.7640,-86.1555,America/Indiana/Indianapolis,1
+wnba-nyl,WNBA,New York Liberty,NYL,Eastern,,{},Barclays Center,40.6826,-73.9754,America/New_York,1
+wnba-tor,WNBA,Toronto Tempo,TOR,Eastern,,{},Coca-Cola Coliseum,43.6353,-79.4184,America/Toronto,1
+wnba-was,WNBA,Washington Mystics,WAS,Eastern,,{},CareFirst Arena,38.8671,-76.9953,America/New_York,1
+wnba-dal,WNBA,Dallas Wings,DAL,Western,,{},College Park Center,32.7300,-97.1081,America/Chicago,1
+wnba-gsv,WNBA,Golden State Valkyries,GSV,Western,,{},Chase Center,37.7680,-122.3877,America/Los_Angeles,1
+wnba-lva,WNBA,Las Vegas Aces,LVA,Western,,{},Michelob Ultra Arena,36.0919,-115.1761,America/Los_Angeles,1
+wnba-las,WNBA,Los Angeles Sparks,LAS,Western,,{},Crypto.com Arena,34.0430,-118.2673,America/Los_Angeles,1
+wnba-min,WNBA,Minnesota Lynx,MIN,Western,,{},Target Center,44.9795,-93.2760,America/Chicago,1
+wnba-phx,WNBA,Phoenix Mercury,PHX,Western,,{},Mortgage Matchup Center,33.4457,-112.0712,America/Phoenix,1
+wnba-por,WNBA,Portland Fire,POR,Western,,{},Moda Center,45.5316,-122.6668,America/Los_Angeles,1
+wnba-sea,WNBA,Seattle Storm,SEA,Western,,{},Climate Pledge Arena,47.6221,-122.3540,America/Los_Angeles,1
+cfb-alabama,CFB,Alabama Crimson Tide,ALA,SEC,,{},Bryant-Denny Stadium,33.2083,-87.5504,America/Chicago,1
+cfb-arkansas,CFB,Arkansas Razorbacks,ARK,SEC,,{},Donald W. Reynolds Razorback Stadium,36.0680,-94.1789,America/Chicago,1
+cfb-auburn,CFB,Auburn Tigers,AUB,SEC,,{},Jordan-Hare Stadium,32.6025,-85.4890,America/Chicago,1
+cfb-florida,CFB,Florida Gators,FLA,SEC,,{},Ben Hill Griffin Stadium,29.6500,-82.3487,America/New_York,1
+cfb-georgia,CFB,Georgia Bulldogs,UGA,SEC,,{},Sanford Stadium,33.9497,-83.3733,America/New_York,1
+cfb-kentucky,CFB,Kentucky Wildcats,UK,SEC,,{},Kroger Field,38.0220,-84.5053,America/New_York,1
+cfb-lsu,CFB,LSU Tigers,LSU,SEC,,{},Tiger Stadium,30.4118,-91.1836,America/Chicago,1
+cfb-mississippi-state,CFB,Mississippi State Bulldogs,MSST,SEC,,{},Davis Wade Stadium,33.4564,-88.7935,America/Chicago,1
+cfb-missouri,CFB,Missouri Tigers,MIZ,SEC,,{},Faurot Field at Memorial Stadium,38.9360,-92.3331,America/Chicago,1
+cfb-oklahoma,CFB,Oklahoma Sooners,OU,SEC,,{},Gaylord Family Oklahoma Memorial Stadium,35.2059,-97.4422,America/Chicago,1
+cfb-ole-miss,CFB,Ole Miss Rebels,MISS,SEC,,{},Vaught-Hemingway Stadium,34.3620,-89.5340,America/Chicago,1
+cfb-south-carolina,CFB,South Carolina Gamecocks,SCAR,SEC,,{},Williams-Brice Stadium,33.9730,-81.0190,America/New_York,1
+cfb-tennessee,CFB,Tennessee Volunteers,TENN,SEC,,{},Neyland Stadium,35.9550,-83.9250,America/New_York,1
+cfb-texas,CFB,Texas Longhorns,TEX,SEC,,{},Darrell K Royal-Texas Memorial Stadium,30.2837,-97.7324,America/Chicago,1
+cfb-texas-am,CFB,Texas A&M Aggies,TAMU,SEC,,{},Kyle Field,30.6100,-96.3400,America/Chicago,1
+cfb-vanderbilt,CFB,Vanderbilt Commodores,VAN,SEC,,{},FirstBank Stadium,36.1440,-86.8090,America/Chicago,1
+cfb-illinois,CFB,Illinois Fighting Illini,ILL,Big Ten,,{},Memorial Stadium,40.0992,-88.2358,America/Chicago,1
+cfb-indiana,CFB,Indiana Hoosiers,IU,Big Ten,,{},Memorial Stadium,39.1810,-86.5260,America/Indiana/Indianapolis,1
+cfb-iowa,CFB,Iowa Hawkeyes,IOWA,Big Ten,,{},Kinnick Stadium,41.6586,-91.5511,America/Chicago,1
+cfb-maryland,CFB,Maryland Terrapins,MD,Big Ten,,{},SECU Stadium,38.9903,-76.9474,America/New_York,1
+cfb-michigan,CFB,Michigan Wolverines,MICH,Big Ten,,{},Michigan Stadium,42.2658,-83.7487,America/Detroit,1
+cfb-michigan-state,CFB,Michigan State Spartans,MSU,Big Ten,,{},Spartan Stadium,42.7281,-84.4848,America/Detroit,1
+cfb-minnesota,CFB,Minnesota Golden Gophers,MINN,Big Ten,,{},Huntington Bank Stadium,44.9765,-93.2245,America/Chicago,1
+cfb-nebraska,CFB,Nebraska Cornhuskers,NEB,Big Ten,,{},Memorial Stadium,40.8206,-96.7056,America/Chicago,1
+cfb-northwestern,CFB,Northwestern Wildcats,NW,Big Ten,,{},Ryan Field,42.0655,-87.6924,America/Chicago,1
+cfb-ohio-state,CFB,Ohio State Buckeyes,OSU,Big Ten,,{},Ohio Stadium,40.0017,-83.0197,America/New_York,1
+cfb-oregon,CFB,Oregon Ducks,ORE,Big Ten,,{},Autzen Stadium,44.0583,-123.0684,America/Los_Angeles,1
+cfb-penn-state,CFB,Penn State Nittany Lions,PSU,Big Ten,,{},Beaver Stadium,40.8122,-77.8560,America/New_York,1
+cfb-purdue,CFB,Purdue Boilermakers,PUR,Big Ten,,{},Ross-Ade Stadium,40.4353,-86.9188,America/Indiana/Indianapolis,1
+cfb-rutgers,CFB,Rutgers Scarlet Knights,RUTG,Big Ten,,{},SHI Stadium,40.5140,-74.4648,America/New_York,1
+cfb-ucla,CFB,UCLA Bruins,UCLA,Big Ten,,{},Rose Bowl,34.1613,-118.1676,America/Los_Angeles,1
+cfb-usc,CFB,USC Trojans,USC,Big Ten,,{},Los Angeles Memorial Coliseum,34.0141,-118.2879,America/Los_Angeles,1
+cfb-washington,CFB,Washington Huskies,WASH,Big Ten,,{},Husky Stadium,47.6503,-122.3016,America/Los_Angeles,1
+cfb-wisconsin,CFB,Wisconsin Badgers,WIS,Big Ten,,{},Camp Randall Stadium,43.0700,-89.4127,America/Chicago,1
+cfb-boston-college,CFB,Boston College Eagles,BC,ACC,,{},Alumni Stadium,42.3350,-71.1665,America/New_York,1
+cfb-california,CFB,California Golden Bears,CAL,ACC,,{},California Memorial Stadium,37.8712,-122.2508,America/Los_Angeles,1
+cfb-clemson,CFB,Clemson Tigers,CLEM,ACC,,{},Memorial Stadium,34.6786,-82.8432,America/New_York,1
+cfb-duke,CFB,Duke Blue Devils,DUKE,ACC,,{},Wallace Wade Stadium,35.9952,-78.9421,America/New_York,1
+cfb-florida-state,CFB,Florida State Seminoles,FSU,ACC,,{},Doak Campbell Stadium,30.4382,-84.3044,America/New_York,1
+cfb-georgia-tech,CFB,Georgia Tech Yellow Jackets,GT,ACC,,{},Bobby Dodd Stadium,33.7725,-84.3928,America/New_York,1
+cfb-louisville,CFB,Louisville Cardinals,LOU,ACC,,{},L&N Federal Credit Union Stadium,38.2058,-85.7585,America/Kentucky/Louisville,1
+cfb-miami,CFB,Miami Hurricanes,MIA,ACC,,{},Hard Rock Stadium,25.9580,-80.2389,America/New_York,1
+cfb-nc-state,CFB,NC State Wolfpack,NCST,ACC,,{},Carter-Finley Stadium,35.8003,-78.7190,America/New_York,1
+cfb-north-carolina,CFB,North Carolina Tar Heels,UNC,ACC,,{},Kenan Memorial Stadium,35.9070,-79.0479,America/New_York,1
+cfb-pittsburgh,CFB,Pittsburgh Panthers,PITT,ACC,,{},Acrisure Stadium,40.4468,-80.0158,America/New_York,1
+cfb-smu,CFB,SMU Mustangs,SMU,ACC,,{},Gerald J. Ford Stadium,32.8360,-96.7844,America/Chicago,1
+cfb-stanford,CFB,Stanford Cardinal,STAN,ACC,,{},Stanford Stadium,37.4344,-122.1610,America/Los_Angeles,1
+cfb-syracuse,CFB,Syracuse Orange,SYR,ACC,,{},JMA Wireless Dome,43.0361,-76.1363,America/New_York,1
+cfb-virginia,CFB,Virginia Cavaliers,UVA,ACC,,{},Scott Stadium,38.0312,-78.5138,America/New_York,1
+cfb-virginia-tech,CFB,Virginia Tech Hokies,VT,ACC,,{},Lane Stadium,37.2200,-80.4181,America/New_York,1
+cfb-wake-forest,CFB,Wake Forest Demon Deacons,WAKE,ACC,,{},Allegacy Federal Credit Union Stadium,36.1305,-80.2554,America/New_York,1
+cfb-arizona,CFB,Arizona Wildcats,ARIZ,Big 12,,{},Arizona Stadium,32.2288,-110.9488,America/Phoenix,1
+cfb-arizona-state,CFB,Arizona State Sun Devils,ASU,Big 12,,{},Mountain America Stadium,33.4264,-111.9325,America/Phoenix,1
+cfb-baylor,CFB,Baylor Bears,BAY,Big 12,,{},McLane Stadium,31.5588,-97.1155,America/Chicago,1
+cfb-byu,CFB,BYU Cougars,BYU,Big 12,,{},LaVell Edwards Stadium,40.2582,-111.6544,America/Denver,1
+cfb-cincinnati,CFB,Cincinnati Bearcats,CIN,Big 12,,{},Nippert Stadium,39.1312,-84.5163,America/New_York,1
+cfb-colorado,CFB,Colorado Buffaloes,COLO,Big 12,,{},Folsom Field,40.0094,-105.2669,America/Denver,1
+cfb-houston,CFB,Houston Cougars,HOU,Big 12,,{},TDECU Stadium,29.7222,-95.3494,America/Chicago,1
+cfb-iowa-state,CFB,Iowa State Cyclones,ISU,Big 12,,{},Jack Trice Stadium,42.0140,-93.6357,America/Chicago,1
+cfb-kansas,CFB,Kansas Jayhawks,KU,Big 12,,{},David Booth Kansas Memorial Stadium,38.9628,-95.2467,America/Chicago,1
+cfb-kansas-state,CFB,Kansas State Wildcats,KSU,Big 12,,{},Bill Snyder Family Stadium,39.2020,-96.5939,America/Chicago,1
+cfb-oklahoma-state,CFB,Oklahoma State Cowboys,OKST,Big 12,,{},Boone Pickens Stadium,36.1257,-97.0665,America/Chicago,1
+cfb-tcu,CFB,TCU Horned Frogs,TCU,Big 12,,{},Amon G. Carter Stadium,32.7100,-97.3680,America/Chicago,1
+cfb-texas-tech,CFB,Texas Tech Red Raiders,TTU,Big 12,,{},Jones AT&T Stadium,33.5910,-101.8727,America/Chicago,1
+cfb-ucf,CFB,UCF Knights,UCF,Big 12,,{},FBC Mortgage Stadium,28.6082,-81.1926,America/New_York,1
+cfb-utah,CFB,Utah Utes,UTAH,Big 12,,{},Rice-Eccles Stadium,40.7601,-111.8489,America/Denver,1
+cfb-west-virginia,CFB,West Virginia Mountaineers,WVU,Big 12,,{},Milan Puskar Stadium,39.6489,-79.9545,America/New_York,1
+cfb-boise-state,CFB,Boise State Broncos,BSU,Pac-12,,{},Albertsons Stadium,43.6028,-116.1957,America/Boise,1
+cfb-colorado-state,CFB,Colorado State Rams,CSU,Pac-12,,{},Canvas Stadium,40.5679,-105.0888,America/Denver,1
+cfb-fresno-state,CFB,Fresno State Bulldogs,FRES,Pac-12,,{},Valley Children's Stadium,36.8130,-119.7590,America/Los_Angeles,1
+cfb-oregon-state,CFB,Oregon State Beavers,ORST,Pac-12,,{},Reser Stadium,44.5596,-123.2814,America/Los_Angeles,1
+cfb-san-diego-state,CFB,San Diego State Aztecs,SDSU,Pac-12,,{},Snapdragon Stadium,32.7831,-117.1196,America/Los_Angeles,1
+cfb-texas-state,CFB,Texas State Bobcats,TXST,Pac-12,,{},UFCU Stadium,29.8900,-97.9250,America/Chicago,1
+cfb-utah-state,CFB,Utah State Aggies,USU,Pac-12,,{},Maverik Stadium,41.7513,-111.8122,America/Denver,1
+cfb-washington-state,CFB,Washington State Cougars,WSU,Pac-12,,{},Martin Stadium,46.7320,-117.1600,America/Los_Angeles,1
+cfb-air-force,CFB,Air Force Falcons,AFA,Mountain West,,{},Falcon Stadium,38.9970,-104.8436,America/Denver,1
+cfb-hawaii,CFB,Hawai'i Rainbow Warriors,HAW,Mountain West,,{},Clarence T.C. Ching Athletics Complex,21.2970,-157.8170,Pacific/Honolulu,1
+cfb-nevada,CFB,Nevada Wolf Pack,NEV,Mountain West,,{},Mackay Stadium,39.5470,-119.8180,America/Los_Angeles,1
+cfb-new-mexico,CFB,New Mexico Lobos,UNM,Mountain West,,{},University Stadium,35.0670,-106.6280,America/Denver,1
+cfb-northern-illinois,CFB,Northern Illinois Huskies,NIU,Mountain West,,{},Huskie Stadium,41.9340,-88.7780,America/Chicago,1
+cfb-san-jose-state,CFB,San Jose State Spartans,SJSU,Mountain West,,{},CEFCU Stadium,37.3200,-121.8680,America/Los_Angeles,1
+cfb-unlv,CFB,UNLV Rebels,UNLV,Mountain West,,{},Allegiant Stadium,36.0909,-115.1833,America/Los_Angeles,1
+cfb-utep,CFB,UTEP Miners,UTEP,Mountain West,,{},Sun Bowl,31.7740,-106.5100,America/Denver,1
+cfb-wyoming,CFB,Wyoming Cowboys,WYO,Mountain West,,{},War Memorial Stadium,41.3110,-105.5690,America/Denver,1
+cfb-army,CFB,Army Black Knights,ARMY,American,,{},Michie Stadium,41.3890,-73.9640,America/New_York,1
+cfb-charlotte,CFB,Charlotte 49ers,CLT,American,,{},Jerry Richardson Stadium,35.3100,-80.7400,America/New_York,1
+cfb-east-carolina,CFB,East Carolina Pirates,ECU,American,,{},Dowdy-Ficklen Stadium,35.5960,-77.3650,America/New_York,1
+cfb-florida-atlantic,CFB,Florida Atlantic Owls,FAU,American,,{},FAU Stadium,26.3750,-80.1010,America/New_York,1
+cfb-memphis,CFB,Memphis Tigers,MEM,American,,{},Simmons Bank Liberty Stadium,35.1210,-89.9770,America/Chicago,1
+cfb-navy,CFB,Navy Midshipmen,NAVY,American,,{},Navy-Marine Corps Memorial Stadium,38.9850,-76.5070,America/New_York,1
+cfb-north-texas,CFB,North Texas Mean Green,UNT,American,,{},DATCU Stadium,33.2040,-97.1590,America/Chicago,1
+cfb-rice,CFB,Rice Owls,RICE,American,,{},Rice Stadium,29.7160,-95.4090,America/Chicago,1
+cfb-south-florida,CFB,South Florida Bulls,USF,American,,{},Raymond James Stadium,27.9759,-82.5033,America/New_York,1
+cfb-temple,CFB,Temple Owls,TEM,American,,{},Lincoln Financial Field,39.9008,-75.1675,America/New_York,1
+cfb-tulane,CFB,Tulane Green Wave,TULN,American,,{},Yulman Stadium,29.9450,-90.1170,America/Chicago,1
+cfb-tulsa,CFB,Tulsa Golden Hurricane,TLSA,American,,{},H.A. Chapman Stadium,36.1460,-95.9450,America/Chicago,1
+cfb-uab,CFB,UAB Blazers,UAB,American,,{},Protective Stadium,33.5310,-86.8020,America/Chicago,1
+cfb-utsa,CFB,UTSA Roadrunners,UTSA,American,,{},Alamodome,29.4170,-98.4790,America/Chicago,1
+cfb-delaware,CFB,Delaware Blue Hens,DEL,Conference USA,,{},Delaware Stadium,39.6600,-75.7470,America/New_York,1
+cfb-fiu,CFB,FIU Panthers,FIU,Conference USA,,{},Pitbull Stadium,25.7520,-80.3770,America/New_York,1
+cfb-jacksonville-state,CFB,Jacksonville State Gamecocks,JVST,Conference USA,,{},AmFirst Stadium at Burgess-Snow Field,33.8200,-85.7660,America/Chicago,1
+cfb-kennesaw-state,CFB,Kennesaw State Owls,KENN,Conference USA,,{},Fifth Third Stadium,34.0290,-84.5660,America/New_York,1
+cfb-liberty,CFB,Liberty Flames,LIB,Conference USA,,{},Williams Stadium,37.3520,-79.1710,America/New_York,1
+cfb-louisiana-tech,CFB,Louisiana Tech Bulldogs,LT,Conference USA,,{},Joe Aillet Stadium,32.5360,-92.6560,America/Chicago,1
+cfb-middle-tennessee,CFB,Middle Tennessee Blue Raiders,MTSU,Conference USA,,{},Johnny 'Red' Floyd Stadium,35.8510,-86.3680,America/Chicago,1
+cfb-missouri-state,CFB,Missouri State Bears,MOST,Conference USA,,{},Robert W. Plaster Stadium,37.2030,-93.2810,America/Chicago,1
+cfb-new-mexico-state,CFB,New Mexico State Aggies,NMSU,Conference USA,,{},Aggie Memorial Stadium,32.2790,-106.7440,America/Denver,1
+cfb-sam-houston,CFB,Sam Houston Bearkats,SHSU,Conference USA,,{},Bowers Stadium,30.7180,-95.5480,America/Chicago,1
+cfb-western-kentucky,CFB,Western Kentucky Hilltoppers,WKU,Conference USA,,{},Houchens Industries-L.T. Smith Stadium,36.9840,-86.4590,America/Chicago,1
+cfb-akron,CFB,Akron Zips,AKR,MAC,,{},InfoCision Stadium,41.0720,-81.5080,America/New_York,1
+cfb-ball-state,CFB,Ball State Cardinals,BALL,MAC,,{},Scheumann Stadium,40.2170,-85.4160,America/Indiana/Indianapolis,1
+cfb-bowling-green,CFB,Bowling Green Falcons,BGSU,MAC,,{},Doyt Perry Stadium,41.3770,-83.6260,America/New_York,1
+cfb-buffalo,CFB,Buffalo Bulls,BUFF,MAC,,{},UB Stadium,43.0000,-78.7800,America/New_York,1
+cfb-central-michigan,CFB,Central Michigan Chippewas,CMU,MAC,,{},Kelly/Shorts Stadium,43.5730,-84.7840,America/Detroit,1
+cfb-eastern-michigan,CFB,Eastern Michigan Eagles,EMU,MAC,,{},Rynearson Stadium,42.2460,-83.6280,America/Detroit,1
+cfb-kent-state,CFB,Kent State Golden Flashes,KENT,MAC,,{},Dix Stadium,41.1390,-81.3310,America/New_York,1
+cfb-miami-oh,CFB,Miami (OH) RedHawks,M-OH,MAC,,{},Yager Stadium,39.5170,-84.7350,America/New_York,1
+cfb-ohio,CFB,Ohio Bobcats,OHIO,MAC,,{},Peden Stadium,39.3200,-82.1060,America/New_York,1
+cfb-toledo,CFB,Toledo Rockets,TOL,MAC,,{},Glass Bowl,41.6570,-83.6130,America/New_York,1
+cfb-umass,CFB,UMass Minutemen,MASS,MAC,,{},Warren McGuirk Alumni Stadium,42.3770,-72.5360,America/New_York,1
+cfb-western-michigan,CFB,Western Michigan Broncos,WMU,MAC,,{},Waldo Stadium,42.2850,-85.6010,America/Detroit,1
+cfb-appalachian-state,CFB,Appalachian State Mountaineers,APP,Sun Belt,,{},Kidd Brewer Stadium,36.2110,-81.6850,America/New_York,1
+cfb-arkansas-state,CFB,Arkansas State Red Wolves,ARST,Sun Belt,,{},Centennial Bank Stadium,35.8490,-90.6670,America/Chicago,1
+cfb-coastal-carolina,CFB,Coastal Carolina Chanticleers,CCU,Sun Belt,,{},Brooks Stadium,33.7930,-79.0120,America/New_York,1
+cfb-georgia-southern,CFB,Georgia Southern Eagles,GASO,Sun Belt,,{},Paulson Stadium,32.4120,-81.7840,America/New_York,1
+cfb-georgia-state,CFB,Georgia State Panthers,GAST,Sun Belt,,{},Center Parc Stadium,33.7350,-84.3890,America/New_York,1
+cfb-james-madison,CFB,James Madison Dukes,JMU,Sun Belt,,{},Bridgeforth Stadium,38.4350,-78.8700,America/New_York,1
+cfb-louisiana,CFB,Louisiana Ragin' Cajuns,ULL,Sun Belt,,{},Cajun Field,30.2160,-92.0420,America/Chicago,1
+cfb-ul-monroe,CFB,UL Monroe Warhawks,ULM,Sun Belt,,{},Malone Stadium,32.5310,-92.0660,America/Chicago,1
+cfb-marshall,CFB,Marshall Thundering Herd,MRSH,Sun Belt,,{},Joan C. Edwards Stadium,38.4240,-82.4260,America/New_York,1
+cfb-old-dominion,CFB,Old Dominion Monarchs,ODU,Sun Belt,,{},S.B. Ballard Stadium,36.8860,-76.3060,America/New_York,1
+cfb-south-alabama,CFB,South Alabama Jaguars,USA,Sun Belt,,{},Hancock Whitney Stadium,30.6990,-88.1830,America/Chicago,1
+cfb-southern-miss,CFB,Southern Miss Golden Eagles,USM,Sun Belt,,{},M.M. Roberts Stadium,31.3280,-89.3330,America/Chicago,1
+cfb-troy,CFB,Troy Trojans,TROY,Sun Belt,,{},Veterans Memorial Stadium,31.8000,-85.9550,America/Chicago,1
+cfb-notre-dame,CFB,Notre Dame Fighting Irish,ND,FBS Independent,,{},Notre Dame Stadium,41.6980,-86.2340,America/Indiana/Indianapolis,1
+cfb-uconn,CFB,UConn Huskies,CONN,FBS Independent,,{},Pratt & Whitney Stadium at Rentschler Field,41.7600,-72.6520,America/New_York,1
+nhl-ari,NHL,Arizona Coyotes,ARI,Western,Central,"{""nhl"":53}",Mullett Arena,33.4255,-111.9325,America/Phoenix,0

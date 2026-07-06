@@ -1,0 +1,14 @@
+{
+  "resource": "leaguegamelog",
+  "parameters": {"LeagueID": "00", "Season": "2022-23", "SeasonType": "Regular Season"},
+  "resultSets": [
+    {
+      "name": "LeagueGameLog",
+      "headers": ["SEASON_ID", "TEAM_ID", "TEAM_ABBREVIATION", "TEAM_NAME", "GAME_ID", "GAME_DATE", "MATCHUP", "WL", "MIN", "PTS", "PLUS_MINUS"],
+      "rowSet": [
+        ["22022", 1610612738, "BOS", "Boston Celtics", "0022200155", "2022-11-20", "BOS @ NYK", "W", 240, 120, 2],
+        ["22022", 1610612752, "NYK", "New York Knicks", "0022200155", "2022-11-20", "NYK vs. BOS", "L", 240, 118, -2]
+      ]
+    }
+  ]
+}

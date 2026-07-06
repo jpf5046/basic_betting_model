@@ -19,9 +19,13 @@ CSV_PATH = Path(__file__).resolve().parent.parent / "data" / "teams.csv"
 EXPECTED_FIELDS = [
     "team_id", "sport", "name", "abbrev", "conference", "division",
     "external_ids", "venue_name", "venue_lat", "venue_lon", "timezone",
+    "active",
 ]
 
-# Update these when leagues expand/contract (or when CBB/WCBB get added).
+# ACTIVE teams per league — update when leagues expand/contract (or when
+# CBB/WCBB get added). Inactive rows (active=0) are historic franchises
+# kept so backfilled seasons can map their games (e.g. Arizona Coyotes);
+# they are not counted here.
 EXPECTED_COUNTS = {
     "NFL": 32,
     "NBA": 30,
@@ -59,7 +63,10 @@ def main() -> int:
     for i, row in enumerate(rows, start=2):  # line numbers incl. header
         where = f"line {i} ({row.get('team_id', '?')})"
         sport = row["sport"]
-        counts[sport] = counts.get(sport, 0) + 1
+        if row.get("active") not in ("0", "1"):
+            errors.append(f"{where}: active must be 0 or 1")
+        if row.get("active") == "1":
+            counts[sport] = counts.get(sport, 0) + 1
 
         tid = row["team_id"]
         if tid in seen_ids:
@@ -119,8 +126,9 @@ def main() -> int:
         return 1
 
     total = sum(counts.values())
+    inactive = len(rows) - total
     per = ", ".join(f"{s}={n}" for s, n in sorted(counts.items()))
-    print(f"OK: {total} teams ({per}), all checks passed")
+    print(f"OK: {total} active teams ({per}) + {inactive} historic, all checks passed")
     return 0
 
 

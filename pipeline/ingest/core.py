@@ -50,6 +50,16 @@ class UnmappedTeamError(RuntimeError):
     """A feed team could not be resolved to a data/teams.csv team_id."""
 
 
+class HttpStatusError(RuntimeError):
+    """A 4xx response — the request is wrong (or the resource doesn't
+    exist, e.g. a club that didn't play that season); retrying won't help."""
+
+    def __init__(self, status: int, url: str):
+        super().__init__(f"HTTP {status} for {url}")
+        self.status = status
+        self.url = url
+
+
 @dataclass
 class Game:
     """One row per game — a single schema shared by every sport.
@@ -82,9 +92,12 @@ CSV_FIELDS = [f.name for f in fields(Game)]
 
 # ------------------------------------------------------------------ I/O
 
-def http_get(url: str, timeout: int = 30, delays: tuple = (0, 2, 4, 8, 16)) -> bytes:
-    """GET with exponential-backoff retries; raises after the last attempt."""
-    req = urllib.request.Request(url, headers={"User-Agent": "basic-betting-model/0.1"})
+def http_get(url: str, timeout: int = 30, delays: tuple = (0, 2, 4, 8, 16),
+             headers: dict | None = None) -> bytes:
+    """GET with exponential-backoff retries; raises after the last attempt.
+    4xx responses raise HttpStatusError immediately (retrying won't help)."""
+    all_headers = {"User-Agent": "basic-betting-model/0.1", **(headers or {})}
+    req = urllib.request.Request(url, headers=all_headers)
     last_err: Exception | None = None
     for attempt, delay in enumerate(delays):
         if delay:
@@ -92,6 +105,11 @@ def http_get(url: str, timeout: int = 30, delays: tuple = (0, 2, 4, 8, 16)) -> b
         try:
             with urllib.request.urlopen(req, timeout=timeout) as resp:
                 return resp.read()
+        except urllib.error.HTTPError as e:
+            if 400 <= e.code < 500:
+                raise HttpStatusError(e.code, url) from e
+            last_err = e
+            print(f"fetch attempt {attempt + 1} failed for {url}: {e}", file=sys.stderr)
         except (urllib.error.URLError, TimeoutError) as e:
             last_err = e
             print(f"fetch attempt {attempt + 1} failed for {url}: {e}", file=sys.stderr)

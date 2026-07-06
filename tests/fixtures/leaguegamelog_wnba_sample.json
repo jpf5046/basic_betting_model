@@ -1,0 +1,17 @@
+{
+  "resource": "leaguegamelog",
+  "parameters": {"LeagueID": "10", "Season": "2024", "SeasonType": "Regular Season"},
+  "resultSets": [
+    {
+      "name": "LeagueGameLog",
+      "headers": ["SEASON_ID", "TEAM_ID", "TEAM_ABBREVIATION", "TEAM_NAME", "GAME_ID", "GAME_DATE", "MATCHUP", "WL", "MIN", "PTS", "PLUS_MINUS"],
+      "rowSet": [
+        ["22024", 1611661319, "LVA", "Las Vegas Aces", "1022400101", "2024-06-01", "LVA @ NYL", "L", 200, 87, -3],
+        ["22024", 1611661313, "NYL", "New York Liberty", "1022400101", "2024-06-01", "NYL vs. LVA", "W", 200, 90, 3],
+        ["22024", 1611661317, "PHO", "Phoenix Mercury", "1022400102", "2024-06-02", "PHO vs. SEA", "W", 200, 80, 5],
+        ["22024", 1611661328, "SEA", "Seattle Storm", "1022400102", "2024-06-02", "SEA @ PHO", "L", 200, 75, -5],
+        ["22024", 1611661324, "MIN", "Minnesota Lynx", "1022400199", "2024-06-03", "MIN vs. ORPHAN", "W", 200, 88, 8]
+      ]
+    }
+  ]
+}

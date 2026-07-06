@@ -233,10 +233,11 @@ Rules:
   hand-tuning them.
 
 **TODO:**
-- [ ] Implement `build_frame()` reading from `games` + `feature_values` + `predictions` +
-      `grades`.
-- [ ] Parquet export per season (`data/frames/mlb_2026.parquet`) for fast repeated
-      backtests and offline analysis in a notebook.
+- [x] `build_frame()` — `pipeline/frame/`: one row per game, features as-of the game
+      date (fresh point-in-time context per date), outcome columns on finals only.
+      CLI writes `data/frames/<sport>/frame_<season>.csv`.
+- [ ] Parquet export per season — deferred with the rest of the pandas question; the
+      CSV columns are already flat and typed for the day it's worth it.
 
 ---
 
@@ -264,10 +265,13 @@ run_backtest(model="my_model", params=<draft or saved config>,
   UI's error panel.
 
 **TODO:**
-- [ ] Metrics module (record/ROI/P&L/pass-rate + groupbys) shared by backtester and live
-      grading so "live vs backtest expectation" is an apples-to-apples comparison.
-- [ ] CLI: `python -m pipeline backtest --model my_model --config aggressive-totals-v2
-      --sports MLB --from 2026-04-01 --to 2026-06-30`
+- [x] Metrics module — `pipeline/backtest/metrics.py` (record/ROI/P&L/pass-rate,
+      by-bet-type and by-tier groupbys, cumulative P&L series), built on the same Grade
+      records live grading produces, so live-vs-backtest stays apples-to-apples.
+- [x] CLI — `python3 -m pipeline.backtest run --sport WNBA --season 2025 [--config x.json]
+      [--from --to] [--no-odds]`: day-by-day replay, candidate always compared against
+      the factory baseline on the same slice, market-priced grading via the odds event
+      map, deterministic run ids, results persisted to `data/backtests/<sport>/`.
 - [ ] Parameter sweep helper (wish list): grid/random search over param ranges, ranked
       results table — the "tune k for NHL" workflow without clicking through a UI 40 times.
 - [ ] Walk-forward validation helper (wish list): tune on month N, evaluate on month N+1,
@@ -390,8 +394,8 @@ data/
 | 5a | ✅ | Odds adapter + event matching + edge + real payouts | 2,4,5 | `pipeline/odds/` (moved up by request): The Odds API v4 fetch/historical, game↔event map, consensus closing prices, model-vs-market edge report, grading at market prices vs market total lines |
 | 6 | ⬜ next | Daily orchestrator + GitHub Actions cron | 2,3,4,5 | Unattended morning run produces pick sheet + grade card |
 | 7 | ✅ | Season backfill (all four sports) | 2,3 | `pipeline/backfill.py`: current + N past seasons per sport via the `run_fetch(season)` / `past_seasons(back)` adapter contract; features/predictions/odds read history through the same per-season CSVs. Historic odds join via `odds fetch --historical` |
-| 8 | ⬜ | `build_frame()` + parquet export | 7 | One call returns the leak-free modeling dataframe (frame.py is the seed) |
-| 9 | ⬜ | Backtester + metrics + CLI | 8 | Any config backtested vs factory baseline; results persisted |
+| 8 | ✅ | `build_frame()` (parquet deferred) | 7 | `pipeline/frame/`: one call returns the leak-free modeling table (features as-of game date + outcomes); CSV per season |
+| 9 | ✅ | Backtester + metrics + CLI | 8 | `pipeline/backtest/`: day-by-day replay through any config, graded at consensus market prices when odds cover the games, candidate vs factory baseline on the same slice, deterministic run ids, persisted JSON + pick-log CSV |
 | 10 | ✅ | NBA + NHL adapters | 2 pattern | Shipped early alongside item 2 (PRs #5, #6) |
 | 11 | ⬜ | Shadow mode + sweep + walk-forward | 9 | Candidate configs accumulate live evidence |
 | 12 | ✅ | Travel-time feature (the canary) | 3 | Shipped early inside PR #8 as one new file — the design claim held. **Open:** backtest it in a model variant once item 9 lands |

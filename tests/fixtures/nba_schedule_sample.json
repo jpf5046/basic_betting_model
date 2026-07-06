@@ -1,0 +1,225 @@
+{
+  "meta": {"version": 1, "request": "scheduleleaguev2", "time": "2026-04-12 08:00:00"},
+  "leagueSchedule": {
+    "seasonYear": "2025-26",
+    "leagueId": "00",
+    "gameDates": [
+      {
+        "gameDate": "10/05/2025 00:00:00",
+        "games": [
+          {
+            "gameId": "0012500001",
+            "gameCode": "20251005/MRABOS",
+            "gameStatus": 3,
+            "gameStatusText": "Final",
+            "gameLabel": "Preseason",
+            "gameDateEst": "2025-10-05T00:00:00Z",
+            "gameDateTimeUTC": "2025-10-05T23:00:00Z",
+            "arenaName": "TD Garden",
+            "awayTeam": {"teamId": 12329210, "teamCity": "Maccabi", "teamName": "Ra'anana", "teamTricode": "MRA", "score": 88},
+            "homeTeam": {"teamId": 1610612738, "teamCity": "Boston", "teamName": "Celtics", "teamTricode": "BOS", "score": 124}
+          }
+        ]
+      },
+      {
+        "gameDate": "12/01/2025 00:00:00",
+        "games": [
+          {
+            "gameId": "0022500101",
+            "gameCode": "20251201/BOSMIA",
+            "gameStatus": 3,
+            "gameStatusText": "Final",
+            "gameLabel": "",
+            "gameDateEst": "2025-12-01T00:00:00Z",
+            "gameDateTimeUTC": "2025-12-02T00:30:00Z",
+            "arenaName": "Kaseya Center",
+            "awayTeam": {"teamId": 1610612738, "teamCity": "Boston", "teamName": "Celtics", "teamTricode": "BOS", "score": 110},
+            "homeTeam": {"teamId": 1610612748, "teamCity": "Miami", "teamName": "Heat", "teamTricode": "MIA", "score": 100}
+          }
+        ]
+      },
+      {
+        "gameDate": "12/03/2025 00:00:00",
+        "games": [
+          {
+            "gameId": "0022500108",
+            "gameCode": "20251203/MIABOS",
+            "gameStatus": 3,
+            "gameStatusText": "Final",
+            "gameLabel": "",
+            "gameDateEst": "2025-12-03T00:00:00Z",
+            "gameDateTimeUTC": "2025-12-04T00:30:00Z",
+            "arenaName": "TD Garden",
+            "awayTeam": {"teamId": 1610612748, "teamCity": "Miami", "teamName": "Heat", "teamTricode": "MIA", "score": 95},
+            "homeTeam": {"teamId": 1610612738, "teamCity": "Boston", "teamName": "Celtics", "teamTricode": "BOS", "score": 105}
+          }
+        ]
+      },
+      {
+        "gameDate": "12/05/2025 00:00:00",
+        "games": [
+          {
+            "gameId": "0022500115",
+            "gameCode": "20251205/NYKMIA",
+            "gameStatus": 3,
+            "gameStatusText": "Final",
+            "gameLabel": "",
+            "gameDateEst": "2025-12-05T00:00:00Z",
+            "gameDateTimeUTC": "2025-12-06T00:30:00Z",
+            "arenaName": "Kaseya Center",
+            "awayTeam": {"teamId": 1610612752, "teamCity": "New York", "teamName": "Knicks", "teamTricode": "NYK", "score": 99},
+            "homeTeam": {"teamId": 1610612748, "teamCity": "Miami", "teamName": "Heat", "teamTricode": "MIA", "score": 101}
+          }
+        ]
+      },
+      {
+        "gameDate": "12/07/2025 00:00:00",
+        "games": [
+          {
+            "gameId": "0022500122",
+            "gameCode": "20251207/PHIBOS",
+            "gameStatus": 3,
+            "gameStatusText": "Final",
+            "gameLabel": "",
+            "gameDateEst": "2025-12-07T00:00:00Z",
+            "gameDateTimeUTC": "2025-12-08T00:00:00Z",
+            "arenaName": "TD Garden",
+            "awayTeam": {"teamId": 1610612755, "teamCity": "Philadelphia", "teamName": "76ers", "teamTricode": "PHI", "score": 88},
+            "homeTeam": {"teamId": 1610612738, "teamCity": "Boston", "teamName": "Celtics", "teamTricode": "BOS", "score": 112}
+          }
+        ]
+      },
+      {
+        "gameDate": "12/09/2025 00:00:00",
+        "games": [
+          {
+            "gameId": "0022500129",
+            "gameCode": "20251209/NYKPHI",
+            "gameStatus": 3,
+            "gameStatusText": "Final",
+            "gameLabel": "",
+            "gameDateEst": "2025-12-09T00:00:00Z",
+            "gameDateTimeUTC": "2025-12-10T00:00:00Z",
+            "arenaName": "Xfinity Mobile Arena",
+            "awayTeam": {"teamId": 1610612752, "teamCity": "New York", "teamName": "Knicks", "teamTricode": "NYK", "score": 120},
+            "homeTeam": {"teamId": 1610612755, "teamCity": "Philadelphia", "teamName": "76ers", "teamTricode": "PHI", "score": 115}
+          }
+        ]
+      },
+      {
+        "gameDate": "12/11/2025 00:00:00",
+        "games": [
+          {
+            "gameId": "0022500136",
+            "gameCode": "20251211/PHINYK",
+            "gameStatus": 3,
+            "gameStatusText": "Final",
+            "gameLabel": "",
+            "gameDateEst": "2025-12-11T00:00:00Z",
+            "gameDateTimeUTC": "2025-12-12T00:30:00Z",
+            "arenaName": "Madison Square Garden",
+            "awayTeam": {"teamId": 1610612755, "teamCity": "Philadelphia", "teamName": "76ers", "teamTricode": "PHI", "score": 97},
+            "homeTeam": {"teamId": 1610612752, "teamCity": "New York", "teamName": "Knicks", "teamTricode": "NYK", "score": 108}
+          }
+        ]
+      },
+      {
+        "gameDate": "12/13/2025 00:00:00",
+        "games": [
+          {
+            "gameId": "0022500143",
+            "gameCode": "20251213/BOSNYK",
+            "gameStatus": 3,
+            "gameStatusText": "Final",
+            "gameLabel": "",
+            "gameDateEst": "2025-12-13T00:00:00Z",
+            "gameDateTimeUTC": "2025-12-14T00:30:00Z",
+            "arenaName": "Madison Square Garden",
+            "awayTeam": {"teamId": 1610612738, "teamCity": "Boston", "teamName": "Celtics", "teamTricode": "BOS", "score": 104},
+            "homeTeam": {"teamId": 1610612752, "teamCity": "New York", "teamName": "Knicks", "teamTricode": "NYK", "score": 102}
+          }
+        ]
+      },
+      {
+        "gameDate": "12/16/2025 00:00:00",
+        "games": [
+          {
+            "gameId": "0062500001",
+            "gameCode": "20251216/BOSOKC",
+            "gameStatus": 3,
+            "gameStatusText": "Final",
+            "gameLabel": "NBA Cup Final",
+            "gameDateEst": "2025-12-16T00:00:00Z",
+            "gameDateTimeUTC": "2025-12-17T01:30:00Z",
+            "arenaName": "T-Mobile Arena",
+            "awayTeam": {"teamId": 1610612738, "teamCity": "Boston", "teamName": "Celtics", "teamTricode": "BOS", "score": 118},
+            "homeTeam": {"teamId": 1610612760, "teamCity": "Oklahoma City", "teamName": "Thunder", "teamTricode": "OKC", "score": 121}
+          }
+        ]
+      },
+      {
+        "gameDate": "02/15/2026 00:00:00",
+        "games": [
+          {
+            "gameId": "0032500001",
+            "gameCode": "20260215/STEWLB",
+            "gameStatus": 3,
+            "gameStatusText": "Final",
+            "gameLabel": "All-Star Game",
+            "gameDateEst": "2026-02-15T00:00:00Z",
+            "gameDateTimeUTC": "2026-02-16T01:00:00Z",
+            "arenaName": "Intuit Dome",
+            "awayTeam": {"teamId": 1631000101, "teamCity": "Team", "teamName": "Stephen", "teamTricode": "STE", "score": 187},
+            "homeTeam": {"teamId": 1631000102, "teamCity": "Team", "teamName": "LeBron", "teamTricode": "WLB", "score": 182}
+          }
+        ]
+      },
+      {
+        "gameDate": "04/12/2026 00:00:00",
+        "games": [
+          {
+            "gameId": "0022501201",
+            "gameCode": "20260412/MIABOS",
+            "gameStatus": 1,
+            "gameStatusText": "7:00 pm ET",
+            "gameLabel": "",
+            "gameDateEst": "2026-04-12T00:00:00Z",
+            "gameDateTimeUTC": "2026-04-12T23:00:00Z",
+            "arenaName": "TD Garden",
+            "awayTeam": {"teamId": 1610612748, "teamCity": "Miami", "teamName": "Heat", "teamTricode": "MIA", "score": 0},
+            "homeTeam": {"teamId": 1610612738, "teamCity": "Boston", "teamName": "Celtics", "teamTricode": "BOS", "score": 0}
+          },
+          {
+            "gameId": "0022501202",
+            "gameCode": "20260412/NYKPHI",
+            "gameStatus": 1,
+            "gameStatusText": "8:30 pm ET",
+            "gameLabel": "",
+            "gameDateEst": "2026-04-12T00:00:00Z",
+            "gameDateTimeUTC": "2026-04-13T00:30:00Z",
+            "arenaName": "Xfinity Mobile Arena",
+            "awayTeam": {"teamId": 1610612752, "teamCity": "New York", "teamName": "Knicks", "teamTricode": "NYK", "score": 0},
+            "homeTeam": {"teamId": 1610612755, "teamCity": "Philadelphia", "teamName": "76ers", "teamTricode": "PHI", "score": 0}
+          }
+        ]
+      },
+      {
+        "gameDate": "04/15/2026 00:00:00",
+        "games": [
+          {
+            "gameId": "0052500001",
+            "gameCode": "20260415/MIAPHI",
+            "gameStatus": 1,
+            "gameStatusText": "7:30 pm ET",
+            "gameLabel": "Play-In Tournament",
+            "gameDateEst": "2026-04-15T00:00:00Z",
+            "gameDateTimeUTC": "2026-04-15T23:30:00Z",
+            "arenaName": "Xfinity Mobile Arena",
+            "awayTeam": {"teamId": 1610612748, "teamCity": "Miami", "teamName": "Heat", "teamTricode": "MIA", "score": 0},
+            "homeTeam": {"teamId": 1610612755, "teamCity": "Philadelphia", "teamName": "76ers", "teamTricode": "PHI", "score": 0}
+          }
+        ]
+      }
+    ]
+  }
+}

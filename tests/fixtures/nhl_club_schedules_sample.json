@@ -1,0 +1,319 @@
+{
+  "BOS": {
+    "currentSeason": 20252026,
+    "clubTimezone": "America/New_York",
+    "games": [
+      {
+        "id": 2025010001,
+        "season": 20252026,
+        "gameType": 1,
+        "gameDate": "2025-09-25",
+        "venue": {"default": "TD Garden"},
+        "startTimeUTC": "2025-09-25T23:00:00Z",
+        "gameState": "OFF",
+        "gameScheduleState": "OK",
+        "awayTeam": {"id": 90001, "abbrev": "PRO", "score": 2},
+        "homeTeam": {"id": 6, "abbrev": "BOS", "score": 3},
+        "gameOutcome": {"lastPeriodType": "REG"}
+      },
+      {
+        "id": 2025020201,
+        "season": 20252026,
+        "gameType": 2,
+        "gameDate": "2025-11-01",
+        "venue": {"default": "Bell Centre"},
+        "startTimeUTC": "2025-11-01T23:00:00Z",
+        "gameState": "OFF",
+        "gameScheduleState": "OK",
+        "awayTeam": {"id": 6, "abbrev": "BOS", "score": 4},
+        "homeTeam": {"id": 8, "abbrev": "MTL", "score": 2},
+        "gameOutcome": {"lastPeriodType": "REG"}
+      },
+      {
+        "id": 2025020215,
+        "season": 20252026,
+        "gameType": 2,
+        "gameDate": "2025-11-03",
+        "venue": {"default": "TD Garden"},
+        "startTimeUTC": "2025-11-03T23:30:00Z",
+        "gameState": "OFF",
+        "gameScheduleState": "OK",
+        "awayTeam": {"id": 8, "abbrev": "MTL", "score": 1},
+        "homeTeam": {"id": 6, "abbrev": "BOS", "score": 5},
+        "gameOutcome": {"lastPeriodType": "REG"}
+      },
+      {
+        "id": 2025020243,
+        "season": 20252026,
+        "gameType": 2,
+        "gameDate": "2025-11-07",
+        "venue": {"default": "TD Garden"},
+        "startTimeUTC": "2025-11-08T00:00:00Z",
+        "gameState": "OFF",
+        "gameScheduleState": "OK",
+        "awayTeam": {"id": 3, "abbrev": "NYR", "score": 2},
+        "homeTeam": {"id": 6, "abbrev": "BOS", "score": 3},
+        "gameOutcome": {"lastPeriodType": "SO"}
+      },
+      {
+        "id": 2025020285,
+        "season": 20252026,
+        "gameType": 2,
+        "gameDate": "2025-11-13",
+        "venue": {"default": "Scotiabank Arena"},
+        "startTimeUTC": "2025-11-14T00:00:00Z",
+        "gameState": "OFF",
+        "gameScheduleState": "OK",
+        "awayTeam": {"id": 6, "abbrev": "BOS", "score": 4},
+        "homeTeam": {"id": 10, "abbrev": "TOR", "score": 3},
+        "gameOutcome": {"lastPeriodType": "REG"}
+      },
+      {
+        "id": 2025020299,
+        "season": 20252026,
+        "gameType": 2,
+        "gameDate": "2025-11-15",
+        "venue": {"default": "Scotiabank Arena"},
+        "startTimeUTC": "2025-11-16T00:00:00Z",
+        "gameState": "FUT",
+        "gameScheduleState": "PPD",
+        "awayTeam": {"id": 6, "abbrev": "BOS"},
+        "homeTeam": {"id": 10, "abbrev": "TOR"}
+      },
+      {
+        "id": 2025030111,
+        "season": 20252026,
+        "gameType": 3,
+        "gameDate": "2026-05-01",
+        "venue": {"default": "TD Garden"},
+        "startTimeUTC": "2026-05-01T23:00:00Z",
+        "gameState": "OFF",
+        "gameScheduleState": "OK",
+        "awayTeam": {"id": 10, "abbrev": "TOR", "score": 2},
+        "homeTeam": {"id": 6, "abbrev": "BOS", "score": 1},
+        "gameOutcome": {"lastPeriodType": "REG"}
+      },
+      {
+        "id": 2025021150,
+        "season": 20252026,
+        "gameType": 2,
+        "gameDate": "2026-04-11",
+        "venue": {"default": "TD Garden"},
+        "startTimeUTC": "2026-04-11T23:00:00Z",
+        "gameState": "FUT",
+        "gameScheduleState": "OK",
+        "awayTeam": {"id": 8, "abbrev": "MTL"},
+        "homeTeam": {"id": 6, "abbrev": "BOS"}
+      }
+    ]
+  },
+  "MTL": {
+    "currentSeason": 20252026,
+    "clubTimezone": "America/Toronto",
+    "games": [
+      {
+        "id": 2025020201,
+        "season": 20252026,
+        "gameType": 2,
+        "gameDate": "2025-11-01",
+        "venue": {"default": "Bell Centre"},
+        "startTimeUTC": "2025-11-01T23:00:00Z",
+        "gameState": "OFF",
+        "gameScheduleState": "OK",
+        "awayTeam": {"id": 6, "abbrev": "BOS", "score": 4},
+        "homeTeam": {"id": 8, "abbrev": "MTL", "score": 2},
+        "gameOutcome": {"lastPeriodType": "REG"}
+      },
+      {
+        "id": 2025020215,
+        "season": 20252026,
+        "gameType": 2,
+        "gameDate": "2025-11-03",
+        "venue": {"default": "TD Garden"},
+        "startTimeUTC": "2025-11-03T23:30:00Z",
+        "gameState": "OFF",
+        "gameScheduleState": "OK",
+        "awayTeam": {"id": 8, "abbrev": "MTL", "score": 1},
+        "homeTeam": {"id": 6, "abbrev": "BOS", "score": 5},
+        "gameOutcome": {"lastPeriodType": "REG"}
+      },
+      {
+        "id": 2025020229,
+        "season": 20252026,
+        "gameType": 2,
+        "gameDate": "2025-11-05",
+        "venue": {"default": "Bell Centre"},
+        "startTimeUTC": "2025-11-05T23:00:00Z",
+        "gameState": "FINAL",
+        "gameScheduleState": "OK",
+        "awayTeam": {"id": 10, "abbrev": "TOR", "score": 3},
+        "homeTeam": {"id": 8, "abbrev": "MTL", "score": 4},
+        "gameOutcome": {"lastPeriodType": "OT"}
+      },
+      {
+        "id": 2025021150,
+        "season": 20252026,
+        "gameType": 2,
+        "gameDate": "2026-04-11",
+        "venue": {"default": "TD Garden"},
+        "startTimeUTC": "2026-04-11T23:00:00Z",
+        "gameState": "FUT",
+        "gameScheduleState": "OK",
+        "awayTeam": {"id": 8, "abbrev": "MTL"},
+        "homeTeam": {"id": 6, "abbrev": "BOS"}
+      }
+    ]
+  },
+  "TOR": {
+    "currentSeason": 20252026,
+    "clubTimezone": "America/Toronto",
+    "games": [
+      {
+        "id": 2025020229,
+        "season": 20252026,
+        "gameType": 2,
+        "gameDate": "2025-11-05",
+        "venue": {"default": "Bell Centre"},
+        "startTimeUTC": "2025-11-05T23:00:00Z",
+        "gameState": "FINAL",
+        "gameScheduleState": "OK",
+        "awayTeam": {"id": 10, "abbrev": "TOR", "score": 3},
+        "homeTeam": {"id": 8, "abbrev": "MTL", "score": 4},
+        "gameOutcome": {"lastPeriodType": "OT"}
+      },
+      {
+        "id": 2025020257,
+        "season": 20252026,
+        "gameType": 2,
+        "gameDate": "2025-11-09",
+        "venue": {"default": "Madison Square Garden"},
+        "startTimeUTC": "2025-11-10T00:00:00Z",
+        "gameState": "OFF",
+        "gameScheduleState": "OK",
+        "awayTeam": {"id": 10, "abbrev": "TOR", "score": 6},
+        "homeTeam": {"id": 3, "abbrev": "NYR", "score": 3},
+        "gameOutcome": {"lastPeriodType": "REG"}
+      },
+      {
+        "id": 2025020271,
+        "season": 20252026,
+        "gameType": 2,
+        "gameDate": "2025-11-11",
+        "venue": {"default": "Scotiabank Arena"},
+        "startTimeUTC": "2025-11-12T00:00:00Z",
+        "gameState": "OFF",
+        "gameScheduleState": "OK",
+        "awayTeam": {"id": 3, "abbrev": "NYR", "score": 2},
+        "homeTeam": {"id": 10, "abbrev": "TOR", "score": 5},
+        "gameOutcome": {"lastPeriodType": "REG"}
+      },
+      {
+        "id": 2025020285,
+        "season": 20252026,
+        "gameType": 2,
+        "gameDate": "2025-11-13",
+        "venue": {"default": "Scotiabank Arena"},
+        "startTimeUTC": "2025-11-14T00:00:00Z",
+        "gameState": "OFF",
+        "gameScheduleState": "OK",
+        "awayTeam": {"id": 6, "abbrev": "BOS", "score": 4},
+        "homeTeam": {"id": 10, "abbrev": "TOR", "score": 3},
+        "gameOutcome": {"lastPeriodType": "REG"}
+      },
+      {
+        "id": 2025020299,
+        "season": 20252026,
+        "gameType": 2,
+        "gameDate": "2025-11-15",
+        "venue": {"default": "Scotiabank Arena"},
+        "startTimeUTC": "2025-11-16T00:00:00Z",
+        "gameState": "FUT",
+        "gameScheduleState": "PPD",
+        "awayTeam": {"id": 6, "abbrev": "BOS"},
+        "homeTeam": {"id": 10, "abbrev": "TOR"}
+      },
+      {
+        "id": 2025030111,
+        "season": 20252026,
+        "gameType": 3,
+        "gameDate": "2026-05-01",
+        "venue": {"default": "TD Garden"},
+        "startTimeUTC": "2026-05-01T23:00:00Z",
+        "gameState": "OFF",
+        "gameScheduleState": "OK",
+        "awayTeam": {"id": 10, "abbrev": "TOR", "score": 2},
+        "homeTeam": {"id": 6, "abbrev": "BOS", "score": 1},
+        "gameOutcome": {"lastPeriodType": "REG"}
+      },
+      {
+        "id": 2025021151,
+        "season": 20252026,
+        "gameType": 2,
+        "gameDate": "2026-04-11",
+        "venue": {"default": "Madison Square Garden"},
+        "startTimeUTC": "2026-04-12T00:00:00Z",
+        "gameState": "FUT",
+        "gameScheduleState": "OK",
+        "awayTeam": {"id": 10, "abbrev": "TOR"},
+        "homeTeam": {"id": 3, "abbrev": "NYR"}
+      }
+    ]
+  },
+  "NYR": {
+    "currentSeason": 20252026,
+    "clubTimezone": "America/New_York",
+    "games": [
+      {
+        "id": 2025020243,
+        "season": 20252026,
+        "gameType": 2,
+        "gameDate": "2025-11-07",
+        "venue": {"default": "TD Garden"},
+        "startTimeUTC": "2025-11-08T00:00:00Z",
+        "gameState": "OFF",
+        "gameScheduleState": "OK",
+        "awayTeam": {"id": 3, "abbrev": "NYR", "score": 2},
+        "homeTeam": {"id": 6, "abbrev": "BOS", "score": 3},
+        "gameOutcome": {"lastPeriodType": "SO"}
+      },
+      {
+        "id": 2025020257,
+        "season": 20252026,
+        "gameType": 2,
+        "gameDate": "2025-11-09",
+        "venue": {"default": "Madison Square Garden"},
+        "startTimeUTC": "2025-11-10T00:00:00Z",
+        "gameState": "OFF",
+        "gameScheduleState": "OK",
+        "awayTeam": {"id": 10, "abbrev": "TOR", "score": 6},
+        "homeTeam": {"id": 3, "abbrev": "NYR", "score": 3},
+        "gameOutcome": {"lastPeriodType": "REG"}
+      },
+      {
+        "id": 2025020271,
+        "season": 20252026,
+        "gameType": 2,
+        "gameDate": "2025-11-11",
+        "venue": {"default": "Scotiabank Arena"},
+        "startTimeUTC": "2025-11-12T00:00:00Z",
+        "gameState": "OFF",
+        "gameScheduleState": "OK",
+        "awayTeam": {"id": 3, "abbrev": "NYR", "score": 2},
+        "homeTeam": {"id": 10, "abbrev": "TOR", "score": 5},
+        "gameOutcome": {"lastPeriodType": "REG"}
+      },
+      {
+        "id": 2025021151,
+        "season": 20252026,
+        "gameType": 2,
+        "gameDate": "2026-04-11",
+        "venue": {"default": "Madison Square Garden"},
+        "startTimeUTC": "2026-04-12T00:00:00Z",
+        "gameState": "FUT",
+        "gameScheduleState": "OK",
+        "awayTeam": {"id": 10, "abbrev": "TOR"},
+        "homeTeam": {"id": 3, "abbrev": "NYR"}
+      }
+    ]
+  }
+}

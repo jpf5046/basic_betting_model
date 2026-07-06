@@ -181,13 +181,18 @@ predictions, different gates" cheaply.
   (blend of other models' predictions). None require pipeline changes.
 
 **TODO:**
-- [ ] Define `Prediction` and `Pick` dataclasses + the model/pick-policy registries.
-- [ ] Implement `my_model` v1 against the feature registry; verify it reproduces
-      `my_model.md` §6 checklist outputs on hand-computed examples (unit tests with fixture
-      game logs).
-- [ ] Config loader with per-sport param validation (weights sum to 1.000, gates ordered,
-      etc. — same validation rules the UI editor will need, so write them once in the
-      backend and expose them).
+- [x] `Prediction` and `Pick` dataclasses + the model registry (`pipeline/models/`,
+      one file per model under `defs/`, auto-discovered) with pick policy split out
+      (`picks.py`) so "same predictions, different gates" is cheap.
+- [x] `my_model` v1 against the feature registry — reproduces `my_model.md` §2–§5
+      on hand-computed fixture examples (blend, renormalization, win prob, gates,
+      display tie-break, confidence label). WNBA constants are provisional
+      (not in my_model.md): home_adv 2.5, k 0.15, totals 168/158 — tune via backtest.
+- [x] Config loader with per-sport param validation (weights sum to 1.000, gates
+      ordered, totals ordered) — factory defaults in `config.py`, JSON override files
+      deep-merge, same rules the UI editor will surface.
+- [ ] CLI pick sheet exists (`python3 -m pipeline.models predict`); wire into the
+      daily orchestrator (§7) once grading lands.
 
 ---
 

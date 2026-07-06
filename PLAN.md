@@ -129,14 +129,17 @@ Key properties:
 - **Null-safe:** a feature may return `None` (no common opponents yet, no weather for a
   dome). Models declare per-feature fallback behavior (My Model's "drop and renormalize").
 
-Initial feature set (extracted from `my_model.md` so My Model becomes pure config + blend):
+**Built** (`pipeline/features/` — registry + point-in-time FeatureContext + frame
+builder + CLI; one file per feature under `pipeline/features/defs/`, auto-discovered):
 
-- [ ] `season_scoring` (SPG, SAPG per team)
-- [ ] `common_opponents` (weighted scored/allowed vs shared opponents + count)
-- [ ] `last10_form` (L10 record; NHL points-based variant)
-- [ ] `home_away_flag` / `home_advantage_units`
-- [ ] `head_to_head` (season H2H scores + count)
-- [ ] `games_played` (for the evidence/confidence score)
+- [x] `season_scoring` (SPG, SAPG, GP per team)
+- [x] `common_opponents` (weighted scored/allowed vs shared opponents + count)
+- [x] `last10_form` (L10 record; NHL points-based variant)
+- [x] `home_advantage` (per-sport factory units; WNBA 2.5 provisional)
+- [x] `head_to_head` (season H2H scores + count)
+- [x] `games_played` (for the evidence/confidence score)
+- [x] `travel_km` — **the canary shipped early and passed**: one new file, nothing
+      else touched, powered by the venue coordinates seeded in item 1.
 
 Wish-list features (each should be an afternoon of work once the registry exists):
 

@@ -227,7 +227,40 @@ VOID and PENDING are reported but never counted in the record. Doubleheaders
 grade independently (picks reference the unique per-game id), and NHL OT/SO
 finals count as plain moneyline wins.
 
-## 7. Run the tests
+## 7. Backtest a config against history
+
+The reason everything above exists. Replays a season (or slice) through a
+model day by day — fresh point-in-time context per date, the same code the
+daily run uses — grades every pick against the actual finals (at consensus
+market prices when the odds event map covers the games), and compares any
+candidate config against the factory baseline on the same slice:
+
+```bash
+python3 -m pipeline.backfill --sport WNBA --seasons 2025   # history first
+python3 -m pipeline.backtest run --sport WNBA --season 2025
+python3 -m pipeline.backtest run --sport WNBA --season 2025 --config tweaks.json
+# factory defaults
+#   record 6-2-0   ROI +50.0%   P&L $+400.00   picks 8   pass rate +0.0%
+#   by tier  STRONG  3-0-0  ROI +100.0%  ...
+# candidate vs baseline P&L: $+100.00
+```
+
+Runs are deterministic (the run id hashes model + slice + params) and
+persist to `data/backtests/<sport>/run_<id>.json` + a full pick-log CSV —
+the future Researcher Console's backtest history reads straight from these.
+Preseason/All-Star games are never replayed. Use `--from`/`--to` for a
+slice, `--no-odds` to force flat $100 grading.
+
+For offline analysis or model fitting, the same leak-free table is one
+call away:
+
+```bash
+python3 -m pipeline.frame build --sport WNBA --season 2025
+# -> data/frames/wnba/frame_2025.csv  (one row per game: features as-of
+#    the game date + final scores/total/margin/winner)
+```
+
+## 8. Run the tests
 
 ```bash
 python3 -m unittest discover -s tests          # all (offline, no network)

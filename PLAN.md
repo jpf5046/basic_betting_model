@@ -83,15 +83,18 @@ class SourceAdapter(Protocol):
     def fetch_game_logs(self, team, season) -> list[LogEntry]
 ```
 
-Planned adapters: `mlb_statsapi`, `nba_statsapi`, `nhl_api`. **Built: `wnba`**
-(`pipeline/ingest/wnba.py` — cdn.wnba.com schedule feed; today's slate, season scores,
-common-opponent inputs; raw-cache + offline tests). Later: `weather_api` (Open-Meteo
-or similar, keyed by venue lat/lon + start time), `odds_api` (optional — My Model doesn't use
-odds, but grading totals against a real line and computing true ROI eventually will).
+**Built:** `wnba`, `mlb`, `nba`, `nhl` (`pipeline/ingest/*.py`) — each covers today's
+slate, season scores, and common-opponent inputs, with raw-response caching and offline
+tests. The shared Game record (one schema for every sport's games CSV, matching the
+`games` table above), query layer, HTTP retry, and CLI live in `pipeline/ingest/core.py`;
+an adapter owns only its feed URLs, team mapping, and feed parsing. Later: `weather_api`
+(Open-Meteo or similar, keyed by venue lat/lon + start time), `odds_api` (optional — My
+Model doesn't use odds, but grading totals against a real line and computing true ROI
+eventually will).
 
 **TODO:**
-- [ ] Build the three league adapters with retry/backoff and raw-response caching to disk
-      (so a re-run of a day never re-hits the API, and history can be rebuilt offline).
+- [x] League adapters with retry/backoff and raw-response caching to disk — WNBA, MLB,
+      NBA, NHL built on the shared `core.py`; standings ingestion still open below.
 - [ ] Backfill job: pull full current-season game logs + daily standings for all three
       leagues to seed history for backtesting.
 - [ ] Nightly ingest writes `standings_snapshots` keyed by `as_of_date` — never overwrite;

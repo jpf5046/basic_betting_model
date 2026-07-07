@@ -27,7 +27,6 @@ Everything downstream of the raw file is covered by tests/test_wnba_ingest.py.
 from __future__ import annotations
 
 import csv
-import json
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -42,6 +41,7 @@ from pipeline.ingest.core import (  # noqa: F401  (query names re-exported for t
     completed_regular_season,
     http_get,
     make_parser,
+    read_feed_json,
     read_games_csv,
     run_query_command,
     team_log,
@@ -195,7 +195,7 @@ def main(argv: list[str] | None = None) -> None:
 
     if args.cmd == "fetch":
         raw = fetch_raw(offline=args.offline)
-        doc = json.loads(raw.read_text())
+        doc = read_feed_json(raw)
         games = parse_games(doc, team_map)
         path = write_games_csv(games, games_csv_path(games[0].season))
         finals = sum(1 for g in games if g.status == "final")

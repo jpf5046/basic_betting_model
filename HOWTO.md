@@ -2,12 +2,18 @@
 
 Everything that exists in this repo today and how to run it, in the order the
 daily orchestrator (`python3 run_daily.py`) runs it: **ingest → inspect →
-features → predict → odds → grade**.
-For the architecture and what's coming next, see [`PLAN.md`](PLAN.md).
+features → predict → odds → grade → backfill/database (optional)**.
+For the architecture and what's coming next, see [`PLAN.md`](PLAN.md). New
+here? Start at the root [`README.md`](README.md).
 
 ## Prerequisites
 
-- Python **3.11+**, standard library only — there is nothing to `pip install`.
+- Python **3.11+**, standard library only — there is nothing to `pip install`
+  for the pipeline itself. All storage is flat CSVs under `data/`; no database
+  is required to run any command below.
+- Optional: `export DATABASE_URL=postgresql://...` mirrors the CSVs into
+  PostgreSQL instead of the default local SQLite file — see §8 below. Needs
+  `pip install "psycopg[binary]"`, the one optional dependency.
 - Run every command **from the repo root**.
 - `fetch` commands need normal internet access (they hit the leagues' public,
   key-less APIs). Everything else — queries, features, predictions, tests —
@@ -198,14 +204,70 @@ VOID and PENDING are reported but never counted in the record. Doubleheaders
 grade independently (picks reference the unique per-game id), and NHL OT/SO
 finals count as plain moneyline wins.
 
-## 7. Run the tests
+## 7. Backfill the season, optionally load it into a database
+
+```bash
+python3 -m pipeline.backfill --sports WNBA               # today's season, this sport
+python3 -m pipeline.backfill --sports WNBA,MLB --through 2026-07-01
+# WNBA: 187 games over 62 dates (150 labeled finals) -> data/frames/wnba_2026.csv
+```
+
+Replays every game on the sport's games CSV through the feature registry
+**as of that game's own date** (`FeatureContext`, point-in-time by
+construction — the same code the daily predict step uses), then labels each
+row with its outcome once final. Writes the canonical frame CSV,
+`data/frames/<sport>_<season>.csv` — identity, one column per feature per
+side, and the outcome group (empty until a game is final). Run the sport's
+`fetch` first; re-running is safe, it always rebuilds the file for the whole
+range.
+
+This is the flat-file half of the future backtester's dataset (PLAN.md §5,
+§7); the model/pick/grade columns come later as the daily orchestrator
+accumulates that history.
+
+**Optional:** mirror the CSVs into a real database so you can query them with
+SQL:
+
+```bash
+python3 -m pipeline.db load --sports WNBA     # teams.csv + games CSV + frame CSV -> db
+python3 -m pipeline.db status
+# teams        275 rows
+# games         44 rows
+# frames        44 rows
+# (sqlite data/model.db)
+```
+
+With no setup this writes a local SQLite file, `data/model.db`. To use
+PostgreSQL instead:
+
+```bash
+pip install "psycopg[binary]"                              # the one optional dependency
+export DATABASE_URL=postgresql://user:pass@host:5432/betting_model
+python3 -m pipeline.db load --sports WNBA
+python3 -m pipeline.db status
+# (postgres (DATABASE_URL))
+```
+
+Same commands, same schema, same output either way — `Db.connect()` just
+checks whether `DATABASE_URL` is set. `load` is a full upsert (safe to re-run
+after a fresh `fetch`/`backfill`); the CSVs stay the source of truth, so the
+database can be deleted and rebuilt from them at any time. Three tables ship
+today: `teams`, `games`, `frames` (the frame CSV's row, with the feature
+vector stored as a JSON column). See `PLAN.md` §1 for the rest of the planned
+schema.
+
+## 8. Run the tests
 
 ```bash
 python3 -m unittest discover -s tests          # all (offline, no network)
 python3 -m unittest tests.test_my_model -v     # one suite
+python3 -m unittest tests.test_backfill tests.test_db -v   # backfill + storage layer
 ```
 
-All suites run from committed fixture feeds — no fetch required.
+All suites run from committed fixture feeds — no fetch required. The
+Postgres-specific test (`tests.test_db.TestPostgres`) is skipped unless
+`TEST_DATABASE_URL` points at a reachable PostgreSQL — it's a real round-trip
+against the live server, not a mock, so it needs one.
 
 ---
 
@@ -258,12 +320,18 @@ we're ready. Still open from §7: standings snapshots.
 | `data/odds/<sport>/snapshots_*.csv` | normalized odds, one row per event/book/market/outcome | regenerated |
 | `data/odds/<sport>/event_map.csv` | durable game_id ↔ event_id join | **worth committing** — it's state |
 | `data/reports/daily_<date>.md` | the orchestrator's daily report | regenerated (commit if you want history) |
+| `data/frames/<sport>_<season>.csv` | labeled canonical frame (backfill) | regenerated |
+| `data/model.db` | local SQLite mirror of teams/games/frames | no (gitignored) — absent when `DATABASE_URL` is set |
 
 ## Troubleshooting
 
 | Symptom | Fix |
 |---|---|
 | `…games_<season>.csv not found — run fetch first` | Run the sport's `fetch` (or check `--season` matches the CSV name in `data/<sport>/`) |
+| `unknown sport(s) …` from `pipeline.backfill` / `pipeline.db` | `--sports` takes a comma-separated subset of `WNBA,MLB,NBA,NHL` |
+| `nothing backfilled — no games CSVs found` | Run the sport's ingest `fetch` before `python3 -m pipeline.backfill` |
+| `DATABASE_URL is set but the driver is missing` | `pip install "psycopg[binary]"` |
+| `pipeline.db load` reports `0 frame rows` for a sport | Run `python3 -m pipeline.backfill --sports <SPORT>` first — `load` mirrors what's already on disk, it doesn't compute frames |
 | `no cached feed in data/raw/… — run fetch without --offline` | `--offline` needs a prior real fetch's cache |
 | `unmapped tricode/team id …` | Add the team or alias to `data/teams.csv` / the adapter's alias map, rerun `scripts/validate_teams.py` |
 | `unexpected feed shape…` | League changed its JSON; the message names the cached raw file to inspect |

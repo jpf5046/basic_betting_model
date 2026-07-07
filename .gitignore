@@ -2,3 +2,5 @@ __pycache__/
 *.pyc
 # raw API feed cache (large, refetchable)
 data/raw/
+# local SQLite database mirror (rebuildable from the CSVs; absent when DATABASE_URL is set)
+data/model.db

@@ -14,7 +14,8 @@ The three files already in this repo define the vision:
 | `researcher-console-design.html` | Interactive design reference for that UI. |
 
 The rest of this document is the backend design. Each numbered section is a work item we
-will tackle one by one. **For how to run what's already built, see [`HOWTO.md`](HOWTO.md)**
+will tackle one by one. **For orientation start at [`README.md`](README.md); for how to
+run what's already built, see [`HOWTO.md`](HOWTO.md)**
 — fetch, inspect, feature frames, predictions, configs, tests. Progress at a glance lives
 in the §10 build-order table.
 
@@ -40,7 +41,19 @@ in the §10 build-order table.
 ## 1. Storage layer (SQLite first, swappable later)
 
 A single SQLite file (`model.db`) is plenty for v1; the schema is designed so Postgres is a
-drop-in swap later. Core tables:
+drop-in swap later.
+
+**Built** (`pipeline/db/`): `Db.connect()` reads `DATABASE_URL` — set → PostgreSQL (via
+`psycopg`, the repo's one optional dependency); unset → local SQLite at `data/model.db`.
+Identical portable SQL runs against both (qmark placeholders rewritten to `%s` for
+psycopg, `ON CONFLICT … DO UPDATE` upserts). `python3 -m pipeline.db {init,load,status}`
+is the CLI; `load` upserts `data/teams.csv`, each sport's games CSV, and the backfilled
+frame CSV (§7) — full and idempotent, safe to re-run any time, since the CSVs remain the
+source of truth and the database is a rebuildable mirror, not the system of record. Three
+tables shipped so far: `teams`, `games`, `frames` (the §5 canonical frame — identity +
+outcome columns, with the per-game feature vector as a JSON column so a new feature never
+needs a migration). The remaining tables below (`model_configs`, `predictions`, `picks`,
+`grades`, …) land as their features do. Core tables (planned in full):
 
 | Table | Purpose | Key columns |
 |---|---|---|
@@ -60,7 +73,10 @@ drop-in swap later. Core tables:
 | `ingest_log` | What was fetched when, and failures | `source, sport, date, status, error` |
 
 **TODO:**
-- [ ] Define schema as versioned migrations (plain SQL files + tiny migration runner).
+- [x] `teams` / `games` / `frames` tables + `DATABASE_URL`-or-SQLite connection + load CLI
+      — see "Built" above.
+- [ ] Define schema as versioned migrations (plain SQL files + tiny migration runner) once
+      more tables land.
 - [x] Team registry with ID mapping — shipped as a flat file, `data/teams.csv` (275 teams:
       NFL, NBA, MLB, NHL, WNBA, CFB/FBS 2026), validated by `scripts/validate_teams.py`.
       The CSV is the source of truth; the future `teams` table seeds from it. Unmapped
@@ -102,8 +118,12 @@ Predictions stay odds-blind by design — odds join on afterward. Later: `weathe
 **TODO:**
 - [x] League adapters with retry/backoff and raw-response caching to disk — WNBA, MLB,
       NBA, NHL built on the shared `core.py`; standings ingestion still open below.
-- [ ] Backfill job: pull full current-season game logs + daily standings for all three
-      leagues to seed history for backtesting.
+- [x] Backfill job (`pipeline/backfill.py`, §7): each adapter's `fetch` already returns
+      the full season's game logs in one feed, so the backfill's job is synthesizing the
+      labeled frame from them (§5) — done below. **Still open:** daily standings snapshots
+      (`standings_snapshots`) aren't ingested at all yet, so anything that would depend on
+      point-in-time standings (as opposed to point-in-time game logs) has no history to
+      backfill.
 - [ ] Nightly ingest writes `standings_snapshots` keyed by `as_of_date` — never overwrite;
       snapshots are the point-in-time backbone.
 - [ ] Weather adapter (wish list): temp, wind speed/direction, precipitation for outdoor
@@ -228,9 +248,18 @@ Rules:
   (pandas) — this is also the future ML-training dataset if we ever fit weights instead of
   hand-tuning them.
 
+**Built, partial** (`pipeline/backfill.py`, §7): the **Identity + Features + Outcome**
+rows above — `python3 -m pipeline.backfill` replays every game to date through
+`FeatureContext` (as-of that game's own date, so the point-in-time guarantee holds) and
+labels it from the games CSV, writing `data/frames/<sport>_<season>.csv` and, optionally,
+the `frames` table (§1) via `python3 -m pipeline.db load`. **Not yet included:** the Model
+output / Pick output / Grade column groups — those need `predictions` and `grades` history
+to exist first, which is what the live daily orchestrator (§7) is now accumulating day by
+day.
+
 **TODO:**
-- [ ] Implement `build_frame()` reading from `games` + `feature_values` + `predictions` +
-      `grades`.
+- [ ] Implement full `build_frame()` joining `games` + `feature_values` (or the frame CSVs)
+      + `predictions` + `grades` — the model/pick/grade column groups.
 - [ ] Parquet export per season (`data/frames/mlb_2026.parquet`) for fast repeated
       backtests and offline analysis in a notebook.
 
@@ -370,16 +399,21 @@ pipeline/
     defs/my_model.py   # ONE FILE PER MODEL (my_model.md v1 shipped)
   grading/             # grader + edge cases (§7)
   orchestrator.py      # the daily DAG (§7) — run_daily.py / python3 -m pipeline daily
+  backfill.py          # season backfill -> labeled canonical frame CSV (§5, §7)
+  db/                  # storage layer (§1): DATABASE_URL (postgres) or local sqlite
+    core.py            # Db.connect(), portable schema + upsert SQL
+    loader.py           # CSV -> teams/games/frames upsert
+    __main__.py         # python3 -m pipeline.db {init,load,status}
   backtest/            # (planned) runner, metrics, sweep (§6)
-  db/                  # (planned) SQLite schema when flat files outgrow (§1)
   api/                 # (planned) FastAPI layer (§8)
 scripts/
   validate_teams.py    # registry checks
-tests/                 # 82 offline tests; fixtures/ holds frozen feeds
+tests/                 # 144 offline tests; fixtures/ holds frozen feeds
 data/
   teams.csv            # canonical team registry (committed)
   raw/                 # timestamped API responses (gitignored)
-  <sport>/ features/ predictions/   # regenerated artifacts
+  <sport>/ features/ predictions/ frames/   # regenerated artifacts
+  model.db             # local SQLite mirror (gitignored) — absent when DATABASE_URL is set
 .github/workflows/
   daily.yml            # the §7 cron, checked in fully commented out (disabled by choice)
 run_daily.py           # local entry point for the daily orchestrator
@@ -391,15 +425,15 @@ run_daily.py           # local entry point for the daily orchestrator
 
 | # | Status | Item | Depends on | Definition of done |
 |---|---|---|---|---|
-| 1 | 🟡 half | Schema + migrations + team registry | — | **Done:** `data/teams.csv` (275 teams, venue lat/lon, timezones, native ids) + validator. **Open:** SQLite schema/migrations, deferred until flat files pinch |
-| 2 | ✅ | Sport adapters + raw cache | 1 | WNBA/MLB/NBA/NHL built on shared `ingest/core.py` (PRs #3–#7); schedule + results + game logs flowing. **Open:** standings snapshots, backfill job |
+| 1 | 🟡 half | Schema + migrations + team registry | — | **Done:** `data/teams.csv` (275 teams, venue lat/lon, timezones, native ids) + validator; `pipeline/db/` gives `teams`/`games`/`frames` tables with a `DATABASE_URL`-or-SQLite connection + load CLI. **Open:** migrations, the remaining tables (configs/predictions/picks/grades), deferred until each feature needs them |
+| 2 | ✅ | Sport adapters + raw cache | 1 | WNBA/MLB/NBA/NHL built on shared `ingest/core.py` (PRs #3–#7); schedule + results + game logs flowing. **Open:** standings snapshots |
 | 3 | ✅ | Feature registry + core features | 1 | `pipeline/features/` (PR #8): point-in-time context, 6 core features, frame CLI. Cache deferred until backtester needs it |
 | 4 | ✅ | `my_model` v1 + pick policy + config loader | 3 | `pipeline/models/` (PR #9): reproduces `my_model.md` on hand-computed fixtures; pick sheet CLI works. WNBA constants provisional |
 | 5 | ✅ | Grader | 2 | `pipeline/grading/`: WIN/LOSS/PUSH plus VOID (postponed/suspended/cancelled) and PENDING (not final yet); doubleheaders via unique game ids; NHL OT/SO = plain ML win; whole-number totals push |
 | 5a | ✅ | Odds adapter + event matching + edge + real payouts | 2,4,5 | `pipeline/odds/` (moved up by request): The Odds API v4 fetch/historical, game↔event map, consensus closing prices, model-vs-market edge report, grading at market prices vs market total lines |
 | 6 | 🟡 half | Daily orchestrator + GitHub Actions cron | 2,3,4,5 | **Done:** `run_daily.py` chains ingest→grade→predict→odds→report per sport with off-season/failure isolation + markdown daily report. **Open (by choice):** the Actions cron is checked in disabled (`.github/workflows/daily.yml`, fully commented) — enable when ready; standings snapshots |
-| 7 | ⬜ | Season backfill (WNBA/MLB 2026) | 2,3 | Full labeled canonical frame for the season to date |
-| 8 | ⬜ | `build_frame()` + parquet export | 7 | One call returns the leak-free modeling dataframe (frame.py is the seed) |
+| 7 | ✅ | Season backfill (WNBA/MLB 2026) | 2,3 | `pipeline/backfill.py`: replays every game to date through `FeatureContext` (point-in-time, per game's own date) and labels it from the games CSV -> `data/frames/<sport>_<season>.csv`; `pipeline/db/` optionally mirrors teams/games/frames into PostgreSQL (`DATABASE_URL`) or local SQLite for SQL access. **Open:** standings-dependent history (blocked on §2's standings ingestion) |
+| 8 | ⬜ | `build_frame()` + parquet export | 7 | Item 7 covers Identity+Features+Outcome; still need the Model/Pick/Grade column groups (needs `predictions`/`grades` history from the now-running daily orchestrator) + parquet export |
 | 9 | ⬜ | Backtester + metrics + CLI | 8 | Any config backtested vs factory baseline; results persisted |
 | 10 | ✅ | NBA + NHL adapters | 2 pattern | Shipped early alongside item 2 (PRs #5, #6) |
 | 11 | ⬜ | Shadow mode + sweep + walk-forward | 9 | Candidate configs accumulate live evidence |

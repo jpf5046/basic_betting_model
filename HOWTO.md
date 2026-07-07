@@ -8,6 +8,9 @@ For the architecture and what's coming next, see [`PLAN.md`](PLAN.md).
 ## Prerequisites
 
 - Python **3.11+**, standard library only — there is nothing to `pip install`.
+- **No database** — all storage is flat CSVs under `data/`. A `DATABASE_URL`
+  env var is ignored today; it becomes the Postgres connection string when the
+  PLAN.md §1 storage layer lands.
 - Run every command **from the repo root**.
 - `fetch` commands need normal internet access (they hit the leagues' public,
   key-less APIs). Everything else — queries, features, predictions, tests —

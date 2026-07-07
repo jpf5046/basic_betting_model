@@ -1,8 +1,8 @@
 # HOWTO — running the pipeline
 
 Everything that exists in this repo today and how to run it, in the order the
-daily process will eventually run it: **ingest → inspect → features → predict
-→ odds → grade**.
+daily orchestrator (`python3 run_daily.py`) runs it: **ingest → inspect →
+features → predict → odds → grade**.
 For the architecture and what's coming next, see [`PLAN.md`](PLAN.md).
 
 ## Prerequisites
@@ -209,7 +209,26 @@ All suites run from committed fixture feeds — no fetch required.
 
 ---
 
-## A typical morning, today (by hand)
+## A typical morning — one command
+
+```bash
+python3 run_daily.py                       # all four sports, today (US/Eastern)
+python3 run_daily.py --sports WNBA,MLB     # just the in-season ones
+python3 run_daily.py --date 2026-07-03     # rebuild a missed day
+python3 run_daily.py --skip-odds           # odds-blind (or just leave ODDS_API_KEY unset)
+```
+
+`run_daily.py` (identical: `python3 -m pipeline daily`) is the PLAN.md §7
+orchestrator. Per sport it chains **ingest → grade yesterday → predict
+today → odds fetch → edge report**, then writes a markdown daily report —
+stage log, grade card, pick sheet, edge table — to
+`data/reports/daily_<date>.md`. Stages are isolated and idempotent: a
+sport with no games today is SKIPPED ("off-season"), not an error; a
+failing stage is recorded (and makes the run exit nonzero) without
+stopping the other sports; re-running a date is always safe. Odds stages
+skip themselves when `ODDS_API_KEY` isn't set.
+
+Step by step, the same loop by hand is:
 
 ```bash
 python3 -m pipeline.ingest.wnba fetch                 # yesterday's finals + today's slate
@@ -219,10 +238,10 @@ python3 -m pipeline.odds fetch --sport WNBA           # today's odds + event mat
 python3 -m pipeline.odds edge --sport WNBA --date "$(date +%F)"   # where's the edge?
 ```
 
-That's the whole daily loop, by hand. The orchestrator that chains these
-steps on a schedule (plus standings snapshots and a daily report) is the next
-build item — see `PLAN.md` §7 and §10. This section becomes one command
-(`python3 -m pipeline daily`) when it lands.
+The unattended-cron version of this exists as
+`.github/workflows/daily.yml` but is **intentionally disabled** (every
+line commented out); the file's header explains how to enable it when
+we're ready. Still open from §7: standings snapshots.
 
 ## Where files live
 
@@ -238,6 +257,7 @@ build item — see `PLAN.md` §7 and §10. This section becomes one command
 | `data/predictions/<sport>/edges_<date>.csv` | model-vs-market edge rows | regenerated |
 | `data/odds/<sport>/snapshots_*.csv` | normalized odds, one row per event/book/market/outcome | regenerated |
 | `data/odds/<sport>/event_map.csv` | durable game_id ↔ event_id join | **worth committing** — it's state |
+| `data/reports/daily_<date>.md` | the orchestrator's daily report | regenerated (commit if you want history) |
 
 ## Troubleshooting
 

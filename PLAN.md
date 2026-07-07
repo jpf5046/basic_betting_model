@@ -293,6 +293,15 @@ daily(date):
                         → ingest_log; alert (email/push) on anomalies
 ```
 
+**Built** (`pipeline/orchestrator.py`): the staged run above as
+`python3 run_daily.py` / `python3 -m pipeline daily [--date] [--sports] [--skip-odds]
+[--offline]` — per-sport isolated stages (one failure can't stop the rest), off-season
+short-circuit, markdown daily report to `data/reports/daily_<date>.md`, nonzero exit on
+any failed stage. The GitHub Actions cron exists as `.github/workflows/daily.yml` but is
+**intentionally disabled** (fully commented out; its header documents how to enable it,
+including the commit-back step that persists picks between ephemeral runners). Still
+open: standings snapshots (blocked on §2) and feature-values caching.
+
 Implementation notes:
 
 - Plain Python orchestrator with explicit stage functions + a state table — **not** Airflow;
@@ -312,9 +321,11 @@ Implementation notes:
 - [ ] **Shadow mode:** run 1–3 non-live candidate configs every day alongside the live one,
       storing predictions + virtual grades but not publishing. Real out-of-sample evidence
       before promoting anything.
-- [ ] Daily report artifact (markdown committed to the repo or posted somewhere) — pick
-      sheet + yesterday's grade card, human-readable.
-- [ ] Failure notifications (start with GitHub Actions failure emails; graduate later).
+- [x] Daily report artifact — `data/reports/daily_<date>.md`: stage log, grade card,
+      pick sheet, edge report. The disabled workflow's commit-back step is what will
+      commit it to the repo once the cron is enabled.
+- [ ] Failure notifications (start with GitHub Actions failure emails once daily.yml is
+      enabled — a failed stage already exits nonzero, which is what turns the run red).
 
 ---
 
@@ -357,8 +368,8 @@ pipeline/
     config.py          # factory defaults per sport, validation, JSON overrides
     picks.py           # pick policy: ML gates + totals thresholds
     defs/my_model.py   # ONE FILE PER MODEL (my_model.md v1 shipped)
-  grading/             # (planned) grader + edge cases (§7)
-  orchestrator.py      # (planned) the daily DAG (§7)
+  grading/             # grader + edge cases (§7)
+  orchestrator.py      # the daily DAG (§7) — run_daily.py / python3 -m pipeline daily
   backtest/            # (planned) runner, metrics, sweep (§6)
   db/                  # (planned) SQLite schema when flat files outgrow (§1)
   api/                 # (planned) FastAPI layer (§8)
@@ -369,7 +380,9 @@ data/
   teams.csv            # canonical team registry (committed)
   raw/                 # timestamped API responses (gitignored)
   <sport>/ features/ predictions/   # regenerated artifacts
-.github/workflows/     # (planned) daily.yml cron
+.github/workflows/
+  daily.yml            # the §7 cron, checked in fully commented out (disabled by choice)
+run_daily.py           # local entry point for the daily orchestrator
 ```
 
 ---
@@ -384,7 +397,7 @@ data/
 | 4 | ✅ | `my_model` v1 + pick policy + config loader | 3 | `pipeline/models/` (PR #9): reproduces `my_model.md` on hand-computed fixtures; pick sheet CLI works. WNBA constants provisional |
 | 5 | ✅ | Grader | 2 | `pipeline/grading/`: WIN/LOSS/PUSH plus VOID (postponed/suspended/cancelled) and PENDING (not final yet); doubleheaders via unique game ids; NHL OT/SO = plain ML win; whole-number totals push |
 | 5a | ✅ | Odds adapter + event matching + edge + real payouts | 2,4,5 | `pipeline/odds/` (moved up by request): The Odds API v4 fetch/historical, game↔event map, consensus closing prices, model-vs-market edge report, grading at market prices vs market total lines |
-| 6 | ⬜ next | Daily orchestrator + GitHub Actions cron | 2,3,4,5 | Unattended morning run produces pick sheet + grade card |
+| 6 | 🟡 half | Daily orchestrator + GitHub Actions cron | 2,3,4,5 | **Done:** `run_daily.py` chains ingest→grade→predict→odds→report per sport with off-season/failure isolation + markdown daily report. **Open (by choice):** the Actions cron is checked in disabled (`.github/workflows/daily.yml`, fully commented) — enable when ready; standings snapshots |
 | 7 | ⬜ | Season backfill (WNBA/MLB 2026) | 2,3 | Full labeled canonical frame for the season to date |
 | 8 | ⬜ | `build_frame()` + parquet export | 7 | One call returns the leak-free modeling dataframe (frame.py is the seed) |
 | 9 | ⬜ | Backtester + metrics + CLI | 8 | Any config backtested vs factory baseline; results persisted |

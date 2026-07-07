@@ -1,0 +1,44 @@
+[
+  {
+    "id": "dh-early",
+    "sport_key": "baseball_mlb",
+    "sport_title": "MLB",
+    "commence_time": "2026-06-05T17:05:00Z",
+    "home_team": "Boston Red Sox",
+    "away_team": "Baltimore Orioles",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2026-06-05T12:00:00Z",
+        "markets": [
+          {"key": "h2h", "outcomes": [
+            {"name": "Boston Red Sox", "price": -140},
+            {"name": "Baltimore Orioles", "price": 120}
+          ]}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dh-late",
+    "sport_key": "baseball_mlb",
+    "sport_title": "MLB",
+    "commence_time": "2026-06-05T23:10:00Z",
+    "home_team": "Boston Red Sox",
+    "away_team": "Baltimore Orioles",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2026-06-05T12:00:00Z",
+        "markets": [
+          {"key": "h2h", "outcomes": [
+            {"name": "Boston Red Sox", "price": -120},
+            {"name": "Baltimore Orioles", "price": 100}
+          ]}
+        ]
+      }
+    ]
+  }
+]

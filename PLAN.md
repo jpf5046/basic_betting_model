@@ -89,10 +89,15 @@ class SourceAdapter(Protocol):
 slate, season scores, and common-opponent inputs, with raw-response caching and offline
 tests. The shared Game record (one schema for every sport's games CSV, matching the
 `games` table above), query layer, HTTP retry, and CLI live in `pipeline/ingest/core.py`;
-an adapter owns only its feed URLs, team mapping, and feed parsing. Later: `weather_api`
-(Open-Meteo or similar, keyed by venue lat/lon + start time), `odds_api` (optional — My
-Model doesn't use odds, but grading totals against a real line and computing true ROI
-eventually will).
+an adapter owns only its feed URLs, team mapping, and feed parsing. **Also built:
+`pipeline/odds/`** (The Odds API v4, key via `ODDS_API_KEY`): odds fetch (live +
+historical snapshots) with raw caching, normalization to team_id-keyed rows, the durable
+`game_id ↔ event_id` event map (matched by sport + home + away + date, start-time
+tie-break for doubleheaders — works for future, live, and historic odds), consensus
+median pricing, a model-vs-market edge report, and market-priced grading. The `events`
+endpoint also surfaces upcoming games for sports without an ingester (e.g. World Cup).
+Predictions stay odds-blind by design — odds join on afterward. Later: `weather_api`
+(Open-Meteo or similar, keyed by venue lat/lon + start time).
 
 **TODO:**
 - [x] League adapters with retry/backoff and raw-response caching to disk — WNBA, MLB,
@@ -298,9 +303,10 @@ Implementation notes:
   `python -m pipeline daily --date 2026-07-03`.
 - Off-season handling: a sport with no games short-circuits to "off-season" status (the UI's
   off-season card), not an error.
-- Grading edge cases to spec out: postponed/suspended games (VOID, $0), MLB doubleheaders
-  (game_id must include game number), NHL OT/SO (counts as win for ML), totals push when
-  final total equals the model's threshold line exactly.
+- Grading edge cases — **built** (`pipeline/grading/`, item 5): postponed/suspended/
+  cancelled → VOID $0; not-final-yet → PENDING (re-run after the next fetch); MLB
+  doubleheaders grade independently via unique game ids; NHL OT/SO counts as a plain ML
+  win; totals landing exactly on a whole-number line push.
 
 **Wish list for the daily run:**
 - [ ] **Shadow mode:** run 1–3 non-live candidate configs every day alongside the live one,
@@ -376,8 +382,9 @@ data/
 | 2 | ✅ | Sport adapters + raw cache | 1 | WNBA/MLB/NBA/NHL built on shared `ingest/core.py` (PRs #3–#7); schedule + results + game logs flowing. **Open:** standings snapshots, backfill job |
 | 3 | ✅ | Feature registry + core features | 1 | `pipeline/features/` (PR #8): point-in-time context, 6 core features, frame CLI. Cache deferred until backtester needs it |
 | 4 | ✅ | `my_model` v1 + pick policy + config loader | 3 | `pipeline/models/` (PR #9): reproduces `my_model.md` on hand-computed fixtures; pick sheet CLI works. WNBA constants provisional |
-| 5 | ⬜ next | Grader | 2 | Yesterday's picks graded incl. postponement/doubleheader/OT edge cases |
-| 6 | ⬜ | Daily orchestrator + GitHub Actions cron | 2,3,4,5 | Unattended morning run produces pick sheet + grade card |
+| 5 | ✅ | Grader | 2 | `pipeline/grading/`: WIN/LOSS/PUSH plus VOID (postponed/suspended/cancelled) and PENDING (not final yet); doubleheaders via unique game ids; NHL OT/SO = plain ML win; whole-number totals push |
+| 5a | ✅ | Odds adapter + event matching + edge + real payouts | 2,4,5 | `pipeline/odds/` (moved up by request): The Odds API v4 fetch/historical, game↔event map, consensus closing prices, model-vs-market edge report, grading at market prices vs market total lines |
+| 6 | ⬜ next | Daily orchestrator + GitHub Actions cron | 2,3,4,5 | Unattended morning run produces pick sheet + grade card |
 | 7 | ⬜ | Season backfill (WNBA/MLB 2026) | 2,3 | Full labeled canonical frame for the season to date |
 | 8 | ⬜ | `build_frame()` + parquet export | 7 | One call returns the leak-free modeling dataframe (frame.py is the seed) |
 | 9 | ⬜ | Backtester + metrics + CLI | 8 | Any config backtested vs factory baseline; results persisted |
@@ -392,9 +399,11 @@ data/
 
 ## Open questions (decide as we go, none block item 1)
 
-- Odds ingestion: My Model is odds-free by design, but real ROI grading and totals-vs-market
-  picks eventually want a line. Which free/cheap odds source, and do we store closing lines
-  from day one just for grading context?
+- ~~Odds ingestion: which source, and do we store closing lines from day one?~~
+  **Resolved:** The Odds API v4 (`pipeline/odds/`); snapshots stored from day one and
+  grading uses consensus closing prices against the market total line. Still open:
+  de-vigging implied probabilities (currently raw, vig included) and stake sizing
+  beyond flat $100 (Kelly fraction once edge estimates prove calibrated).
 - Season boundaries: do features reset hard at season start, or blend in last season's data
   for the first N games (early-season cold start is when common-opponents is empty)?
 - Where does the daily report go — committed markdown, email, or just the future UI?

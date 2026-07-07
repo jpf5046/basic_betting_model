@@ -4,11 +4,14 @@ Runs entirely against tests/fixtures/wnba_schedule_sample.json — no network.
 From the repo root:  python3 -m unittest tests.test_wnba_ingest -v
 """
 import copy
+import gzip
 import json
+import tempfile
 import unittest
 from datetime import date
 from pathlib import Path
 
+from pipeline.ingest.core import read_feed_json
 from pipeline.ingest.wnba import (
     UnmappedTeamError,
     common_opponents,
@@ -83,6 +86,34 @@ class TestParse(unittest.TestCase):
         bad["homeTeam"]["teamTricode"] = "XXX"
         with self.assertRaises(UnmappedTeamError):
             parse_games(doc, load_team_map())
+
+
+class TestReadFeedJson(unittest.TestCase):
+    """Raw-cache parsing must survive what the CDN actually sends back:
+    gzip bodies, UTF-8 BOMs, and (diagnosably) non-JSON error pages."""
+
+    def _write(self, body: bytes) -> Path:
+        f = tempfile.NamedTemporaryFile(suffix=".json", delete=False)
+        self.addCleanup(Path(f.name).unlink)
+        f.write(body)
+        f.close()
+        return Path(f.name)
+
+    def test_plain_json(self):
+        self.assertEqual(read_feed_json(self._write(b'{"a": 1}')), {"a": 1})
+
+    def test_utf8_bom(self):
+        self.assertEqual(read_feed_json(self._write(b'\xef\xbb\xbf{"a": 1}')), {"a": 1})
+
+    def test_gzip_body(self):
+        self.assertEqual(read_feed_json(self._write(gzip.compress(b'{"a": 1}'))), {"a": 1})
+
+    def test_non_json_body_names_the_file(self):
+        path = self._write(b"<html>Access Denied</html>")
+        with self.assertRaises(RuntimeError) as ctx:
+            read_feed_json(path)
+        self.assertIn(str(path), str(ctx.exception))
+        self.assertIn("Access Denied", str(ctx.exception))
 
 
 class TestQueries(unittest.TestCase):

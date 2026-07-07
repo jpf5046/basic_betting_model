@@ -30,6 +30,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import gzip
 import json
 import sys
 import time
@@ -82,20 +83,55 @@ CSV_FIELDS = [f.name for f in fields(Game)]
 
 # ------------------------------------------------------------------ I/O
 
+# The Akamai edge fronting cdn.{nba,wnba}.com answers non-browser user agents
+# with 200 + a non-JSON body, which used to land in the raw cache and only
+# blow up later as a bare JSONDecodeError. Look like a browser instead.
+BROWSER_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+    ),
+    "Accept": "application/json, text/plain, */*",
+    "Accept-Encoding": "gzip",
+}
+
+
+def _gunzip_if_needed(body: bytes) -> bytes:
+    return gzip.decompress(body) if body[:2] == b"\x1f\x8b" else body
+
+
 def http_get(url: str, timeout: int = 30, delays: tuple = (0, 2, 4, 8, 16)) -> bytes:
-    """GET with exponential-backoff retries; raises after the last attempt."""
-    req = urllib.request.Request(url, headers={"User-Agent": "basic-betting-model/0.1"})
+    """GET with exponential-backoff retries; raises after the last attempt.
+
+    Responses are transparently gunzipped, so callers and the raw cache
+    always see the plain body.
+    """
+    req = urllib.request.Request(url, headers=dict(BROWSER_HEADERS))
     last_err: Exception | None = None
     for attempt, delay in enumerate(delays):
         if delay:
             time.sleep(delay)
         try:
             with urllib.request.urlopen(req, timeout=timeout) as resp:
-                return resp.read()
+                return _gunzip_if_needed(resp.read())
         except (urllib.error.URLError, TimeoutError) as e:
             last_err = e
             print(f"fetch attempt {attempt + 1} failed for {url}: {e}", file=sys.stderr)
     raise RuntimeError(f"could not fetch {url}: {last_err}")
+
+
+def read_feed_json(path: Path) -> dict:
+    """Parse a cached raw feed file, tolerating gzip bodies (older caches)
+    and a UTF-8 BOM, and failing with a diagnosable error on anything else."""
+    body = _gunzip_if_needed(path.read_bytes())
+    try:
+        return json.loads(body.decode("utf-8-sig"))
+    except (UnicodeDecodeError, json.JSONDecodeError) as e:
+        preview = body[:120].decode("utf-8", "replace")
+        raise RuntimeError(
+            f"{path} is not valid JSON ({e}) — the feed likely returned an "
+            f"error page; body starts with: {preview!r}"
+        ) from None
 
 
 def utc_to_eastern_date(utc_iso: str) -> str:

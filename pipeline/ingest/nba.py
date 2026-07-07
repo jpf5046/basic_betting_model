@@ -50,6 +50,7 @@ from pipeline.ingest.core import (  # noqa: F401  (query names re-exported for t
     completed_regular_season,
     http_get,
     make_parser,
+    read_feed_json,
     read_games_csv,
     run_query_command,
     team_log,
@@ -202,7 +203,7 @@ def main(argv: list[str] | None = None) -> None:
 
     if args.cmd == "fetch":
         raw = fetch_raw(offline=args.offline)
-        doc = json.loads(raw.read_text())
+        doc = read_feed_json(raw)
         games = parse_games(doc, by_nba_id)
         path = write_games_csv(games, games_csv_path(games[0].season))
         finals = sum(1 for g in games if g.status == "final")

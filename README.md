@@ -11,18 +11,22 @@ python3 run_daily.py          # the whole morning loop, one command
 
 ## Requirements
 
-- **Python 3.11+, standard library only** — there is nothing to `pip install`.
-- No database, no services: all storage is flat CSVs under `data/` (see
-  [Storage](#storage--databases) below).
+- **Python 3.11+, standard library only** — there is nothing to `pip install`
+  for the pipeline itself. All storage is flat CSVs under `data/` (see
+  [Storage & databases](#storage--databases) below); no database is required
+  to run locally.
 - Internet access for the `fetch` stages (the leagues' public, key-less APIs).
 - Optional: `export ODDS_API_KEY=...` ([The Odds API](https://the-odds-api.com))
   for the odds-fetch and edge-report stages — without it those stages skip
   themselves and the pipeline runs odds-blind.
+- Optional: `export DATABASE_URL=postgresql://...` to mirror the flat files
+  into PostgreSQL instead of local SQLite — needs `pip install "psycopg[binary]"`,
+  the one optional dependency. See [Storage & databases](#storage--databases).
 
 ## Quickstart
 
 ```bash
-python3 -m unittest discover -s tests      # 129 offline tests, no network needed
+python3 -m unittest discover -s tests      # 144 offline tests, no network needed
 python3 run_daily.py --sports WNBA,MLB     # daily run for the in-season sports
 python3 run_daily.py --date 2026-07-03     # rebuild a missed day
 ```
@@ -44,6 +48,8 @@ out); its header explains how to enable it.
 | Odds adapter | `pipeline/odds/` | The Odds API v4: consensus prices, game↔event matching, model-vs-market edge report |
 | Grader | `pipeline/grading/` | WIN/LOSS/PUSH/VOID/PENDING at market prices, doubleheader- and OT-aware |
 | Daily orchestrator | `pipeline/orchestrator.py` | Chains all of the above per sport; `run_daily.py` / `python3 -m pipeline daily` |
+| Season backfill | `pipeline/backfill.py` | Replays a season through the feature registry (point-in-time) to synthesize the labeled canonical frame |
+| Storage layer | `pipeline/db/` | Optional queryable mirror of the CSVs — PostgreSQL via `DATABASE_URL`, else local SQLite |
 
 ## Docs
 
@@ -56,15 +62,34 @@ out); its header explains how to enable it.
 
 ## Storage & databases
 
-**Nothing in the pipeline connects to a database today, and none is needed to
-run it locally.** Every artifact is a flat CSV under `data/` (the games CSVs,
-feature frames, predictions, picks, grades, odds snapshots) — deliberately, per
-[`PLAN.md`](PLAN.md) §1: files are reviewable, diffable, and enough until the
-backtester needs real queries.
+Flat CSVs under `data/` remain the source of truth (games, feature frames,
+predictions, picks, grades, odds snapshots) — reviewable, diffable, and
+sufficient on their own; **you do not need a database to run the pipeline
+locally.**
 
-If you have a PostgreSQL instance and a `DATABASE_URL` environment variable set:
-setting it changes nothing right now — no code reads it. The recorded plan
-(PLAN §1) is that when the storage layer lands, it will **honor `DATABASE_URL`
-when set (PostgreSQL) and fall back to a local SQLite file otherwise**, keeping
-the zero-dependency local path working. The schema in PLAN §1 is already written
-to make that a drop-in swap.
+A database mirror (PLAN.md §1) is available on top of that for anyone who
+wants to query the data with SQL — e.g. for the backtester, ad hoc analysis,
+or feeding the future API layer. It follows the CSVs, not the other way
+around:
+
+```bash
+# No setup: local SQLite file at data/model.db
+python3 -m pipeline.backfill --sports WNBA          # build the labeled frame CSV
+python3 -m pipeline.db load --sports WNBA           # mirror teams/games/frames into it
+python3 -m pipeline.db status                       # row counts
+
+# With a PostgreSQL instance: same commands, one env var, one extra package
+pip install "psycopg[binary]"
+export DATABASE_URL=postgresql://user:pass@host:5432/betting_model
+python3 -m pipeline.db load --sports WNBA
+```
+
+`DATABASE_URL` set → PostgreSQL; unset → the local SQLite file — same schema,
+same SQL, same CLI either way (`pipeline/db/core.py`). `load` is a full
+idempotent upsert, so it's always safe to re-run after a fresh `fetch` or
+`backfill`; the database can be deleted and rebuilt from the CSVs at any time.
+Three tables today: `teams`, `games`, and `frames` (the canonical
+identity+features+outcome row from `pipeline.backfill`, features stored as a
+JSON column so new features never need a migration). See `PLAN.md` §1 for the
+rest of the planned schema (configs, predictions, picks, grades) as those
+land.

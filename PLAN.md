@@ -14,7 +14,8 @@ The three files already in this repo define the vision:
 | `researcher-console-design.html` | Interactive design reference for that UI. |
 
 The rest of this document is the backend design. Each numbered section is a work item we
-will tackle one by one. **For how to run what's already built, see [`HOWTO.md`](HOWTO.md)**
+will tackle one by one. **For orientation start at [`README.md`](README.md); for how to
+run what's already built, see [`HOWTO.md`](HOWTO.md)**
 — fetch, inspect, feature frames, predictions, configs, tests. Progress at a glance lives
 in the §10 build-order table.
 
@@ -40,7 +41,10 @@ in the §10 build-order table.
 ## 1. Storage layer (SQLite first, swappable later)
 
 A single SQLite file (`model.db`) is plenty for v1; the schema is designed so Postgres is a
-drop-in swap later. Core tables:
+drop-in swap later. **Decision (2026-07):** a PostgreSQL instance is available via a
+`DATABASE_URL` env var — when this layer lands, connect to `DATABASE_URL` if set, else
+fall back to local SQLite, so the zero-dependency local path keeps working. Until then
+nothing reads `DATABASE_URL`; every artifact is a flat CSV under `data/`. Core tables:
 
 | Table | Purpose | Key columns |
 |---|---|---|
@@ -375,7 +379,7 @@ pipeline/
   api/                 # (planned) FastAPI layer (§8)
 scripts/
   validate_teams.py    # registry checks
-tests/                 # 82 offline tests; fixtures/ holds frozen feeds
+tests/                 # 129 offline tests; fixtures/ holds frozen feeds
 data/
   teams.csv            # canonical team registry (committed)
   raw/                 # timestamped API responses (gitignored)

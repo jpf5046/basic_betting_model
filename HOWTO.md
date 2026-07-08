@@ -256,12 +256,59 @@ today: `teams`, `games`, `frames` (the frame CSV's row, with the feature
 vector stored as a JSON column). See `PLAN.md` §1 for the rest of the planned
 schema.
 
+## 7a. Backfill games + odds from an existing export
+
+For dates too old for the live feeds (they only serve the current season)
+or too old for The Odds API's historical-snapshot endpoint (its window is
+only a few days), import an existing `games_scores` / `games_odds`-shaped
+export instead:
+
+```bash
+python3 -m pipeline.backfill_external --scores scores.csv --odds odds.csv
+# scores: 41213 rows -> 6284 games across 11 sport/season file(s)
+#   MLB 2024: 2268 games (2268 final)
+#   ...
+# odds: 38907 rows -> 812634 normalized quote rows
+#   MLB: 601422 rows (2201 events)
+#   ...
+```
+
+Input is two CSVs, one row per game each, sharing a `game_key` column —
+which turns out to already be The Odds API's own event id (a 32-character
+hex string), so it's used directly as our `game_id` for these rows; no
+fuzzy matching needed, the join is exact and already in the source data.
+`--odds` is optional. `--dry-run` reports without writing anything.
+
+Only sport_keys we have a team registry for are imported — `WNBA`, `MLB`,
+`NBA`, `NHL` (plus `basketball_nba_preseason`, mapped to NBA/preseason).
+Everything else — soccer leagues, NCAAB, NFL, rugby league, euroleague,
+and whatever other sport_keys your export has — is reported and skipped,
+not silently dropped: there's no `data/teams.csv` entry to resolve those
+team names against. `--sports` narrows further if you only want a subset
+of the four right now.
+
+Team names are resolved the same way the odds adapter already does —
+`data/teams.csv` names plus `pipeline/odds/normalize.py`'s `NAME_ALIASES`.
+Old exports surface franchise relocations the live alias list has never
+needed (e.g. Arizona Coyotes → Utah Mammoth); when you hit one, add it to
+`NAME_ALIASES` the same way. Any team name that still doesn't resolve is
+listed by name and `game_key` in the run's output — nothing is imported
+silently unmapped.
+
+Odds come back with **every bookmaker's every quote** (including
+`spreads`, which the rest of the pipeline doesn't grade against yet, but
+which are stored — a future spread-betting pick policy would find them
+already there). Re-running is safe: games upsert by `game_id` into the
+season's games CSV, and the odds/event-map files are written the same way
+the live odds adapter writes them, so `pipeline.odds.edge` and
+`pipeline.grading` read backfilled games exactly like live ones.
+
 ## 8. Run the tests
 
 ```bash
 python3 -m unittest discover -s tests          # all (offline, no network)
 python3 -m unittest tests.test_my_model -v     # one suite
-python3 -m unittest tests.test_backfill tests.test_db -v   # backfill + storage layer
+python3 -m unittest tests.test_backfill tests.test_db tests.test_backfill_external -v
 ```
 
 All suites run from committed fixture feeds — no fetch required. The
@@ -343,3 +390,5 @@ we're ready. Still open from §7: standings snapshots.
 | `unmapped team names (add to NAME_ALIASES?)` | The Odds API spells a team differently — add the alias in `pipeline/odds/normalize.py` |
 | `AMBIGUOUS: … multiple candidates` | Doubleheader whose start times couldn't break the tie — check the games CSV has `start_time_utc` for both games |
 | `no matched odds event` in edge/grading | Run `python3 -m pipeline.odds fetch` (or `match`) after the games CSV exists |
+| `backfill_external` reports a sport_key as "skipped" | Either it's outside `--sports`, or there's genuinely no `data/teams.csv` entry for that sport yet (soccer, NCAAB, NFL, …) |
+| `backfill_external` lists a team name under "unmapped" | Add it to `NAME_ALIASES` in `pipeline/odds/normalize.py` — old exports surface franchise relocations (e.g. Arizona Coyotes → Utah Mammoth) the live alias list never needed |

@@ -124,6 +124,21 @@ Predictions stay odds-blind by design — odds join on afterward. Later: `weathe
       (`standings_snapshots`) aren't ingested at all yet, so anything that would depend on
       point-in-time standings (as opposed to point-in-time game logs) has no history to
       backfill.
+- [x] External games+odds backfill (`pipeline/backfill_external.py`): for dates neither
+      the live feeds nor The Odds API's historical-snapshot window can reach anymore,
+      import an existing `games_scores`/`games_odds`-shaped export instead (a prior
+      odds-tracking DB's tables — one row per game each, sharing a `game_key` that turns
+      out to already be The Odds API's own event id, so it's used directly as our
+      `game_id`, no fuzzy matching needed). Filters to sport_keys we have a team registry
+      for (WNBA/MLB/NBA/NHL + `basketball_nba_preseason`), reports and skips the rest
+      (soccer leagues, NCAAB, NFL, rugby league, …) rather than dropping them silently.
+      Flattens each game's full bookmaker/market/outcome history (including `spreads`,
+      not just `h2h`/`totals` — stored for a future spread pick policy, ungraded today)
+      into the same row shape `pipeline/odds/normalize.py` produces from a live fetch, so
+      `pipeline.odds.edge` / `pipeline.grading` read backfilled games exactly like live
+      ones. Surfaced a real gap on first run: relocated franchises (Arizona Coyotes → Utah
+      Mammoth) aren't in the current 32-team registry under their old name — added to
+      `NAME_ALIASES` as found, same as any other alias.
 - [ ] Nightly ingest writes `standings_snapshots` keyed by `as_of_date` — never overwrite;
       snapshots are the point-in-time backbone.
 - [ ] Weather adapter (wish list): temp, wind speed/direction, precipitation for outdoor
@@ -400,6 +415,7 @@ pipeline/
   grading/             # grader + edge cases (§7)
   orchestrator.py      # the daily DAG (§7) — run_daily.py / python3 -m pipeline daily
   backfill.py          # season backfill -> labeled canonical frame CSV (§5, §7)
+  backfill_external.py # import an existing games+odds export for dates live sources can't reach (§2, §7)
   db/                  # storage layer (§1): DATABASE_URL (postgres) or local sqlite
     core.py            # Db.connect(), portable schema + upsert SQL
     loader.py           # CSV -> teams/games/frames upsert
@@ -408,7 +424,7 @@ pipeline/
   api/                 # (planned) FastAPI layer (§8)
 scripts/
   validate_teams.py    # registry checks
-tests/                 # 144 offline tests; fixtures/ holds frozen feeds
+tests/                 # 164 offline tests; fixtures/ holds frozen feeds
 data/
   teams.csv            # canonical team registry (committed)
   raw/                 # timestamped API responses (gitignored)
@@ -432,7 +448,7 @@ run_daily.py           # local entry point for the daily orchestrator
 | 5 | ✅ | Grader | 2 | `pipeline/grading/`: WIN/LOSS/PUSH plus VOID (postponed/suspended/cancelled) and PENDING (not final yet); doubleheaders via unique game ids; NHL OT/SO = plain ML win; whole-number totals push |
 | 5a | ✅ | Odds adapter + event matching + edge + real payouts | 2,4,5 | `pipeline/odds/` (moved up by request): The Odds API v4 fetch/historical, game↔event map, consensus closing prices, model-vs-market edge report, grading at market prices vs market total lines |
 | 6 | 🟡 half | Daily orchestrator + GitHub Actions cron | 2,3,4,5 | **Done:** `run_daily.py` chains ingest→grade→predict→odds→report per sport with off-season/failure isolation + markdown daily report. **Open (by choice):** the Actions cron is checked in disabled (`.github/workflows/daily.yml`, fully commented) — enable when ready; standings snapshots |
-| 7 | ✅ | Season backfill (WNBA/MLB 2026) | 2,3 | `pipeline/backfill.py`: replays every game to date through `FeatureContext` (point-in-time, per game's own date) and labels it from the games CSV -> `data/frames/<sport>_<season>.csv`; `pipeline/db/` optionally mirrors teams/games/frames into PostgreSQL (`DATABASE_URL`) or local SQLite for SQL access. **Open:** standings-dependent history (blocked on §2's standings ingestion) |
+| 7 | ✅ | Season backfill (WNBA/MLB 2026) | 2,3 | `pipeline/backfill.py`: replays every game to date through `FeatureContext` (point-in-time, per game's own date) and labels it from the games CSV -> `data/frames/<sport>_<season>.csv`; `pipeline/db/` optionally mirrors teams/games/frames into PostgreSQL (`DATABASE_URL`) or local SQLite for SQL access. `pipeline/backfill_external.py` covers dates the live feeds/Odds API can no longer reach, importing an existing games+odds export instead. **Open:** standings-dependent history (blocked on §2's standings ingestion) |
 | 8 | ⬜ | `build_frame()` + parquet export | 7 | Item 7 covers Identity+Features+Outcome; still need the Model/Pick/Grade column groups (needs `predictions`/`grades` history from the now-running daily orchestrator) + parquet export |
 | 9 | ⬜ | Backtester + metrics + CLI | 8 | Any config backtested vs factory baseline; results persisted |
 | 10 | ✅ | NBA + NHL adapters | 2 pattern | Shipped early alongside item 2 (PRs #5, #6) |

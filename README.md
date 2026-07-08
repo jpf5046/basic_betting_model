@@ -26,7 +26,7 @@ python3 run_daily.py          # the whole morning loop, one command
 ## Quickstart
 
 ```bash
-python3 -m unittest discover -s tests      # 144 offline tests, no network needed
+python3 -m unittest discover -s tests      # 164 offline tests, no network needed
 python3 run_daily.py --sports WNBA,MLB     # daily run for the in-season sports
 python3 run_daily.py --date 2026-07-03     # rebuild a missed day
 ```
@@ -49,6 +49,7 @@ out); its header explains how to enable it.
 | Grader | `pipeline/grading/` | WIN/LOSS/PUSH/VOID/PENDING at market prices, doubleheader- and OT-aware |
 | Daily orchestrator | `pipeline/orchestrator.py` | Chains all of the above per sport; `run_daily.py` / `python3 -m pipeline daily` |
 | Season backfill | `pipeline/backfill.py` | Replays a season through the feature registry (point-in-time) to synthesize the labeled canonical frame |
+| External games+odds backfill | `pipeline/backfill_external.py` | Imports a `games_scores`/`games_odds`-shaped export for dates the live feeds and The Odds API's historical window can no longer reach |
 | Storage layer | `pipeline/db/` | Optional queryable mirror of the CSVs — PostgreSQL via `DATABASE_URL`, else local SQLite |
 
 ## Docs

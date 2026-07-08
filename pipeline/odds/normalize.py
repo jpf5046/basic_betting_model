@@ -28,6 +28,9 @@ NAME_ALIASES = {
     "St Louis Blues": "St. Louis Blues",
     "Montréal Canadiens": "Montreal Canadiens",
     "Utah Hockey Club": "Utah Mammoth",
+    # Franchise relocated after the 2023-24 season; historic odds/scores
+    # exports still use the old name.
+    "Arizona Coyotes": "Utah Mammoth",
 }
 
 ROW_FIELDS = ["snapshot_ts", "event_id", "sport", "commence_time",

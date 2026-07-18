@@ -1,0 +1,74 @@
+# Season backfill — manual one-shot (run this FIRST, before the daily cron
+# has anything to grade or mirror).
+#
+# What it does, per sport: fetch the season's schedule feed (pipeline.ingest),
+# replay the season through the feature registry to build the labeled
+# canonical frame (pipeline.backfill), optionally mirror everything into
+# Postgres (pipeline.db, when DATABASE_URL is configured), then commit the
+# games + frames CSVs back to the repo so later runs — and the daily cron —
+# start from them. Every stage is idempotent, so re-running is always safe.
+
+name: backfill
+
+on:
+  workflow_dispatch:
+    inputs:
+      sports:
+        description: "Comma-separated sports"
+        default: "MLB,NBA,NHL,WNBA"
+      season:
+        description: "Season key override (default: current per sport)"
+        default: ""
+      through:
+        description: "Backfill through YYYY-MM-DD (default: today)"
+        default: ""
+
+permissions:
+  contents: write            # needed by the commit-back step
+
+concurrency:
+  group: pipeline-data       # shared with daily.yml — never interleave commits
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL || vars.DATABASE_URL }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run the offline test suite first
+        run: python3 -m unittest discover -s tests
+
+      - name: Ingest each sport's season feed
+        run: |
+          for sport in $(echo "${{ inputs.sports }}" | tr ',' ' ' | tr 'A-Z' 'a-z'); do
+            python3 -m pipeline.ingest."$sport" fetch
+          done
+
+      - name: Build the labeled canonical frames
+        run: |
+          args="--sports ${{ inputs.sports }}"
+          [ -n "${{ inputs.season }}" ] && args="$args --season ${{ inputs.season }}"
+          [ -n "${{ inputs.through }}" ] && args="$args --through ${{ inputs.through }}"
+          python3 -m pipeline.backfill $args
+
+      - name: Mirror CSVs into Postgres
+        if: env.DATABASE_URL != ''
+        run: |
+          pip install "psycopg[binary]"
+          python3 -m pipeline.db init
+          python3 -m pipeline.db load --sports "${{ inputs.sports }}"
+
+      - name: Commit the backfilled data
+        run: |
+          git config user.name "daily-pipeline[bot]"
+          git config user.email "daily-pipeline@users.noreply.github.com"
+          git add data/frames data/*/games_*.csv || true
+          git diff --cached --quiet || git commit -m "season backfill $(date -u +%F)"
+          git push

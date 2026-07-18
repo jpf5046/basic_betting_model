@@ -191,5 +191,47 @@ class TestReport(OrchestratorCase):
         self.assertIn("_nothing today", path.read_text())
 
 
+class TestExitPolicy(unittest.TestCase):
+    """How main() turns stage failures into an exit code, strict vs
+    --allow-partial (the mode the daily cron runs in)."""
+
+    @staticmethod
+    def run_main(results, argv):
+        with mock.patch.object(orchestrator, "daily", return_value=results), \
+             mock.patch.object(orchestrator, "write_report", return_value=Path("x.md")), \
+             contextlib.redirect_stdout(io.StringIO()):
+            try:
+                orchestrator.main(argv)
+            except SystemExit as e:
+                return str(e.code)
+        return None
+
+    def test_strict_fails_on_any_failure(self):
+        results = [StageResult("ingest", "MLB", "ok"),
+                   StageResult("ingest", "NBA", "failed")]
+        msg = self.run_main(results, ["--sports", "MLB,NBA"])
+        self.assertIn("ingest NBA", msg)
+
+    def test_partial_tolerates_some_ingest_failures(self):
+        results = [StageResult("ingest", "MLB", "ok"),
+                   StageResult("ingest", "NBA", "failed")]
+        # MLB fetched, so a single off-season/unreachable feed keeps the run green.
+        self.assertIsNone(self.run_main(results, ["--sports", "MLB,NBA", "--allow-partial"]))
+
+    def test_partial_still_fails_when_every_ingest_fails(self):
+        results = [StageResult("ingest", "MLB", "failed"),
+                   StageResult("ingest", "NBA", "failed")]
+        msg = self.run_main(results, ["--sports", "MLB,NBA", "--allow-partial"])
+        self.assertIsNotNone(msg)  # a total feed outage still alerts
+
+    def test_partial_still_fails_on_a_later_stage(self):
+        results = [StageResult("ingest", "MLB", "ok"),
+                   StageResult("ingest", "NBA", "failed"),
+                   StageResult("predict", "MLB", "failed")]
+        msg = self.run_main(results, ["--sports", "MLB,NBA", "--allow-partial"])
+        self.assertIn("predict MLB", msg)      # a real bug on a fetched sport
+        self.assertNotIn("ingest NBA", msg)    # the tolerated feed isn't in the exit
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -58,10 +58,14 @@ jobs:
           if [ -n "$ODDS_API_KEY" ]; then echo "ODDS_API_KEY: present (${#ODDS_API_KEY} chars)"; else echo "ODDS_API_KEY: MISSING — odds + edge stages will be skipped"; fi
           if [ -n "$DATABASE_URL" ]; then echo "DATABASE_URL: present"; else echo "DATABASE_URL: MISSING — Postgres mirror will be skipped (SQLite used locally)"; fi
 
+      # --allow-partial: an off-season or unreachable feed for one sport (e.g.
+      # NBA in July) is reported but does not red the whole run — the sports
+      # that fetched still publish and commit. A total feed outage (every sport
+      # fails) or a later-stage bug still fails the run and emails you.
       - name: Run the daily pipeline
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY || vars.ODDS_API_KEY }}
-        run: python3 run_daily.py
+        run: python3 run_daily.py --allow-partial
 
       # Idempotent full-season rebuild: keeps the labeled canonical frame in
       # sync with the finals that today's ingest just fetched.

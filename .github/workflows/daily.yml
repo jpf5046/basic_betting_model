@@ -1,75 +1,83 @@
-# Daily pipeline cron — INTENTIONALLY DISABLED.
-#
-# Every line below is commented out on purpose: this workflow is checked in as
-# the blueprint for PLAN.md §7's unattended morning run, but it must not go
-# live until we choose to flip it on. Until then, the daily run is local:
-#
-#     python3 run_daily.py            # or: python3 -m pipeline daily
-#
-# To enable:
-#   1. Uncomment everything below this header block.
-#   2. Add ODDS_API_KEY to the repo's Actions secrets (Settings → Secrets and
-#      variables → Actions) — or delete that env line to run odds-blind.
-#   3. Commit to the default branch; check the run in the Actions tab.
+# Daily pipeline cron — ENABLED (was the PLAN.md §7 blueprint, flipped on now
+# that ODDS_API_KEY / DATABASE_URL are configured in the repo settings).
 #
 # Design notes (why the workflow looks like this):
 #   * Actions runners are ephemeral, so yesterday's picks would vanish between
 #     runs — grading depends on them. The commit-back step persists
-#     data/predictions/ and data/reports/ to the repo after each run; that is
-#     also the PLAN.md §7 wish-list "daily report artifact, committed".
+#     data/predictions/, data/reports/, and data/frames/ to the repo after
+#     each run; that is also the PLAN.md §7 wish-list "daily report artifact,
+#     committed".
 #   * The cron fires at 10:30 UTC (~6:30am ET), after every US game is final.
-#   * `|| true` is NOT used: a failed stage exits nonzero, the run shows red,
-#     and GitHub emails the failure — the free version of §7's alerting.
-#
-# ---------------------------------------------------------------------------
-#
-# name: daily
-#
-# on:
-#   schedule:
-#     - cron: "30 10 * * *"   # 10:30 UTC daily (~6:30am ET)
-#   workflow_dispatch: {}      # manual "Run workflow" button for missed days
-#
-# permissions:
-#   contents: write            # needed by the commit-back step
-#
-# concurrency:
-#   group: daily-pipeline      # never let two runs interleave commits
-#   cancel-in-progress: false
-#
-# jobs:
-#   daily:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v4
-#
-#       - uses: actions/setup-python@v5
-#         with:
-#           python-version: "3.11"
-#
-#       - name: Run the offline test suite first
-#         run: python3 -m unittest discover -s tests
-#
-#       - name: Run the daily pipeline
-#         env:
-#           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-#         run: python3 run_daily.py
-#
-#       - name: Upload the daily report as a run artifact
-#         if: always()
-#         uses: actions/upload-artifact@v4
-#         with:
-#           name: daily-report
-#           path: |
-#             data/reports/
-#             data/predictions/
-#           if-no-files-found: ignore
-#
-#       - name: Commit results back (picks must survive until tomorrow's grading)
-#         if: always()
-#         run: |
-#           git config user.name "daily-pipeline[bot]"
-#           git config user.email "daily-pipeline@users.noreply.github.com"
-#           git add data/predictions data/reports data/*/games_*.csv || true
-#           git diff --cached --quiet || git commit -m "daily run $(date -u +%F)"
-#           git push
+#   * `|| true` is NOT used on the pipeline stages: a failed stage exits
+#     nonzero, the run shows red, and GitHub emails the failure — the free
+#     version of §7's alerting.
+#   * Secrets/vars: ODDS_API_KEY and DATABASE_URL are read from Actions
+#     secrets, falling back to repo variables. Odds and the Postgres mirror
+#     each degrade gracefully (skipped) when their value is absent.
+#   * First-time setup: run the "backfill" workflow once before this cron has
+#     anything to grade or mirror — it seeds the season's games and frames.
+
+name: daily
+
+on:
+  schedule:
+    - cron: "30 10 * * *"   # 10:30 UTC daily (~6:30am ET)
+  workflow_dispatch: {}      # manual "Run workflow" button for missed days
+
+permissions:
+  contents: write            # needed by the commit-back step
+
+concurrency:
+  group: pipeline-data       # shared with backfill.yml — never interleave commits
+  cancel-in-progress: false
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL || vars.DATABASE_URL }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run the offline test suite first
+        run: python3 -m unittest discover -s tests
+
+      - name: Run the daily pipeline
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY || vars.ODDS_API_KEY }}
+        run: python3 run_daily.py
+
+      # Idempotent full-season rebuild: keeps the labeled canonical frame in
+      # sync with the finals that today's ingest just fetched.
+      - name: Rebuild the labeled frames
+        run: python3 -m pipeline.backfill
+
+      - name: Mirror CSVs into Postgres
+        if: env.DATABASE_URL != ''
+        run: |
+          pip install "psycopg[binary]"
+          python3 -m pipeline.db init
+          python3 -m pipeline.db load
+
+      - name: Upload the daily report as a run artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-report
+          path: |
+            data/reports/
+            data/predictions/
+          if-no-files-found: ignore
+
+      - name: Commit results back (picks must survive until tomorrow's grading)
+        if: always()
+        run: |
+          git config user.name "daily-pipeline[bot]"
+          git config user.email "daily-pipeline@users.noreply.github.com"
+          git add data/predictions data/reports data/frames data/*/games_*.csv || true
+          git diff --cached --quiet || git commit -m "daily run $(date -u +%F)"
+          git push

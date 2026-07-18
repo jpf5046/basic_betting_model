@@ -1,0 +1,1499 @@
+game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,away_abbrev,home_abbrev,away_score,home_score,venue,ot,doubleheader,game_number
+2025010101,20252026,preseason,2025-09-20,2025-09-20T23:00:00Z,final,nhl-stl,nhl-dal,STL,DAL,1,2,American Airlines Center,SO,N,1
+2025010001,20252026,preseason,2025-09-21,2025-09-21T22:00:00Z,final,nhl-ana,nhl-lak,ANA,LAK,1,3,Toyota Arena,REG,N,1
+2025010002,20252026,preseason,2025-09-21,2025-09-22T00:00:00Z,final,nhl-cgy,nhl-edm,CGY,EDM,3,2,Rogers Place,OT,N,1
+2025010003,20252026,preseason,2025-09-21,2025-09-22T00:00:00Z,final,nhl-edm,nhl-cgy,EDM,CGY,3,0,Scotiabank Saddledome,REG,N,1
+2025010004,20252026,preseason,2025-09-21,2025-09-21T19:00:00Z,final,nhl-fla,nhl-nsh,FLA,NSH,0,5,Bridgestone Arena,REG,N,1
+2025010005,20252026,preseason,2025-09-21,2025-09-21T23:00:00Z,final,nhl-fla,nhl-nsh,FLA,NSH,3,5,Bridgestone Arena,REG,N,1
+2025010006,20252026,preseason,2025-09-21,2025-09-21T21:00:00Z,final,nhl-min,nhl-wpg,MIN,WPG,3,2,Canada Life Centre,OT,N,1
+2025010007,20252026,preseason,2025-09-21,2025-09-21T17:00:00Z,final,nhl-nyr,nhl-njd,NYR,NJD,5,3,Prudential Center,REG,N,1
+2025010008,20252026,preseason,2025-09-21,2025-09-21T23:00:00Z,final,nhl-phi,nhl-nyi,PHI,NYI,3,2,UBS Arena,SO,N,1
+2025010009,20252026,preseason,2025-09-21,2025-09-21T21:00:00Z,final,nhl-stl,nhl-cbj,STL,CBJ,1,4,Nationwide Arena,REG,N,1
+2025010010,20252026,preseason,2025-09-21,2025-09-21T19:00:00Z,final,nhl-tor,nhl-ott,TOR,OTT,4,3,Canadian Tire Centre,REG,N,1
+2025010011,20252026,preseason,2025-09-21,2025-09-22T00:00:00Z,final,nhl-van,nhl-sea,VAN,SEA,3,5,Climate Pledge Arena,REG,N,1
+2025010012,20252026,preseason,2025-09-21,2025-09-22T00:00:00Z,final,nhl-vgk,nhl-sjs,VGK,SJS,0,3,SAP Center at San Jose,REG,N,1
+2025010013,20252026,preseason,2025-09-21,2025-09-21T21:00:00Z,final,nhl-wsh,nhl-bos,WSH,BOS,5,2,TD Garden,REG,N,1
+2025010103,20252026,preseason,2025-09-21,2025-09-21T23:00:00Z,final,nhl-col,nhl-uta,COL,UTA,5,1,Magness Arena,REG,N,1
+2025010104,20252026,preseason,2025-09-21,2025-09-22T01:30:00Z,final,nhl-uta,nhl-col,UTA,COL,2,3,Ball Arena,REG,N,1
+2025010014,20252026,preseason,2025-09-22,2025-09-22T23:00:00Z,final,nhl-buf,nhl-cbj,BUF,CBJ,4,0,Nationwide Arena,REG,N,1
+2025010015,20252026,preseason,2025-09-22,2025-09-22T23:00:00Z,final,nhl-pit,nhl-mtl,PIT,MTL,1,2,Centre Bell,SO,N,1
+2025010016,20252026,preseason,2025-09-22,2025-09-22T23:00:00Z,final,nhl-tbl,nhl-car,TBL,CAR,2,1,Lenovo Center,REG,N,1
+2025010017,20252026,preseason,2025-09-22,2025-09-23T02:00:00Z,final,nhl-uta,nhl-ana,UTA,ANA,1,6,Honda Center,REG,N,1
+2025010018,20252026,preseason,2025-09-23,2025-09-23T23:00:00Z,final,nhl-bos,nhl-nyr,BOS,NYR,5,4,Madison Square Garden,OT,N,1
+2025010019,20252026,preseason,2025-09-23,2025-09-23T23:00:00Z,final,nhl-chi,nhl-det,CHI,DET,2,3,Little Caesars Arena,REG,N,1
+2025010020,20252026,preseason,2025-09-23,2025-09-23T23:00:00Z,final,nhl-cbj,nhl-buf,CBJ,BUF,1,2,KeyBank Center,REG,N,1
+2025010021,20252026,preseason,2025-09-23,2025-09-24T00:00:00Z,final,nhl-min,nhl-dal,MIN,DAL,2,3,American Airlines Center,OT,N,1
+2025010022,20252026,preseason,2025-09-23,2025-09-24T00:00:00Z,final,nhl-edm,nhl-wpg,EDM,WPG,3,2,Canada Life Centre,REG,N,1
+2025010023,20252026,preseason,2025-09-23,2025-09-24T02:00:00Z,final,nhl-lak,nhl-vgk,LAK,VGK,3,1,T-Mobile Arena,REG,N,1
+2025010024,20252026,preseason,2025-09-23,2025-09-23T23:00:00Z,final,nhl-nyi,nhl-njd,NYI,NJD,2,6,Prudential Center,REG,N,1
+2025010025,20252026,preseason,2025-09-23,2025-09-23T23:00:00Z,final,nhl-ott,nhl-tor,OTT,TOR,3,2,Scotiabank Arena,OT,N,1
+2025010026,20252026,preseason,2025-09-23,2025-09-23T23:00:00Z,final,nhl-phi,nhl-mtl,PHI,MTL,2,4,Centre Bell,REG,N,1
+2025010027,20252026,preseason,2025-09-23,2025-09-24T01:00:00Z,final,nhl-sea,nhl-cgy,SEA,CGY,1,4,Scotiabank Saddledome,REG,N,1
+2025010028,20252026,preseason,2025-09-23,2025-09-24T00:00:00Z,final,nhl-tbl,nhl-nsh,TBL,NSH,3,2,Bridgestone Arena,SO,N,1
+2025010029,20252026,preseason,2025-09-24,2025-09-25T02:00:00Z,final,nhl-cgy,nhl-van,CGY,VAN,1,3,Abbotsford Entertainment Centre,REG,N,1
+2025010030,20252026,preseason,2025-09-24,2025-09-24T22:00:00Z,final,nhl-fla,nhl-car,FLA,CAR,4,2,Lenovo Center,REG,N,1
+2025010031,20252026,preseason,2025-09-24,2025-09-25T02:00:00Z,final,nhl-lak,nhl-ana,LAK,ANA,3,0,Honda Center,REG,N,1
+2025010032,20252026,preseason,2025-09-24,2025-09-24T23:00:00Z,final,nhl-pit,nhl-cbj,PIT,CBJ,1,4,Nationwide Arena,REG,N,1
+2025010033,20252026,preseason,2025-09-24,2025-09-25T01:00:00Z,final,nhl-sea,nhl-edm,SEA,EDM,4,1,Rogers Place,REG,N,1
+2025010034,20252026,preseason,2025-09-25,2025-09-25T23:00:00Z,final,nhl-buf,nhl-det,BUF,DET,2,5,Little Caesars Arena,REG,N,1
+2025010035,20252026,preseason,2025-09-25,2025-09-25T23:00:00Z,final,nhl-nyi,nhl-nyr,NYI,NYR,5,4,Madison Square Garden,REG,N,1
+2025010036,20252026,preseason,2025-09-25,2025-09-25T23:00:00Z,final,nhl-phi,nhl-wsh,PHI,WSH,1,5,Giant Center,REG,N,1
+2025010037,20252026,preseason,2025-09-25,2025-09-25T23:00:00Z,final,nhl-tor,nhl-mtl,TOR,MTL,7,2,Centre Bell,REG,N,1
+2025010038,20252026,preseason,2025-09-25,2025-09-26T00:00:00Z,final,nhl-dal,nhl-min,DAL,MIN,5,2,Grand Casino Arena,REG,N,1
+2025010039,20252026,preseason,2025-09-25,2025-09-26T02:00:00Z,final,nhl-uta,nhl-vgk,UTA,VGK,2,3,T-Mobile Arena,OT,N,1
+2025010040,20252026,preseason,2025-09-26,2025-09-26T23:00:00Z,final,nhl-car,nhl-tbl,CAR,TBL,5,6,Benchmark International Arena,REG,N,1
+2025010041,20252026,preseason,2025-09-26,2025-09-26T23:00:00Z,final,nhl-det,nhl-pit,DET,PIT,2,3,PPG Paints Arena,REG,N,1
+2025010042,20252026,preseason,2025-09-26,2025-09-26T23:00:00Z,final,nhl-njd,nhl-nyi,NJD,NYI,4,2,UBS Arena,REG,N,1
+2025010043,20252026,preseason,2025-09-26,2025-09-27T02:00:00Z,final,nhl-sea,nhl-van,SEA,VAN,2,4,Rogers Arena,REG,N,1
+2025010044,20252026,preseason,2025-09-26,2025-09-27T02:00:00Z,final,nhl-vgk,nhl-sjs,VGK,SJS,2,1,SAP Center at San Jose,REG,N,1
+2025010045,20252026,preseason,2025-09-26,2025-09-27T01:00:00Z,final,nhl-wpg,nhl-edm,WPG,EDM,0,4,Rogers Place,REG,N,1
+2025010046,20252026,preseason,2025-09-27,2025-09-27T22:00:00Z,final,nhl-ana,nhl-lak,ANA,LAK,5,3,Dignity Health Arena,REG,N,1
+2025010047,20252026,preseason,2025-09-27,2025-09-27T21:00:00Z,final,nhl-bos,nhl-phi,BOS,PHI,4,3,Xfinity Mobile Arena,REG,N,1
+2025010048,20252026,preseason,2025-09-27,2025-09-27T23:00:00Z,final,nhl-chi,nhl-stl,CHI,STL,4,2,Enterprise Center,REG,N,1
+2025010049,20252026,preseason,2025-09-27,2025-09-28T00:00:00Z,final,nhl-cgy,nhl-wpg,CGY,WPG,2,4,Canada Life Centre,REG,N,1
+2025010050,20252026,preseason,2025-09-27,2025-09-27T23:00:00Z,final,nhl-cbj,nhl-pit,CBJ,PIT,1,4,PPG Paints Arena,REG,N,1
+2025010051,20252026,preseason,2025-09-27,2025-09-27T23:00:00Z,final,nhl-dal,nhl-col,DAL,COL,1,4,Ball Arena,REG,N,1
+2025010052,20252026,preseason,2025-09-27,2025-09-27T19:00:00Z,final,nhl-det,nhl-buf,DET,BUF,2,5,KeyBank Center,REG,N,1
+2025010053,20252026,preseason,2025-09-27,2025-09-27T23:00:00Z,final,nhl-mtl,nhl-tor,MTL,TOR,4,2,Scotiabank Arena,REG,N,1
+2025010054,20252026,preseason,2025-09-27,2025-09-27T23:00:00Z,final,nhl-nsh,nhl-tbl,NSH,TBL,1,4,Benchmark International Arena,REG,N,1
+2025010055,20252026,preseason,2025-09-28,2025-09-28T23:00:00Z,final,nhl-nsh,nhl-car,NSH,CAR,2,4,Lenovo Center,REG,N,1
+2025010056,20252026,preseason,2025-09-28,2025-09-28T19:00:00Z,final,nhl-njd,nhl-ott,NJD,OTT,0,2,Centre Videotron,REG,N,1
+2025010057,20252026,preseason,2025-09-28,2025-09-28T22:00:00Z,final,nhl-chi,nhl-min,CHI,MIN,4,1,Grand Casino Arena,REG,N,1
+2025010058,20252026,preseason,2025-09-28,2025-09-29T00:00:00Z,final,nhl-van,nhl-edm,VAN,EDM,3,4,Rogers Place,REG,N,1
+2025010059,20252026,preseason,2025-09-28,2025-09-28T19:00:00Z,final,nhl-wsh,nhl-njd,WSH,NJD,3,2,Prudential Center,SO,N,1
+2025010060,20252026,preseason,2025-09-29,2025-09-30T02:00:00Z,final,nhl-cgy,nhl-sea,CGY,SEA,2,1,Climate Pledge Arena,SO,N,1
+2025010061,20252026,preseason,2025-09-29,2025-09-29T22:00:00Z,final,nhl-car,nhl-fla,CAR,FLA,3,4,Amerant Bank Arena,OT,N,1
+2025010062,20252026,preseason,2025-09-29,2025-09-29T23:00:00Z,final,nhl-nyr,nhl-nyi,NYR,NYI,3,2,UBS Arena,OT,N,1
+2025010063,20252026,preseason,2025-09-29,2025-09-29T23:00:00Z,final,nhl-phi,nhl-bos,PHI,BOS,3,2,TD Garden,SO,N,1
+2025010064,20252026,preseason,2025-09-29,2025-09-29T23:00:00Z,final,nhl-pit,nhl-det,PIT,DET,2,1,Little Caesars Arena,REG,N,1
+2025010065,20252026,preseason,2025-09-29,2025-09-30T02:00:00Z,final,nhl-sjs,nhl-ana,SJS,ANA,2,3,Honda Center,REG,N,1
+2025010066,20252026,preseason,2025-09-30,2025-10-01T00:00:00Z,final,nhl-det,nhl-chi,DET,CHI,3,1,United Center,REG,N,1
+2025010067,20252026,preseason,2025-09-30,2025-09-30T23:00:00Z,final,nhl-fla,nhl-tbl,FLA,TBL,2,3,Kia Center,REG,N,1
+2025010068,20252026,preseason,2025-09-30,2025-10-01T01:00:00Z,final,nhl-lak,nhl-uta,LAK,UTA,3,2,Idaho Central Arena,REG,N,1
+2025010069,20252026,preseason,2025-09-30,2025-09-30T23:00:00Z,final,nhl-mtl,nhl-ott,MTL,OTT,5,0,Centre Videotron,REG,N,1
+2025010070,20252026,preseason,2025-09-30,2025-10-01T00:00:00Z,final,nhl-vgk,nhl-col,VGK,COL,2,4,Ball Arena,REG,N,1
+2025010071,20252026,preseason,2025-09-30,2025-09-30T23:00:00Z,final,nhl-wsh,nhl-cbj,WSH,CBJ,4,3,Nationwide Arena,REG,N,1
+2025010072,20252026,preseason,2025-09-30,2025-10-01T00:00:00Z,final,nhl-wpg,nhl-min,WPG,MIN,2,3,Grand Casino Arena,REG,N,1
+2025010102,20252026,preseason,2025-09-30,2025-10-01T00:00:00Z,final,nhl-dal,nhl-stl,DAL,STL,5,3,Enterprise Center,REG,N,1
+2025010073,20252026,preseason,2025-10-01,2025-10-02T02:00:00Z,final,nhl-ana,nhl-sjs,ANA,SJS,5,2,SAP Center at San Jose,REG,N,1
+2025010074,20252026,preseason,2025-10-01,2025-10-02T01:00:00Z,final,nhl-col,nhl-vgk,COL,VGK,1,2,T-Mobile Arena,REG,N,1
+2025010075,20252026,preseason,2025-10-01,2025-10-02T02:00:00Z,final,nhl-edm,nhl-sea,EDM,SEA,2,4,Climate Pledge Arena,REG,N,1
+2025010076,20252026,preseason,2025-10-01,2025-10-01T23:00:00Z,final,nhl-pit,nhl-buf,PIT,BUF,5,3,KeyBank Center,REG,N,1
+2025010077,20252026,preseason,2025-10-01,2025-10-02T01:00:00Z,final,nhl-van,nhl-cgy,VAN,CGY,8,1,Scotiabank Saddledome,REG,N,1
+2025010078,20252026,preseason,2025-10-02,2025-10-02T23:00:00Z,final,nhl-bos,nhl-wsh,BOS,WSH,3,1,Capital One Arena,REG,N,1
+2025010079,20252026,preseason,2025-10-02,2025-10-02T23:00:00Z,final,nhl-det,nhl-tor,DET,TOR,3,1,Scotiabank Arena,REG,N,1
+2025010080,20252026,preseason,2025-10-02,2025-10-02T23:00:00Z,final,nhl-fla,nhl-tbl,FLA,TBL,2,5,Benchmark International Arena,REG,N,1
+2025010081,20252026,preseason,2025-10-02,2025-10-03T01:00:00Z,final,nhl-lak,nhl-uta,LAK,UTA,1,2,Delta Center,REG,N,1
+2025010082,20252026,preseason,2025-10-02,2025-10-02T23:00:00Z,final,nhl-njd,nhl-nyr,NJD,NYR,3,1,Madison Square Garden,REG,N,1
+2025010083,20252026,preseason,2025-10-02,2025-10-02T23:00:00Z,final,nhl-nyi,nhl-phi,NYI,PHI,4,3,Xfinity Mobile Arena,REG,N,1
+2025010084,20252026,preseason,2025-10-02,2025-10-03T00:00:00Z,final,nhl-ott,nhl-stl,OTT,STL,1,7,Enterprise Center,REG,N,1
+2025010085,20252026,preseason,2025-10-03,2025-10-03T23:00:00Z,final,nhl-buf,nhl-pit,BUF,PIT,4,5,PPG Paints Arena,OT,N,1
+2025010086,20252026,preseason,2025-10-03,2025-10-04T00:00:00Z,final,nhl-min,nhl-chi,MIN,CHI,3,2,United Center,REG,N,1
+2025010087,20252026,preseason,2025-10-03,2025-10-04T02:00:00Z,final,nhl-edm,nhl-van,EDM,VAN,2,3,Rogers Arena,OT,N,1
+2025010088,20252026,preseason,2025-10-03,2025-10-04T02:00:00Z,final,nhl-sjs,nhl-vgk,SJS,VGK,4,1,T-Mobile Arena,REG,N,1
+2025010089,20252026,preseason,2025-10-03,2025-10-04T01:00:00Z,final,nhl-wpg,nhl-cgy,WPG,CGY,5,4,Scotiabank Saddledome,SO,N,1
+2025010090,20252026,preseason,2025-10-04,2025-10-04T20:00:00Z,final,nhl-ana,nhl-lak,ANA,LAK,4,5,Crypto.com Arena,OT,N,1
+2025010091,20252026,preseason,2025-10-04,2025-10-04T20:00:00Z,final,nhl-car,nhl-nsh,CAR,NSH,2,3,Bridgestone Arena,OT,N,1
+2025010092,20252026,preseason,2025-10-04,2025-10-04T22:00:00Z,final,nhl-col,nhl-dal,COL,DAL,2,3,American Airlines Center,REG,N,1
+2025010093,20252026,preseason,2025-10-04,2025-10-04T23:00:00Z,final,nhl-cbj,nhl-wsh,CBJ,WSH,1,2,Capital One Arena,REG,N,1
+2025010094,20252026,preseason,2025-10-04,2025-10-04T16:30:00Z,final,nhl-njd,nhl-phi,NJD,PHI,3,4,Xfinity Mobile Arena,SO,N,1
+2025010095,20252026,preseason,2025-10-04,2025-10-04T18:00:00Z,final,nhl-nyr,nhl-bos,NYR,BOS,1,4,TD Garden,REG,N,1
+2025010096,20252026,preseason,2025-10-04,2025-10-04T23:00:00Z,final,nhl-ott,nhl-mtl,OTT,MTL,3,1,Centre Bell,REG,N,1
+2025010097,20252026,preseason,2025-10-04,2025-10-04T23:00:00Z,final,nhl-stl,nhl-chi,STL,CHI,4,0,United Center,REG,N,1
+2025010098,20252026,preseason,2025-10-04,2025-10-05T00:00:00Z,final,nhl-sjs,nhl-uta,SJS,UTA,4,6,Delta Center,REG,N,1
+2025010099,20252026,preseason,2025-10-04,2025-10-04T23:00:00Z,final,nhl-tbl,nhl-fla,TBL,FLA,0,7,Amerant Bank Arena,REG,N,1
+2025010100,20252026,preseason,2025-10-04,2025-10-04T23:00:00Z,final,nhl-tor,nhl-det,TOR,DET,5,6,Little Caesars Arena,OT,N,1
+2025020001,20252026,regular,2025-10-07,2025-10-07T21:00:00Z,final,nhl-chi,nhl-fla,CHI,FLA,2,3,Amerant Bank Arena,REG,N,1
+2025020002,20252026,regular,2025-10-07,2025-10-08T00:00:00Z,final,nhl-pit,nhl-nyr,PIT,NYR,3,0,Madison Square Garden,REG,N,1
+2025020003,20252026,regular,2025-10-07,2025-10-08T02:30:00Z,final,nhl-col,nhl-lak,COL,LAK,4,1,Crypto.com Arena,REG,N,1
+2025020004,20252026,regular,2025-10-08,2025-10-08T23:00:00Z,final,nhl-mtl,nhl-tor,MTL,TOR,2,5,Scotiabank Arena,REG,N,1
+2025020005,20252026,regular,2025-10-08,2025-10-08T23:30:00Z,final,nhl-bos,nhl-wsh,BOS,WSH,3,1,Capital One Arena,REG,N,1
+2025020006,20252026,regular,2025-10-08,2025-10-09T02:00:00Z,final,nhl-cgy,nhl-edm,CGY,EDM,4,3,Rogers Place,SO,N,1
+2025020007,20252026,regular,2025-10-08,2025-10-09T02:00:00Z,final,nhl-lak,nhl-vgk,LAK,VGK,6,5,T-Mobile Arena,SO,N,1
+2025020008,20252026,regular,2025-10-09,2025-10-09T23:00:00Z,final,nhl-chi,nhl-bos,CHI,BOS,3,4,TD Garden,OT,N,1
+2025020009,20252026,regular,2025-10-09,2025-10-09T23:00:00Z,final,nhl-nyr,nhl-buf,NYR,BUF,4,0,KeyBank Center,REG,N,1
+2025020010,20252026,regular,2025-10-09,2025-10-09T23:00:00Z,final,nhl-mtl,nhl-det,MTL,DET,5,1,Little Caesars Arena,REG,N,1
+2025020011,20252026,regular,2025-10-09,2025-10-09T23:00:00Z,final,nhl-ott,nhl-tbl,OTT,TBL,5,4,Benchmark International Arena,REG,N,1
+2025020012,20252026,regular,2025-10-09,2025-10-09T23:00:00Z,final,nhl-phi,nhl-fla,PHI,FLA,1,2,Amerant Bank Arena,REG,N,1
+2025020013,20252026,regular,2025-10-09,2025-10-09T23:00:00Z,final,nhl-nyi,nhl-pit,NYI,PIT,3,4,PPG Paints Arena,REG,N,1
+2025020014,20252026,regular,2025-10-09,2025-10-09T23:30:00Z,final,nhl-njd,nhl-car,NJD,CAR,3,6,Lenovo Center,REG,N,1
+2025020015,20252026,regular,2025-10-09,2025-10-10T00:00:00Z,final,nhl-min,nhl-stl,MIN,STL,5,0,Enterprise Center,REG,N,1
+2025020016,20252026,regular,2025-10-09,2025-10-10T00:00:00Z,final,nhl-cbj,nhl-nsh,CBJ,NSH,1,2,Bridgestone Arena,REG,N,1
+2025020017,20252026,regular,2025-10-09,2025-10-10T00:00:00Z,final,nhl-dal,nhl-wpg,DAL,WPG,5,4,Canada Life Centre,REG,N,1
+2025020018,20252026,regular,2025-10-09,2025-10-10T01:00:00Z,final,nhl-uta,nhl-col,UTA,COL,1,2,Ball Arena,REG,N,1
+2025020019,20252026,regular,2025-10-09,2025-10-10T02:00:00Z,final,nhl-cgy,nhl-van,CGY,VAN,1,5,Rogers Arena,REG,N,1
+2025020020,20252026,regular,2025-10-09,2025-10-10T02:00:00Z,final,nhl-vgk,nhl-sjs,VGK,SJS,4,3,SAP Center at San Jose,OT,N,1
+2025020021,20252026,regular,2025-10-09,2025-10-10T02:00:00Z,final,nhl-ana,nhl-sea,ANA,SEA,1,3,Climate Pledge Arena,REG,N,1
+2025020022,20252026,regular,2025-10-11,2025-10-11T17:30:00Z,final,nhl-lak,nhl-wpg,LAK,WPG,2,3,Canada Life Centre,REG,N,1
+2025020023,20252026,regular,2025-10-11,2025-10-11T20:00:00Z,final,nhl-stl,nhl-cgy,STL,CGY,4,2,Scotiabank Saddledome,REG,N,1
+2025020024,20252026,regular,2025-10-11,2025-10-11T23:00:00Z,final,nhl-buf,nhl-bos,BUF,BOS,1,3,TD Garden,REG,N,1
+2025020025,20252026,regular,2025-10-11,2025-10-11T23:00:00Z,final,nhl-tor,nhl-det,TOR,DET,3,6,Little Caesars Arena,REG,N,1
+2025020026,20252026,regular,2025-10-11,2025-10-11T23:00:00Z,final,nhl-njd,nhl-tbl,NJD,TBL,5,3,Benchmark International Arena,REG,N,1
+2025020027,20252026,regular,2025-10-11,2025-10-11T23:00:00Z,final,nhl-ott,nhl-fla,OTT,FLA,2,6,Amerant Bank Arena,REG,N,1
+2025020028,20252026,regular,2025-10-11,2025-10-11T23:00:00Z,final,nhl-wsh,nhl-nyi,WSH,NYI,4,2,UBS Arena,REG,N,1
+2025020029,20252026,regular,2025-10-11,2025-10-11T23:00:00Z,final,nhl-nyr,nhl-pit,NYR,PIT,6,1,PPG Paints Arena,REG,N,1
+2025020030,20252026,regular,2025-10-11,2025-10-11T23:00:00Z,final,nhl-phi,nhl-car,PHI,CAR,3,4,Lenovo Center,OT,N,1
+2025020031,20252026,regular,2025-10-11,2025-10-11T23:00:00Z,final,nhl-mtl,nhl-chi,MTL,CHI,3,2,United Center,REG,N,1
+2025020032,20252026,regular,2025-10-11,2025-10-12T00:00:00Z,final,nhl-uta,nhl-nsh,UTA,NSH,3,2,Bridgestone Arena,OT,N,1
+2025020033,20252026,regular,2025-10-11,2025-10-12T00:00:00Z,final,nhl-cbj,nhl-min,CBJ,MIN,7,4,Grand Casino Arena,REG,N,1
+2025020034,20252026,regular,2025-10-11,2025-10-12T01:00:00Z,final,nhl-dal,nhl-col,DAL,COL,5,4,Ball Arena,SO,N,1
+2025020035,20252026,regular,2025-10-11,2025-10-12T02:00:00Z,final,nhl-van,nhl-edm,VAN,EDM,1,3,Rogers Place,REG,N,1
+2025020036,20252026,regular,2025-10-11,2025-10-12T02:00:00Z,final,nhl-ana,nhl-sjs,ANA,SJS,7,6,SAP Center at San Jose,OT,N,1
+2025020037,20252026,regular,2025-10-11,2025-10-12T02:00:00Z,final,nhl-vgk,nhl-sea,VGK,SEA,1,2,Climate Pledge Arena,OT,N,1
+2025020038,20252026,regular,2025-10-12,2025-10-12T23:00:00Z,final,nhl-wsh,nhl-nyr,WSH,NYR,1,0,Madison Square Garden,REG,N,1
+2025020039,20252026,regular,2025-10-13,2025-10-13T16:30:00Z,final,nhl-col,nhl-buf,COL,BUF,3,1,KeyBank Center,REG,N,1
+2025020040,20252026,regular,2025-10-13,2025-10-13T17:00:00Z,final,nhl-tbl,nhl-bos,TBL,BOS,4,3,TD Garden,REG,N,1
+2025020041,20252026,regular,2025-10-13,2025-10-13T17:00:00Z,final,nhl-nsh,nhl-ott,NSH,OTT,4,1,Canadian Tire Centre,REG,N,1
+2025020042,20252026,regular,2025-10-13,2025-10-13T17:00:00Z,final,nhl-wpg,nhl-nyi,WPG,NYI,5,2,UBS Arena,REG,N,1
+2025020043,20252026,regular,2025-10-13,2025-10-13T18:00:00Z,final,nhl-det,nhl-tor,DET,TOR,3,2,Scotiabank Arena,REG,N,1
+2025020044,20252026,regular,2025-10-13,2025-10-13T23:00:00Z,final,nhl-fla,nhl-phi,FLA,PHI,2,5,Xfinity Mobile Arena,REG,N,1
+2025020045,20252026,regular,2025-10-13,2025-10-13T23:00:00Z,final,nhl-njd,nhl-cbj,NJD,CBJ,3,2,Nationwide Arena,REG,N,1
+2025020046,20252026,regular,2025-10-13,2025-10-13T23:30:00Z,final,nhl-stl,nhl-van,STL,VAN,5,2,Rogers Arena,REG,N,1
+2025020047,20252026,regular,2025-10-13,2025-10-14T00:00:00Z,final,nhl-lak,nhl-min,LAK,MIN,3,4,Grand Casino Arena,SO,N,1
+2025020048,20252026,regular,2025-10-13,2025-10-14T00:30:00Z,final,nhl-uta,nhl-chi,UTA,CHI,1,3,United Center,REG,N,1
+2025020049,20252026,regular,2025-10-14,2025-10-14T23:00:00Z,final,nhl-nsh,nhl-tor,NSH,TOR,4,7,Scotiabank Arena,REG,N,1
+2025020050,20252026,regular,2025-10-14,2025-10-14T23:00:00Z,final,nhl-sea,nhl-mtl,SEA,MTL,4,5,Centre Bell,OT,N,1
+2025020051,20252026,regular,2025-10-14,2025-10-14T23:00:00Z,final,nhl-edm,nhl-nyr,EDM,NYR,2,0,Madison Square Garden,REG,N,1
+2025020052,20252026,regular,2025-10-14,2025-10-14T23:00:00Z,final,nhl-tbl,nhl-wsh,TBL,WSH,2,3,Capital One Arena,OT,N,1
+2025020053,20252026,regular,2025-10-14,2025-10-15T01:00:00Z,final,nhl-vgk,nhl-cgy,VGK,CGY,4,2,Scotiabank Saddledome,REG,N,1
+2025020054,20252026,regular,2025-10-14,2025-10-15T01:30:00Z,final,nhl-min,nhl-dal,MIN,DAL,2,5,American Airlines Center,REG,N,1
+2025020055,20252026,regular,2025-10-14,2025-10-15T02:00:00Z,final,nhl-car,nhl-sjs,CAR,SJS,5,1,SAP Center at San Jose,REG,N,1
+2025020056,20252026,regular,2025-10-14,2025-10-15T02:30:00Z,final,nhl-pit,nhl-ana,PIT,ANA,3,4,Honda Center,REG,N,1
+2025020057,20252026,regular,2025-10-15,2025-10-15T23:00:00Z,final,nhl-ott,nhl-buf,OTT,BUF,4,8,KeyBank Center,REG,N,1
+2025020058,20252026,regular,2025-10-15,2025-10-15T23:00:00Z,final,nhl-fla,nhl-det,FLA,DET,1,4,Little Caesars Arena,REG,N,1
+2025020059,20252026,regular,2025-10-15,2025-10-16T01:30:00Z,final,nhl-chi,nhl-stl,CHI,STL,8,3,Enterprise Center,REG,N,1
+2025020060,20252026,regular,2025-10-15,2025-10-16T01:30:00Z,final,nhl-cgy,nhl-uta,CGY,UTA,1,3,Delta Center,REG,N,1
+2025020061,20252026,regular,2025-10-16,2025-10-16T23:00:00Z,final,nhl-nyr,nhl-tor,NYR,TOR,1,2,Scotiabank Arena,OT,N,1
+2025020062,20252026,regular,2025-10-16,2025-10-16T23:00:00Z,final,nhl-nsh,nhl-mtl,NSH,MTL,2,3,Centre Bell,OT,N,1
+2025020063,20252026,regular,2025-10-16,2025-10-16T23:00:00Z,final,nhl-sea,nhl-ott,SEA,OTT,3,4,Canadian Tire Centre,SO,N,1
+2025020064,20252026,regular,2025-10-16,2025-10-16T23:00:00Z,final,nhl-fla,nhl-njd,FLA,NJD,1,3,Prudential Center,REG,N,1
+2025020065,20252026,regular,2025-10-16,2025-10-16T23:30:00Z,final,nhl-edm,nhl-nyi,EDM,NYI,2,4,UBS Arena,REG,N,1
+2025020066,20252026,regular,2025-10-16,2025-10-16T23:00:00Z,final,nhl-wpg,nhl-phi,WPG,PHI,5,2,Xfinity Mobile Arena,REG,N,1
+2025020067,20252026,regular,2025-10-16,2025-10-16T23:00:00Z,final,nhl-col,nhl-cbj,COL,CBJ,4,1,Nationwide Arena,REG,N,1
+2025020068,20252026,regular,2025-10-16,2025-10-17T00:00:00Z,final,nhl-van,nhl-dal,VAN,DAL,5,3,American Airlines Center,REG,N,1
+2025020069,20252026,regular,2025-10-16,2025-10-17T02:00:00Z,final,nhl-bos,nhl-vgk,BOS,VGK,5,6,T-Mobile Arena,REG,N,1
+2025020070,20252026,regular,2025-10-16,2025-10-17T02:00:00Z,final,nhl-car,nhl-ana,CAR,ANA,4,1,Honda Center,REG,N,1
+2025020071,20252026,regular,2025-10-16,2025-10-17T02:00:00Z,final,nhl-pit,nhl-lak,PIT,LAK,4,2,Crypto.com Arena,REG,N,1
+2025020072,20252026,regular,2025-10-17,2025-10-17T23:00:00Z,final,nhl-tbl,nhl-det,TBL,DET,1,2,Little Caesars Arena,OT,N,1
+2025020073,20252026,regular,2025-10-17,2025-10-17T23:00:00Z,final,nhl-min,nhl-wsh,MIN,WSH,1,5,Capital One Arena,REG,N,1
+2025020074,20252026,regular,2025-10-17,2025-10-18T00:30:00Z,final,nhl-van,nhl-chi,VAN,CHI,3,2,United Center,SO,N,1
+2025020075,20252026,regular,2025-10-17,2025-10-18T01:00:00Z,final,nhl-sjs,nhl-uta,SJS,UTA,3,6,Delta Center,REG,N,1
+2025020076,20252026,regular,2025-10-18,2025-10-18T17:00:00Z,final,nhl-fla,nhl-buf,FLA,BUF,0,3,KeyBank Center,REG,N,1
+2025020077,20252026,regular,2025-10-18,2025-10-18T19:00:00Z,final,nhl-nyi,nhl-ott,NYI,OTT,5,4,Canadian Tire Centre,REG,N,1
+2025020078,20252026,regular,2025-10-18,2025-10-18T19:30:00Z,final,nhl-edm,nhl-njd,EDM,NJD,3,5,Prudential Center,REG,N,1
+2025020079,20252026,regular,2025-10-18,2025-10-18T23:00:00Z,final,nhl-sea,nhl-tor,SEA,TOR,4,3,Scotiabank Arena,OT,N,1
+2025020080,20252026,regular,2025-10-18,2025-10-18T23:00:00Z,final,nhl-nyr,nhl-mtl,NYR,MTL,4,3,Centre Bell,REG,N,1
+2025020081,20252026,regular,2025-10-18,2025-10-18T23:00:00Z,final,nhl-min,nhl-phi,MIN,PHI,1,2,Xfinity Mobile Arena,OT,N,1
+2025020082,20252026,regular,2025-10-18,2025-10-18T23:00:00Z,final,nhl-tbl,nhl-cbj,TBL,CBJ,2,3,Nationwide Arena,REG,N,1
+2025020083,20252026,regular,2025-10-18,2025-10-18T23:00:00Z,final,nhl-dal,nhl-stl,DAL,STL,1,3,Enterprise Center,REG,N,1
+2025020084,20252026,regular,2025-10-18,2025-10-18T23:00:00Z,final,nhl-nsh,nhl-wpg,NSH,WPG,1,4,Canada Life Centre,REG,N,1
+2025020085,20252026,regular,2025-10-18,2025-10-19T01:00:00Z,final,nhl-bos,nhl-col,BOS,COL,1,4,Ball Arena,REG,N,1
+2025020086,20252026,regular,2025-10-18,2025-10-19T01:00:00Z,final,nhl-car,nhl-lak,CAR,LAK,4,3,Crypto.com Arena,OT,N,1
+2025020087,20252026,regular,2025-10-18,2025-10-19T02:00:00Z,final,nhl-cgy,nhl-vgk,CGY,VGK,1,6,T-Mobile Arena,REG,N,1
+2025020088,20252026,regular,2025-10-18,2025-10-19T02:00:00Z,final,nhl-pit,nhl-sjs,PIT,SJS,3,0,SAP Center at San Jose,REG,N,1
+2025020089,20252026,regular,2025-10-19,2025-10-19T16:30:00Z,final,nhl-van,nhl-wsh,VAN,WSH,4,3,Capital One Arena,REG,N,1
+2025020090,20252026,regular,2025-10-19,2025-10-19T19:00:00Z,final,nhl-edm,nhl-det,EDM,DET,2,4,Little Caesars Arena,REG,N,1
+2025020091,20252026,regular,2025-10-19,2025-10-19T23:00:00Z,final,nhl-ana,nhl-chi,ANA,CHI,1,2,United Center,OT,N,1
+2025020092,20252026,regular,2025-10-19,2025-10-19T23:00:00Z,final,nhl-bos,nhl-uta,BOS,UTA,2,3,Delta Center,REG,N,1
+2025020093,20252026,regular,2025-10-20,2025-10-20T23:00:00Z,final,nhl-min,nhl-nyr,MIN,NYR,3,1,Madison Square Garden,REG,N,1
+2025020094,20252026,regular,2025-10-20,2025-10-20T23:00:00Z,final,nhl-sea,nhl-phi,SEA,PHI,2,5,Xfinity Mobile Arena,REG,N,1
+2025020095,20252026,regular,2025-10-20,2025-10-20T23:30:00Z,final,nhl-buf,nhl-mtl,BUF,MTL,2,4,Centre Bell,REG,N,1
+2025020096,20252026,regular,2025-10-20,2025-10-21T01:30:00Z,final,nhl-wpg,nhl-cgy,WPG,CGY,2,1,Scotiabank Saddledome,REG,N,1
+2025020097,20252026,regular,2025-10-20,2025-10-21T02:00:00Z,final,nhl-car,nhl-vgk,CAR,VGK,1,4,T-Mobile Arena,REG,N,1
+2025020098,20252026,regular,2025-10-21,2025-10-21T23:00:00Z,final,nhl-njd,nhl-tor,NJD,TOR,5,2,Scotiabank Arena,REG,N,1
+2025020099,20252026,regular,2025-10-21,2025-10-21T23:00:00Z,final,nhl-edm,nhl-ott,EDM,OTT,3,2,Canadian Tire Centre,OT,N,1
+2025020100,20252026,regular,2025-10-21,2025-10-21T23:00:00Z,final,nhl-sjs,nhl-nyi,SJS,NYI,3,4,UBS Arena,REG,N,1
+2025020101,20252026,regular,2025-10-21,2025-10-21T23:00:00Z,final,nhl-van,nhl-pit,VAN,PIT,1,5,PPG Paints Arena,REG,N,1
+2025020102,20252026,regular,2025-10-21,2025-10-21T23:00:00Z,final,nhl-sea,nhl-wsh,SEA,WSH,1,4,Capital One Arena,REG,N,1
+2025020103,20252026,regular,2025-10-21,2025-10-21T23:30:00Z,final,nhl-fla,nhl-bos,FLA,BOS,4,3,TD Garden,REG,N,1
+2025020104,20252026,regular,2025-10-21,2025-10-22T00:00:00Z,final,nhl-lak,nhl-stl,LAK,STL,2,1,Enterprise Center,OT,N,1
+2025020105,20252026,regular,2025-10-21,2025-10-22T00:00:00Z,final,nhl-ana,nhl-nsh,ANA,NSH,5,2,Bridgestone Arena,REG,N,1
+2025020106,20252026,regular,2025-10-21,2025-10-22T00:00:00Z,final,nhl-cbj,nhl-dal,CBJ,DAL,5,1,American Airlines Center,REG,N,1
+2025020107,20252026,regular,2025-10-21,2025-10-22T02:00:00Z,final,nhl-col,nhl-uta,COL,UTA,3,4,Delta Center,OT,N,1
+2025020108,20252026,regular,2025-10-22,2025-10-22T23:00:00Z,final,nhl-min,nhl-njd,MIN,NJD,1,4,Prudential Center,REG,N,1
+2025020109,20252026,regular,2025-10-22,2025-10-22T23:30:00Z,final,nhl-det,nhl-buf,DET,BUF,2,4,KeyBank Center,REG,N,1
+2025020110,20252026,regular,2025-10-22,2025-10-23T00:30:00Z,final,nhl-mtl,nhl-cgy,MTL,CGY,2,1,Scotiabank Saddledome,OT,N,1
+2025020111,20252026,regular,2025-10-23,2025-10-23T23:00:00Z,final,nhl-ana,nhl-bos,ANA,BOS,7,5,TD Garden,REG,N,1
+2025020112,20252026,regular,2025-10-23,2025-10-23T23:00:00Z,final,nhl-phi,nhl-ott,PHI,OTT,1,2,Canadian Tire Centre,REG,N,1
+2025020113,20252026,regular,2025-10-23,2025-10-23T22:45:00Z,final,nhl-chi,nhl-tbl,CHI,TBL,3,2,Benchmark International Arena,REG,N,1
+2025020114,20252026,regular,2025-10-23,2025-10-23T23:00:00Z,final,nhl-pit,nhl-fla,PIT,FLA,5,3,Amerant Bank Arena,REG,N,1
+2025020115,20252026,regular,2025-10-23,2025-10-23T23:00:00Z,final,nhl-det,nhl-nyi,DET,NYI,2,7,UBS Arena,REG,N,1
+2025020116,20252026,regular,2025-10-23,2025-10-23T23:00:00Z,final,nhl-sjs,nhl-nyr,SJS,NYR,6,5,Madison Square Garden,OT,N,1
+2025020117,20252026,regular,2025-10-23,2025-10-24T00:00:00Z,final,nhl-uta,nhl-stl,UTA,STL,7,4,Enterprise Center,REG,N,1
+2025020118,20252026,regular,2025-10-23,2025-10-24T00:00:00Z,final,nhl-van,nhl-nsh,VAN,NSH,1,2,Bridgestone Arena,REG,N,1
+2025020119,20252026,regular,2025-10-23,2025-10-24T01:00:00Z,final,nhl-lak,nhl-dal,LAK,DAL,3,2,American Airlines Center,OT,N,1
+2025020120,20252026,regular,2025-10-23,2025-10-24T00:00:00Z,final,nhl-sea,nhl-wpg,SEA,WPG,3,0,Canada Life Centre,REG,N,1
+2025020121,20252026,regular,2025-10-23,2025-10-24T01:00:00Z,final,nhl-car,nhl-col,CAR,COL,5,4,Ball Arena,SO,N,1
+2025020122,20252026,regular,2025-10-23,2025-10-24T01:00:00Z,final,nhl-mtl,nhl-edm,MTL,EDM,5,6,Rogers Place,REG,N,1
+2025020123,20252026,regular,2025-10-24,2025-10-24T23:00:00Z,final,nhl-tor,nhl-buf,TOR,BUF,3,5,KeyBank Center,REG,N,1
+2025020124,20252026,regular,2025-10-24,2025-10-24T23:00:00Z,final,nhl-sjs,nhl-njd,SJS,NJD,1,3,Prudential Center,REG,N,1
+2025020125,20252026,regular,2025-10-24,2025-10-24T23:00:00Z,final,nhl-wsh,nhl-cbj,WSH,CBJ,5,1,Nationwide Arena,REG,N,1
+2025020126,20252026,regular,2025-10-24,2025-10-25T00:00:00Z,final,nhl-cgy,nhl-wpg,CGY,WPG,3,5,Canada Life Centre,REG,N,1
+2025020127,20252026,regular,2025-10-25,2025-10-25T16:30:00Z,final,nhl-nyi,nhl-phi,NYI,PHI,3,4,Xfinity Mobile Arena,SO,N,1
+2025020128,20252026,regular,2025-10-25,2025-10-25T19:00:00Z,final,nhl-col,nhl-bos,COL,BOS,2,3,TD Garden,REG,N,1
+2025020129,20252026,regular,2025-10-25,2025-10-25T21:00:00Z,final,nhl-ana,nhl-tbl,ANA,TBL,3,4,Benchmark International Arena,REG,N,1
+2025020130,20252026,regular,2025-10-25,2025-10-25T22:00:00Z,final,nhl-vgk,nhl-fla,VGK,FLA,0,3,Amerant Bank Arena,REG,N,1
+2025020131,20252026,regular,2025-10-25,2025-10-25T22:00:00Z,final,nhl-uta,nhl-min,UTA,MIN,6,2,Grand Casino Arena,REG,N,1
+2025020132,20252026,regular,2025-10-25,2025-10-25T21:00:00Z,final,nhl-buf,nhl-tor,BUF,TOR,3,4,Scotiabank Arena,OT,N,1
+2025020133,20252026,regular,2025-10-25,2025-10-25T23:00:00Z,final,nhl-stl,nhl-det,STL,DET,4,6,Little Caesars Arena,REG,N,1
+2025020134,20252026,regular,2025-10-25,2025-10-25T23:00:00Z,final,nhl-cbj,nhl-pit,CBJ,PIT,5,4,PPG Paints Arena,SO,N,1
+2025020135,20252026,regular,2025-10-25,2025-10-25T23:00:00Z,final,nhl-ott,nhl-wsh,OTT,WSH,7,1,Capital One Arena,REG,N,1
+2025020136,20252026,regular,2025-10-25,2025-10-25T23:00:00Z,final,nhl-mtl,nhl-van,MTL,VAN,4,3,Rogers Arena,REG,N,1
+2025020137,20252026,regular,2025-10-25,2025-10-26T00:00:00Z,final,nhl-lak,nhl-nsh,LAK,NSH,4,5,Bridgestone Arena,SO,N,1
+2025020138,20252026,regular,2025-10-25,2025-10-26T00:00:00Z,final,nhl-car,nhl-dal,CAR,DAL,2,3,American Airlines Center,REG,N,1
+2025020139,20252026,regular,2025-10-25,2025-10-26T02:00:00Z,final,nhl-edm,nhl-sea,EDM,SEA,2,3,Climate Pledge Arena,REG,N,1
+2025020140,20252026,regular,2025-10-26,2025-10-26T17:00:00Z,final,nhl-col,nhl-njd,COL,NJD,3,4,Prudential Center,OT,N,1
+2025020141,20252026,regular,2025-10-26,2025-10-26T21:00:00Z,final,nhl-vgk,nhl-tbl,VGK,TBL,1,2,Benchmark International Arena,OT,N,1
+2025020142,20252026,regular,2025-10-26,2025-10-26T22:00:00Z,final,nhl-sjs,nhl-min,SJS,MIN,6,5,Grand Casino Arena,OT,N,1
+2025020143,20252026,regular,2025-10-26,2025-10-26T22:00:00Z,final,nhl-uta,nhl-wpg,UTA,WPG,3,2,Canada Life Centre,REG,N,1
+2025020144,20252026,regular,2025-10-26,2025-10-26T23:00:00Z,final,nhl-lak,nhl-chi,LAK,CHI,3,1,United Center,REG,N,1
+2025020145,20252026,regular,2025-10-26,2025-10-26T23:00:00Z,final,nhl-dal,nhl-nsh,DAL,NSH,3,2,Bridgestone Arena,REG,N,1
+2025020146,20252026,regular,2025-10-26,2025-10-27T00:00:00Z,final,nhl-nyr,nhl-cgy,NYR,CGY,1,5,Scotiabank Saddledome,REG,N,1
+2025020147,20252026,regular,2025-10-26,2025-10-27T02:00:00Z,final,nhl-edm,nhl-van,EDM,VAN,3,4,Rogers Arena,OT,N,1
+2025020148,20252026,regular,2025-10-27,2025-10-27T23:00:00Z,final,nhl-stl,nhl-pit,STL,PIT,3,6,PPG Paints Arena,REG,N,1
+2025020149,20252026,regular,2025-10-27,2025-10-27T23:30:00Z,final,nhl-bos,nhl-ott,BOS,OTT,2,7,Canadian Tire Centre,REG,N,1
+2025020150,20252026,regular,2025-10-28,2025-10-28T22:00:00Z,final,nhl-pit,nhl-phi,PIT,PHI,2,3,Xfinity Mobile Arena,SO,N,1
+2025020151,20252026,regular,2025-10-28,2025-10-28T22:00:00Z,final,nhl-cgy,nhl-tor,CGY,TOR,3,4,Scotiabank Arena,REG,N,1
+2025020152,20252026,regular,2025-10-28,2025-10-28T22:45:00Z,final,nhl-cbj,nhl-buf,CBJ,BUF,4,3,KeyBank Center,OT,N,1
+2025020153,20252026,regular,2025-10-28,2025-10-28T23:00:00Z,final,nhl-ana,nhl-fla,ANA,FLA,3,2,Amerant Bank Arena,SO,N,1
+2025020154,20252026,regular,2025-10-28,2025-10-28T23:15:00Z,final,nhl-nyi,nhl-bos,NYI,BOS,2,5,TD Garden,REG,N,1
+2025020155,20252026,regular,2025-10-28,2025-10-28T22:30:00Z,final,nhl-vgk,nhl-car,VGK,CAR,6,3,Lenovo Center,REG,N,1
+2025020156,20252026,regular,2025-10-28,2025-10-28T23:45:00Z,final,nhl-tbl,nhl-nsh,TBL,NSH,5,2,Bridgestone Arena,REG,N,1
+2025020157,20252026,regular,2025-10-28,2025-10-29T00:00:00Z,final,nhl-wpg,nhl-min,WPG,MIN,4,3,Grand Casino Arena,OT,N,1
+2025020158,20252026,regular,2025-10-28,2025-10-29T00:15:00Z,final,nhl-det,nhl-stl,DET,STL,5,2,Enterprise Center,REG,N,1
+2025020159,20252026,regular,2025-10-28,2025-10-29T00:30:00Z,final,nhl-wsh,nhl-dal,WSH,DAL,0,1,American Airlines Center,REG,N,1
+2025020160,20252026,regular,2025-10-28,2025-10-29T00:45:00Z,final,nhl-ott,nhl-chi,OTT,CHI,3,7,United Center,REG,N,1
+2025020161,20252026,regular,2025-10-28,2025-10-29T01:00:00Z,final,nhl-njd,nhl-col,NJD,COL,4,8,Ball Arena,REG,N,1
+2025020162,20252026,regular,2025-10-28,2025-10-29T01:30:00Z,final,nhl-uta,nhl-edm,UTA,EDM,3,6,Rogers Place,REG,N,1
+2025020163,20252026,regular,2025-10-28,2025-10-29T02:00:00Z,final,nhl-nyr,nhl-van,NYR,VAN,2,0,Rogers Arena,REG,N,1
+2025020164,20252026,regular,2025-10-28,2025-10-29T02:30:00Z,final,nhl-mtl,nhl-sea,MTL,SEA,4,3,Climate Pledge Arena,OT,N,1
+2025020165,20252026,regular,2025-10-28,2025-10-29T03:00:00Z,final,nhl-lak,nhl-sjs,LAK,SJS,4,3,SAP Center at San Jose,REG,N,1
+2025020166,20252026,regular,2025-10-29,2025-10-29T23:30:00Z,final,nhl-tor,nhl-cbj,TOR,CBJ,3,6,Nationwide Arena,REG,N,1
+2025020167,20252026,regular,2025-10-30,2025-10-30T23:00:00Z,final,nhl-buf,nhl-bos,BUF,BOS,3,4,TD Garden,OT,N,1
+2025020168,20252026,regular,2025-10-30,2025-10-30T23:00:00Z,final,nhl-cgy,nhl-ott,CGY,OTT,3,4,Canadian Tire Centre,SO,N,1
+2025020169,20252026,regular,2025-10-30,2025-10-30T23:00:00Z,final,nhl-dal,nhl-tbl,DAL,TBL,1,2,Benchmark International Arena,OT,N,1
+2025020170,20252026,regular,2025-10-30,2025-10-30T23:00:00Z,final,nhl-nsh,nhl-phi,NSH,PHI,1,4,Xfinity Mobile Arena,REG,N,1
+2025020171,20252026,regular,2025-10-30,2025-10-30T23:30:00Z,final,nhl-nyi,nhl-car,NYI,CAR,2,6,Lenovo Center,REG,N,1
+2025020172,20252026,regular,2025-10-30,2025-10-31T00:00:00Z,final,nhl-van,nhl-stl,VAN,STL,4,3,Enterprise Center,SO,N,1
+2025020173,20252026,regular,2025-10-30,2025-10-31T00:00:00Z,final,nhl-pit,nhl-min,PIT,MIN,4,1,Grand Casino Arena,REG,N,1
+2025020174,20252026,regular,2025-10-30,2025-10-31T00:00:00Z,final,nhl-chi,nhl-wpg,CHI,WPG,3,6,Canada Life Centre,REG,N,1
+2025020175,20252026,regular,2025-10-30,2025-10-31T01:00:00Z,final,nhl-nyr,nhl-edm,NYR,EDM,4,3,Rogers Place,OT,N,1
+2025020176,20252026,regular,2025-10-30,2025-10-31T02:00:00Z,final,nhl-njd,nhl-sjs,NJD,SJS,2,5,SAP Center at San Jose,REG,N,1
+2025020177,20252026,regular,2025-10-30,2025-10-31T02:30:00Z,final,nhl-det,nhl-lak,DET,LAK,4,3,Crypto.com Arena,SO,N,1
+2025020178,20252026,regular,2025-10-31,2025-10-31T20:00:00Z,final,nhl-col,nhl-vgk,COL,VGK,4,2,T-Mobile Arena,REG,N,1
+2025020179,20252026,regular,2025-10-31,2025-10-31T23:00:00Z,final,nhl-nyi,nhl-wsh,NYI,WSH,3,1,Capital One Arena,REG,N,1
+2025020180,20252026,regular,2025-10-31,2025-11-01T02:00:00Z,final,nhl-det,nhl-ana,DET,ANA,2,5,Honda Center,REG,N,1
+2025020181,20252026,regular,2025-11-01,2025-11-01T17:00:00Z,final,nhl-car,nhl-bos,CAR,BOS,1,2,TD Garden,REG,N,1
+2025020182,20252026,regular,2025-11-01,2025-11-01T19:00:00Z,final,nhl-pit,nhl-wpg,PIT,WPG,2,5,Canada Life Centre,REG,N,1
+2025020183,20252026,regular,2025-11-01,2025-11-01T19:30:00Z,final,nhl-cgy,nhl-nsh,CGY,NSH,2,4,Bridgestone Arena,REG,N,1
+2025020184,20252026,regular,2025-11-01,2025-11-01T20:00:00Z,final,nhl-col,nhl-sjs,COL,SJS,2,3,SAP Center at San Jose,OT,N,1
+2025020185,20252026,regular,2025-11-01,2025-11-01T22:00:00Z,final,nhl-dal,nhl-fla,DAL,FLA,3,4,Amerant Bank Arena,SO,N,1
+2025020186,20252026,regular,2025-11-01,2025-11-01T23:00:00Z,final,nhl-wsh,nhl-buf,WSH,BUF,3,4,KeyBank Center,SO,N,1
+2025020187,20252026,regular,2025-11-01,2025-11-01T23:00:00Z,final,nhl-ott,nhl-mtl,OTT,MTL,3,4,Centre Bell,OT,N,1
+2025020188,20252026,regular,2025-11-01,2025-11-01T23:00:00Z,final,nhl-tor,nhl-phi,TOR,PHI,5,2,Xfinity Mobile Arena,REG,N,1
+2025020189,20252026,regular,2025-11-01,2025-11-01T23:00:00Z,final,nhl-stl,nhl-cbj,STL,CBJ,2,3,Nationwide Arena,REG,N,1
+2025020190,20252026,regular,2025-11-01,2025-11-01T23:00:00Z,final,nhl-van,nhl-min,VAN,MIN,2,5,Grand Casino Arena,REG,N,1
+2025020191,20252026,regular,2025-11-01,2025-11-02T01:00:00Z,final,nhl-njd,nhl-lak,NJD,LAK,4,1,Crypto.com Arena,REG,N,1
+2025020192,20252026,regular,2025-11-01,2025-11-02T02:00:00Z,final,nhl-chi,nhl-edm,CHI,EDM,2,3,Rogers Place,OT,N,1
+2025020193,20252026,regular,2025-11-01,2025-11-02T02:00:00Z,final,nhl-nyr,nhl-sea,NYR,SEA,3,2,Climate Pledge Arena,OT,N,1
+2025020194,20252026,regular,2025-11-02,2025-11-02T20:30:00Z,final,nhl-tbl,nhl-uta,TBL,UTA,4,2,Delta Center,REG,N,1
+2025020195,20252026,regular,2025-11-02,2025-11-02T22:00:00Z,final,nhl-cbj,nhl-nyi,CBJ,NYI,2,3,UBS Arena,REG,N,1
+2025020196,20252026,regular,2025-11-02,2025-11-03T00:00:00Z,final,nhl-cgy,nhl-phi,CGY,PHI,2,1,Xfinity Mobile Arena,REG,N,1
+2025020197,20252026,regular,2025-11-02,2025-11-03T01:00:00Z,final,nhl-njd,nhl-ana,NJD,ANA,1,4,Honda Center,REG,N,1
+2025020198,20252026,regular,2025-11-02,2025-11-03T01:00:00Z,final,nhl-det,nhl-sjs,DET,SJS,3,2,SAP Center at San Jose,SO,N,1
+2025020199,20252026,regular,2025-11-03,2025-11-04T00:30:00Z,final,nhl-pit,nhl-tor,PIT,TOR,3,4,Scotiabank Arena,REG,N,1
+2025020200,20252026,regular,2025-11-03,2025-11-04T01:30:00Z,final,nhl-edm,nhl-stl,EDM,STL,2,3,Enterprise Center,REG,N,1
+2025020201,20252026,regular,2025-11-03,2025-11-04T01:30:00Z,final,nhl-van,nhl-nsh,VAN,NSH,5,4,Bridgestone Arena,OT,N,1
+2025020202,20252026,regular,2025-11-03,2025-11-04T03:00:00Z,final,nhl-chi,nhl-sea,CHI,SEA,1,3,Climate Pledge Arena,REG,N,1
+2025020203,20252026,regular,2025-11-04,2025-11-05T00:00:00Z,final,nhl-uta,nhl-buf,UTA,BUF,2,1,KeyBank Center,OT,N,1
+2025020204,20252026,regular,2025-11-04,2025-11-05T00:00:00Z,final,nhl-phi,nhl-mtl,PHI,MTL,5,4,Centre Bell,SO,N,1
+2025020205,20252026,regular,2025-11-04,2025-11-05T00:00:00Z,final,nhl-bos,nhl-nyi,BOS,NYI,4,3,UBS Arena,SO,N,1
+2025020206,20252026,regular,2025-11-04,2025-11-05T00:00:00Z,final,nhl-car,nhl-nyr,CAR,NYR,3,0,Madison Square Garden,REG,N,1
+2025020207,20252026,regular,2025-11-04,2025-11-05T01:00:00Z,final,nhl-edm,nhl-dal,EDM,DAL,3,4,American Airlines Center,SO,N,1
+2025020208,20252026,regular,2025-11-04,2025-11-05T01:00:00Z,final,nhl-nsh,nhl-min,NSH,MIN,2,3,Grand Casino Arena,OT,N,1
+2025020209,20252026,regular,2025-11-04,2025-11-05T02:30:00Z,final,nhl-tbl,nhl-col,TBL,COL,2,3,Ball Arena,REG,N,1
+2025020210,20252026,regular,2025-11-04,2025-11-05T03:00:00Z,final,nhl-det,nhl-vgk,DET,VGK,0,1,T-Mobile Arena,REG,N,1
+2025020211,20252026,regular,2025-11-04,2025-11-05T03:00:00Z,final,nhl-fla,nhl-ana,FLA,ANA,3,7,Honda Center,REG,N,1
+2025020212,20252026,regular,2025-11-04,2025-11-05T03:30:00Z,final,nhl-wpg,nhl-lak,WPG,LAK,0,3,Crypto.com Arena,REG,N,1
+2025020213,20252026,regular,2025-11-05,2025-11-06T00:00:00Z,final,nhl-uta,nhl-tor,UTA,TOR,3,5,Scotiabank Arena,REG,N,1
+2025020214,20252026,regular,2025-11-05,2025-11-06T00:30:00Z,final,nhl-stl,nhl-wsh,STL,WSH,1,6,Capital One Arena,REG,N,1
+2025020215,20252026,regular,2025-11-05,2025-11-06T02:30:00Z,final,nhl-cbj,nhl-cgy,CBJ,CGY,1,5,Scotiabank Saddledome,REG,N,1
+2025020216,20252026,regular,2025-11-05,2025-11-06T03:00:00Z,final,nhl-chi,nhl-van,CHI,VAN,5,2,Rogers Arena,REG,N,1
+2025020217,20252026,regular,2025-11-05,2025-11-06T03:00:00Z,final,nhl-sjs,nhl-sea,SJS,SEA,6,1,Climate Pledge Arena,REG,N,1
+2025020218,20252026,regular,2025-11-06,2025-11-07T00:00:00Z,final,nhl-ott,nhl-bos,OTT,BOS,2,3,TD Garden,OT,N,1
+2025020219,20252026,regular,2025-11-06,2025-11-07T00:00:00Z,final,nhl-stl,nhl-buf,STL,BUF,3,0,KeyBank Center,REG,N,1
+2025020220,20252026,regular,2025-11-06,2025-11-07T00:00:00Z,final,nhl-mtl,nhl-njd,MTL,NJD,3,4,Prudential Center,OT,N,1
+2025020221,20252026,regular,2025-11-06,2025-11-07T00:30:00Z,final,nhl-wsh,nhl-pit,WSH,PIT,3,5,PPG Paints Arena,REG,N,1
+2025020222,20252026,regular,2025-11-06,2025-11-07T00:00:00Z,final,nhl-min,nhl-car,MIN,CAR,3,4,Lenovo Center,REG,N,1
+2025020223,20252026,regular,2025-11-06,2025-11-07T01:00:00Z,final,nhl-phi,nhl-nsh,PHI,NSH,3,1,Bridgestone Arena,REG,N,1
+2025020224,20252026,regular,2025-11-06,2025-11-07T01:00:00Z,final,nhl-ana,nhl-dal,ANA,DAL,7,5,American Airlines Center,REG,N,1
+2025020225,20252026,regular,2025-11-06,2025-11-07T03:00:00Z,final,nhl-tbl,nhl-vgk,TBL,VGK,6,3,T-Mobile Arena,REG,N,1
+2025020226,20252026,regular,2025-11-06,2025-11-07T03:00:00Z,final,nhl-fla,nhl-lak,FLA,LAK,5,2,Crypto.com Arena,REG,N,1
+2025020227,20252026,regular,2025-11-07,2025-11-08T00:00:00Z,final,nhl-nyr,nhl-det,NYR,DET,4,1,Little Caesars Arena,REG,N,1
+2025020228,20252026,regular,2025-11-07,2025-11-08T00:00:00Z,final,nhl-min,nhl-nyi,MIN,NYI,5,2,UBS Arena,REG,N,1
+2025020229,20252026,regular,2025-11-07,2025-11-08T02:00:00Z,final,nhl-chi,nhl-cgy,CHI,CGY,4,0,Scotiabank Saddledome,REG,N,1
+2025020230,20252026,regular,2025-11-07,2025-11-08T03:00:00Z,final,nhl-wpg,nhl-sjs,WPG,SJS,1,2,SAP Center at San Jose,REG,N,1
+2025020231,20252026,regular,2025-11-08,2025-11-08T17:30:00Z,final,nhl-pit,nhl-njd,PIT,NJD,1,2,Prudential Center,SO,N,1
+2025020232,20252026,regular,2025-11-08,2025-11-08T18:00:00Z,final,nhl-ott,nhl-phi,OTT,PHI,3,2,Xfinity Mobile Arena,OT,N,1
+2025020233,20252026,regular,2025-11-08,2025-11-08T20:30:00Z,final,nhl-dal,nhl-nsh,DAL,NSH,5,4,Bridgestone Arena,REG,N,1
+2025020234,20252026,regular,2025-11-08,2025-11-09T00:00:00Z,final,nhl-bos,nhl-tor,BOS,TOR,5,3,Scotiabank Arena,REG,N,1
+2025020235,20252026,regular,2025-11-08,2025-11-09T00:00:00Z,final,nhl-uta,nhl-mtl,UTA,MTL,2,6,Centre Bell,REG,N,1
+2025020236,20252026,regular,2025-11-08,2025-11-09T00:00:00Z,final,nhl-wsh,nhl-tbl,WSH,TBL,2,3,Benchmark International Arena,REG,N,1
+2025020237,20252026,regular,2025-11-08,2025-11-09T00:00:00Z,final,nhl-nyi,nhl-nyr,NYI,NYR,5,0,Madison Square Garden,REG,N,1
+2025020238,20252026,regular,2025-11-08,2025-11-09T00:00:00Z,final,nhl-buf,nhl-car,BUF,CAR,3,6,Lenovo Center,REG,N,1
+2025020239,20252026,regular,2025-11-08,2025-11-09T00:00:00Z,final,nhl-sea,nhl-stl,SEA,STL,4,3,Enterprise Center,OT,N,1
+2025020240,20252026,regular,2025-11-08,2025-11-09T03:00:00Z,final,nhl-col,nhl-edm,COL,EDM,9,1,Rogers Place,REG,N,1
+2025020241,20252026,regular,2025-11-08,2025-11-09T03:00:00Z,final,nhl-cbj,nhl-van,CBJ,VAN,3,4,Rogers Arena,REG,N,1
+2025020242,20252026,regular,2025-11-08,2025-11-09T03:00:00Z,final,nhl-ana,nhl-vgk,ANA,VGK,4,3,T-Mobile Arena,OT,N,1
+2025020243,20252026,regular,2025-11-08,2025-11-09T03:00:00Z,final,nhl-fla,nhl-sjs,FLA,SJS,1,3,SAP Center at San Jose,REG,N,1
+2025020244,20252026,regular,2025-11-09,2025-11-09T18:00:00Z,final,nhl-chi,nhl-det,CHI,DET,5,1,Little Caesars Arena,REG,N,1
+2025020245,20252026,regular,2025-11-09,2025-11-09T19:00:00Z,final,nhl-lak,nhl-pit,LAK,PIT,3,2,PPG Paints Arena,REG,N,1
+2025020246,20252026,regular,2025-11-09,2025-11-10T00:00:00Z,final,nhl-car,nhl-tor,CAR,TOR,5,4,Scotiabank Arena,REG,N,1
+2025020247,20252026,regular,2025-11-09,2025-11-10T00:00:00Z,final,nhl-uta,nhl-ott,UTA,OTT,2,4,Canadian Tire Centre,REG,N,1
+2025020248,20252026,regular,2025-11-09,2025-11-10T00:00:00Z,final,nhl-sea,nhl-dal,SEA,DAL,1,2,American Airlines Center,REG,N,1
+2025020249,20252026,regular,2025-11-09,2025-11-10T01:00:00Z,final,nhl-cgy,nhl-min,CGY,MIN,0,2,Grand Casino Arena,REG,N,1
+2025020250,20252026,regular,2025-11-09,2025-11-10T03:00:00Z,final,nhl-col,nhl-van,COL,VAN,5,4,Rogers Arena,OT,N,1
+2025020251,20252026,regular,2025-11-09,2025-11-10T03:00:00Z,final,nhl-wpg,nhl-ana,WPG,ANA,1,4,Honda Center,REG,N,1
+2025020252,20252026,regular,2025-11-10,2025-11-11T00:00:00Z,final,nhl-nyi,nhl-njd,NYI,NJD,3,2,Prudential Center,OT,N,1
+2025020253,20252026,regular,2025-11-10,2025-11-11T00:00:00Z,final,nhl-nsh,nhl-nyr,NSH,NYR,3,6,Madison Square Garden,REG,N,1
+2025020254,20252026,regular,2025-11-10,2025-11-11T01:30:00Z,final,nhl-cbj,nhl-edm,CBJ,EDM,4,5,Rogers Place,OT,N,1
+2025020255,20252026,regular,2025-11-10,2025-11-11T03:00:00Z,final,nhl-fla,nhl-vgk,FLA,VGK,3,2,T-Mobile Arena,REG,N,1
+2025020256,20252026,regular,2025-11-11,2025-11-12T00:00:00Z,final,nhl-tor,nhl-bos,TOR,BOS,3,5,TD Garden,REG,N,1
+2025020257,20252026,regular,2025-11-11,2025-11-12T00:00:00Z,final,nhl-lak,nhl-mtl,LAK,MTL,5,1,Centre Bell,REG,N,1
+2025020258,20252026,regular,2025-11-11,2025-11-12T00:00:00Z,final,nhl-dal,nhl-ott,DAL,OTT,3,2,Canadian Tire Centre,OT,N,1
+2025020259,20252026,regular,2025-11-11,2025-11-12T00:00:00Z,final,nhl-wsh,nhl-car,WSH,CAR,4,1,Lenovo Center,REG,N,1
+2025020260,20252026,regular,2025-11-11,2025-11-12T01:00:00Z,final,nhl-cgy,nhl-stl,CGY,STL,2,3,Enterprise Center,REG,N,1
+2025020261,20252026,regular,2025-11-11,2025-11-12T01:00:00Z,final,nhl-sjs,nhl-min,SJS,MIN,2,1,Grand Casino Arena,OT,N,1
+2025020262,20252026,regular,2025-11-11,2025-11-12T02:30:00Z,final,nhl-ana,nhl-col,ANA,COL,1,4,Ball Arena,REG,N,1
+2025020263,20252026,regular,2025-11-11,2025-11-12T03:00:00Z,final,nhl-wpg,nhl-van,WPG,VAN,5,3,Rogers Arena,REG,N,1
+2025020264,20252026,regular,2025-11-11,2025-11-12T03:00:00Z,final,nhl-cbj,nhl-sea,CBJ,SEA,2,1,Climate Pledge Arena,SO,N,1
+2025020265,20252026,regular,2025-11-12,2025-11-13T00:00:00Z,final,nhl-nyr,nhl-tbl,NYR,TBL,7,3,Benchmark International Arena,REG,N,1
+2025020266,20252026,regular,2025-11-12,2025-11-13T00:30:00Z,final,nhl-edm,nhl-phi,EDM,PHI,2,1,Xfinity Mobile Arena,OT,N,1
+2025020267,20252026,regular,2025-11-12,2025-11-13T02:00:00Z,final,nhl-buf,nhl-uta,BUF,UTA,2,5,Delta Center,REG,N,1
+2025020268,20252026,regular,2025-11-12,2025-11-13T02:30:00Z,final,nhl-njd,nhl-chi,NJD,CHI,4,3,United Center,OT,N,1
+2025020269,20252026,regular,2025-11-13,2025-11-14T00:00:00Z,final,nhl-lak,nhl-tor,LAK,TOR,4,3,Scotiabank Arena,OT,N,1
+2025020270,20252026,regular,2025-11-13,2025-11-14T00:00:00Z,final,nhl-dal,nhl-mtl,DAL,MTL,7,0,Centre Bell,REG,N,1
+2025020271,20252026,regular,2025-11-13,2025-11-14T00:00:00Z,final,nhl-bos,nhl-ott,BOS,OTT,3,5,Canadian Tire Centre,REG,N,1
+2025020272,20252026,regular,2025-11-13,2025-11-14T00:00:00Z,final,nhl-ana,nhl-det,ANA,DET,3,6,Little Caesars Arena,REG,N,1
+2025020273,20252026,regular,2025-11-13,2025-11-14T00:00:00Z,final,nhl-wsh,nhl-fla,WSH,FLA,3,6,Amerant Bank Arena,REG,N,1
+2025020274,20252026,regular,2025-11-13,2025-11-14T00:30:00Z,final,nhl-edm,nhl-cbj,EDM,CBJ,4,5,Nationwide Arena,REG,N,1
+2025020275,20252026,regular,2025-11-13,2025-11-14T02:00:00Z,final,nhl-buf,nhl-col,BUF,COL,3,6,Ball Arena,REG,N,1
+2025020276,20252026,regular,2025-11-13,2025-11-14T02:00:00Z,final,nhl-sjs,nhl-cgy,SJS,CGY,0,2,Scotiabank Saddledome,REG,N,1
+2025020277,20252026,regular,2025-11-13,2025-11-14T03:00:00Z,final,nhl-nyi,nhl-vgk,NYI,VGK,4,3,T-Mobile Arena,OT,N,1
+2025020278,20252026,regular,2025-11-13,2025-11-14T03:00:00Z,final,nhl-wpg,nhl-sea,WPG,SEA,3,5,Climate Pledge Arena,REG,N,1
+2025020279,20252026,regular,2025-11-14,2025-11-15T00:00:00Z,final,nhl-van,nhl-car,VAN,CAR,3,4,Lenovo Center,OT,N,1
+2025020280,20252026,regular,2025-11-14,2025-11-15T01:00:00Z,final,nhl-phi,nhl-stl,PHI,STL,6,5,Enterprise Center,SO,N,1
+2025020281,20252026,regular,2025-11-14,2025-11-14T19:00:00Z,final,nhl-pit,nhl-nsh,PIT,NSH,1,2,Avicii Arena,OT,N,1
+2025020282,20252026,regular,2025-11-14,2025-11-15T02:00:00Z,final,nhl-nyi,nhl-uta,NYI,UTA,3,2,Delta Center,OT,N,1
+2025020283,20252026,regular,2025-11-15,2025-11-15T22:00:00Z,final,nhl-tbl,nhl-fla,TBL,FLA,3,1,Amerant Bank Arena,REG,N,1
+2025020284,20252026,regular,2025-11-15,2025-11-15T23:00:00Z,final,nhl-ana,nhl-min,ANA,MIN,0,2,Grand Casino Arena,REG,N,1
+2025020285,20252026,regular,2025-11-15,2025-11-16T00:00:00Z,final,nhl-bos,nhl-mtl,BOS,MTL,3,2,Centre Bell,REG,N,1
+2025020286,20252026,regular,2025-11-15,2025-11-16T00:00:00Z,final,nhl-lak,nhl-ott,LAK,OTT,1,0,Canadian Tire Centre,REG,N,1
+2025020287,20252026,regular,2025-11-15,2025-11-16T00:00:00Z,final,nhl-buf,nhl-det,BUF,DET,5,4,Little Caesars Arena,OT,N,1
+2025020288,20252026,regular,2025-11-15,2025-11-16T00:00:00Z,final,nhl-njd,nhl-wsh,NJD,WSH,3,2,Capital One Arena,SO,N,1
+2025020289,20252026,regular,2025-11-15,2025-11-16T00:00:00Z,final,nhl-edm,nhl-car,EDM,CAR,4,3,Lenovo Center,OT,N,1
+2025020290,20252026,regular,2025-11-15,2025-11-16T00:00:00Z,final,nhl-nyr,nhl-cbj,NYR,CBJ,2,1,Nationwide Arena,SO,N,1
+2025020291,20252026,regular,2025-11-15,2025-11-16T00:00:00Z,final,nhl-tor,nhl-chi,TOR,CHI,2,3,United Center,REG,N,1
+2025020292,20252026,regular,2025-11-15,2025-11-16T01:00:00Z,final,nhl-vgk,nhl-stl,VGK,STL,4,1,Enterprise Center,REG,N,1
+2025020293,20252026,regular,2025-11-15,2025-11-16T01:00:00Z,final,nhl-phi,nhl-dal,PHI,DAL,1,5,American Airlines Center,REG,N,1
+2025020294,20252026,regular,2025-11-15,2025-11-16T03:00:00Z,final,nhl-wpg,nhl-cgy,WPG,CGY,4,3,Scotiabank Saddledome,SO,N,1
+2025020295,20252026,regular,2025-11-15,2025-11-16T03:00:00Z,final,nhl-sjs,nhl-sea,SJS,SEA,1,4,Climate Pledge Arena,REG,N,1
+2025020296,20252026,regular,2025-11-16,2025-11-16T14:00:00Z,final,nhl-nsh,nhl-pit,NSH,PIT,0,4,Avicii Arena,REG,N,1
+2025020297,20252026,regular,2025-11-16,2025-11-16T22:00:00Z,final,nhl-van,nhl-tbl,VAN,TBL,6,2,Benchmark International Arena,REG,N,1
+2025020298,20252026,regular,2025-11-16,2025-11-16T23:00:00Z,final,nhl-vgk,nhl-min,VGK,MIN,2,3,Grand Casino Arena,OT,N,1
+2025020299,20252026,regular,2025-11-16,2025-11-17T00:00:00Z,final,nhl-det,nhl-nyr,DET,NYR,2,1,Madison Square Garden,REG,N,1
+2025020300,20252026,regular,2025-11-16,2025-11-17T02:00:00Z,final,nhl-nyi,nhl-col,NYI,COL,1,4,Ball Arena,REG,N,1
+2025020301,20252026,regular,2025-11-17,2025-11-18T00:00:00Z,final,nhl-car,nhl-bos,CAR,BOS,3,1,TD Garden,REG,N,1
+2025020302,20252026,regular,2025-11-17,2025-11-18T00:00:00Z,final,nhl-edm,nhl-buf,EDM,BUF,1,5,KeyBank Center,REG,N,1
+2025020303,20252026,regular,2025-11-17,2025-11-18T00:00:00Z,final,nhl-van,nhl-fla,VAN,FLA,5,8,Amerant Bank Arena,REG,N,1
+2025020304,20252026,regular,2025-11-17,2025-11-18T00:00:00Z,final,nhl-lak,nhl-wsh,LAK,WSH,1,2,Capital One Arena,REG,N,1
+2025020305,20252026,regular,2025-11-17,2025-11-18T00:30:00Z,final,nhl-mtl,nhl-cbj,MTL,CBJ,3,4,Nationwide Arena,SO,N,1
+2025020306,20252026,regular,2025-11-17,2025-11-18T03:00:00Z,final,nhl-uta,nhl-ana,UTA,ANA,2,3,Honda Center,OT,N,1
+2025020307,20252026,regular,2025-11-18,2025-11-19T00:00:00Z,final,nhl-stl,nhl-tor,STL,TOR,2,3,Scotiabank Arena,OT,N,1
+2025020308,20252026,regular,2025-11-18,2025-11-19T00:00:00Z,final,nhl-sea,nhl-det,SEA,DET,2,4,Little Caesars Arena,REG,N,1
+2025020309,20252026,regular,2025-11-18,2025-11-19T00:00:00Z,final,nhl-njd,nhl-tbl,NJD,TBL,1,5,Benchmark International Arena,REG,N,1
+2025020310,20252026,regular,2025-11-18,2025-11-19T01:00:00Z,final,nhl-nyi,nhl-dal,NYI,DAL,3,2,American Airlines Center,REG,N,1
+2025020311,20252026,regular,2025-11-18,2025-11-19T01:00:00Z,final,nhl-cbj,nhl-wpg,CBJ,WPG,2,5,Canada Life Centre,REG,N,1
+2025020312,20252026,regular,2025-11-18,2025-11-19T01:30:00Z,final,nhl-cgy,nhl-chi,CGY,CHI,2,5,United Center,REG,N,1
+2025020313,20252026,regular,2025-11-18,2025-11-19T03:00:00Z,final,nhl-nyr,nhl-vgk,NYR,VGK,2,3,T-Mobile Arena,REG,N,1
+2025020314,20252026,regular,2025-11-18,2025-11-19T03:00:00Z,final,nhl-uta,nhl-sjs,UTA,SJS,2,3,SAP Center at San Jose,OT,N,1
+2025020315,20252026,regular,2025-11-19,2025-11-20T00:00:00Z,final,nhl-edm,nhl-wsh,EDM,WSH,4,7,Capital One Arena,REG,N,1
+2025020316,20252026,regular,2025-11-19,2025-11-20T00:30:00Z,final,nhl-cgy,nhl-buf,CGY,BUF,6,2,KeyBank Center,REG,N,1
+2025020317,20252026,regular,2025-11-19,2025-11-20T02:30:00Z,final,nhl-car,nhl-min,CAR,MIN,3,4,Grand Casino Arena,SO,N,1
+2025020318,20252026,regular,2025-11-19,2025-11-20T03:00:00Z,final,nhl-bos,nhl-ana,BOS,ANA,3,4,Honda Center,REG,N,1
+2025020319,20252026,regular,2025-11-20,2025-11-21T00:00:00Z,final,nhl-cbj,nhl-tor,CBJ,TOR,3,2,Scotiabank Arena,OT,N,1
+2025020320,20252026,regular,2025-11-20,2025-11-21T00:00:00Z,final,nhl-wsh,nhl-mtl,WSH,MTL,8,4,Centre Bell,REG,N,1
+2025020321,20252026,regular,2025-11-20,2025-11-21T00:00:00Z,final,nhl-nyi,nhl-det,NYI,DET,5,0,Little Caesars Arena,REG,N,1
+2025020322,20252026,regular,2025-11-20,2025-11-21T00:30:00Z,final,nhl-edm,nhl-tbl,EDM,TBL,1,2,Benchmark International Arena,OT,N,1
+2025020323,20252026,regular,2025-11-20,2025-11-21T00:00:00Z,final,nhl-njd,nhl-fla,NJD,FLA,0,1,Amerant Bank Arena,REG,N,1
+2025020324,20252026,regular,2025-11-20,2025-11-21T00:00:00Z,final,nhl-stl,nhl-phi,STL,PHI,2,3,Xfinity Mobile Arena,OT,N,1
+2025020325,20252026,regular,2025-11-20,2025-11-21T01:00:00Z,final,nhl-sea,nhl-chi,SEA,CHI,3,2,United Center,REG,N,1
+2025020326,20252026,regular,2025-11-20,2025-11-21T02:00:00Z,final,nhl-nyr,nhl-col,NYR,COL,3,6,Ball Arena,REG,N,1
+2025020327,20252026,regular,2025-11-20,2025-11-21T02:00:00Z,final,nhl-vgk,nhl-uta,VGK,UTA,4,1,Delta Center,REG,N,1
+2025020328,20252026,regular,2025-11-20,2025-11-21T03:00:00Z,final,nhl-dal,nhl-van,DAL,VAN,4,2,Rogers Arena,REG,N,1
+2025020329,20252026,regular,2025-11-20,2025-11-21T03:00:00Z,final,nhl-ott,nhl-ana,OTT,ANA,3,2,Honda Center,REG,N,1
+2025020330,20252026,regular,2025-11-20,2025-11-21T03:00:00Z,final,nhl-lak,nhl-sjs,LAK,SJS,3,4,SAP Center at San Jose,SO,N,1
+2025020331,20252026,regular,2025-11-21,2025-11-22T00:00:00Z,final,nhl-chi,nhl-buf,CHI,BUF,3,9,KeyBank Center,REG,N,1
+2025020332,20252026,regular,2025-11-21,2025-11-22T00:00:00Z,final,nhl-min,nhl-pit,MIN,PIT,5,0,PPG Paints Arena,REG,N,1
+2025020333,20252026,regular,2025-11-21,2025-11-22T01:00:00Z,final,nhl-car,nhl-wpg,CAR,WPG,4,3,Canada Life Centre,REG,N,1
+2025020334,20252026,regular,2025-11-21,2025-11-22T03:30:00Z,final,nhl-bos,nhl-lak,BOS,LAK,2,1,Crypto.com Arena,OT,N,1
+2025020335,20252026,regular,2025-11-22,2025-11-22T18:00:00Z,final,nhl-cbj,nhl-det,CBJ,DET,3,4,Little Caesars Arena,OT,N,1
+2025020336,20252026,regular,2025-11-22,2025-11-22T20:30:00Z,final,nhl-stl,nhl-nyi,STL,NYI,2,1,UBS Arena,REG,N,1
+2025020337,20252026,regular,2025-11-22,2025-11-23T00:00:00Z,final,nhl-tor,nhl-mtl,TOR,MTL,2,5,Centre Bell,REG,N,1
+2025020338,20252026,regular,2025-11-22,2025-11-23T00:00:00Z,final,nhl-edm,nhl-fla,EDM,FLA,6,3,Amerant Bank Arena,REG,N,1
+2025020339,20252026,regular,2025-11-22,2025-11-23T00:00:00Z,final,nhl-njd,nhl-phi,NJD,PHI,3,6,Xfinity Mobile Arena,REG,N,1
+2025020340,20252026,regular,2025-11-22,2025-11-23T00:00:00Z,final,nhl-sea,nhl-pit,SEA,PIT,3,2,PPG Paints Arena,OT,N,1
+2025020341,20252026,regular,2025-11-22,2025-11-23T00:00:00Z,final,nhl-tbl,nhl-wsh,TBL,WSH,5,3,Capital One Arena,REG,N,1
+2025020342,20252026,regular,2025-11-22,2025-11-23T00:00:00Z,final,nhl-ott,nhl-sjs,OTT,SJS,3,2,SAP Center at San Jose,REG,N,1
+2025020343,20252026,regular,2025-11-22,2025-11-23T01:00:00Z,final,nhl-col,nhl-nsh,COL,NSH,3,0,Bridgestone Arena,REG,N,1
+2025020344,20252026,regular,2025-11-22,2025-11-23T02:00:00Z,final,nhl-nyr,nhl-uta,NYR,UTA,2,3,Delta Center,REG,N,1
+2025020345,20252026,regular,2025-11-22,2025-11-23T03:00:00Z,final,nhl-dal,nhl-cgy,DAL,CGY,2,3,Scotiabank Saddledome,SO,N,1
+2025020346,20252026,regular,2025-11-22,2025-11-23T03:00:00Z,final,nhl-vgk,nhl-ana,VGK,ANA,3,4,Honda Center,OT,N,1
+2025020347,20252026,regular,2025-11-23,2025-11-23T18:00:00Z,final,nhl-car,nhl-buf,CAR,BUF,1,4,KeyBank Center,REG,N,1
+2025020348,20252026,regular,2025-11-23,2025-11-23T21:00:00Z,final,nhl-min,nhl-wpg,MIN,WPG,3,0,Canada Life Centre,REG,N,1
+2025020349,20252026,regular,2025-11-23,2025-11-23T22:00:00Z,final,nhl-sea,nhl-nyi,SEA,NYI,0,1,UBS Arena,SO,N,1
+2025020350,20252026,regular,2025-11-23,2025-11-24T00:00:00Z,final,nhl-col,nhl-chi,COL,CHI,1,0,United Center,REG,N,1
+2025020351,20252026,regular,2025-11-23,2025-11-24T01:00:00Z,final,nhl-bos,nhl-sjs,BOS,SJS,1,3,SAP Center at San Jose,REG,N,1
+2025020352,20252026,regular,2025-11-23,2025-11-24T02:00:00Z,final,nhl-cgy,nhl-van,CGY,VAN,5,2,Rogers Arena,REG,N,1
+2025020353,20252026,regular,2025-11-24,2025-11-25T00:00:00Z,final,nhl-phi,nhl-tbl,PHI,TBL,0,3,Benchmark International Arena,REG,N,1
+2025020354,20252026,regular,2025-11-24,2025-11-25T00:00:00Z,final,nhl-det,nhl-njd,DET,NJD,3,4,Prudential Center,REG,N,1
+2025020355,20252026,regular,2025-11-24,2025-11-25T00:00:00Z,final,nhl-stl,nhl-nyr,STL,NYR,2,3,Madison Square Garden,REG,N,1
+2025020356,20252026,regular,2025-11-24,2025-11-25T00:00:00Z,final,nhl-cbj,nhl-wsh,CBJ,WSH,1,5,Capital One Arena,REG,N,1
+2025020357,20252026,regular,2025-11-24,2025-11-25T01:00:00Z,final,nhl-fla,nhl-nsh,FLA,NSH,8,3,Bridgestone Arena,REG,N,1
+2025020358,20252026,regular,2025-11-24,2025-11-25T02:00:00Z,final,nhl-vgk,nhl-uta,VGK,UTA,1,5,Delta Center,REG,N,1
+2025020359,20252026,regular,2025-11-24,2025-11-25T02:00:00Z,final,nhl-ott,nhl-lak,OTT,LAK,1,2,Crypto.com Arena,REG,N,1
+2025020360,20252026,regular,2025-11-25,2025-11-26T02:00:00Z,final,nhl-dal,nhl-edm,DAL,EDM,8,3,Rogers Place,REG,N,1
+2025020361,20252026,regular,2025-11-26,2025-11-27T00:00:00Z,final,nhl-nsh,nhl-det,NSH,DET,6,3,Little Caesars Arena,REG,N,1
+2025020362,20252026,regular,2025-11-26,2025-11-27T00:00:00Z,final,nhl-cgy,nhl-tbl,CGY,TBL,1,5,Benchmark International Arena,REG,N,1
+2025020363,20252026,regular,2025-11-26,2025-11-27T00:00:00Z,final,nhl-phi,nhl-fla,PHI,FLA,4,2,Amerant Bank Arena,REG,N,1
+2025020364,20252026,regular,2025-11-26,2025-11-27T00:00:00Z,final,nhl-stl,nhl-njd,STL,NJD,2,3,Prudential Center,OT,N,1
+2025020365,20252026,regular,2025-11-26,2025-11-27T00:00:00Z,final,nhl-bos,nhl-nyi,BOS,NYI,3,1,UBS Arena,REG,N,1
+2025020366,20252026,regular,2025-11-26,2025-11-27T00:00:00Z,final,nhl-buf,nhl-pit,BUF,PIT,2,4,PPG Paints Arena,REG,N,1
+2025020367,20252026,regular,2025-11-26,2025-11-27T00:00:00Z,final,nhl-wpg,nhl-wsh,WPG,WSH,3,4,Capital One Arena,REG,N,1
+2025020368,20252026,regular,2025-11-26,2025-11-27T00:00:00Z,final,nhl-nyr,nhl-car,NYR,CAR,4,2,Lenovo Center,REG,N,1
+2025020369,20252026,regular,2025-11-26,2025-11-27T00:00:00Z,final,nhl-tor,nhl-cbj,TOR,CBJ,2,1,Nationwide Arena,OT,N,1
+2025020370,20252026,regular,2025-11-26,2025-11-27T01:30:00Z,final,nhl-min,nhl-chi,MIN,CHI,4,3,United Center,OT,N,1
+2025020371,20252026,regular,2025-11-26,2025-11-27T02:00:00Z,final,nhl-sjs,nhl-col,SJS,COL,0,6,Ball Arena,REG,N,1
+2025020372,20252026,regular,2025-11-26,2025-11-27T02:30:00Z,final,nhl-mtl,nhl-uta,MTL,UTA,4,3,Delta Center,REG,N,1
+2025020373,20252026,regular,2025-11-26,2025-11-27T03:00:00Z,final,nhl-ott,nhl-vgk,OTT,VGK,4,3,T-Mobile Arena,SO,N,1
+2025020374,20252026,regular,2025-11-26,2025-11-27T03:00:00Z,final,nhl-van,nhl-ana,VAN,ANA,5,4,Honda Center,REG,N,1
+2025020375,20252026,regular,2025-11-26,2025-11-27T03:00:00Z,final,nhl-dal,nhl-sea,DAL,SEA,3,2,Climate Pledge Arena,REG,N,1
+2025020376,20252026,regular,2025-11-28,2025-11-28T18:00:00Z,final,nhl-nyr,nhl-bos,NYR,BOS,6,2,TD Garden,REG,N,1
+2025020377,20252026,regular,2025-11-28,2025-11-28T17:00:00Z,final,nhl-tbl,nhl-det,TBL,DET,6,3,Little Caesars Arena,REG,N,1
+2025020378,20252026,regular,2025-11-28,2025-11-28T20:30:00Z,final,nhl-col,nhl-min,COL,MIN,2,3,Grand Casino Arena,SO,N,1
+2025020379,20252026,regular,2025-11-28,2025-11-28T21:00:00Z,final,nhl-njd,nhl-buf,NJD,BUF,5,0,KeyBank Center,REG,N,1
+2025020380,20252026,regular,2025-11-28,2025-11-28T21:00:00Z,final,nhl-cgy,nhl-fla,CGY,FLA,5,3,Amerant Bank Arena,REG,N,1
+2025020381,20252026,regular,2025-11-28,2025-11-28T21:00:00Z,final,nhl-phi,nhl-nyi,PHI,NYI,4,3,UBS Arena,SO,N,1
+2025020382,20252026,regular,2025-11-28,2025-11-28T21:00:00Z,final,nhl-ott,nhl-stl,OTT,STL,3,4,Enterprise Center,REG,N,1
+2025020383,20252026,regular,2025-11-28,2025-11-28T21:00:00Z,final,nhl-mtl,nhl-vgk,MTL,VGK,4,1,T-Mobile Arena,REG,N,1
+2025020384,20252026,regular,2025-11-28,2025-11-28T21:00:00Z,final,nhl-lak,nhl-ana,LAK,ANA,4,5,Honda Center,SO,N,1
+2025020385,20252026,regular,2025-11-28,2025-11-28T21:00:00Z,final,nhl-van,nhl-sjs,VAN,SJS,2,3,SAP Center at San Jose,REG,N,1
+2025020386,20252026,regular,2025-11-28,2025-11-28T22:00:00Z,final,nhl-tor,nhl-wsh,TOR,WSH,2,4,Capital One Arena,REG,N,1
+2025020387,20252026,regular,2025-11-28,2025-11-28T22:00:00Z,final,nhl-wpg,nhl-car,WPG,CAR,1,5,Lenovo Center,REG,N,1
+2025020388,20252026,regular,2025-11-28,2025-11-29T00:00:00Z,final,nhl-pit,nhl-cbj,PIT,CBJ,4,3,Nationwide Arena,OT,N,1
+2025020389,20252026,regular,2025-11-28,2025-11-29T01:00:00Z,final,nhl-nsh,nhl-chi,NSH,CHI,4,3,United Center,REG,N,1
+2025020390,20252026,regular,2025-11-28,2025-11-29T01:00:00Z,final,nhl-uta,nhl-dal,UTA,DAL,3,4,American Airlines Center,REG,N,1
+2025020391,20252026,regular,2025-11-29,2025-11-29T19:00:00Z,final,nhl-tbl,nhl-nyr,TBL,NYR,4,1,Madison Square Garden,REG,N,1
+2025020392,20252026,regular,2025-11-29,2025-11-29T20:00:00Z,final,nhl-mtl,nhl-col,MTL,COL,2,7,Ball Arena,REG,N,1
+2025020393,20252026,regular,2025-11-29,2025-11-29T21:00:00Z,final,nhl-edm,nhl-sea,EDM,SEA,4,0,Climate Pledge Arena,REG,N,1
+2025020394,20252026,regular,2025-11-29,2025-11-30T00:00:00Z,final,nhl-det,nhl-bos,DET,BOS,2,3,TD Garden,SO,N,1
+2025020395,20252026,regular,2025-11-29,2025-11-30T00:00:00Z,final,nhl-phi,nhl-njd,PHI,NJD,5,3,Prudential Center,REG,N,1
+2025020396,20252026,regular,2025-11-29,2025-11-30T00:00:00Z,final,nhl-tor,nhl-pit,TOR,PIT,7,2,PPG Paints Arena,REG,N,1
+2025020397,20252026,regular,2025-11-29,2025-11-30T00:00:00Z,final,nhl-wpg,nhl-nsh,WPG,NSH,5,2,Bridgestone Arena,REG,N,1
+2025020398,20252026,regular,2025-11-29,2025-11-30T01:00:00Z,final,nhl-uta,nhl-stl,UTA,STL,0,1,Enterprise Center,REG,N,1
+2025020399,20252026,regular,2025-11-29,2025-11-30T01:00:00Z,final,nhl-buf,nhl-min,BUF,MIN,3,2,Grand Casino Arena,SO,N,1
+2025020400,20252026,regular,2025-11-29,2025-11-30T03:00:00Z,final,nhl-sjs,nhl-vgk,SJS,VGK,3,4,T-Mobile Arena,REG,N,1
+2025020401,20252026,regular,2025-11-29,2025-11-30T03:00:00Z,final,nhl-van,nhl-lak,VAN,LAK,1,2,Crypto.com Arena,OT,N,1
+2025020402,20252026,regular,2025-11-30,2025-11-30T18:00:00Z,final,nhl-wsh,nhl-nyi,WSH,NYI,4,1,UBS Arena,REG,N,1
+2025020403,20252026,regular,2025-11-30,2025-11-30T20:30:00Z,final,nhl-ana,nhl-chi,ANA,CHI,3,5,United Center,REG,N,1
+2025020404,20252026,regular,2025-11-30,2025-11-30T22:00:00Z,final,nhl-cgy,nhl-car,CGY,CAR,0,1,Lenovo Center,OT,N,1
+2025020405,20252026,regular,2025-11-30,2025-11-30T23:00:00Z,final,nhl-ott,nhl-dal,OTT,DAL,1,6,American Airlines Center,REG,N,1
+2025020406,20252026,regular,2025-12-01,2025-12-02T00:00:00Z,final,nhl-cbj,nhl-njd,CBJ,NJD,5,3,Prudential Center,REG,N,1
+2025020407,20252026,regular,2025-12-01,2025-12-02T00:00:00Z,final,nhl-pit,nhl-phi,PIT,PHI,5,1,Xfinity Mobile Arena,REG,N,1
+2025020408,20252026,regular,2025-12-01,2025-12-02T00:30:00Z,final,nhl-wpg,nhl-buf,WPG,BUF,1,5,KeyBank Center,REG,N,1
+2025020409,20252026,regular,2025-12-01,2025-12-02T01:00:00Z,final,nhl-ana,nhl-stl,ANA,STL,4,1,Enterprise Center,REG,N,1
+2025020410,20252026,regular,2025-12-01,2025-12-02T03:00:00Z,final,nhl-uta,nhl-sjs,UTA,SJS,3,6,SAP Center at San Jose,REG,N,1
+2025020411,20252026,regular,2025-12-02,2025-12-03T00:00:00Z,final,nhl-ott,nhl-mtl,OTT,MTL,5,2,Centre Bell,REG,N,1
+2025020412,20252026,regular,2025-12-02,2025-12-03T00:00:00Z,final,nhl-bos,nhl-det,BOS,DET,4,5,Little Caesars Arena,REG,N,1
+2025020413,20252026,regular,2025-12-02,2025-12-03T00:30:00Z,final,nhl-tor,nhl-fla,TOR,FLA,4,1,Amerant Bank Arena,REG,N,1
+2025020414,20252026,regular,2025-12-02,2025-12-03T00:00:00Z,final,nhl-tbl,nhl-nyi,TBL,NYI,1,2,UBS Arena,REG,N,1
+2025020415,20252026,regular,2025-12-02,2025-12-03T00:00:00Z,final,nhl-dal,nhl-nyr,DAL,NYR,2,3,Madison Square Garden,OT,N,1
+2025020416,20252026,regular,2025-12-02,2025-12-03T01:00:00Z,final,nhl-cgy,nhl-nsh,CGY,NSH,1,5,Bridgestone Arena,REG,N,1
+2025020417,20252026,regular,2025-12-02,2025-12-03T02:00:00Z,final,nhl-van,nhl-col,VAN,COL,1,3,Ball Arena,REG,N,1
+2025020418,20252026,regular,2025-12-02,2025-12-03T02:00:00Z,final,nhl-min,nhl-edm,MIN,EDM,1,0,Rogers Place,REG,N,1
+2025020419,20252026,regular,2025-12-02,2025-12-03T03:00:00Z,final,nhl-chi,nhl-vgk,CHI,VGK,3,4,T-Mobile Arena,SO,N,1
+2025020420,20252026,regular,2025-12-02,2025-12-03T03:30:00Z,final,nhl-wsh,nhl-lak,WSH,LAK,3,1,Crypto.com Arena,REG,N,1
+2025020421,20252026,regular,2025-12-03,2025-12-04T00:00:00Z,final,nhl-dal,nhl-njd,DAL,NJD,3,0,Prudential Center,REG,N,1
+2025020422,20252026,regular,2025-12-03,2025-12-04T00:30:00Z,final,nhl-wpg,nhl-mtl,WPG,MTL,2,3,Centre Bell,SO,N,1
+2025020423,20252026,regular,2025-12-03,2025-12-04T00:30:00Z,final,nhl-buf,nhl-phi,BUF,PHI,2,5,Xfinity Mobile Arena,REG,N,1
+2025020424,20252026,regular,2025-12-03,2025-12-04T03:00:00Z,final,nhl-uta,nhl-ana,UTA,ANA,7,0,Honda Center,REG,N,1
+2025020425,20252026,regular,2025-12-03,2025-12-04T03:00:00Z,final,nhl-wsh,nhl-sjs,WSH,SJS,7,1,SAP Center at San Jose,REG,N,1
+2025020426,20252026,regular,2025-12-04,2025-12-05T00:00:00Z,final,nhl-stl,nhl-bos,STL,BOS,2,5,TD Garden,REG,N,1
+2025020427,20252026,regular,2025-12-04,2025-12-05T00:00:00Z,final,nhl-nyr,nhl-ott,NYR,OTT,4,2,Canadian Tire Centre,REG,N,1
+2025020428,20252026,regular,2025-12-04,2025-12-05T00:00:00Z,final,nhl-pit,nhl-tbl,PIT,TBL,4,3,Benchmark International Arena,REG,N,1
+2025020429,20252026,regular,2025-12-04,2025-12-05T00:00:00Z,final,nhl-nsh,nhl-fla,NSH,FLA,2,1,Amerant Bank Arena,OT,N,1
+2025020430,20252026,regular,2025-12-04,2025-12-05T00:00:00Z,final,nhl-col,nhl-nyi,COL,NYI,3,6,UBS Arena,REG,N,1
+2025020431,20252026,regular,2025-12-04,2025-12-05T00:00:00Z,final,nhl-tor,nhl-car,TOR,CAR,5,1,Lenovo Center,REG,N,1
+2025020432,20252026,regular,2025-12-04,2025-12-05T00:30:00Z,final,nhl-det,nhl-cbj,DET,CBJ,5,6,Nationwide Arena,SO,N,1
+2025020433,20252026,regular,2025-12-04,2025-12-05T02:00:00Z,final,nhl-min,nhl-cgy,MIN,CGY,1,4,Scotiabank Saddledome,REG,N,1
+2025020434,20252026,regular,2025-12-04,2025-12-05T02:00:00Z,final,nhl-sea,nhl-edm,SEA,EDM,4,9,Rogers Place,REG,N,1
+2025020435,20252026,regular,2025-12-04,2025-12-05T03:00:00Z,final,nhl-chi,nhl-lak,CHI,LAK,2,1,Crypto.com Arena,REG,N,1
+2025020436,20252026,regular,2025-12-05,2025-12-06T00:00:00Z,final,nhl-vgk,nhl-njd,VGK,NJD,3,0,Prudential Center,REG,N,1
+2025020437,20252026,regular,2025-12-05,2025-12-06T00:00:00Z,final,nhl-buf,nhl-wpg,BUF,WPG,1,4,Canada Life Centre,REG,N,1
+2025020438,20252026,regular,2025-12-05,2025-12-06T01:00:00Z,final,nhl-sjs,nhl-dal,SJS,DAL,1,4,American Airlines Center,REG,N,1
+2025020439,20252026,regular,2025-12-05,2025-12-06T02:00:00Z,final,nhl-uta,nhl-van,UTA,VAN,4,1,Rogers Arena,REG,N,1
+2025020440,20252026,regular,2025-12-05,2025-12-06T03:00:00Z,final,nhl-wsh,nhl-ana,WSH,ANA,3,4,Honda Center,SO,N,1
+2025020441,20252026,regular,2025-12-06,2025-12-06T17:30:00Z,final,nhl-col,nhl-nyr,COL,NYR,3,2,Madison Square Garden,OT,N,1
+2025020442,20252026,regular,2025-12-06,2025-12-06T20:30:00Z,final,nhl-cbj,nhl-fla,CBJ,FLA,6,7,Amerant Bank Arena,OT,N,1
+2025020443,20252026,regular,2025-12-06,2025-12-07T00:00:00Z,final,nhl-njd,nhl-bos,NJD,BOS,1,4,TD Garden,REG,N,1
+2025020444,20252026,regular,2025-12-06,2025-12-07T00:00:00Z,final,nhl-mtl,nhl-tor,MTL,TOR,2,1,Scotiabank Arena,SO,N,1
+2025020445,20252026,regular,2025-12-06,2025-12-07T00:00:00Z,final,nhl-stl,nhl-ott,STL,OTT,2,1,Canadian Tire Centre,REG,N,1
+2025020446,20252026,regular,2025-12-06,2025-12-07T00:00:00Z,final,nhl-nyi,nhl-tbl,NYI,TBL,2,0,Benchmark International Arena,REG,N,1
+2025020447,20252026,regular,2025-12-06,2025-12-07T00:00:00Z,final,nhl-nsh,nhl-car,NSH,CAR,3,6,Lenovo Center,REG,N,1
+2025020448,20252026,regular,2025-12-06,2025-12-07T00:00:00Z,final,nhl-uta,nhl-cgy,UTA,CGY,0,2,Scotiabank Saddledome,REG,N,1
+2025020449,20252026,regular,2025-12-06,2025-12-07T02:00:00Z,final,nhl-chi,nhl-lak,CHI,LAK,0,6,Crypto.com Arena,REG,N,1
+2025020450,20252026,regular,2025-12-06,2025-12-07T03:00:00Z,final,nhl-wpg,nhl-edm,WPG,EDM,2,6,Rogers Place,REG,N,1
+2025020451,20252026,regular,2025-12-06,2025-12-07T03:00:00Z,final,nhl-min,nhl-van,MIN,VAN,2,4,Rogers Arena,REG,N,1
+2025020452,20252026,regular,2025-12-06,2025-12-07T03:00:00Z,final,nhl-det,nhl-sea,DET,SEA,4,3,Climate Pledge Arena,REG,N,1
+2025020453,20252026,regular,2025-12-07,2025-12-07T18:00:00Z,final,nhl-col,nhl-phi,COL,PHI,3,2,Xfinity Mobile Arena,REG,N,1
+2025020454,20252026,regular,2025-12-07,2025-12-07T22:00:00Z,final,nhl-nyi,nhl-fla,NYI,FLA,1,4,Amerant Bank Arena,REG,N,1
+2025020455,20252026,regular,2025-12-07,2025-12-07T22:00:00Z,final,nhl-sjs,nhl-car,SJS,CAR,4,1,Lenovo Center,REG,N,1
+2025020456,20252026,regular,2025-12-07,2025-12-07T23:00:00Z,final,nhl-pit,nhl-dal,PIT,DAL,2,3,American Airlines Center,SO,N,1
+2025020457,20252026,regular,2025-12-07,2025-12-08T00:00:00Z,final,nhl-stl,nhl-mtl,STL,MTL,4,3,Centre Bell,REG,N,1
+2025020458,20252026,regular,2025-12-07,2025-12-08T00:00:00Z,final,nhl-vgk,nhl-nyr,VGK,NYR,3,2,Madison Square Garden,OT,N,1
+2025020459,20252026,regular,2025-12-07,2025-12-08T00:00:00Z,final,nhl-cbj,nhl-wsh,CBJ,WSH,0,2,Capital One Arena,REG,N,1
+2025020460,20252026,regular,2025-12-07,2025-12-08T01:00:00Z,final,nhl-chi,nhl-ana,CHI,ANA,1,7,Honda Center,REG,N,1
+2025020461,20252026,regular,2025-12-08,2025-12-09T00:30:00Z,final,nhl-tbl,nhl-tor,TBL,TOR,0,2,Scotiabank Arena,REG,N,1
+2025020462,20252026,regular,2025-12-08,2025-12-09T02:00:00Z,final,nhl-lak,nhl-uta,LAK,UTA,4,2,Delta Center,REG,N,1
+2025020463,20252026,regular,2025-12-08,2025-12-09T02:00:00Z,final,nhl-buf,nhl-cgy,BUF,CGY,4,7,Scotiabank Saddledome,REG,N,1
+2025020464,20252026,regular,2025-12-08,2025-12-09T03:00:00Z,final,nhl-det,nhl-van,DET,VAN,4,0,Rogers Arena,REG,N,1
+2025020465,20252026,regular,2025-12-08,2025-12-09T03:00:00Z,final,nhl-min,nhl-sea,MIN,SEA,4,1,Climate Pledge Arena,REG,N,1
+2025020466,20252026,regular,2025-12-09,2025-12-10T00:00:00Z,final,nhl-tbl,nhl-mtl,TBL,MTL,6,1,Centre Bell,REG,N,1
+2025020467,20252026,regular,2025-12-09,2025-12-10T00:00:00Z,final,nhl-njd,nhl-ott,NJD,OTT,4,3,Canadian Tire Centre,REG,N,1
+2025020468,20252026,regular,2025-12-09,2025-12-10T00:00:00Z,final,nhl-vgk,nhl-nyi,VGK,NYI,4,5,UBS Arena,SO,N,1
+2025020469,20252026,regular,2025-12-09,2025-12-10T00:00:00Z,final,nhl-sjs,nhl-phi,SJS,PHI,1,4,Xfinity Mobile Arena,REG,N,1
+2025020470,20252026,regular,2025-12-09,2025-12-10T00:00:00Z,final,nhl-ana,nhl-pit,ANA,PIT,4,3,PPG Paints Arena,SO,N,1
+2025020471,20252026,regular,2025-12-09,2025-12-10T00:30:00Z,final,nhl-cbj,nhl-car,CBJ,CAR,1,4,Lenovo Center,REG,N,1
+2025020472,20252026,regular,2025-12-09,2025-12-10T01:00:00Z,final,nhl-bos,nhl-stl,BOS,STL,5,2,Enterprise Center,REG,N,1
+2025020473,20252026,regular,2025-12-09,2025-12-10T01:00:00Z,final,nhl-dal,nhl-wpg,DAL,WPG,4,3,Canada Life Centre,REG,N,1
+2025020474,20252026,regular,2025-12-09,2025-12-10T02:00:00Z,final,nhl-buf,nhl-edm,BUF,EDM,4,3,Rogers Place,OT,N,1
+2025020475,20252026,regular,2025-12-09,2025-12-10T02:30:00Z,final,nhl-col,nhl-nsh,COL,NSH,3,4,Bridgestone Arena,SO,N,1
+2025020476,20252026,regular,2025-12-10,2025-12-11T00:30:00Z,final,nhl-nyr,nhl-chi,NYR,CHI,0,3,United Center,REG,N,1
+2025020477,20252026,regular,2025-12-10,2025-12-11T01:30:00Z,final,nhl-det,nhl-cgy,DET,CGY,4,3,Scotiabank Saddledome,REG,N,1
+2025020478,20252026,regular,2025-12-10,2025-12-11T02:00:00Z,final,nhl-fla,nhl-uta,FLA,UTA,4,3,Delta Center,REG,N,1
+2025020479,20252026,regular,2025-12-10,2025-12-11T03:00:00Z,final,nhl-lak,nhl-sea,LAK,SEA,2,3,Climate Pledge Arena,OT,N,1
+2025020480,20252026,regular,2025-12-11,2025-12-12T00:00:00Z,final,nhl-sjs,nhl-tor,SJS,TOR,3,2,Scotiabank Arena,OT,N,1
+2025020481,20252026,regular,2025-12-11,2025-12-12T00:00:00Z,final,nhl-tbl,nhl-njd,TBL,NJD,8,4,Prudential Center,REG,N,1
+2025020482,20252026,regular,2025-12-11,2025-12-12T00:00:00Z,final,nhl-ana,nhl-nyi,ANA,NYI,2,5,UBS Arena,REG,N,1
+2025020483,20252026,regular,2025-12-11,2025-12-12T00:00:00Z,final,nhl-vgk,nhl-phi,VGK,PHI,3,2,Xfinity Mobile Arena,OT,N,1
+2025020484,20252026,regular,2025-12-11,2025-12-12T00:00:00Z,final,nhl-mtl,nhl-pit,MTL,PIT,4,2,PPG Paints Arena,REG,N,1
+2025020485,20252026,regular,2025-12-11,2025-12-12T00:00:00Z,final,nhl-car,nhl-wsh,CAR,WSH,3,2,Capital One Arena,SO,N,1
+2025020486,20252026,regular,2025-12-11,2025-12-12T00:00:00Z,final,nhl-ott,nhl-cbj,OTT,CBJ,6,3,Nationwide Arena,REG,N,1
+2025020487,20252026,regular,2025-12-11,2025-12-12T01:00:00Z,final,nhl-stl,nhl-nsh,STL,NSH,2,7,Bridgestone Arena,REG,N,1
+2025020488,20252026,regular,2025-12-11,2025-12-12T01:00:00Z,final,nhl-dal,nhl-min,DAL,MIN,2,5,Grand Casino Arena,REG,N,1
+2025020489,20252026,regular,2025-12-11,2025-12-12T01:00:00Z,final,nhl-bos,nhl-wpg,BOS,WPG,6,3,Canada Life Centre,REG,N,1
+2025020490,20252026,regular,2025-12-11,2025-12-12T02:30:00Z,final,nhl-fla,nhl-col,FLA,COL,2,6,Ball Arena,REG,N,1
+2025020491,20252026,regular,2025-12-11,2025-12-12T02:00:00Z,final,nhl-det,nhl-edm,DET,EDM,1,4,Rogers Place,REG,N,1
+2025020492,20252026,regular,2025-12-11,2025-12-12T03:00:00Z,final,nhl-buf,nhl-van,BUF,VAN,3,2,Rogers Arena,REG,N,1
+2025020493,20252026,regular,2025-12-12,2025-12-13T01:00:00Z,final,nhl-chi,nhl-stl,CHI,STL,2,3,Enterprise Center,REG,N,1
+2025020494,20252026,regular,2025-12-12,2025-12-13T02:00:00Z,final,nhl-sea,nhl-uta,SEA,UTA,3,5,Delta Center,REG,N,1
+2025020495,20252026,regular,2025-12-13,2025-12-13T17:30:00Z,final,nhl-ana,nhl-njd,ANA,NJD,1,4,Prudential Center,REG,N,1
+2025020496,20252026,regular,2025-12-13,2025-12-13T19:00:00Z,final,nhl-ott,nhl-min,OTT,MIN,2,3,Grand Casino Arena,REG,N,1
+2025020497,20252026,regular,2025-12-13,2025-12-13T20:00:00Z,final,nhl-sjs,nhl-pit,SJS,PIT,6,5,PPG Paints Arena,OT,N,1
+2025020498,20252026,regular,2025-12-13,2025-12-13T20:30:00Z,final,nhl-tbl,nhl-nyi,TBL,NYI,2,3,UBS Arena,SO,N,1
+2025020499,20252026,regular,2025-12-13,2025-12-14T00:00:00Z,final,nhl-edm,nhl-tor,EDM,TOR,6,3,Scotiabank Arena,REG,N,1
+2025020500,20252026,regular,2025-12-13,2025-12-14T00:00:00Z,final,nhl-mtl,nhl-nyr,MTL,NYR,4,5,Madison Square Garden,OT,N,1
+2025020501,20252026,regular,2025-12-13,2025-12-14T00:00:00Z,final,nhl-car,nhl-phi,CAR,PHI,4,3,Xfinity Mobile Arena,SO,N,1
+2025020502,20252026,regular,2025-12-13,2025-12-14T00:00:00Z,final,nhl-vgk,nhl-cbj,VGK,CBJ,3,2,Nationwide Arena,REG,N,1
+2025020503,20252026,regular,2025-12-13,2025-12-14T00:00:00Z,final,nhl-wsh,nhl-wpg,WSH,WPG,1,5,Canada Life Centre,REG,N,1
+2025020504,20252026,regular,2025-12-13,2025-12-14T01:00:00Z,final,nhl-det,nhl-chi,DET,CHI,4,0,United Center,REG,N,1
+2025020505,20252026,regular,2025-12-13,2025-12-14T01:00:00Z,final,nhl-fla,nhl-dal,FLA,DAL,4,0,American Airlines Center,REG,N,1
+2025020506,20252026,regular,2025-12-13,2025-12-14T02:00:00Z,final,nhl-nsh,nhl-col,NSH,COL,2,4,Ball Arena,REG,N,1
+2025020507,20252026,regular,2025-12-13,2025-12-14T03:00:00Z,final,nhl-cgy,nhl-lak,CGY,LAK,2,1,Crypto.com Arena,OT,N,1
+2025020508,20252026,regular,2025-12-14,2025-12-14T17:30:00Z,final,nhl-van,nhl-njd,VAN,NJD,2,1,Prudential Center,REG,N,1
+2025020509,20252026,regular,2025-12-14,2025-12-14T20:00:00Z,final,nhl-uta,nhl-pit,UTA,PIT,5,4,PPG Paints Arena,OT,N,1
+2025020510,20252026,regular,2025-12-14,2025-12-14T22:00:00Z,final,nhl-phi,nhl-car,PHI,CAR,2,3,Lenovo Center,SO,N,1
+2025020511,20252026,regular,2025-12-14,2025-12-14T23:00:00Z,final,nhl-bos,nhl-min,BOS,MIN,2,6,Grand Casino Arena,REG,N,1
+2025020512,20252026,regular,2025-12-14,2025-12-15T00:00:00Z,final,nhl-edm,nhl-mtl,EDM,MTL,1,4,Centre Bell,REG,N,1
+2025020513,20252026,regular,2025-12-14,2025-12-15T01:00:00Z,final,nhl-buf,nhl-sea,BUF,SEA,3,1,Climate Pledge Arena,REG,N,1
+2025020514,20252026,regular,2025-12-15,2025-12-16T00:00:00Z,final,nhl-fla,nhl-tbl,FLA,TBL,5,2,Benchmark International Arena,REG,N,1
+2025020515,20252026,regular,2025-12-15,2025-12-16T00:00:00Z,final,nhl-ana,nhl-nyr,ANA,NYR,4,1,Madison Square Garden,REG,N,1
+2025020516,20252026,regular,2025-12-15,2025-12-16T00:30:00Z,final,nhl-ott,nhl-wpg,OTT,WPG,3,2,Canada Life Centre,OT,N,1
+2025020517,20252026,regular,2025-12-15,2025-12-16T01:00:00Z,final,nhl-nsh,nhl-stl,NSH,STL,5,2,Enterprise Center,REG,N,1
+2025020518,20252026,regular,2025-12-15,2025-12-16T01:00:00Z,final,nhl-lak,nhl-dal,LAK,DAL,1,4,American Airlines Center,REG,N,1
+2025020519,20252026,regular,2025-12-16,2025-12-17T00:00:00Z,final,nhl-uta,nhl-bos,UTA,BOS,1,4,TD Garden,REG,N,1
+2025020520,20252026,regular,2025-12-16,2025-12-17T00:00:00Z,final,nhl-chi,nhl-tor,CHI,TOR,2,3,Scotiabank Arena,REG,N,1
+2025020521,20252026,regular,2025-12-16,2025-12-17T00:00:00Z,final,nhl-phi,nhl-mtl,PHI,MTL,4,1,Centre Bell,REG,N,1
+2025020522,20252026,regular,2025-12-16,2025-12-17T00:00:00Z,final,nhl-nyi,nhl-det,NYI,DET,2,3,Little Caesars Arena,REG,N,1
+2025020523,20252026,regular,2025-12-16,2025-12-17T00:00:00Z,final,nhl-van,nhl-nyr,VAN,NYR,3,0,Madison Square Garden,REG,N,1
+2025020524,20252026,regular,2025-12-16,2025-12-17T00:30:00Z,final,nhl-edm,nhl-pit,EDM,PIT,6,4,PPG Paints Arena,REG,N,1
+2025020525,20252026,regular,2025-12-16,2025-12-17T00:00:00Z,final,nhl-ana,nhl-cbj,ANA,CBJ,3,4,Nationwide Arena,OT,N,1
+2025020526,20252026,regular,2025-12-16,2025-12-17T01:00:00Z,final,nhl-wsh,nhl-min,WSH,MIN,0,5,Grand Casino Arena,REG,N,1
+2025020527,20252026,regular,2025-12-16,2025-12-17T03:00:00Z,final,nhl-cgy,nhl-sjs,CGY,SJS,3,6,SAP Center at San Jose,REG,N,1
+2025020528,20252026,regular,2025-12-16,2025-12-17T03:00:00Z,final,nhl-col,nhl-sea,COL,SEA,5,3,Climate Pledge Arena,REG,N,1
+2025020529,20252026,regular,2025-12-17,2025-12-18T00:00:00Z,final,nhl-lak,nhl-fla,LAK,FLA,2,3,Amerant Bank Arena,REG,N,1
+2025020530,20252026,regular,2025-12-17,2025-12-18T00:30:00Z,final,nhl-uta,nhl-det,UTA,DET,4,1,Little Caesars Arena,REG,N,1
+2025020531,20252026,regular,2025-12-17,2025-12-18T01:00:00Z,final,nhl-wpg,nhl-stl,WPG,STL,0,1,Enterprise Center,REG,N,1
+2025020532,20252026,regular,2025-12-17,2025-12-18T01:00:00Z,final,nhl-car,nhl-nsh,CAR,NSH,4,1,Bridgestone Arena,REG,N,1
+2025020533,20252026,regular,2025-12-17,2025-12-18T03:00:00Z,final,nhl-njd,nhl-vgk,NJD,VGK,2,1,T-Mobile Arena,SO,N,1
+2025020534,20252026,regular,2025-12-18,2025-12-19T00:00:00Z,final,nhl-edm,nhl-bos,EDM,BOS,3,1,TD Garden,REG,N,1
+2025020535,20252026,regular,2025-12-18,2025-12-19T00:30:00Z,final,nhl-phi,nhl-buf,PHI,BUF,3,5,KeyBank Center,REG,N,1
+2025020536,20252026,regular,2025-12-18,2025-12-19T00:00:00Z,final,nhl-chi,nhl-mtl,CHI,MTL,1,4,Centre Bell,REG,N,1
+2025020537,20252026,regular,2025-12-18,2025-12-19T00:00:00Z,final,nhl-pit,nhl-ott,PIT,OTT,0,4,Canadian Tire Centre,REG,N,1
+2025020538,20252026,regular,2025-12-18,2025-12-19T00:00:00Z,final,nhl-lak,nhl-tbl,LAK,TBL,2,1,Benchmark International Arena,REG,N,1
+2025020539,20252026,regular,2025-12-18,2025-12-19T00:00:00Z,final,nhl-tor,nhl-wsh,TOR,WSH,0,4,Capital One Arena,REG,N,1
+2025020540,20252026,regular,2025-12-18,2025-12-19T00:00:00Z,final,nhl-min,nhl-cbj,MIN,CBJ,5,2,Nationwide Arena,REG,N,1
+2025020541,20252026,regular,2025-12-18,2025-12-19T01:00:00Z,final,nhl-nyr,nhl-stl,NYR,STL,2,1,Enterprise Center,OT,N,1
+2025020542,20252026,regular,2025-12-18,2025-12-19T02:00:00Z,final,nhl-sea,nhl-cgy,SEA,CGY,2,4,Scotiabank Saddledome,REG,N,1
+2025020543,20252026,regular,2025-12-18,2025-12-19T03:00:00Z,final,nhl-dal,nhl-sjs,DAL,SJS,5,3,SAP Center at San Jose,REG,N,1
+2025020544,20252026,regular,2025-12-19,2025-12-20T00:00:00Z,final,nhl-car,nhl-fla,CAR,FLA,3,4,Amerant Bank Arena,SO,N,1
+2025020545,20252026,regular,2025-12-19,2025-12-20T00:00:00Z,final,nhl-van,nhl-nyi,VAN,NYI,4,1,UBS Arena,REG,N,1
+2025020546,20252026,regular,2025-12-19,2025-12-20T02:00:00Z,final,nhl-wpg,nhl-col,WPG,COL,2,3,Ball Arena,REG,N,1
+2025020547,20252026,regular,2025-12-19,2025-12-20T02:00:00Z,final,nhl-njd,nhl-uta,NJD,UTA,2,1,Delta Center,REG,N,1
+2025020548,20252026,regular,2025-12-19,2025-12-20T03:00:00Z,final,nhl-dal,nhl-ana,DAL,ANA,8,3,Honda Center,REG,N,1
+2025020549,20252026,regular,2025-12-20,2025-12-20T17:30:00Z,final,nhl-phi,nhl-nyr,PHI,NYR,4,5,Madison Square Garden,SO,N,1
+2025020550,20252026,regular,2025-12-20,2025-12-20T17:30:00Z,final,nhl-det,nhl-wsh,DET,WSH,5,2,Capital One Arena,REG,N,1
+2025020551,20252026,regular,2025-12-20,2025-12-20T20:00:00Z,final,nhl-chi,nhl-ott,CHI,OTT,4,6,Canadian Tire Centre,REG,N,1
+2025020552,20252026,regular,2025-12-20,2025-12-20T20:00:00Z,final,nhl-edm,nhl-min,EDM,MIN,2,5,Grand Casino Arena,REG,N,1
+2025020553,20252026,regular,2025-12-20,2025-12-20T22:00:00Z,final,nhl-nyi,nhl-buf,NYI,BUF,2,3,KeyBank Center,SO,N,1
+2025020554,20252026,regular,2025-12-20,2025-12-20T23:00:00Z,final,nhl-stl,nhl-fla,STL,FLA,6,2,Amerant Bank Arena,REG,N,1
+2025020555,20252026,regular,2025-12-20,2025-12-21T00:00:00Z,final,nhl-van,nhl-bos,VAN,BOS,5,4,TD Garden,SO,N,1
+2025020556,20252026,regular,2025-12-20,2025-12-21T00:00:00Z,final,nhl-pit,nhl-mtl,PIT,MTL,0,4,Centre Bell,REG,N,1
+2025020557,20252026,regular,2025-12-20,2025-12-21T00:00:00Z,final,nhl-car,nhl-tbl,CAR,TBL,4,6,Benchmark International Arena,REG,N,1
+2025020558,20252026,regular,2025-12-20,2025-12-21T00:00:00Z,final,nhl-tor,nhl-nsh,TOR,NSH,3,5,Bridgestone Arena,REG,N,1
+2025020559,20252026,regular,2025-12-20,2025-12-21T03:00:00Z,final,nhl-vgk,nhl-cgy,VGK,CGY,3,6,Scotiabank Saddledome,REG,N,1
+2025020560,20252026,regular,2025-12-20,2025-12-21T03:00:00Z,final,nhl-cbj,nhl-ana,CBJ,ANA,3,4,Honda Center,REG,N,1
+2025020561,20252026,regular,2025-12-20,2025-12-21T03:00:00Z,final,nhl-sea,nhl-sjs,SEA,SJS,4,2,SAP Center at San Jose,REG,N,1
+2025020562,20252026,regular,2025-12-21,2025-12-21T18:00:00Z,final,nhl-wsh,nhl-det,WSH,DET,2,3,Little Caesars Arena,OT,N,1
+2025020563,20252026,regular,2025-12-21,2025-12-21T23:00:00Z,final,nhl-col,nhl-min,COL,MIN,5,1,Grand Casino Arena,REG,N,1
+2025020564,20252026,regular,2025-12-21,2025-12-22T00:00:00Z,final,nhl-ott,nhl-bos,OTT,BOS,6,2,TD Garden,REG,N,1
+2025020565,20252026,regular,2025-12-21,2025-12-22T00:00:00Z,final,nhl-buf,nhl-njd,BUF,NJD,3,1,Prudential Center,REG,N,1
+2025020566,20252026,regular,2025-12-21,2025-12-22T00:00:00Z,final,nhl-mtl,nhl-pit,MTL,PIT,3,4,PPG Paints Arena,SO,N,1
+2025020567,20252026,regular,2025-12-21,2025-12-22T00:00:00Z,final,nhl-nyr,nhl-nsh,NYR,NSH,1,2,Bridgestone Arena,REG,N,1
+2025020568,20252026,regular,2025-12-21,2025-12-22T00:00:00Z,final,nhl-tor,nhl-dal,TOR,DAL,1,5,American Airlines Center,REG,N,1
+2025020569,20252026,regular,2025-12-21,2025-12-22T00:00:00Z,final,nhl-wpg,nhl-uta,WPG,UTA,3,4,Delta Center,OT,N,1
+2025020570,20252026,regular,2025-12-21,2025-12-22T01:00:00Z,final,nhl-vgk,nhl-edm,VGK,EDM,3,4,Rogers Place,REG,N,1
+2025020571,20252026,regular,2025-12-22,2025-12-23T00:00:00Z,final,nhl-stl,nhl-tbl,STL,TBL,1,4,Benchmark International Arena,REG,N,1
+2025020572,20252026,regular,2025-12-22,2025-12-23T00:30:00Z,final,nhl-van,nhl-phi,VAN,PHI,2,5,Xfinity Mobile Arena,REG,N,1
+2025020573,20252026,regular,2025-12-22,2025-12-23T03:00:00Z,final,nhl-sea,nhl-ana,SEA,ANA,3,1,Honda Center,REG,N,1
+2025020574,20252026,regular,2025-12-22,2025-12-23T03:00:00Z,final,nhl-cbj,nhl-lak,CBJ,LAK,3,1,Crypto.com Arena,REG,N,1
+2025020575,20252026,regular,2025-12-23,2025-12-23T21:00:00Z,final,nhl-pit,nhl-tor,PIT,TOR,3,6,Scotiabank Arena,REG,N,1
+2025020576,20252026,regular,2025-12-23,2025-12-24T00:00:00Z,final,nhl-nyr,nhl-wsh,NYR,WSH,7,3,Capital One Arena,REG,N,1
+2025020577,20252026,regular,2025-12-23,2025-12-24T00:00:00Z,final,nhl-mtl,nhl-bos,MTL,BOS,6,2,TD Garden,REG,N,1
+2025020578,20252026,regular,2025-12-23,2025-12-24T00:00:00Z,final,nhl-buf,nhl-ott,BUF,OTT,3,2,Canadian Tire Centre,OT,N,1
+2025020579,20252026,regular,2025-12-23,2025-12-23T23:30:00Z,final,nhl-dal,nhl-det,DAL,DET,3,4,Little Caesars Arena,OT,N,1
+2025020580,20252026,regular,2025-12-23,2025-12-24T00:00:00Z,final,nhl-njd,nhl-nyi,NJD,NYI,1,2,UBS Arena,REG,N,1
+2025020581,20252026,regular,2025-12-23,2025-12-24T00:00:00Z,final,nhl-fla,nhl-car,FLA,CAR,5,2,Lenovo Center,REG,N,1
+2025020582,20252026,regular,2025-12-23,2025-12-24T01:00:00Z,final,nhl-nsh,nhl-min,NSH,MIN,3,2,Grand Casino Arena,OT,N,1
+2025020583,20252026,regular,2025-12-23,2025-12-24T02:00:00Z,final,nhl-phi,nhl-chi,PHI,CHI,3,1,United Center,REG,N,1
+2025020584,20252026,regular,2025-12-23,2025-12-24T02:00:00Z,final,nhl-uta,nhl-col,UTA,COL,0,1,Ball Arena,REG,N,1
+2025020585,20252026,regular,2025-12-23,2025-12-24T02:00:00Z,final,nhl-cgy,nhl-edm,CGY,EDM,1,5,Rogers Place,REG,N,1
+2025020586,20252026,regular,2025-12-23,2025-12-24T03:00:00Z,final,nhl-sjs,nhl-vgk,SJS,VGK,2,7,T-Mobile Arena,REG,N,1
+2025020587,20252026,regular,2025-12-23,2025-12-24T03:00:00Z,final,nhl-sea,nhl-lak,SEA,LAK,3,2,Crypto.com Arena,REG,N,1
+2025020588,20252026,regular,2025-12-27,2025-12-27T23:00:00Z,final,nhl-nyr,nhl-nyi,NYR,NYI,0,2,UBS Arena,REG,N,1
+2025020589,20252026,regular,2025-12-27,2025-12-28T00:00:00Z,final,nhl-bos,nhl-buf,BOS,BUF,1,4,KeyBank Center,REG,N,1
+2025020590,20252026,regular,2025-12-27,2025-12-28T00:00:00Z,final,nhl-ott,nhl-tor,OTT,TOR,5,7,Scotiabank Arena,REG,N,1
+2025020591,20252026,regular,2025-12-27,2025-12-28T00:00:00Z,final,nhl-tbl,nhl-fla,TBL,FLA,4,2,Amerant Bank Arena,REG,N,1
+2025020592,20252026,regular,2025-12-27,2025-12-28T00:00:00Z,final,nhl-wsh,nhl-njd,WSH,NJD,4,3,Prudential Center,OT,N,1
+2025020593,20252026,regular,2025-12-27,2025-12-28T00:00:00Z,final,nhl-det,nhl-car,DET,CAR,2,5,Lenovo Center,REG,N,1
+2025020594,20252026,regular,2025-12-27,2025-12-28T00:00:00Z,final,nhl-min,nhl-wpg,MIN,WPG,4,3,Canada Life Centre,OT,N,1
+2025020595,20252026,regular,2025-12-27,2025-12-28T01:00:00Z,final,nhl-nsh,nhl-stl,NSH,STL,2,3,Enterprise Center,REG,N,1
+2025020596,20252026,regular,2025-12-27,2025-12-28T01:00:00Z,final,nhl-chi,nhl-dal,CHI,DAL,4,3,American Airlines Center,SO,N,1
+2025020597,20252026,regular,2025-12-27,2025-12-28T02:00:00Z,final,nhl-ana,nhl-lak,ANA,LAK,1,6,Crypto.com Arena,REG,N,1
+2025020598,20252026,regular,2025-12-27,2025-12-28T03:00:00Z,final,nhl-edm,nhl-cgy,EDM,CGY,2,3,Scotiabank Saddledome,REG,N,1
+2025020599,20252026,regular,2025-12-27,2025-12-28T03:00:00Z,final,nhl-sjs,nhl-van,SJS,VAN,6,3,Rogers Arena,REG,N,1
+2025020600,20252026,regular,2025-12-27,2025-12-28T03:00:00Z,final,nhl-col,nhl-vgk,COL,VGK,6,5,T-Mobile Arena,SO,N,1
+2025020601,20252026,regular,2025-12-28,2025-12-29T00:00:00Z,final,nhl-tor,nhl-det,TOR,DET,2,3,Little Caesars Arena,OT,N,1
+2025020602,20252026,regular,2025-12-28,2025-12-28T22:00:00Z,final,nhl-mtl,nhl-tbl,MTL,TBL,4,5,Benchmark International Arena,SO,N,1
+2025020603,20252026,regular,2025-12-28,2025-12-28T22:00:00Z,final,nhl-nyi,nhl-cbj,NYI,CBJ,2,4,Nationwide Arena,REG,N,1
+2025020604,20252026,regular,2025-12-28,2025-12-29T00:00:00Z,final,nhl-pit,nhl-chi,PIT,CHI,7,3,United Center,REG,N,1
+2025020605,20252026,regular,2025-12-28,2025-12-29T01:00:00Z,final,nhl-phi,nhl-sea,PHI,SEA,1,4,Climate Pledge Arena,REG,N,1
+2025020606,20252026,regular,2025-12-29,2025-12-30T00:30:00Z,final,nhl-cbj,nhl-ott,CBJ,OTT,4,1,Canadian Tire Centre,REG,N,1
+2025020607,20252026,regular,2025-12-29,2025-12-30T00:00:00Z,final,nhl-wsh,nhl-fla,WSH,FLA,3,5,Amerant Bank Arena,REG,N,1
+2025020608,20252026,regular,2025-12-29,2025-12-30T00:00:00Z,final,nhl-nyr,nhl-car,NYR,CAR,2,3,Lenovo Center,OT,N,1
+2025020609,20252026,regular,2025-12-29,2025-12-30T00:30:00Z,final,nhl-edm,nhl-wpg,EDM,WPG,3,1,Canada Life Centre,REG,N,1
+2025020610,20252026,regular,2025-12-29,2025-12-30T01:00:00Z,final,nhl-buf,nhl-stl,BUF,STL,4,2,Enterprise Center,REG,N,1
+2025020611,20252026,regular,2025-12-29,2025-12-30T02:00:00Z,final,nhl-lak,nhl-col,LAK,COL,2,5,Ball Arena,REG,N,1
+2025020612,20252026,regular,2025-12-29,2025-12-30T02:00:00Z,final,nhl-nsh,nhl-uta,NSH,UTA,4,3,Delta Center,REG,N,1
+2025020613,20252026,regular,2025-12-29,2025-12-30T02:00:00Z,final,nhl-bos,nhl-cgy,BOS,CGY,1,2,Scotiabank Saddledome,OT,N,1
+2025020614,20252026,regular,2025-12-29,2025-12-30T03:00:00Z,final,nhl-min,nhl-vgk,MIN,VGK,5,2,T-Mobile Arena,REG,N,1
+2025020615,20252026,regular,2025-12-29,2025-12-30T03:00:00Z,final,nhl-sjs,nhl-ana,SJS,ANA,5,4,Honda Center,REG,N,1
+2025020616,20252026,regular,2025-12-29,2025-12-30T03:00:00Z,final,nhl-van,nhl-sea,VAN,SEA,3,2,Climate Pledge Arena,SO,N,1
+2025020617,20252026,regular,2025-12-30,2025-12-31T00:00:00Z,final,nhl-njd,nhl-tor,NJD,TOR,0,4,Scotiabank Arena,REG,N,1
+2025020618,20252026,regular,2025-12-30,2025-12-31T00:00:00Z,final,nhl-mtl,nhl-fla,MTL,FLA,3,2,Amerant Bank Arena,OT,N,1
+2025020619,20252026,regular,2025-12-30,2025-12-31T00:00:00Z,final,nhl-car,nhl-pit,CAR,PIT,1,5,PPG Paints Arena,REG,N,1
+2025020620,20252026,regular,2025-12-30,2025-12-31T01:30:00Z,final,nhl-nyi,nhl-chi,NYI,CHI,3,2,United Center,SO,N,1
+2025020621,20252026,regular,2025-12-30,2025-12-31T03:00:00Z,final,nhl-phi,nhl-van,PHI,VAN,6,3,Rogers Arena,REG,N,1
+2025020622,20252026,regular,2025-12-31,2025-12-31T17:30:00Z,final,nhl-nyr,nhl-wsh,NYR,WSH,3,6,Capital One Arena,REG,N,1
+2025020623,20252026,regular,2025-12-31,2025-12-31T20:00:00Z,final,nhl-nsh,nhl-vgk,NSH,VGK,4,2,T-Mobile Arena,REG,N,1
+2025020624,20252026,regular,2025-12-31,2025-12-31T21:00:00Z,final,nhl-tbl,nhl-ana,TBL,ANA,4,3,Honda Center,OT,N,1
+2025020625,20252026,regular,2025-12-31,2025-12-31T21:00:00Z,final,nhl-min,nhl-sjs,MIN,SJS,3,4,SAP Center at San Jose,SO,N,1
+2025020626,20252026,regular,2025-12-31,2025-12-31T23:30:00Z,final,nhl-wpg,nhl-det,WPG,DET,1,2,Little Caesars Arena,REG,N,1
+2025020627,20252026,regular,2025-12-31,2026-01-01T00:00:00Z,final,nhl-njd,nhl-cbj,NJD,CBJ,3,2,Nationwide Arena,REG,N,1
+2025020628,20252026,regular,2025-12-31,2026-01-01T01:00:00Z,final,nhl-buf,nhl-dal,BUF,DAL,4,1,American Airlines Center,REG,N,1
+2025020629,20252026,regular,2025-12-31,2026-01-01T02:00:00Z,final,nhl-stl,nhl-col,STL,COL,1,6,Ball Arena,REG,N,1
+2025020630,20252026,regular,2025-12-31,2026-01-01T02:30:00Z,final,nhl-phi,nhl-cgy,PHI,CGY,1,5,Scotiabank Saddledome,REG,N,1
+2025020631,20252026,regular,2025-12-31,2026-01-01T02:30:00Z,final,nhl-bos,nhl-edm,BOS,EDM,6,2,Rogers Place,REG,N,1
+2025020632,20252026,regular,2026-01-01,2026-01-01T18:00:00Z,final,nhl-wsh,nhl-ott,WSH,OTT,3,4,Canadian Tire Centre,REG,N,1
+2025020633,20252026,regular,2026-01-01,2026-01-01T20:00:00Z,final,nhl-uta,nhl-nyi,UTA,NYI,7,2,UBS Arena,REG,N,1
+2025020634,20252026,regular,2026-01-01,2026-01-02T00:00:00Z,final,nhl-wpg,nhl-tor,WPG,TOR,5,6,Scotiabank Arena,REG,N,1
+2025020635,20252026,regular,2026-01-01,2026-01-02T00:00:00Z,final,nhl-det,nhl-pit,DET,PIT,3,4,PPG Paints Arena,OT,N,1
+2025020636,20252026,regular,2026-01-01,2026-01-02T00:00:00Z,final,nhl-mtl,nhl-car,MTL,CAR,7,5,Lenovo Center,REG,N,1
+2025020637,20252026,regular,2026-01-01,2026-01-02T01:30:00Z,final,nhl-dal,nhl-chi,DAL,CHI,3,4,United Center,REG,N,1
+2025020638,20252026,regular,2026-01-01,2026-01-02T03:00:00Z,final,nhl-nsh,nhl-sea,NSH,SEA,1,4,Climate Pledge Arena,REG,N,1
+2025020639,20252026,regular,2026-01-01,2026-01-02T00:00:00Z,final,nhl-tbl,nhl-lak,TBL,LAK,5,3,Crypto.com Arena,REG,N,1
+2025020640,20252026,regular,2026-01-02,2026-01-02T20:00:00Z,final,nhl-vgk,nhl-stl,VGK,STL,3,4,Enterprise Center,REG,N,1
+2025020641,20252026,regular,2026-01-02,2026-01-03T01:00:00Z,final,nhl-nyr,nhl-fla,NYR,FLA,5,1,loanDepot park,REG,N,1
+2025020642,20252026,regular,2026-01-02,2026-01-03T03:30:00Z,final,nhl-sea,nhl-van,SEA,VAN,4,3,Rogers Arena,SO,N,1
+2025020643,20252026,regular,2026-01-02,2026-01-03T03:30:00Z,final,nhl-min,nhl-ana,MIN,ANA,5,2,Honda Center,REG,N,1
+2025020644,20252026,regular,2026-01-03,2026-01-03T17:00:00Z,final,nhl-pit,nhl-det,PIT,DET,4,1,Little Caesars Arena,REG,N,1
+2025020645,20252026,regular,2026-01-03,2026-01-03T20:00:00Z,final,nhl-uta,nhl-njd,UTA,NJD,1,4,Prudential Center,REG,N,1
+2025020646,20252026,regular,2026-01-03,2026-01-03T20:00:00Z,final,nhl-buf,nhl-cbj,BUF,CBJ,1,5,Nationwide Arena,REG,N,1
+2025020647,20252026,regular,2026-01-03,2026-01-03T20:30:00Z,final,nhl-phi,nhl-edm,PHI,EDM,5,2,Rogers Place,REG,N,1
+2025020648,20252026,regular,2026-01-03,2026-01-03T21:00:00Z,final,nhl-mtl,nhl-stl,MTL,STL,0,2,Enterprise Center,REG,N,1
+2025020649,20252026,regular,2026-01-03,2026-01-03T21:00:00Z,final,nhl-tbl,nhl-sjs,TBL,SJS,7,3,SAP Center at San Jose,REG,N,1
+2025020650,20252026,regular,2026-01-03,2026-01-04T00:00:00Z,final,nhl-wpg,nhl-ott,WPG,OTT,2,4,Canadian Tire Centre,REG,N,1
+2025020651,20252026,regular,2026-01-03,2026-01-04T00:00:00Z,final,nhl-tor,nhl-nyi,TOR,NYI,3,4,UBS Arena,OT,N,1
+2025020652,20252026,regular,2026-01-03,2026-01-04T00:00:00Z,final,nhl-chi,nhl-wsh,CHI,WSH,3,2,Capital One Arena,SO,N,1
+2025020653,20252026,regular,2026-01-03,2026-01-04T00:00:00Z,final,nhl-col,nhl-car,COL,CAR,5,3,Lenovo Center,REG,N,1
+2025020654,20252026,regular,2026-01-03,2026-01-04T00:00:00Z,final,nhl-nsh,nhl-cgy,NSH,CGY,4,3,Scotiabank Saddledome,REG,N,1
+2025020655,20252026,regular,2026-01-03,2026-01-04T02:00:00Z,final,nhl-min,nhl-lak,MIN,LAK,4,5,Crypto.com Arena,SO,N,1
+2025020656,20252026,regular,2026-01-03,2026-01-04T03:00:00Z,final,nhl-bos,nhl-van,BOS,VAN,3,2,Rogers Arena,OT,N,1
+2025020657,20252026,regular,2026-01-04,2026-01-04T19:00:00Z,final,nhl-mtl,nhl-dal,MTL,DAL,4,3,American Airlines Center,OT,N,1
+2025020658,20252026,regular,2026-01-04,2026-01-04T20:00:00Z,final,nhl-pit,nhl-cbj,PIT,CBJ,5,4,Nationwide Arena,OT,N,1
+2025020659,20252026,regular,2026-01-04,2026-01-04T22:00:00Z,final,nhl-col,nhl-fla,COL,FLA,1,2,Amerant Bank Arena,REG,N,1
+2025020660,20252026,regular,2026-01-04,2026-01-05T00:00:00Z,final,nhl-car,nhl-njd,CAR,NJD,3,1,Prudential Center,REG,N,1
+2025020661,20252026,regular,2026-01-04,2026-01-05T00:00:00Z,final,nhl-vgk,nhl-chi,VGK,CHI,2,3,United Center,OT,N,1
+2025020662,20252026,regular,2026-01-05,2026-01-06T00:00:00Z,final,nhl-uta,nhl-nyr,UTA,NYR,3,2,Madison Square Garden,OT,N,1
+2025020663,20252026,regular,2026-01-05,2026-01-06T00:00:00Z,final,nhl-ana,nhl-wsh,ANA,WSH,4,7,Capital One Arena,REG,N,1
+2025020664,20252026,regular,2026-01-05,2026-01-06T00:30:00Z,final,nhl-det,nhl-ott,DET,OTT,5,3,Canadian Tire Centre,REG,N,1
+2025020665,20252026,regular,2026-01-05,2026-01-06T02:30:00Z,final,nhl-sea,nhl-cgy,SEA,CGY,5,1,Scotiabank Saddledome,REG,N,1
+2025020666,20252026,regular,2026-01-05,2026-01-06T03:30:00Z,final,nhl-min,nhl-lak,MIN,LAK,2,4,Crypto.com Arena,REG,N,1
+2025020667,20252026,regular,2026-01-06,2026-01-07T00:00:00Z,final,nhl-van,nhl-buf,VAN,BUF,3,5,KeyBank Center,REG,N,1
+2025020668,20252026,regular,2026-01-06,2026-01-07T00:00:00Z,final,nhl-col,nhl-tbl,COL,TBL,2,4,Benchmark International Arena,REG,N,1
+2025020669,20252026,regular,2026-01-06,2026-01-07T00:30:00Z,final,nhl-njd,nhl-nyi,NJD,NYI,0,9,UBS Arena,REG,N,1
+2025020670,20252026,regular,2026-01-06,2026-01-07T00:00:00Z,final,nhl-ana,nhl-phi,ANA,PHI,2,5,Xfinity Mobile Arena,REG,N,1
+2025020671,20252026,regular,2026-01-06,2026-01-07T00:00:00Z,final,nhl-dal,nhl-car,DAL,CAR,3,6,Lenovo Center,REG,N,1
+2025020672,20252026,regular,2026-01-06,2026-01-07T00:30:00Z,final,nhl-fla,nhl-tor,FLA,TOR,1,4,Scotiabank Arena,REG,N,1
+2025020673,20252026,regular,2026-01-06,2026-01-07T01:00:00Z,final,nhl-vgk,nhl-wpg,VGK,WPG,4,3,Canada Life Centre,OT,N,1
+2025020674,20252026,regular,2026-01-06,2026-01-07T02:00:00Z,final,nhl-nsh,nhl-edm,NSH,EDM,2,6,Rogers Place,REG,N,1
+2025020675,20252026,regular,2026-01-06,2026-01-07T03:00:00Z,final,nhl-cbj,nhl-sjs,CBJ,SJS,2,5,SAP Center at San Jose,REG,N,1
+2025020676,20252026,regular,2026-01-06,2026-01-07T03:00:00Z,final,nhl-bos,nhl-sea,BOS,SEA,4,7,Climate Pledge Arena,REG,N,1
+2025020677,20252026,regular,2026-01-07,2026-01-08T00:00:00Z,final,nhl-dal,nhl-wsh,DAL,WSH,4,1,Capital One Arena,REG,N,1
+2025020678,20252026,regular,2026-01-07,2026-01-08T00:30:00Z,final,nhl-cgy,nhl-mtl,CGY,MTL,1,4,Centre Bell,REG,N,1
+2025020679,20252026,regular,2026-01-07,2026-01-08T02:30:00Z,final,nhl-stl,nhl-chi,STL,CHI,3,7,United Center,REG,N,1
+2025020680,20252026,regular,2026-01-07,2026-01-08T02:30:00Z,final,nhl-ott,nhl-uta,OTT,UTA,1,3,Delta Center,REG,N,1
+2025020681,20252026,regular,2026-01-07,2026-01-08T03:30:00Z,final,nhl-sjs,nhl-lak,SJS,LAK,4,3,Crypto.com Arena,OT,N,1
+2025020682,20252026,regular,2026-01-08,2026-01-09T00:00:00Z,final,nhl-cgy,nhl-bos,CGY,BOS,1,4,TD Garden,REG,N,1
+2025020683,20252026,regular,2026-01-08,2026-01-09T00:00:00Z,final,nhl-fla,nhl-mtl,FLA,MTL,2,6,Centre Bell,REG,N,1
+2025020684,20252026,regular,2026-01-08,2026-01-09T00:00:00Z,final,nhl-van,nhl-det,VAN,DET,1,5,Little Caesars Arena,REG,N,1
+2025020685,20252026,regular,2026-01-08,2026-01-09T00:00:00Z,final,nhl-buf,nhl-nyr,BUF,NYR,5,2,Madison Square Garden,REG,N,1
+2025020686,20252026,regular,2026-01-08,2026-01-09T00:00:00Z,final,nhl-tor,nhl-phi,TOR,PHI,2,1,Xfinity Mobile Arena,OT,N,1
+2025020687,20252026,regular,2026-01-08,2026-01-09T00:00:00Z,final,nhl-njd,nhl-pit,NJD,PIT,1,4,PPG Paints Arena,REG,N,1
+2025020688,20252026,regular,2026-01-08,2026-01-09T00:00:00Z,final,nhl-ana,nhl-car,ANA,CAR,2,5,Lenovo Center,REG,N,1
+2025020689,20252026,regular,2026-01-08,2026-01-09T01:00:00Z,final,nhl-nyi,nhl-nsh,NYI,NSH,1,2,Bridgestone Arena,SO,N,1
+2025020690,20252026,regular,2026-01-08,2026-01-09T01:00:00Z,final,nhl-edm,nhl-wpg,EDM,WPG,4,3,Canada Life Centre,REG,N,1
+2025020691,20252026,regular,2026-01-08,2026-01-09T02:00:00Z,final,nhl-ott,nhl-col,OTT,COL,2,8,Ball Arena,REG,N,1
+2025020692,20252026,regular,2026-01-08,2026-01-09T03:00:00Z,final,nhl-cbj,nhl-vgk,CBJ,VGK,3,5,T-Mobile Arena,REG,N,1
+2025020693,20252026,regular,2026-01-08,2026-01-09T03:00:00Z,final,nhl-min,nhl-sea,MIN,SEA,3,2,Climate Pledge Arena,OT,N,1
+2025020694,20252026,regular,2026-01-09,2026-01-10T01:00:00Z,final,nhl-wsh,nhl-chi,WSH,CHI,5,1,United Center,REG,N,1
+2025020695,20252026,regular,2026-01-09,2026-01-10T01:00:00Z,final,nhl-lak,nhl-wpg,LAK,WPG,1,5,Canada Life Centre,REG,N,1
+2025020696,20252026,regular,2026-01-09,2026-01-10T02:00:00Z,final,nhl-stl,nhl-uta,STL,UTA,2,4,Delta Center,REG,N,1
+2025020697,20252026,regular,2026-01-10,2026-01-10T18:00:00Z,final,nhl-nyr,nhl-bos,NYR,BOS,2,10,TD Garden,REG,N,1
+2025020698,20252026,regular,2026-01-10,2026-01-10T20:30:00Z,final,nhl-cgy,nhl-pit,CGY,PIT,2,1,PPG Paints Arena,REG,N,1
+2025020699,20252026,regular,2026-01-10,2026-01-10T21:00:00Z,final,nhl-cbj,nhl-col,CBJ,COL,0,4,Ball Arena,REG,N,1
+2025020700,20252026,regular,2026-01-10,2026-01-10T21:00:00Z,final,nhl-dal,nhl-sjs,DAL,SJS,4,5,SAP Center at San Jose,OT,N,1
+2025020701,20252026,regular,2026-01-10,2026-01-11T00:00:00Z,final,nhl-ana,nhl-buf,ANA,BUF,3,5,KeyBank Center,REG,N,1
+2025020702,20252026,regular,2026-01-10,2026-01-11T00:00:00Z,final,nhl-van,nhl-tor,VAN,TOR,0,5,Scotiabank Arena,REG,N,1
+2025020703,20252026,regular,2026-01-10,2026-01-11T00:00:00Z,final,nhl-det,nhl-mtl,DET,MTL,4,0,Centre Bell,REG,N,1
+2025020704,20252026,regular,2026-01-10,2026-01-11T00:00:00Z,final,nhl-fla,nhl-ott,FLA,OTT,3,2,Canadian Tire Centre,REG,N,1
+2025020705,20252026,regular,2026-01-10,2026-01-11T00:00:00Z,final,nhl-tbl,nhl-phi,TBL,PHI,7,2,Xfinity Mobile Arena,REG,N,1
+2025020706,20252026,regular,2026-01-10,2026-01-11T00:00:00Z,final,nhl-sea,nhl-car,SEA,CAR,2,3,Lenovo Center,REG,N,1
+2025020707,20252026,regular,2026-01-10,2026-01-11T01:00:00Z,final,nhl-chi,nhl-nsh,CHI,NSH,3,0,Bridgestone Arena,REG,N,1
+2025020708,20252026,regular,2026-01-10,2026-01-11T01:00:00Z,final,nhl-nyi,nhl-min,NYI,MIN,4,3,Grand Casino Arena,OT,N,1
+2025020709,20252026,regular,2026-01-10,2026-01-11T03:00:00Z,final,nhl-lak,nhl-edm,LAK,EDM,4,3,Rogers Place,SO,N,1
+2025020710,20252026,regular,2026-01-10,2026-01-11T03:00:00Z,final,nhl-stl,nhl-vgk,STL,VGK,2,4,T-Mobile Arena,REG,N,1
+2025020711,20252026,regular,2026-01-11,2026-01-11T19:00:00Z,final,nhl-njd,nhl-wpg,NJD,WPG,3,4,Canada Life Centre,REG,N,1
+2025020712,20252026,regular,2026-01-11,2026-01-11T22:00:00Z,final,nhl-pit,nhl-bos,PIT,BOS,0,1,TD Garden,REG,N,1
+2025020713,20252026,regular,2026-01-11,2026-01-12T00:00:00Z,final,nhl-wsh,nhl-nsh,WSH,NSH,2,3,Bridgestone Arena,REG,N,1
+2025020714,20252026,regular,2026-01-11,2026-01-12T00:00:00Z,final,nhl-cbj,nhl-uta,CBJ,UTA,3,2,Delta Center,OT,N,1
+2025020715,20252026,regular,2026-01-11,2026-01-12T01:00:00Z,final,nhl-vgk,nhl-sjs,VGK,SJS,7,2,SAP Center at San Jose,REG,N,1
+2025020716,20252026,regular,2026-01-12,2026-01-13T00:00:00Z,final,nhl-fla,nhl-buf,FLA,BUF,4,3,KeyBank Center,REG,N,1
+2025020717,20252026,regular,2026-01-12,2026-01-13T00:00:00Z,final,nhl-car,nhl-det,CAR,DET,3,4,Little Caesars Arena,OT,N,1
+2025020718,20252026,regular,2026-01-12,2026-01-13T00:00:00Z,final,nhl-sea,nhl-nyr,SEA,NYR,4,2,Madison Square Garden,REG,N,1
+2025020719,20252026,regular,2026-01-12,2026-01-13T00:00:00Z,final,nhl-tbl,nhl-phi,TBL,PHI,5,1,Xfinity Mobile Arena,REG,N,1
+2025020720,20252026,regular,2026-01-12,2026-01-13T00:30:00Z,final,nhl-van,nhl-mtl,VAN,MTL,3,6,Centre Bell,REG,N,1
+2025020721,20252026,regular,2026-01-12,2026-01-13T01:00:00Z,final,nhl-njd,nhl-min,NJD,MIN,5,2,Grand Casino Arena,REG,N,1
+2025020722,20252026,regular,2026-01-12,2026-01-13T01:30:00Z,final,nhl-edm,nhl-chi,EDM,CHI,4,1,United Center,REG,N,1
+2025020723,20252026,regular,2026-01-12,2026-01-13T03:00:00Z,final,nhl-tor,nhl-col,TOR,COL,4,3,Ball Arena,OT,N,1
+2025020724,20252026,regular,2026-01-12,2026-01-13T03:00:00Z,final,nhl-dal,nhl-lak,DAL,LAK,3,1,Crypto.com Arena,REG,N,1
+2025020725,20252026,regular,2026-01-13,2026-01-14T00:00:00Z,final,nhl-van,nhl-ott,VAN,OTT,1,2,Canadian Tire Centre,REG,N,1
+2025020726,20252026,regular,2026-01-13,2026-01-14T00:00:00Z,final,nhl-tbl,nhl-pit,TBL,PIT,2,1,PPG Paints Arena,SO,N,1
+2025020727,20252026,regular,2026-01-13,2026-01-14T00:00:00Z,final,nhl-mtl,nhl-wsh,MTL,WSH,2,3,Capital One Arena,OT,N,1
+2025020728,20252026,regular,2026-01-13,2026-01-14T00:00:00Z,final,nhl-cgy,nhl-cbj,CGY,CBJ,3,5,Nationwide Arena,REG,N,1
+2025020729,20252026,regular,2026-01-13,2026-01-14T00:30:00Z,final,nhl-det,nhl-bos,DET,BOS,0,3,TD Garden,REG,N,1
+2025020730,20252026,regular,2026-01-13,2026-01-14T00:30:00Z,final,nhl-car,nhl-stl,CAR,STL,0,3,Enterprise Center,REG,N,1
+2025020731,20252026,regular,2026-01-13,2026-01-14T01:00:00Z,final,nhl-edm,nhl-nsh,EDM,NSH,3,4,Bridgestone Arena,OT,N,1
+2025020732,20252026,regular,2026-01-13,2026-01-14T01:00:00Z,final,nhl-nyi,nhl-wpg,NYI,WPG,4,5,Canada Life Centre,REG,N,1
+2025020733,20252026,regular,2026-01-13,2026-01-14T03:00:00Z,final,nhl-tor,nhl-uta,TOR,UTA,1,6,Delta Center,REG,N,1
+2025020734,20252026,regular,2026-01-13,2026-01-14T03:00:00Z,final,nhl-dal,nhl-ana,DAL,ANA,1,3,Honda Center,REG,N,1
+2025020735,20252026,regular,2026-01-14,2026-01-15T00:00:00Z,final,nhl-sea,nhl-njd,SEA,NJD,2,3,Prudential Center,OT,N,1
+2025020736,20252026,regular,2026-01-14,2026-01-15T00:30:00Z,final,nhl-phi,nhl-buf,PHI,BUF,2,5,KeyBank Center,REG,N,1
+2025020737,20252026,regular,2026-01-14,2026-01-15T00:30:00Z,final,nhl-ott,nhl-nyr,OTT,NYR,8,4,Madison Square Garden,REG,N,1
+2025020738,20252026,regular,2026-01-14,2026-01-15T03:00:00Z,final,nhl-vgk,nhl-lak,VGK,LAK,3,2,Crypto.com Arena,OT,N,1
+2025020739,20252026,regular,2026-01-15,2026-01-16T01:00:00Z,final,nhl-sea,nhl-bos,SEA,BOS,2,4,TD Garden,REG,N,1
+2025020740,20252026,regular,2026-01-15,2026-01-16T00:00:00Z,final,nhl-mtl,nhl-buf,MTL,BUF,3,5,KeyBank Center,REG,N,1
+2025020741,20252026,regular,2026-01-15,2026-01-16T00:00:00Z,final,nhl-phi,nhl-pit,PHI,PIT,3,6,PPG Paints Arena,REG,N,1
+2025020742,20252026,regular,2026-01-15,2026-01-16T00:00:00Z,final,nhl-sjs,nhl-wsh,SJS,WSH,3,2,Capital One Arena,REG,N,1
+2025020743,20252026,regular,2026-01-15,2026-01-16T00:00:00Z,final,nhl-van,nhl-cbj,VAN,CBJ,1,4,Nationwide Arena,REG,N,1
+2025020744,20252026,regular,2026-01-15,2026-01-16T01:00:00Z,final,nhl-wpg,nhl-min,WPG,MIN,6,2,Grand Casino Arena,REG,N,1
+2025020745,20252026,regular,2026-01-15,2026-01-16T01:30:00Z,final,nhl-cgy,nhl-chi,CGY,CHI,3,1,United Center,REG,N,1
+2025020746,20252026,regular,2026-01-15,2026-01-16T02:00:00Z,final,nhl-dal,nhl-uta,DAL,UTA,1,2,Delta Center,REG,N,1
+2025020747,20252026,regular,2026-01-15,2026-01-16T02:00:00Z,final,nhl-nyi,nhl-edm,NYI,EDM,1,0,Rogers Place,REG,N,1
+2025020748,20252026,regular,2026-01-15,2026-01-16T02:30:00Z,final,nhl-tor,nhl-vgk,TOR,VGK,5,6,T-Mobile Arena,OT,N,1
+2025020749,20252026,regular,2026-01-16,2026-01-17T00:00:00Z,final,nhl-sjs,nhl-det,SJS,DET,2,4,Little Caesars Arena,REG,N,1
+2025020750,20252026,regular,2026-01-16,2026-01-17T00:00:00Z,final,nhl-fla,nhl-car,FLA,CAR,1,9,Lenovo Center,REG,N,1
+2025020751,20252026,regular,2026-01-16,2026-01-17T01:00:00Z,final,nhl-tbl,nhl-stl,TBL,STL,2,3,Enterprise Center,SO,N,1
+2025020752,20252026,regular,2026-01-16,2026-01-17T02:00:00Z,final,nhl-nsh,nhl-col,NSH,COL,7,3,Ball Arena,REG,N,1
+2025020753,20252026,regular,2026-01-16,2026-01-17T03:30:00Z,final,nhl-ana,nhl-lak,ANA,LAK,3,2,Crypto.com Arena,SO,N,1
+2025020754,20252026,regular,2026-01-17,2026-01-17T17:30:00Z,final,nhl-min,nhl-buf,MIN,BUF,5,4,KeyBank Center,OT,N,1
+2025020755,20252026,regular,2026-01-17,2026-01-17T18:00:00Z,final,nhl-nyr,nhl-phi,NYR,PHI,6,3,Xfinity Mobile Arena,REG,N,1
+2025020756,20252026,regular,2026-01-17,2026-01-17T20:00:00Z,final,nhl-nyi,nhl-cgy,NYI,CGY,2,4,Scotiabank Saddledome,REG,N,1
+2025020757,20252026,regular,2026-01-17,2026-01-17T22:00:00Z,final,nhl-sea,nhl-uta,SEA,UTA,3,6,Delta Center,REG,N,1
+2025020758,20252026,regular,2026-01-17,2026-01-18T00:00:00Z,final,nhl-mtl,nhl-ott,MTL,OTT,6,5,Canadian Tire Centre,OT,N,1
+2025020759,20252026,regular,2026-01-17,2026-01-18T00:00:00Z,final,nhl-car,nhl-njd,CAR,NJD,4,1,Prudential Center,REG,N,1
+2025020760,20252026,regular,2026-01-17,2026-01-18T00:00:00Z,final,nhl-cbj,nhl-pit,CBJ,PIT,4,3,PPG Paints Arena,SO,N,1
+2025020761,20252026,regular,2026-01-17,2026-01-18T00:00:00Z,final,nhl-fla,nhl-wsh,FLA,WSH,5,2,Capital One Arena,REG,N,1
+2025020762,20252026,regular,2026-01-17,2026-01-18T00:00:00Z,final,nhl-tor,nhl-wpg,TOR,WPG,4,3,Canada Life Centre,OT,N,1
+2025020763,20252026,regular,2026-01-17,2026-01-18T01:00:00Z,final,nhl-bos,nhl-chi,BOS,CHI,5,2,United Center,REG,N,1
+2025020764,20252026,regular,2026-01-17,2026-01-18T03:00:00Z,final,nhl-edm,nhl-van,EDM,VAN,6,0,Rogers Arena,REG,N,1
+2025020765,20252026,regular,2026-01-17,2026-01-18T03:00:00Z,final,nhl-nsh,nhl-vgk,NSH,VGK,2,7,T-Mobile Arena,REG,N,1
+2025020766,20252026,regular,2026-01-17,2026-01-18T03:00:00Z,final,nhl-lak,nhl-ana,LAK,ANA,1,2,Honda Center,OT,N,1
+2025020767,20252026,regular,2026-01-18,2026-01-18T19:00:00Z,final,nhl-tbl,nhl-dal,TBL,DAL,4,1,American Airlines Center,REG,N,1
+2025020768,20252026,regular,2026-01-18,2026-01-18T22:00:00Z,final,nhl-ott,nhl-det,OTT,DET,3,4,Little Caesars Arena,OT,N,1
+2025020769,20252026,regular,2026-01-18,2026-01-19T01:00:00Z,final,nhl-stl,nhl-edm,STL,EDM,0,5,Rogers Place,REG,N,1
+2025020770,20252026,regular,2026-01-19,2026-01-19T18:30:00Z,final,nhl-buf,nhl-car,BUF,CAR,1,2,Lenovo Center,REG,N,1
+2025020771,20252026,regular,2026-01-19,2026-01-19T21:00:00Z,final,nhl-wsh,nhl-col,WSH,COL,2,5,Ball Arena,REG,N,1
+2025020772,20252026,regular,2026-01-19,2026-01-19T22:00:00Z,final,nhl-pit,nhl-sea,PIT,SEA,6,3,Climate Pledge Arena,REG,N,1
+2025020773,20252026,regular,2026-01-19,2026-01-19T23:00:00Z,final,nhl-sjs,nhl-fla,SJS,FLA,4,1,Amerant Bank Arena,REG,N,1
+2025020774,20252026,regular,2026-01-19,2026-01-20T00:30:00Z,final,nhl-min,nhl-tor,MIN,TOR,6,3,Scotiabank Arena,REG,N,1
+2025020775,20252026,regular,2026-01-19,2026-01-20T01:00:00Z,final,nhl-phi,nhl-vgk,PHI,VGK,2,1,T-Mobile Arena,REG,N,1
+2025020776,20252026,regular,2026-01-19,2026-01-20T01:30:00Z,final,nhl-wpg,nhl-chi,WPG,CHI,0,2,United Center,REG,N,1
+2025020777,20252026,regular,2026-01-19,2026-01-20T02:00:00Z,final,nhl-njd,nhl-cgy,NJD,CGY,2,1,Scotiabank Saddledome,OT,N,1
+2025020778,20252026,regular,2026-01-19,2026-01-20T03:00:00Z,final,nhl-nyi,nhl-van,NYI,VAN,4,3,Rogers Arena,REG,N,1
+2025020779,20252026,regular,2026-01-19,2026-01-20T03:00:00Z,final,nhl-nyr,nhl-ana,NYR,ANA,3,5,Honda Center,REG,N,1
+2025020780,20252026,regular,2026-01-20,2026-01-21T00:00:00Z,final,nhl-min,nhl-mtl,MIN,MTL,3,4,Centre Bell,REG,N,1
+2025020781,20252026,regular,2026-01-20,2026-01-21T00:00:00Z,final,nhl-sjs,nhl-tbl,SJS,TBL,1,4,Benchmark International Arena,REG,N,1
+2025020782,20252026,regular,2026-01-20,2026-01-21T00:00:00Z,final,nhl-ott,nhl-cbj,OTT,CBJ,4,1,Nationwide Arena,REG,N,1
+2025020783,20252026,regular,2026-01-20,2026-01-21T00:30:00Z,final,nhl-bos,nhl-dal,BOS,DAL,2,6,American Airlines Center,REG,N,1
+2025020784,20252026,regular,2026-01-20,2026-01-21T01:00:00Z,final,nhl-buf,nhl-nsh,BUF,NSH,5,3,Bridgestone Arena,REG,N,1
+2025020785,20252026,regular,2026-01-20,2026-01-21T01:00:00Z,final,nhl-stl,nhl-wpg,STL,WPG,1,3,Canada Life Centre,REG,N,1
+2025020786,20252026,regular,2026-01-20,2026-01-21T03:00:00Z,final,nhl-njd,nhl-edm,NJD,EDM,2,1,Rogers Place,REG,N,1
+2025020787,20252026,regular,2026-01-20,2026-01-21T03:00:00Z,final,nhl-nyr,nhl-lak,NYR,LAK,3,4,Crypto.com Arena,REG,N,1
+2025020788,20252026,regular,2026-01-21,2026-01-22T00:00:00Z,final,nhl-det,nhl-tor,DET,TOR,2,1,Scotiabank Arena,OT,N,1
+2025020789,20252026,regular,2026-01-21,2026-01-22T02:00:00Z,final,nhl-ana,nhl-col,ANA,COL,2,1,Ball Arena,SO,N,1
+2025020790,20252026,regular,2026-01-21,2026-01-22T02:00:00Z,final,nhl-phi,nhl-uta,PHI,UTA,4,5,Delta Center,OT,N,1
+2025020791,20252026,regular,2026-01-21,2026-01-22T02:30:00Z,final,nhl-pit,nhl-cgy,PIT,CGY,4,1,Scotiabank Saddledome,REG,N,1
+2025020792,20252026,regular,2026-01-21,2026-01-22T03:00:00Z,final,nhl-wsh,nhl-van,WSH,VAN,3,4,Rogers Arena,REG,N,1
+2025020793,20252026,regular,2026-01-21,2026-01-22T02:30:00Z,final,nhl-nyi,nhl-sea,NYI,SEA,1,4,Climate Pledge Arena,REG,N,1
+2025020794,20252026,regular,2026-01-22,2026-01-23T00:00:00Z,final,nhl-vgk,nhl-bos,VGK,BOS,3,4,TD Garden,REG,N,1
+2025020795,20252026,regular,2026-01-22,2026-01-23T00:00:00Z,final,nhl-buf,nhl-mtl,BUF,MTL,4,2,Centre Bell,REG,N,1
+2025020796,20252026,regular,2026-01-22,2026-01-23T00:00:00Z,final,nhl-chi,nhl-car,CHI,CAR,4,3,Lenovo Center,SO,N,1
+2025020797,20252026,regular,2026-01-22,2026-01-23T00:00:00Z,final,nhl-dal,nhl-cbj,DAL,CBJ,0,1,Nationwide Arena,REG,N,1
+2025020798,20252026,regular,2026-01-22,2026-01-23T01:00:00Z,final,nhl-ott,nhl-nsh,OTT,NSH,3,5,Bridgestone Arena,REG,N,1
+2025020799,20252026,regular,2026-01-22,2026-01-23T01:00:00Z,final,nhl-fla,nhl-wpg,FLA,WPG,2,1,Canada Life Centre,SO,N,1
+2025020800,20252026,regular,2026-01-22,2026-01-23T02:00:00Z,final,nhl-pit,nhl-edm,PIT,EDM,6,2,Rogers Place,REG,N,1
+2025020801,20252026,regular,2026-01-22,2026-01-23T02:30:00Z,final,nhl-det,nhl-min,DET,MIN,3,4,Grand Casino Arena,OT,N,1
+2025020802,20252026,regular,2026-01-23,2026-01-24T00:00:00Z,final,nhl-vgk,nhl-tor,VGK,TOR,6,3,Scotiabank Arena,REG,N,1
+2025020803,20252026,regular,2026-01-23,2026-01-24T00:00:00Z,final,nhl-tbl,nhl-chi,TBL,CHI,2,1,United Center,SO,N,1
+2025020804,20252026,regular,2026-01-23,2026-01-24T01:00:00Z,final,nhl-stl,nhl-dal,STL,DAL,2,3,American Airlines Center,REG,N,1
+2025020805,20252026,regular,2026-01-23,2026-01-24T02:00:00Z,final,nhl-phi,nhl-col,PHI,COL,7,3,Ball Arena,REG,N,1
+2025020806,20252026,regular,2026-01-23,2026-01-24T02:00:00Z,final,nhl-wsh,nhl-cgy,WSH,CGY,3,1,Scotiabank Saddledome,REG,N,1
+2025020807,20252026,regular,2026-01-23,2026-01-24T03:00:00Z,final,nhl-njd,nhl-van,NJD,VAN,5,4,Rogers Arena,REG,N,1
+2025020808,20252026,regular,2026-01-23,2026-01-24T03:00:00Z,final,nhl-nyr,nhl-sjs,NYR,SJS,1,3,SAP Center at San Jose,REG,N,1
+2025020809,20252026,regular,2026-01-23,2026-01-24T03:00:00Z,final,nhl-ana,nhl-sea,ANA,SEA,4,2,Climate Pledge Arena,REG,N,1
+2025020810,20252026,regular,2026-01-24,2026-01-24T18:00:00Z,final,nhl-buf,nhl-nyi,BUF,NYI,5,0,UBS Arena,REG,N,1
+2025020811,20252026,regular,2026-01-24,2026-01-24T18:30:00Z,final,nhl-uta,nhl-nsh,UTA,NSH,5,2,Bridgestone Arena,REG,N,1
+2025020812,20252026,regular,2026-01-24,2026-01-25T00:00:00Z,final,nhl-mtl,nhl-bos,MTL,BOS,3,4,TD Garden,REG,N,1
+2025020813,20252026,regular,2026-01-24,2026-01-25T00:00:00Z,final,nhl-car,nhl-ott,CAR,OTT,4,1,Canadian Tire Centre,REG,N,1
+2025020814,20252026,regular,2026-01-24,2026-01-25T00:00:00Z,final,nhl-tbl,nhl-cbj,TBL,CBJ,5,8,Nationwide Arena,REG,N,1
+2025020815,20252026,regular,2026-01-24,2026-01-25T00:00:00Z,final,nhl-det,nhl-wpg,DET,WPG,5,1,Canada Life Centre,REG,N,1
+2025020816,20252026,regular,2026-01-24,2026-01-25T01:00:00Z,final,nhl-lak,nhl-stl,LAK,STL,5,4,Enterprise Center,SO,N,1
+2025020817,20252026,regular,2026-01-24,2026-01-25T02:00:00Z,final,nhl-fla,nhl-min,FLA,MIN,4,3,Grand Casino Arena,OT,N,1
+2025020818,20252026,regular,2026-01-24,2026-01-25T03:00:00Z,final,nhl-wsh,nhl-edm,WSH,EDM,5,6,Rogers Place,OT,N,1
+2025020819,20252026,regular,2026-01-25,2026-01-25T18:30:00Z,final,nhl-col,nhl-tor,COL,TOR,4,1,Scotiabank Arena,REG,N,1
+2025020820,20252026,regular,2026-01-25,2026-01-25T20:00:00Z,final,nhl-njd,nhl-sea,NJD,SEA,2,4,Climate Pledge Arena,REG,N,1
+2025020821,20252026,regular,2026-01-25,2026-01-25T22:00:00Z,final,nhl-vgk,nhl-ott,VGK,OTT,1,7,Canadian Tire Centre,REG,N,1
+2025020822,20252026,regular,2026-01-25,2026-01-25T23:00:00Z,final,nhl-pit,nhl-van,PIT,VAN,3,2,Rogers Arena,REG,N,1
+2025020823,20252026,regular,2026-01-25,2026-01-26T00:00:00Z,final,nhl-fla,nhl-chi,FLA,CHI,5,1,United Center,REG,N,1
+2025020824,20252026,regular,2026-01-25,2026-01-26T01:00:00Z,final,nhl-ana,nhl-cgy,ANA,CGY,4,3,Scotiabank Saddledome,OT,N,1
+2025020825,20252026,regular,2026-01-26,2026-01-27T00:00:00Z,final,nhl-uta,nhl-tbl,UTA,TBL,0,2,Benchmark International Arena,REG,N,1
+2025020826,20252026,regular,2026-01-26,2026-01-27T00:00:00Z,final,nhl-bos,nhl-nyr,BOS,NYR,3,4,Madison Square Garden,OT,N,1
+2025020827,20252026,regular,2026-01-26,2026-01-27T00:00:00Z,final,nhl-nyi,nhl-phi,NYI,PHI,4,0,Xfinity Mobile Arena,REG,N,1
+2025020829,20252026,regular,2026-01-26,2026-01-27T01:30:00Z,final,nhl-ana,nhl-edm,ANA,EDM,4,7,Rogers Place,REG,N,1
+2025020830,20252026,regular,2026-01-27,2026-01-28T00:00:00Z,final,nhl-nsh,nhl-bos,NSH,BOS,2,3,TD Garden,OT,N,1
+2025020831,20252026,regular,2026-01-27,2026-01-28T00:00:00Z,final,nhl-buf,nhl-tor,BUF,TOR,7,4,Scotiabank Arena,REG,N,1
+2025020832,20252026,regular,2026-01-27,2026-01-28T00:00:00Z,final,nhl-vgk,nhl-mtl,VGK,MTL,2,3,Centre Bell,OT,N,1
+2025020833,20252026,regular,2026-01-27,2026-01-28T00:00:00Z,final,nhl-lak,nhl-det,LAK,DET,3,1,Little Caesars Arena,REG,N,1
+2025020834,20252026,regular,2026-01-27,2026-01-28T00:00:00Z,final,nhl-uta,nhl-fla,UTA,FLA,4,3,Amerant Bank Arena,REG,N,1
+2025020835,20252026,regular,2026-01-27,2026-01-28T00:00:00Z,final,nhl-wpg,nhl-njd,WPG,NJD,4,3,Prudential Center,REG,N,1
+2025020836,20252026,regular,2026-01-27,2026-01-28T01:00:00Z,final,nhl-dal,nhl-stl,DAL,STL,4,3,Enterprise Center,REG,N,1
+2025020837,20252026,regular,2026-01-27,2026-01-28T01:00:00Z,final,nhl-chi,nhl-min,CHI,MIN,3,4,Grand Casino Arena,SO,N,1
+2025020838,20252026,regular,2026-01-27,2026-01-28T03:00:00Z,final,nhl-sjs,nhl-van,SJS,VAN,5,2,Rogers Arena,REG,N,1
+2025020839,20252026,regular,2026-01-27,2026-01-28T03:00:00Z,final,nhl-wsh,nhl-sea,WSH,SEA,1,5,Climate Pledge Arena,REG,N,1
+2025020840,20252026,regular,2026-01-28,2026-01-29T00:30:00Z,final,nhl-phi,nhl-cbj,PHI,CBJ,3,5,Nationwide Arena,REG,N,1
+2025020841,20252026,regular,2026-01-28,2026-01-29T00:30:00Z,final,nhl-col,nhl-ott,COL,OTT,2,5,Canadian Tire Centre,REG,N,1
+2025020842,20252026,regular,2026-01-28,2026-01-29T00:00:00Z,final,nhl-nyr,nhl-nyi,NYR,NYI,2,5,UBS Arena,REG,N,1
+2025020843,20252026,regular,2026-01-29,2026-01-30T00:00:00Z,final,nhl-phi,nhl-bos,PHI,BOS,3,6,TD Garden,REG,N,1
+2025020844,20252026,regular,2026-01-29,2026-01-30T00:00:00Z,final,nhl-lak,nhl-buf,LAK,BUF,1,4,KeyBank Center,REG,N,1
+2025020845,20252026,regular,2026-01-29,2026-01-30T00:00:00Z,final,nhl-col,nhl-mtl,COL,MTL,3,7,Centre Bell,REG,N,1
+2025020846,20252026,regular,2026-01-29,2026-01-30T00:30:00Z,final,nhl-wsh,nhl-det,WSH,DET,4,3,Little Caesars Arena,SO,N,1
+2025020847,20252026,regular,2026-01-29,2026-01-30T00:00:00Z,final,nhl-wpg,nhl-tbl,WPG,TBL,1,4,Benchmark International Arena,REG,N,1
+2025020848,20252026,regular,2026-01-29,2026-01-30T00:00:00Z,final,nhl-nsh,nhl-njd,NSH,NJD,2,3,Prudential Center,OT,N,1
+2025020849,20252026,regular,2026-01-29,2026-01-30T00:00:00Z,final,nhl-nyi,nhl-nyr,NYI,NYR,2,1,Madison Square Garden,REG,N,1
+2025020850,20252026,regular,2026-01-29,2026-01-30T00:00:00Z,final,nhl-chi,nhl-pit,CHI,PIT,2,6,PPG Paints Arena,REG,N,1
+2025020851,20252026,regular,2026-01-29,2026-01-30T00:00:00Z,final,nhl-uta,nhl-car,UTA,CAR,4,5,Lenovo Center,REG,N,1
+2025020852,20252026,regular,2026-01-29,2026-01-30T01:00:00Z,final,nhl-fla,nhl-stl,FLA,STL,4,5,Enterprise Center,REG,N,1
+2025020853,20252026,regular,2026-01-29,2026-01-30T01:00:00Z,final,nhl-cgy,nhl-min,CGY,MIN,1,4,Grand Casino Arena,REG,N,1
+2025020854,20252026,regular,2026-01-29,2026-01-30T02:00:00Z,final,nhl-sjs,nhl-edm,SJS,EDM,3,4,Rogers Place,OT,N,1
+2025020855,20252026,regular,2026-01-29,2026-01-30T03:00:00Z,final,nhl-ana,nhl-van,ANA,VAN,0,2,Rogers Arena,REG,N,1
+2025020856,20252026,regular,2026-01-29,2026-01-30T03:00:00Z,final,nhl-dal,nhl-vgk,DAL,VGK,5,4,T-Mobile Arena,SO,N,1
+2025020857,20252026,regular,2026-01-29,2026-01-30T03:00:00Z,final,nhl-tor,nhl-sea,TOR,SEA,2,5,Climate Pledge Arena,REG,N,1
+2025020858,20252026,regular,2026-01-30,2026-01-31T01:30:00Z,final,nhl-cbj,nhl-chi,CBJ,CHI,4,2,United Center,REG,N,1
+2025020859,20252026,regular,2026-01-31,2026-01-31T17:30:00Z,final,nhl-lak,nhl-phi,LAK,PHI,3,2,Xfinity Mobile Arena,OT,N,1
+2025020860,20252026,regular,2026-01-31,2026-01-31T18:00:00Z,final,nhl-col,nhl-det,COL,DET,5,0,Little Caesars Arena,REG,N,1
+2025020861,20252026,regular,2026-01-31,2026-01-31T20:30:00Z,final,nhl-nyr,nhl-pit,NYR,PIT,5,6,PPG Paints Arena,REG,N,1
+2025020862,20252026,regular,2026-01-31,2026-01-31T21:00:00Z,final,nhl-wpg,nhl-fla,WPG,FLA,2,1,Amerant Bank Arena,REG,N,1
+2025020863,20252026,regular,2026-01-31,2026-01-31T21:00:00Z,final,nhl-sjs,nhl-cgy,SJS,CGY,2,3,Scotiabank Saddledome,REG,N,1
+2025020864,20252026,regular,2026-01-31,2026-01-31T22:00:00Z,final,nhl-car,nhl-wsh,CAR,WSH,3,4,Capital One Arena,OT,N,1
+2025020865,20252026,regular,2026-01-31,2026-02-01T00:00:00Z,final,nhl-mtl,nhl-buf,MTL,BUF,4,2,KeyBank Center,REG,N,1
+2025020866,20252026,regular,2026-01-31,2026-02-01T00:00:00Z,final,nhl-njd,nhl-ott,NJD,OTT,1,4,Canadian Tire Centre,REG,N,1
+2025020867,20252026,regular,2026-01-31,2026-02-01T00:00:00Z,final,nhl-nsh,nhl-nyi,NSH,NYI,4,3,UBS Arena,REG,N,1
+2025020868,20252026,regular,2026-01-31,2026-02-01T00:00:00Z,final,nhl-cbj,nhl-stl,CBJ,STL,5,3,Enterprise Center,REG,N,1
+2025020869,20252026,regular,2026-01-31,2026-02-01T00:00:00Z,final,nhl-tor,nhl-van,TOR,VAN,3,2,Rogers Arena,SO,N,1
+2025020870,20252026,regular,2026-01-31,2026-02-01T02:00:00Z,final,nhl-dal,nhl-uta,DAL,UTA,3,2,Delta Center,REG,N,1
+2025020871,20252026,regular,2026-01-31,2026-02-01T03:00:00Z,final,nhl-min,nhl-edm,MIN,EDM,7,3,Rogers Place,REG,N,1
+2025020872,20252026,regular,2026-01-31,2026-02-01T03:00:00Z,final,nhl-sea,nhl-vgk,SEA,VGK,3,2,T-Mobile Arena,REG,N,1
+2025020873,20252026,regular,2026-02-01,2026-02-01T23:30:00Z,final,nhl-bos,nhl-tbl,BOS,TBL,5,6,Raymond James Stadium,SO,N,1
+2025020874,20252026,regular,2026-02-01,2026-02-01T20:00:00Z,final,nhl-lak,nhl-car,LAK,CAR,2,3,Lenovo Center,OT,N,1
+2025020875,20252026,regular,2026-02-01,2026-02-02T02:30:00Z,final,nhl-vgk,nhl-ana,VGK,ANA,3,4,Honda Center,REG,N,1
+2025020876,20252026,regular,2026-02-02,2026-02-03T00:00:00Z,final,nhl-buf,nhl-fla,BUF,FLA,5,3,Amerant Bank Arena,REG,N,1
+2025020877,20252026,regular,2026-02-02,2026-02-03T00:00:00Z,final,nhl-ott,nhl-pit,OTT,PIT,3,2,PPG Paints Arena,REG,N,1
+2025020878,20252026,regular,2026-02-02,2026-02-03T00:00:00Z,final,nhl-nyi,nhl-wsh,NYI,WSH,1,4,Capital One Arena,REG,N,1
+2025020879,20252026,regular,2026-02-02,2026-02-03T00:30:00Z,final,nhl-mtl,nhl-min,MTL,MIN,3,4,Grand Casino Arena,OT,N,1
+2025020880,20252026,regular,2026-02-02,2026-02-03T01:00:00Z,final,nhl-stl,nhl-nsh,STL,NSH,5,6,Bridgestone Arena,REG,N,1
+2025020881,20252026,regular,2026-02-02,2026-02-03T01:30:00Z,final,nhl-sjs,nhl-chi,SJS,CHI,3,6,United Center,REG,N,1
+2025020882,20252026,regular,2026-02-02,2026-02-03T01:30:00Z,final,nhl-wpg,nhl-dal,WPG,DAL,3,4,American Airlines Center,OT,N,1
+2025020883,20252026,regular,2026-02-02,2026-02-03T02:00:00Z,final,nhl-det,nhl-col,DET,COL,2,0,Ball Arena,REG,N,1
+2025020884,20252026,regular,2026-02-02,2026-02-03T02:30:00Z,final,nhl-van,nhl-uta,VAN,UTA,2,6,Delta Center,REG,N,1
+2025020885,20252026,regular,2026-02-02,2026-02-03T03:00:00Z,final,nhl-tor,nhl-cgy,TOR,CGY,4,2,Scotiabank Saddledome,REG,N,1
+2025020886,20252026,regular,2026-02-03,2026-02-04T00:30:00Z,final,nhl-buf,nhl-tbl,BUF,TBL,3,4,Benchmark International Arena,OT,N,1
+2025020887,20252026,regular,2026-02-03,2026-02-04T00:00:00Z,final,nhl-cbj,nhl-njd,CBJ,NJD,3,0,Prudential Center,REG,N,1
+2025020888,20252026,regular,2026-02-03,2026-02-04T00:30:00Z,final,nhl-pit,nhl-nyi,PIT,NYI,4,5,UBS Arena,OT,N,1
+2025020889,20252026,regular,2026-02-03,2026-02-04T00:00:00Z,final,nhl-wsh,nhl-phi,WSH,PHI,2,4,Xfinity Mobile Arena,REG,N,1
+2025020890,20252026,regular,2026-02-03,2026-02-04T00:00:00Z,final,nhl-ott,nhl-car,OTT,CAR,3,4,Lenovo Center,REG,N,1
+2025020891,20252026,regular,2026-02-03,2026-02-04T01:30:00Z,final,nhl-tor,nhl-edm,TOR,EDM,5,2,Rogers Place,REG,N,1
+2025020892,20252026,regular,2026-02-03,2026-02-04T03:00:00Z,final,nhl-sea,nhl-ana,SEA,ANA,2,4,Honda Center,REG,N,1
+2025020893,20252026,regular,2026-02-04,2026-02-05T00:00:00Z,final,nhl-bos,nhl-fla,BOS,FLA,4,5,Amerant Bank Arena,SO,N,1
+2025020894,20252026,regular,2026-02-04,2026-02-05T00:00:00Z,final,nhl-chi,nhl-cbj,CHI,CBJ,0,4,Nationwide Arena,REG,N,1
+2025020895,20252026,regular,2026-02-04,2026-02-05T00:00:00Z,final,nhl-mtl,nhl-wpg,MTL,WPG,5,1,Canada Life Centre,REG,N,1
+2025020896,20252026,regular,2026-02-04,2026-02-05T01:00:00Z,final,nhl-min,nhl-nsh,MIN,NSH,6,5,Bridgestone Arena,OT,N,1
+2025020897,20252026,regular,2026-02-04,2026-02-05T02:00:00Z,final,nhl-sjs,nhl-col,SJS,COL,2,4,Ball Arena,REG,N,1
+2025020898,20252026,regular,2026-02-04,2026-02-05T02:00:00Z,final,nhl-det,nhl-uta,DET,UTA,1,4,Delta Center,REG,N,1
+2025020899,20252026,regular,2026-02-04,2026-02-05T02:30:00Z,final,nhl-stl,nhl-dal,STL,DAL,4,5,American Airlines Center,REG,N,1
+2025020900,20252026,regular,2026-02-04,2026-02-05T03:00:00Z,final,nhl-edm,nhl-cgy,EDM,CGY,3,4,Scotiabank Saddledome,REG,N,1
+2025020901,20252026,regular,2026-02-04,2026-02-05T03:00:00Z,final,nhl-van,nhl-vgk,VAN,VGK,2,5,T-Mobile Arena,REG,N,1
+2025020902,20252026,regular,2026-02-04,2026-02-05T03:00:00Z,final,nhl-sea,nhl-lak,SEA,LAK,4,2,Crypto.com Arena,REG,N,1
+2025020903,20252026,regular,2026-02-05,2026-02-06T00:00:00Z,final,nhl-pit,nhl-buf,PIT,BUF,5,2,KeyBank Center,REG,N,1
+2025020904,20252026,regular,2026-02-05,2026-02-06T00:30:00Z,final,nhl-fla,nhl-tbl,FLA,TBL,1,6,Benchmark International Arena,REG,N,1
+2025020905,20252026,regular,2026-02-05,2026-02-06T00:00:00Z,final,nhl-nyi,nhl-njd,NYI,NJD,3,1,Prudential Center,REG,N,1
+2025020906,20252026,regular,2026-02-05,2026-02-06T00:00:00Z,final,nhl-car,nhl-nyr,CAR,NYR,2,0,Madison Square Garden,REG,N,1
+2025020907,20252026,regular,2026-02-05,2026-02-06T00:00:00Z,final,nhl-ott,nhl-phi,OTT,PHI,2,1,Xfinity Mobile Arena,OT,N,1
+2025020908,20252026,regular,2026-02-05,2026-02-06T00:00:00Z,final,nhl-nsh,nhl-wsh,NSH,WSH,2,4,Capital One Arena,REG,N,1
+2025020909,20252026,regular,2026-02-05,2026-02-06T03:00:00Z,final,nhl-lak,nhl-vgk,LAK,VGK,1,4,T-Mobile Arena,REG,N,1
+2025020910,20252026,regular,2026-02-25,2026-02-26T00:00:00Z,final,nhl-buf,nhl-njd,BUF,NJD,2,1,Prudential Center,REG,N,1
+2025020911,20252026,regular,2026-02-25,2026-02-26T00:00:00Z,final,nhl-phi,nhl-wsh,PHI,WSH,1,3,Capital One Arena,REG,N,1
+2025020912,20252026,regular,2026-02-25,2026-02-26T00:30:00Z,final,nhl-tor,nhl-tbl,TOR,TBL,2,4,Benchmark International Arena,REG,N,1
+2025020913,20252026,regular,2026-02-25,2026-02-26T01:00:00Z,final,nhl-sea,nhl-dal,SEA,DAL,1,4,American Airlines Center,REG,N,1
+2025020914,20252026,regular,2026-02-25,2026-02-26T02:00:00Z,final,nhl-col,nhl-uta,COL,UTA,4,2,Delta Center,REG,N,1
+2025020915,20252026,regular,2026-02-25,2026-02-26T03:00:00Z,final,nhl-wpg,nhl-van,WPG,VAN,3,2,Rogers Arena,OT,N,1
+2025020916,20252026,regular,2026-02-25,2026-02-26T03:00:00Z,final,nhl-vgk,nhl-lak,VGK,LAK,6,4,Crypto.com Arena,REG,N,1
+2025020917,20252026,regular,2026-02-25,2026-02-26T03:30:00Z,final,nhl-edm,nhl-ana,EDM,ANA,5,6,Honda Center,REG,N,1
+2025020918,20252026,regular,2026-02-26,2026-02-27T00:00:00Z,final,nhl-cbj,nhl-bos,CBJ,BOS,2,4,TD Garden,REG,N,1
+2025020919,20252026,regular,2026-02-26,2026-02-27T00:00:00Z,final,nhl-nyi,nhl-mtl,NYI,MTL,4,3,Centre Bell,OT,N,1
+2025020920,20252026,regular,2026-02-26,2026-02-27T00:00:00Z,final,nhl-det,nhl-ott,DET,OTT,2,1,Canadian Tire Centre,OT,N,1
+2025020921,20252026,regular,2026-02-26,2026-02-27T00:00:00Z,final,nhl-tor,nhl-fla,TOR,FLA,1,5,Amerant Bank Arena,REG,N,1
+2025020922,20252026,regular,2026-02-26,2026-02-27T00:00:00Z,final,nhl-njd,nhl-pit,NJD,PIT,1,4,PPG Paints Arena,REG,N,1
+2025020923,20252026,regular,2026-02-26,2026-02-27T00:00:00Z,final,nhl-tbl,nhl-car,TBL,CAR,4,5,Lenovo Center,REG,N,1
+2025020924,20252026,regular,2026-02-26,2026-02-27T01:00:00Z,final,nhl-phi,nhl-nyr,PHI,NYR,3,2,Madison Square Garden,OT,N,1
+2025020925,20252026,regular,2026-02-26,2026-02-27T01:00:00Z,final,nhl-sea,nhl-stl,SEA,STL,1,5,Enterprise Center,REG,N,1
+2025020926,20252026,regular,2026-02-26,2026-02-27T01:00:00Z,final,nhl-chi,nhl-nsh,CHI,NSH,2,4,Bridgestone Arena,REG,N,1
+2025020927,20252026,regular,2026-02-26,2026-02-27T02:00:00Z,final,nhl-min,nhl-col,MIN,COL,5,2,Ball Arena,REG,N,1
+2025020928,20252026,regular,2026-02-26,2026-02-27T03:00:00Z,final,nhl-cgy,nhl-sjs,CGY,SJS,4,1,SAP Center at San Jose,REG,N,1
+2025020929,20252026,regular,2026-02-26,2026-02-27T03:30:00Z,final,nhl-edm,nhl-lak,EDM,LAK,8,1,Crypto.com Arena,REG,N,1
+2025020930,20252026,regular,2026-02-27,2026-02-28T00:00:00Z,final,nhl-buf,nhl-fla,BUF,FLA,3,2,Amerant Bank Arena,REG,N,1
+2025020931,20252026,regular,2026-02-27,2026-02-28T00:00:00Z,final,nhl-vgk,nhl-wsh,VGK,WSH,2,3,Capital One Arena,REG,N,1
+2025020932,20252026,regular,2026-02-27,2026-02-28T02:00:00Z,final,nhl-min,nhl-uta,MIN,UTA,2,5,Delta Center,REG,N,1
+2025020933,20252026,regular,2026-02-27,2026-02-28T03:00:00Z,final,nhl-wpg,nhl-ana,WPG,ANA,4,5,Honda Center,OT,N,1
+2025020934,20252026,regular,2026-02-28,2026-02-28T17:30:00Z,final,nhl-pit,nhl-nyr,PIT,NYR,2,3,Madison Square Garden,SO,N,1
+2025020935,20252026,regular,2026-02-28,2026-02-28T20:00:00Z,final,nhl-bos,nhl-phi,BOS,PHI,1,3,Xfinity Mobile Arena,REG,N,1
+2025020936,20252026,regular,2026-02-28,2026-02-28T21:00:00Z,final,nhl-edm,nhl-sjs,EDM,SJS,4,5,SAP Center at San Jose,REG,N,1
+2025020937,20252026,regular,2026-02-28,2026-02-28T23:00:00Z,final,nhl-nyi,nhl-cbj,NYI,CBJ,4,3,Nationwide Arena,OT,N,1
+2025020938,20252026,regular,2026-02-28,2026-02-28T23:00:00Z,final,nhl-chi,nhl-col,CHI,COL,1,3,Ball Arena,REG,N,1
+2025020939,20252026,regular,2026-02-28,2026-03-01T00:00:00Z,final,nhl-ott,nhl-tor,OTT,TOR,5,2,Scotiabank Arena,REG,N,1
+2025020940,20252026,regular,2026-02-28,2026-03-01T00:00:00Z,final,nhl-wsh,nhl-mtl,WSH,MTL,2,6,Centre Bell,REG,N,1
+2025020941,20252026,regular,2026-02-28,2026-03-01T00:00:00Z,final,nhl-buf,nhl-tbl,BUF,TBL,6,2,Benchmark International Arena,REG,N,1
+2025020942,20252026,regular,2026-02-28,2026-03-01T00:00:00Z,final,nhl-det,nhl-car,DET,CAR,2,5,Lenovo Center,REG,N,1
+2025020943,20252026,regular,2026-02-28,2026-02-28T22:00:00Z,final,nhl-njd,nhl-stl,NJD,STL,3,1,Enterprise Center,REG,N,1
+2025020944,20252026,regular,2026-02-28,2026-03-01T00:00:00Z,final,nhl-cgy,nhl-lak,CGY,LAK,0,2,Crypto.com Arena,REG,N,1
+2025020945,20252026,regular,2026-02-28,2026-03-01T01:00:00Z,final,nhl-nsh,nhl-dal,NSH,DAL,2,3,American Airlines Center,OT,N,1
+2025020946,20252026,regular,2026-02-28,2026-03-01T03:00:00Z,final,nhl-van,nhl-sea,VAN,SEA,1,5,Climate Pledge Arena,REG,N,1
+2025020947,20252026,regular,2026-03-01,2026-03-01T18:00:00Z,final,nhl-vgk,nhl-pit,VGK,PIT,0,5,PPG Paints Arena,REG,N,1
+2025020948,20252026,regular,2026-03-01,2026-03-01T23:30:00Z,final,nhl-fla,nhl-nyi,FLA,NYI,4,5,UBS Arena,REG,N,1
+2025020949,20252026,regular,2026-03-01,2026-03-01T21:00:00Z,final,nhl-chi,nhl-uta,CHI,UTA,4,0,Delta Center,REG,N,1
+2025020950,20252026,regular,2026-03-01,2026-03-01T21:00:00Z,final,nhl-wpg,nhl-sjs,WPG,SJS,1,2,SAP Center at San Jose,OT,N,1
+2025020951,20252026,regular,2026-03-01,2026-03-01T22:00:00Z,final,nhl-stl,nhl-min,STL,MIN,3,1,Grand Casino Arena,REG,N,1
+2025020952,20252026,regular,2026-03-01,2026-03-02T01:00:00Z,final,nhl-cgy,nhl-ana,CGY,ANA,2,3,Honda Center,SO,N,1
+2025020953,20252026,regular,2026-03-02,2026-03-03T00:00:00Z,final,nhl-cbj,nhl-nyr,CBJ,NYR,5,4,Madison Square Garden,OT,N,1
+2025020954,20252026,regular,2026-03-02,2026-03-03T00:30:00Z,final,nhl-phi,nhl-tor,PHI,TOR,3,2,Scotiabank Arena,SO,N,1
+2025020955,20252026,regular,2026-03-02,2026-03-02T19:00:00Z,final,nhl-det,nhl-nsh,DET,NSH,4,2,Bridgestone Arena,REG,N,1
+2025020956,20252026,regular,2026-03-02,2026-03-03T03:00:00Z,final,nhl-dal,nhl-van,DAL,VAN,6,1,Rogers Arena,REG,N,1
+2025020957,20252026,regular,2026-03-02,2026-03-03T03:00:00Z,final,nhl-car,nhl-sea,CAR,SEA,1,2,Climate Pledge Arena,REG,N,1
+2025020958,20252026,regular,2026-03-02,2026-03-03T03:30:00Z,final,nhl-col,nhl-lak,COL,LAK,4,2,Crypto.com Arena,REG,N,1
+2025020959,20252026,regular,2026-03-03,2026-03-04T00:00:00Z,final,nhl-pit,nhl-bos,PIT,BOS,1,2,TD Garden,REG,N,1
+2025020960,20252026,regular,2026-03-03,2026-03-04T00:00:00Z,final,nhl-vgk,nhl-buf,VGK,BUF,2,3,KeyBank Center,REG,N,1
+2025020961,20252026,regular,2026-03-03,2026-03-04T00:00:00Z,final,nhl-fla,nhl-njd,FLA,NJD,1,5,Prudential Center,REG,N,1
+2025020962,20252026,regular,2026-03-03,2026-03-04T00:00:00Z,final,nhl-uta,nhl-wsh,UTA,WSH,3,2,Capital One Arena,REG,N,1
+2025020963,20252026,regular,2026-03-03,2026-03-04T00:00:00Z,final,nhl-nsh,nhl-cbj,NSH,CBJ,2,3,Nationwide Arena,REG,N,1
+2025020964,20252026,regular,2026-03-03,2026-03-04T01:00:00Z,final,nhl-chi,nhl-wpg,CHI,WPG,2,3,Canada Life Centre,OT,N,1
+2025020965,20252026,regular,2026-03-03,2026-03-04T02:00:00Z,final,nhl-dal,nhl-cgy,DAL,CGY,6,1,Scotiabank Saddledome,REG,N,1
+2025020966,20252026,regular,2026-03-03,2026-03-04T02:00:00Z,final,nhl-ott,nhl-edm,OTT,EDM,4,5,Rogers Place,OT,N,1
+2025020967,20252026,regular,2026-03-03,2026-03-04T02:30:00Z,final,nhl-tbl,nhl-min,TBL,MIN,1,5,Grand Casino Arena,REG,N,1
+2025020968,20252026,regular,2026-03-03,2026-03-04T03:00:00Z,final,nhl-col,nhl-ana,COL,ANA,5,1,Honda Center,REG,N,1
+2025020969,20252026,regular,2026-03-03,2026-03-04T03:00:00Z,final,nhl-mtl,nhl-sjs,MTL,SJS,5,7,SAP Center at San Jose,REG,N,1
+2025020970,20252026,regular,2026-03-04,2026-03-05T00:00:00Z,final,nhl-vgk,nhl-det,VGK,DET,4,3,Little Caesars Arena,OT,N,1
+2025020971,20252026,regular,2026-03-04,2026-03-05T00:00:00Z,final,nhl-tor,nhl-njd,TOR,NJD,3,4,Prudential Center,SO,N,1
+2025020972,20252026,regular,2026-03-04,2026-03-05T03:00:00Z,final,nhl-car,nhl-van,CAR,VAN,6,4,Rogers Arena,REG,N,1
+2025020973,20252026,regular,2026-03-04,2026-03-05T03:00:00Z,final,nhl-nyi,nhl-ana,NYI,ANA,1,5,Honda Center,REG,N,1
+2025020974,20252026,regular,2026-03-04,2026-03-05T03:00:00Z,final,nhl-stl,nhl-sea,STL,SEA,3,2,Climate Pledge Arena,REG,N,1
+2025020975,20252026,regular,2026-03-05,2026-03-06T00:00:00Z,final,nhl-tor,nhl-nyr,TOR,NYR,2,6,Madison Square Garden,REG,N,1
+2025020976,20252026,regular,2026-03-05,2026-03-06T00:00:00Z,final,nhl-uta,nhl-phi,UTA,PHI,3,0,Xfinity Mobile Arena,REG,N,1
+2025020977,20252026,regular,2026-03-05,2026-03-06T00:00:00Z,final,nhl-buf,nhl-pit,BUF,PIT,5,1,PPG Paints Arena,REG,N,1
+2025020978,20252026,regular,2026-03-05,2026-03-06T00:00:00Z,final,nhl-fla,nhl-cbj,FLA,CBJ,2,4,Nationwide Arena,REG,N,1
+2025020979,20252026,regular,2026-03-05,2026-03-06T01:00:00Z,final,nhl-bos,nhl-nsh,BOS,NSH,3,6,Bridgestone Arena,REG,N,1
+2025020980,20252026,regular,2026-03-05,2026-03-06T01:00:00Z,final,nhl-tbl,nhl-wpg,TBL,WPG,1,4,Canada Life Centre,REG,N,1
+2025020981,20252026,regular,2026-03-05,2026-03-06T02:00:00Z,final,nhl-ott,nhl-cgy,OTT,CGY,4,1,Scotiabank Saddledome,REG,N,1
+2025020982,20252026,regular,2026-03-05,2026-03-06T02:30:00Z,final,nhl-nyi,nhl-lak,NYI,LAK,3,5,Crypto.com Arena,REG,N,1
+2025020983,20252026,regular,2026-03-06,2026-03-07T00:00:00Z,final,nhl-fla,nhl-det,FLA,DET,3,1,Little Caesars Arena,REG,N,1
+2025020984,20252026,regular,2026-03-06,2026-03-07T01:00:00Z,final,nhl-col,nhl-dal,COL,DAL,5,4,American Airlines Center,SO,N,1
+2025020985,20252026,regular,2026-03-06,2026-03-07T01:30:00Z,final,nhl-van,nhl-chi,VAN,CHI,6,3,United Center,REG,N,1
+2025020986,20252026,regular,2026-03-06,2026-03-07T02:00:00Z,final,nhl-car,nhl-edm,CAR,EDM,6,3,Rogers Place,REG,N,1
+2025020987,20252026,regular,2026-03-06,2026-03-07T02:00:00Z,final,nhl-mtl,nhl-ana,MTL,ANA,5,6,Honda Center,SO,N,1
+2025020988,20252026,regular,2026-03-06,2026-03-07T03:00:00Z,final,nhl-min,nhl-vgk,MIN,VGK,4,2,T-Mobile Arena,REG,N,1
+2025020989,20252026,regular,2026-03-06,2026-03-07T03:00:00Z,final,nhl-stl,nhl-sjs,STL,SJS,3,2,SAP Center at San Jose,OT,N,1
+2025020990,20252026,regular,2026-03-07,2026-03-07T17:30:00Z,final,nhl-wsh,nhl-bos,WSH,BOS,1,3,TD Garden,REG,N,1
+2025020991,20252026,regular,2026-03-07,2026-03-07T20:00:00Z,final,nhl-nyr,nhl-njd,NYR,NJD,3,6,Prudential Center,REG,N,1
+2025020992,20252026,regular,2026-03-07,2026-03-07T22:30:00Z,final,nhl-nsh,nhl-buf,NSH,BUF,2,3,KeyBank Center,REG,N,1
+2025020993,20252026,regular,2026-03-07,2026-03-07T22:30:00Z,final,nhl-phi,nhl-pit,PHI,PIT,4,3,PPG Paints Arena,SO,N,1
+2025020994,20252026,regular,2026-03-07,2026-03-08T00:00:00Z,final,nhl-tbl,nhl-tor,TBL,TOR,5,2,Scotiabank Arena,REG,N,1
+2025020995,20252026,regular,2026-03-07,2026-03-08T00:00:00Z,final,nhl-uta,nhl-cbj,UTA,CBJ,5,4,Nationwide Arena,OT,N,1
+2025020996,20252026,regular,2026-03-07,2026-03-08T00:00:00Z,final,nhl-van,nhl-wpg,VAN,WPG,2,3,Canada Life Centre,OT,N,1
+2025020997,20252026,regular,2026-03-07,2026-03-08T00:00:00Z,final,nhl-mtl,nhl-lak,MTL,LAK,4,3,Crypto.com Arena,REG,N,1
+2025020998,20252026,regular,2026-03-07,2026-03-08T03:00:00Z,final,nhl-car,nhl-cgy,CAR,CGY,4,5,Scotiabank Saddledome,REG,N,1
+2025020999,20252026,regular,2026-03-07,2026-03-08T03:00:00Z,final,nhl-nyi,nhl-sjs,NYI,SJS,2,1,SAP Center at San Jose,OT,N,1
+2025021000,20252026,regular,2026-03-07,2026-03-08T03:00:00Z,final,nhl-ott,nhl-sea,OTT,SEA,7,4,Climate Pledge Arena,REG,N,1
+2025021001,20252026,regular,2026-03-08,2026-03-08T18:00:00Z,final,nhl-min,nhl-col,MIN,COL,2,3,Ball Arena,SO,N,1
+2025021002,20252026,regular,2026-03-08,2026-03-08T20:30:00Z,final,nhl-bos,nhl-pit,BOS,PIT,4,5,PPG Paints Arena,OT,N,1
+2025021003,20252026,regular,2026-03-08,2026-03-08T22:00:00Z,final,nhl-tbl,nhl-buf,TBL,BUF,7,8,KeyBank Center,REG,N,1
+2025021004,20252026,regular,2026-03-08,2026-03-08T22:00:00Z,final,nhl-chi,nhl-dal,CHI,DAL,3,4,American Airlines Center,OT,N,1
+2025021005,20252026,regular,2026-03-08,2026-03-08T23:00:00Z,final,nhl-det,nhl-njd,DET,NJD,3,0,Prudential Center,REG,N,1
+2025021006,20252026,regular,2026-03-08,2026-03-09T01:00:00Z,final,nhl-stl,nhl-ana,STL,ANA,4,0,Honda Center,REG,N,1
+2025021007,20252026,regular,2026-03-08,2026-03-09T01:30:00Z,final,nhl-edm,nhl-vgk,EDM,VGK,4,2,T-Mobile Arena,REG,N,1
+2025020828,20252026,regular,2026-03-09,2026-03-09T20:00:00Z,final,nhl-lak,nhl-cbj,LAK,CBJ,5,4,Nationwide Arena,OT,N,1
+2025021008,20252026,regular,2026-03-09,2026-03-09T23:00:00Z,final,nhl-nyr,nhl-phi,NYR,PHI,6,2,Xfinity Mobile Arena,REG,N,1
+2025021009,20252026,regular,2026-03-09,2026-03-09T23:00:00Z,final,nhl-cgy,nhl-wsh,CGY,WSH,3,7,Capital One Arena,REG,N,1
+2025021010,20252026,regular,2026-03-09,2026-03-10T00:30:00Z,final,nhl-uta,nhl-chi,UTA,CHI,2,3,United Center,OT,N,1
+2025021011,20252026,regular,2026-03-09,2026-03-10T01:00:00Z,final,nhl-ott,nhl-van,OTT,VAN,2,0,Rogers Arena,REG,N,1
+2025021012,20252026,regular,2026-03-10,2026-03-10T23:00:00Z,final,nhl-lak,nhl-bos,LAK,BOS,1,2,TD Garden,OT,N,1
+2025021013,20252026,regular,2026-03-10,2026-03-10T23:00:00Z,final,nhl-sjs,nhl-buf,SJS,BUF,3,6,KeyBank Center,REG,N,1
+2025021014,20252026,regular,2026-03-10,2026-03-10T23:00:00Z,final,nhl-tor,nhl-mtl,TOR,MTL,1,3,Centre Bell,REG,N,1
+2025021015,20252026,regular,2026-03-10,2026-03-10T23:00:00Z,final,nhl-cbj,nhl-tbl,CBJ,TBL,5,2,Benchmark International Arena,REG,N,1
+2025021016,20252026,regular,2026-03-10,2026-03-10T23:00:00Z,final,nhl-det,nhl-fla,DET,FLA,3,4,Amerant Bank Arena,REG,N,1
+2025021017,20252026,regular,2026-03-10,2026-03-10T23:00:00Z,final,nhl-cgy,nhl-nyr,CGY,NYR,0,4,Madison Square Garden,REG,N,1
+2025021018,20252026,regular,2026-03-10,2026-03-10T23:00:00Z,final,nhl-pit,nhl-car,PIT,CAR,4,5,Lenovo Center,SO,N,1
+2025021019,20252026,regular,2026-03-10,2026-03-10T23:30:00Z,final,nhl-nyi,nhl-stl,NYI,STL,4,3,Enterprise Center,OT,N,1
+2025021020,20252026,regular,2026-03-10,2026-03-11T00:00:00Z,final,nhl-vgk,nhl-dal,VGK,DAL,1,2,American Airlines Center,REG,N,1
+2025021021,20252026,regular,2026-03-10,2026-03-11T00:00:00Z,final,nhl-uta,nhl-min,UTA,MIN,0,5,Grand Casino Arena,REG,N,1
+2025021022,20252026,regular,2026-03-10,2026-03-11T00:30:00Z,final,nhl-ana,nhl-wpg,ANA,WPG,4,1,Canada Life Centre,REG,N,1
+2025021023,20252026,regular,2026-03-10,2026-03-11T02:00:00Z,final,nhl-edm,nhl-col,EDM,COL,4,3,Ball Arena,REG,N,1
+2025021024,20252026,regular,2026-03-10,2026-03-11T02:00:00Z,final,nhl-nsh,nhl-sea,NSH,SEA,4,2,Climate Pledge Arena,REG,N,1
+2025021025,20252026,regular,2026-03-11,2026-03-11T23:30:00Z,final,nhl-mtl,nhl-ott,MTL,OTT,3,2,Canadian Tire Centre,REG,N,1
+2025021026,20252026,regular,2026-03-11,2026-03-11T23:30:00Z,final,nhl-wsh,nhl-phi,WSH,PHI,1,4,Xfinity Mobile Arena,REG,N,1
+2025021027,20252026,regular,2026-03-12,2026-03-12T23:00:00Z,final,nhl-sjs,nhl-bos,SJS,BOS,4,2,TD Garden,REG,N,1
+2025021028,20252026,regular,2026-03-12,2026-03-12T23:00:00Z,final,nhl-wsh,nhl-buf,WSH,BUF,2,1,KeyBank Center,REG,N,1
+2025021029,20252026,regular,2026-03-12,2026-03-12T23:00:00Z,final,nhl-ana,nhl-tor,ANA,TOR,4,6,Scotiabank Arena,REG,N,1
+2025021030,20252026,regular,2026-03-12,2026-03-12T23:00:00Z,final,nhl-det,nhl-tbl,DET,TBL,1,4,Benchmark International Arena,REG,N,1
+2025021031,20252026,regular,2026-03-12,2026-03-12T23:00:00Z,final,nhl-cbj,nhl-fla,CBJ,FLA,1,2,Amerant Bank Arena,OT,N,1
+2025021032,20252026,regular,2026-03-12,2026-03-12T23:00:00Z,final,nhl-cgy,nhl-njd,CGY,NJD,5,4,Prudential Center,REG,N,1
+2025021033,20252026,regular,2026-03-12,2026-03-12T23:00:00Z,final,nhl-stl,nhl-car,STL,CAR,3,1,Lenovo Center,REG,N,1
+2025021034,20252026,regular,2026-03-12,2026-03-13T00:00:00Z,final,nhl-edm,nhl-dal,EDM,DAL,2,7,American Airlines Center,REG,N,1
+2025021035,20252026,regular,2026-03-12,2026-03-13T00:00:00Z,final,nhl-phi,nhl-min,PHI,MIN,3,2,Grand Casino Arena,SO,N,1
+2025021036,20252026,regular,2026-03-12,2026-03-13T00:00:00Z,final,nhl-nyr,nhl-wpg,NYR,WPG,6,3,Canada Life Centre,REG,N,1
+2025021037,20252026,regular,2026-03-12,2026-03-13T01:00:00Z,final,nhl-chi,nhl-uta,CHI,UTA,3,2,Delta Center,OT,N,1
+2025021038,20252026,regular,2026-03-12,2026-03-13T02:00:00Z,final,nhl-nsh,nhl-van,NSH,VAN,3,4,Rogers Arena,SO,N,1
+2025021039,20252026,regular,2026-03-12,2026-03-13T02:00:00Z,final,nhl-pit,nhl-vgk,PIT,VGK,2,6,T-Mobile Arena,REG,N,1
+2025021040,20252026,regular,2026-03-12,2026-03-13T02:00:00Z,final,nhl-col,nhl-sea,COL,SEA,5,1,Climate Pledge Arena,REG,N,1
+2025021041,20252026,regular,2026-03-13,2026-03-13T23:00:00Z,final,nhl-lak,nhl-nyi,LAK,NYI,3,2,UBS Arena,REG,N,1
+2025021042,20252026,regular,2026-03-13,2026-03-14T00:00:00Z,final,nhl-edm,nhl-stl,EDM,STL,2,3,Enterprise Center,OT,N,1
+2025021043,20252026,regular,2026-03-14,2026-03-14T17:00:00Z,final,nhl-ana,nhl-ott,ANA,OTT,0,2,Canadian Tire Centre,REG,N,1
+2025021044,20252026,regular,2026-03-14,2026-03-14T19:00:00Z,final,nhl-bos,nhl-wsh,BOS,WSH,3,2,Capital One Arena,SO,N,1
+2025021045,20252026,regular,2026-03-14,2026-03-14T20:00:00Z,final,nhl-col,nhl-wpg,COL,WPG,1,3,Canada Life Centre,REG,N,1
+2025021046,20252026,regular,2026-03-14,2026-03-14T22:00:00Z,final,nhl-nyr,nhl-min,NYR,MIN,4,2,Grand Casino Arena,REG,N,1
+2025021047,20252026,regular,2026-03-14,2026-03-14T23:00:00Z,final,nhl-tor,nhl-buf,TOR,BUF,2,3,KeyBank Center,SO,N,1
+2025021048,20252026,regular,2026-03-14,2026-03-14T23:00:00Z,final,nhl-sjs,nhl-mtl,SJS,MTL,4,2,Centre Bell,REG,N,1
+2025021049,20252026,regular,2026-03-14,2026-03-14T23:00:00Z,final,nhl-car,nhl-tbl,CAR,TBL,4,2,Benchmark International Arena,REG,N,1
+2025021050,20252026,regular,2026-03-14,2026-03-14T23:00:00Z,final,nhl-lak,nhl-njd,LAK,NJD,4,6,Prudential Center,REG,N,1
+2025021051,20252026,regular,2026-03-14,2026-03-14T23:00:00Z,final,nhl-cgy,nhl-nyi,CGY,NYI,2,3,UBS Arena,REG,N,1
+2025021052,20252026,regular,2026-03-14,2026-03-14T23:30:00Z,final,nhl-cbj,nhl-phi,CBJ,PHI,2,1,Xfinity Mobile Arena,SO,N,1
+2025021053,20252026,regular,2026-03-14,2026-03-15T00:00:00Z,final,nhl-det,nhl-dal,DET,DAL,2,3,American Airlines Center,OT,N,1
+2025021054,20252026,regular,2026-03-14,2026-03-15T01:00:00Z,final,nhl-pit,nhl-uta,PIT,UTA,4,3,Delta Center,REG,N,1
+2025021055,20252026,regular,2026-03-14,2026-03-15T02:00:00Z,final,nhl-sea,nhl-van,SEA,VAN,5,2,Rogers Arena,REG,N,1
+2025021056,20252026,regular,2026-03-14,2026-03-15T02:00:00Z,final,nhl-chi,nhl-vgk,CHI,VGK,0,4,T-Mobile Arena,REG,N,1
+2025021057,20252026,regular,2026-03-15,2026-03-15T19:00:00Z,final,nhl-stl,nhl-wpg,STL,WPG,2,3,Canada Life Centre,REG,N,1
+2025021058,20252026,regular,2026-03-15,2026-03-15T21:00:00Z,final,nhl-sjs,nhl-ott,SJS,OTT,4,7,Canadian Tire Centre,REG,N,1
+2025021059,20252026,regular,2026-03-15,2026-03-15T23:00:00Z,final,nhl-ana,nhl-mtl,ANA,MTL,4,3,Centre Bell,REG,N,1
+2025021060,20252026,regular,2026-03-15,2026-03-15T23:30:00Z,final,nhl-tor,nhl-min,TOR,MIN,4,2,Grand Casino Arena,REG,N,1
+2025021061,20252026,regular,2026-03-15,2026-03-16T00:00:00Z,final,nhl-nsh,nhl-edm,NSH,EDM,1,3,Rogers Place,REG,N,1
+2025021062,20252026,regular,2026-03-15,2026-03-16T00:00:00Z,final,nhl-fla,nhl-sea,FLA,SEA,2,6,Climate Pledge Arena,REG,N,1
+2025021063,20252026,regular,2026-03-16,2026-03-16T23:00:00Z,final,nhl-cgy,nhl-det,CGY,DET,2,5,Little Caesars Arena,REG,N,1
+2025021064,20252026,regular,2026-03-16,2026-03-16T23:00:00Z,final,nhl-bos,nhl-njd,BOS,NJD,3,4,Prudential Center,OT,N,1
+2025021065,20252026,regular,2026-03-16,2026-03-16T23:00:00Z,final,nhl-lak,nhl-nyr,LAK,NYR,4,1,Madison Square Garden,REG,N,1
+2025021066,20252026,regular,2026-03-16,2026-03-17T00:00:00Z,final,nhl-uta,nhl-dal,UTA,DAL,6,3,American Airlines Center,REG,N,1
+2025021067,20252026,regular,2026-03-16,2026-03-17T01:30:00Z,final,nhl-pit,nhl-col,PIT,COL,7,2,Ball Arena,REG,N,1
+2025021068,20252026,regular,2026-03-17,2026-03-17T23:00:00Z,final,nhl-nyi,nhl-tor,NYI,TOR,3,1,Scotiabank Arena,REG,N,1
+2025021069,20252026,regular,2026-03-17,2026-03-17T23:00:00Z,final,nhl-bos,nhl-mtl,BOS,MTL,2,3,Centre Bell,OT,N,1
+2025021070,20252026,regular,2026-03-17,2026-03-17T23:00:00Z,final,nhl-car,nhl-cbj,CAR,CBJ,1,5,Nationwide Arena,REG,N,1
+2025021071,20252026,regular,2026-03-17,2026-03-18T00:00:00Z,final,nhl-nsh,nhl-wpg,NSH,WPG,4,3,Canada Life Centre,SO,N,1
+2025021072,20252026,regular,2026-03-17,2026-03-17T23:30:00Z,final,nhl-min,nhl-chi,MIN,CHI,4,3,United Center,OT,N,1
+2025021073,20252026,regular,2026-03-17,2026-03-18T01:00:00Z,final,nhl-sjs,nhl-edm,SJS,EDM,3,5,Rogers Place,REG,N,1
+2025021074,20252026,regular,2026-03-17,2026-03-18T02:00:00Z,final,nhl-fla,nhl-van,FLA,VAN,2,5,Rogers Arena,REG,N,1
+2025021075,20252026,regular,2026-03-17,2026-03-18T02:00:00Z,final,nhl-buf,nhl-vgk,BUF,VGK,2,0,T-Mobile Arena,REG,N,1
+2025021076,20252026,regular,2026-03-17,2026-03-18T02:00:00Z,final,nhl-tbl,nhl-sea,TBL,SEA,6,2,Climate Pledge Arena,REG,N,1
+2025021077,20252026,regular,2026-03-18,2026-03-18T23:00:00Z,final,nhl-njd,nhl-nyr,NJD,NYR,6,3,Madison Square Garden,REG,N,1
+2025021078,20252026,regular,2026-03-18,2026-03-18T23:00:00Z,final,nhl-pit,nhl-car,PIT,CAR,5,6,Lenovo Center,OT,N,1
+2025021079,20252026,regular,2026-03-18,2026-03-18T23:30:00Z,final,nhl-ott,nhl-wsh,OTT,WSH,1,4,Capital One Arena,REG,N,1
+2025021080,20252026,regular,2026-03-18,2026-03-19T01:30:00Z,final,nhl-dal,nhl-col,DAL,COL,2,1,Ball Arena,SO,N,1
+2025021081,20252026,regular,2026-03-18,2026-03-19T01:30:00Z,final,nhl-stl,nhl-cgy,STL,CGY,1,2,Scotiabank Saddledome,SO,N,1
+2025021082,20252026,regular,2026-03-18,2026-03-19T02:00:00Z,final,nhl-phi,nhl-ana,PHI,ANA,3,2,Honda Center,OT,N,1
+2025021083,20252026,regular,2026-03-19,2026-03-19T23:00:00Z,final,nhl-wpg,nhl-bos,WPG,BOS,1,6,TD Garden,REG,N,1
+2025021084,20252026,regular,2026-03-19,2026-03-19T23:00:00Z,final,nhl-nyi,nhl-ott,NYI,OTT,2,3,Canadian Tire Centre,REG,N,1
+2025021085,20252026,regular,2026-03-19,2026-03-19T23:00:00Z,final,nhl-mtl,nhl-det,MTL,DET,1,3,Little Caesars Arena,REG,N,1
+2025021086,20252026,regular,2026-03-19,2026-03-19T23:00:00Z,final,nhl-nyr,nhl-cbj,NYR,CBJ,3,6,Nationwide Arena,REG,N,1
+2025021087,20252026,regular,2026-03-19,2026-03-20T00:00:00Z,final,nhl-sea,nhl-nsh,SEA,NSH,1,3,Bridgestone Arena,REG,N,1
+2025021088,20252026,regular,2026-03-19,2026-03-19T23:30:00Z,final,nhl-chi,nhl-min,CHI,MIN,2,1,Grand Casino Arena,REG,N,1
+2025021089,20252026,regular,2026-03-19,2026-03-20T01:00:00Z,final,nhl-fla,nhl-edm,FLA,EDM,4,0,Rogers Place,REG,N,1
+2025021090,20252026,regular,2026-03-19,2026-03-20T02:00:00Z,final,nhl-tbl,nhl-van,TBL,VAN,6,2,Rogers Arena,REG,N,1
+2025021091,20252026,regular,2026-03-19,2026-03-20T02:00:00Z,final,nhl-uta,nhl-vgk,UTA,VGK,4,0,T-Mobile Arena,REG,N,1
+2025021092,20252026,regular,2026-03-19,2026-03-20T02:00:00Z,final,nhl-buf,nhl-sjs,BUF,SJS,5,0,SAP Center at San Jose,REG,N,1
+2025021093,20252026,regular,2026-03-19,2026-03-20T02:30:00Z,final,nhl-phi,nhl-lak,PHI,LAK,4,3,Crypto.com Arena,SO,N,1
+2025021094,20252026,regular,2026-03-20,2026-03-20T23:00:00Z,final,nhl-car,nhl-tor,CAR,TOR,4,3,Scotiabank Arena,OT,N,1
+2025021095,20252026,regular,2026-03-20,2026-03-20T23:00:00Z,final,nhl-njd,nhl-wsh,NJD,WSH,1,2,Capital One Arena,REG,N,1
+2025021096,20252026,regular,2026-03-20,2026-03-21T00:30:00Z,final,nhl-col,nhl-chi,COL,CHI,4,1,United Center,REG,N,1
+2025021097,20252026,regular,2026-03-20,2026-03-21T01:00:00Z,final,nhl-fla,nhl-cgy,FLA,CGY,1,4,Scotiabank Saddledome,REG,N,1
+2025021098,20252026,regular,2026-03-20,2026-03-21T02:00:00Z,final,nhl-ana,nhl-uta,ANA,UTA,4,1,Delta Center,REG,N,1
+2025021099,20252026,regular,2026-03-21,2026-03-21T17:00:00Z,final,nhl-wpg,nhl-pit,WPG,PIT,4,5,PPG Paints Arena,SO,N,1
+2025021100,20252026,regular,2026-03-21,2026-03-21T18:00:00Z,final,nhl-vgk,nhl-nsh,VGK,NSH,1,4,Bridgestone Arena,REG,N,1
+2025021101,20252026,regular,2026-03-21,2026-03-21T20:00:00Z,final,nhl-dal,nhl-min,DAL,MIN,1,2,Grand Casino Arena,OT,N,1
+2025021102,20252026,regular,2026-03-21,2026-03-21T20:00:00Z,final,nhl-buf,nhl-lak,BUF,LAK,4,1,Crypto.com Arena,REG,N,1
+2025021103,20252026,regular,2026-03-21,2026-03-21T20:00:00Z,final,nhl-phi,nhl-sjs,PHI,SJS,4,1,SAP Center at San Jose,REG,N,1
+2025021104,20252026,regular,2026-03-21,2026-03-21T21:00:00Z,final,nhl-sea,nhl-cbj,SEA,CBJ,2,5,Nationwide Arena,REG,N,1
+2025021105,20252026,regular,2026-03-21,2026-03-21T23:00:00Z,final,nhl-nyi,nhl-mtl,NYI,MTL,3,7,Centre Bell,REG,N,1
+2025021106,20252026,regular,2026-03-21,2026-03-21T23:00:00Z,final,nhl-tor,nhl-ott,TOR,OTT,2,5,Canadian Tire Centre,REG,N,1
+2025021107,20252026,regular,2026-03-21,2026-03-21T23:00:00Z,final,nhl-stl,nhl-van,STL,VAN,3,1,Rogers Arena,REG,N,1
+2025021108,20252026,regular,2026-03-21,2026-03-22T00:00:00Z,final,nhl-bos,nhl-det,BOS,DET,4,2,Little Caesars Arena,REG,N,1
+2025021109,20252026,regular,2026-03-21,2026-03-22T02:00:00Z,final,nhl-tbl,nhl-edm,TBL,EDM,5,2,Rogers Place,REG,N,1
+2025021110,20252026,regular,2026-03-22,2026-03-22T16:00:00Z,final,nhl-wpg,nhl-nyr,WPG,NYR,3,2,Madison Square Garden,SO,N,1
+2025021111,20252026,regular,2026-03-22,2026-03-22T16:30:00Z,final,nhl-col,nhl-wsh,COL,WSH,3,2,Capital One Arena,OT,N,1
+2025021112,20252026,regular,2026-03-22,2026-03-22T19:00:00Z,final,nhl-car,nhl-pit,CAR,PIT,5,1,PPG Paints Arena,REG,N,1
+2025021113,20252026,regular,2026-03-22,2026-03-22T19:00:00Z,final,nhl-nsh,nhl-chi,NSH,CHI,3,2,United Center,OT,N,1
+2025021114,20252026,regular,2026-03-22,2026-03-22T23:00:00Z,final,nhl-cbj,nhl-nyi,CBJ,NYI,0,1,UBS Arena,REG,N,1
+2025021115,20252026,regular,2026-03-22,2026-03-22T23:00:00Z,final,nhl-vgk,nhl-dal,VGK,DAL,3,2,American Airlines Center,REG,N,1
+2025021116,20252026,regular,2026-03-22,2026-03-23T00:00:00Z,final,nhl-tbl,nhl-cgy,TBL,CGY,3,4,Scotiabank Saddledome,OT,N,1
+2025021117,20252026,regular,2026-03-22,2026-03-23T00:00:00Z,final,nhl-buf,nhl-ana,BUF,ANA,5,6,Honda Center,OT,N,1
+2025021118,20252026,regular,2026-03-22,2026-03-23T01:00:00Z,final,nhl-lak,nhl-uta,LAK,UTA,3,4,Delta Center,OT,N,1
+2025021119,20252026,regular,2026-03-23,2026-03-23T23:30:00Z,final,nhl-ott,nhl-nyr,OTT,NYR,2,1,Madison Square Garden,REG,N,1
+2025021120,20252026,regular,2026-03-24,2026-03-24T23:00:00Z,final,nhl-tor,nhl-bos,TOR,BOS,4,2,TD Garden,REG,N,1
+2025021121,20252026,regular,2026-03-24,2026-03-24T23:00:00Z,final,nhl-car,nhl-mtl,CAR,MTL,2,5,Centre Bell,REG,N,1
+2025021122,20252026,regular,2026-03-24,2026-03-24T23:00:00Z,final,nhl-ott,nhl-det,OTT,DET,3,2,Little Caesars Arena,REG,N,1
+2025021123,20252026,regular,2026-03-24,2026-03-24T23:00:00Z,final,nhl-sea,nhl-fla,SEA,FLA,4,5,Amerant Bank Arena,SO,N,1
+2025021124,20252026,regular,2026-03-24,2026-03-24T23:00:00Z,final,nhl-chi,nhl-nyi,CHI,NYI,4,3,UBS Arena,REG,N,1
+2025021125,20252026,regular,2026-03-24,2026-03-24T23:00:00Z,final,nhl-cbj,nhl-phi,CBJ,PHI,3,2,Xfinity Mobile Arena,REG,N,1
+2025021126,20252026,regular,2026-03-24,2026-03-24T23:00:00Z,final,nhl-col,nhl-pit,COL,PIT,6,2,PPG Paints Arena,REG,N,1
+2025021127,20252026,regular,2026-03-24,2026-03-24T23:30:00Z,final,nhl-min,nhl-tbl,MIN,TBL,3,6,Benchmark International Arena,REG,N,1
+2025021128,20252026,regular,2026-03-24,2026-03-25T00:00:00Z,final,nhl-wsh,nhl-stl,WSH,STL,0,3,Enterprise Center,REG,N,1
+2025021129,20252026,regular,2026-03-24,2026-03-25T00:00:00Z,final,nhl-sjs,nhl-nsh,SJS,NSH,3,6,Bridgestone Arena,REG,N,1
+2025021130,20252026,regular,2026-03-24,2026-03-25T00:00:00Z,final,nhl-njd,nhl-dal,NJD,DAL,6,4,American Airlines Center,REG,N,1
+2025021131,20252026,regular,2026-03-24,2026-03-25T00:00:00Z,final,nhl-vgk,nhl-wpg,VGK,WPG,1,4,Canada Life Centre,REG,N,1
+2025021132,20252026,regular,2026-03-24,2026-03-25T01:30:00Z,final,nhl-edm,nhl-uta,EDM,UTA,5,2,Delta Center,REG,N,1
+2025021133,20252026,regular,2026-03-24,2026-03-25T01:00:00Z,final,nhl-lak,nhl-cgy,LAK,CGY,2,3,Scotiabank Saddledome,SO,N,1
+2025021134,20252026,regular,2026-03-24,2026-03-25T02:00:00Z,final,nhl-ana,nhl-van,ANA,VAN,5,3,Rogers Arena,REG,N,1
+2025021135,20252026,regular,2026-03-25,2026-03-25T23:30:00Z,final,nhl-bos,nhl-buf,BOS,BUF,4,3,KeyBank Center,OT,N,1
+2025021136,20252026,regular,2026-03-25,2026-03-25T23:30:00Z,final,nhl-nyr,nhl-tor,NYR,TOR,3,4,Scotiabank Arena,REG,N,1
+2025021137,20252026,regular,2026-03-26,2026-03-26T23:00:00Z,final,nhl-cbj,nhl-mtl,CBJ,MTL,1,2,Centre Bell,REG,N,1
+2025021138,20252026,regular,2026-03-26,2026-03-26T23:00:00Z,final,nhl-pit,nhl-ott,PIT,OTT,4,3,Canadian Tire Centre,SO,N,1
+2025021139,20252026,regular,2026-03-26,2026-03-26T23:00:00Z,final,nhl-sea,nhl-tbl,SEA,TBL,4,3,Benchmark International Arena,OT,N,1
+2025021140,20252026,regular,2026-03-26,2026-03-26T23:00:00Z,final,nhl-min,nhl-fla,MIN,FLA,3,2,Amerant Bank Arena,REG,N,1
+2025021141,20252026,regular,2026-03-26,2026-03-26T23:00:00Z,final,nhl-dal,nhl-nyi,DAL,NYI,1,2,UBS Arena,REG,N,1
+2025021142,20252026,regular,2026-03-26,2026-03-26T23:00:00Z,final,nhl-chi,nhl-phi,CHI,PHI,1,5,Xfinity Mobile Arena,REG,N,1
+2025021143,20252026,regular,2026-03-26,2026-03-27T00:00:00Z,final,nhl-sjs,nhl-stl,SJS,STL,1,2,Enterprise Center,OT,N,1
+2025021144,20252026,regular,2026-03-26,2026-03-27T00:00:00Z,final,nhl-njd,nhl-nsh,NJD,NSH,4,2,Bridgestone Arena,REG,N,1
+2025021145,20252026,regular,2026-03-26,2026-03-27T00:00:00Z,final,nhl-col,nhl-wpg,COL,WPG,3,2,Canada Life Centre,REG,N,1
+2025021146,20252026,regular,2026-03-26,2026-03-27T01:00:00Z,final,nhl-wsh,nhl-uta,WSH,UTA,7,4,Delta Center,REG,N,1
+2025021147,20252026,regular,2026-03-26,2026-03-27T01:00:00Z,final,nhl-ana,nhl-cgy,ANA,CGY,3,2,Scotiabank Saddledome,OT,N,1
+2025021148,20252026,regular,2026-03-26,2026-03-27T01:30:00Z,final,nhl-edm,nhl-vgk,EDM,VGK,4,3,T-Mobile Arena,OT,N,1
+2025021149,20252026,regular,2026-03-26,2026-03-27T02:00:00Z,final,nhl-lak,nhl-van,LAK,VAN,4,0,Rogers Arena,REG,N,1
+2025021150,20252026,regular,2026-03-27,2026-03-27T23:00:00Z,final,nhl-det,nhl-buf,DET,BUF,5,2,KeyBank Center,REG,N,1
+2025021151,20252026,regular,2026-03-27,2026-03-27T23:00:00Z,final,nhl-chi,nhl-nyr,CHI,NYR,1,6,Madison Square Garden,REG,N,1
+2025021152,20252026,regular,2026-03-28,2026-03-28T17:00:00Z,final,nhl-ott,nhl-tbl,OTT,TBL,2,4,Benchmark International Arena,REG,N,1
+2025021153,20252026,regular,2026-03-28,2026-03-28T17:00:00Z,final,nhl-fla,nhl-nyi,FLA,NYI,2,5,UBS Arena,REG,N,1
+2025021154,20252026,regular,2026-03-28,2026-03-28T19:30:00Z,final,nhl-ana,nhl-edm,ANA,EDM,2,4,Rogers Place,REG,N,1
+2025021155,20252026,regular,2026-03-28,2026-03-28T21:00:00Z,final,nhl-min,nhl-bos,MIN,BOS,3,6,TD Garden,REG,N,1
+2025021156,20252026,regular,2026-03-28,2026-03-28T21:00:00Z,final,nhl-dal,nhl-pit,DAL,PIT,6,3,PPG Paints Arena,REG,N,1
+2025021157,20252026,regular,2026-03-28,2026-03-28T21:00:00Z,final,nhl-njd,nhl-car,NJD,CAR,2,5,Lenovo Center,REG,N,1
+2025021158,20252026,regular,2026-03-28,2026-03-28T21:00:00Z,final,nhl-sjs,nhl-cbj,SJS,CBJ,3,2,Nationwide Arena,REG,N,1
+2025021159,20252026,regular,2026-03-28,2026-03-28T21:30:00Z,final,nhl-sea,nhl-buf,SEA,BUF,2,3,KeyBank Center,SO,N,1
+2025021160,20252026,regular,2026-03-28,2026-03-28T23:00:00Z,final,nhl-tor,nhl-stl,TOR,STL,1,5,Enterprise Center,REG,N,1
+2025021161,20252026,regular,2026-03-28,2026-03-28T23:00:00Z,final,nhl-mtl,nhl-nsh,MTL,NSH,4,1,Bridgestone Arena,REG,N,1
+2025021162,20252026,regular,2026-03-28,2026-03-28T23:00:00Z,final,nhl-wpg,nhl-col,WPG,COL,4,2,Ball Arena,REG,N,1
+2025021163,20252026,regular,2026-03-28,2026-03-29T00:00:00Z,final,nhl-phi,nhl-det,PHI,DET,5,3,Little Caesars Arena,REG,N,1
+2025021164,20252026,regular,2026-03-28,2026-03-29T01:00:00Z,final,nhl-uta,nhl-lak,UTA,LAK,6,2,Crypto.com Arena,REG,N,1
+2025021165,20252026,regular,2026-03-28,2026-03-29T02:00:00Z,final,nhl-van,nhl-cgy,VAN,CGY,3,7,Scotiabank Saddledome,REG,N,1
+2025021166,20252026,regular,2026-03-28,2026-03-29T02:30:00Z,final,nhl-wsh,nhl-vgk,WSH,VGK,5,4,T-Mobile Arena,SO,N,1
+2025021167,20252026,regular,2026-03-29,2026-03-29T17:00:00Z,final,nhl-fla,nhl-nyr,FLA,NYR,1,3,Madison Square Garden,REG,N,1
+2025021168,20252026,regular,2026-03-29,2026-03-29T21:00:00Z,final,nhl-nsh,nhl-tbl,NSH,TBL,2,3,Benchmark International Arena,REG,N,1
+2025021169,20252026,regular,2026-03-29,2026-03-29T21:00:00Z,final,nhl-mtl,nhl-car,MTL,CAR,3,1,Lenovo Center,REG,N,1
+2025021170,20252026,regular,2026-03-29,2026-03-29T21:00:00Z,final,nhl-bos,nhl-cbj,BOS,CBJ,4,3,Nationwide Arena,SO,N,1
+2025021171,20252026,regular,2026-03-29,2026-03-29T23:00:00Z,final,nhl-chi,nhl-njd,CHI,NJD,3,5,Prudential Center,REG,N,1
+2025021172,20252026,regular,2026-03-29,2026-03-29T23:00:00Z,final,nhl-dal,nhl-phi,DAL,PHI,1,2,Xfinity Mobile Arena,OT,N,1
+2025021173,20252026,regular,2026-03-30,2026-03-30T23:00:00Z,final,nhl-pit,nhl-nyi,PIT,NYI,8,3,UBS Arena,REG,N,1
+2025021174,20252026,regular,2026-03-30,2026-03-31T00:30:00Z,final,nhl-cgy,nhl-col,CGY,COL,2,9,Ball Arena,REG,N,1
+2025021175,20252026,regular,2026-03-30,2026-03-31T02:00:00Z,final,nhl-van,nhl-vgk,VAN,VGK,2,4,T-Mobile Arena,REG,N,1
+2025021176,20252026,regular,2026-03-30,2026-03-31T02:00:00Z,final,nhl-tor,nhl-ana,TOR,ANA,5,4,Honda Center,OT,N,1
+2025021177,20252026,regular,2026-03-30,2026-03-31T02:00:00Z,final,nhl-stl,nhl-sjs,STL,SJS,4,5,SAP Center at San Jose,REG,N,1
+2025021178,20252026,regular,2026-03-31,2026-03-31T23:00:00Z,final,nhl-dal,nhl-bos,DAL,BOS,3,6,TD Garden,REG,N,1
+2025021179,20252026,regular,2026-03-31,2026-03-31T23:00:00Z,final,nhl-nyi,nhl-buf,NYI,BUF,3,4,KeyBank Center,REG,N,1
+2025021180,20252026,regular,2026-03-31,2026-03-31T23:00:00Z,final,nhl-mtl,nhl-tbl,MTL,TBL,4,1,Benchmark International Arena,REG,N,1
+2025021181,20252026,regular,2026-03-31,2026-03-31T23:00:00Z,final,nhl-ott,nhl-fla,OTT,FLA,3,6,Amerant Bank Arena,REG,N,1
+2025021182,20252026,regular,2026-03-31,2026-03-31T23:00:00Z,final,nhl-njd,nhl-nyr,NJD,NYR,1,4,Madison Square Garden,REG,N,1
+2025021183,20252026,regular,2026-03-31,2026-03-31T23:00:00Z,final,nhl-det,nhl-pit,DET,PIT,1,5,PPG Paints Arena,REG,N,1
+2025021184,20252026,regular,2026-03-31,2026-03-31T23:00:00Z,final,nhl-phi,nhl-wsh,PHI,WSH,4,6,Capital One Arena,REG,N,1
+2025021185,20252026,regular,2026-03-31,2026-03-31T23:30:00Z,final,nhl-car,nhl-cbj,CAR,CBJ,5,2,Nationwide Arena,REG,N,1
+2025021186,20252026,regular,2026-03-31,2026-04-01T00:30:00Z,final,nhl-wpg,nhl-chi,WPG,CHI,4,3,United Center,OT,N,1
+2025021187,20252026,regular,2026-03-31,2026-04-01T01:00:00Z,final,nhl-sea,nhl-edm,SEA,EDM,0,3,Rogers Place,REG,N,1
+2025021188,20252026,regular,2026-04-01,2026-04-02T00:30:00Z,final,nhl-van,nhl-col,VAN,COL,8,6,Ball Arena,REG,N,1
+2025021189,20252026,regular,2026-04-01,2026-04-02T01:00:00Z,final,nhl-stl,nhl-lak,STL,LAK,1,2,Crypto.com Arena,OT,N,1
+2025021190,20252026,regular,2026-04-01,2026-04-02T01:00:00Z,final,nhl-ana,nhl-sjs,ANA,SJS,3,4,SAP Center at San Jose,REG,N,1
+2025021191,20252026,regular,2026-04-02,2026-04-02T23:00:00Z,final,nhl-buf,nhl-ott,BUF,OTT,1,4,Canadian Tire Centre,REG,N,1
+2025021192,20252026,regular,2026-04-02,2026-04-02T23:00:00Z,final,nhl-pit,nhl-tbl,PIT,TBL,3,6,Benchmark International Arena,REG,N,1
+2025021193,20252026,regular,2026-04-02,2026-04-02T23:00:00Z,final,nhl-bos,nhl-fla,BOS,FLA,1,2,Amerant Bank Arena,REG,N,1
+2025021194,20252026,regular,2026-04-02,2026-04-02T23:30:00Z,final,nhl-wsh,nhl-njd,WSH,NJD,3,7,Prudential Center,REG,N,1
+2025021195,20252026,regular,2026-04-02,2026-04-02T23:00:00Z,final,nhl-mtl,nhl-nyr,MTL,NYR,3,2,Madison Square Garden,REG,N,1
+2025021196,20252026,regular,2026-04-02,2026-04-02T23:00:00Z,final,nhl-det,nhl-phi,DET,PHI,4,2,Xfinity Mobile Arena,REG,N,1
+2025021197,20252026,regular,2026-04-02,2026-04-02T23:00:00Z,final,nhl-cbj,nhl-car,CBJ,CAR,1,5,Lenovo Center,REG,N,1
+2025021198,20252026,regular,2026-04-02,2026-04-03T00:00:00Z,final,nhl-wpg,nhl-dal,WPG,DAL,0,3,American Airlines Center,REG,N,1
+2025021199,20252026,regular,2026-04-02,2026-04-03T00:00:00Z,final,nhl-van,nhl-min,VAN,MIN,2,5,Grand Casino Arena,REG,N,1
+2025021200,20252026,regular,2026-04-02,2026-04-03T01:00:00Z,final,nhl-chi,nhl-edm,CHI,EDM,1,3,Rogers Place,REG,N,1
+2025021201,20252026,regular,2026-04-02,2026-04-03T02:00:00Z,final,nhl-cgy,nhl-vgk,CGY,VGK,3,6,T-Mobile Arena,REG,N,1
+2025021202,20252026,regular,2026-04-02,2026-04-03T02:00:00Z,final,nhl-tor,nhl-sjs,TOR,SJS,1,4,SAP Center at San Jose,REG,N,1
+2025021203,20252026,regular,2026-04-02,2026-04-03T02:00:00Z,final,nhl-uta,nhl-sea,UTA,SEA,6,2,Climate Pledge Arena,REG,N,1
+2025021204,20252026,regular,2026-04-02,2026-04-03T02:30:00Z,final,nhl-nsh,nhl-lak,NSH,LAK,5,4,Crypto.com Arena,SO,N,1
+2025021205,20252026,regular,2026-04-03,2026-04-03T23:00:00Z,final,nhl-phi,nhl-nyi,PHI,NYI,4,1,UBS Arena,REG,N,1
+2025021206,20252026,regular,2026-04-03,2026-04-04T02:00:00Z,final,nhl-stl,nhl-ana,STL,ANA,6,2,Honda Center,REG,N,1
+2025021207,20252026,regular,2026-04-04,2026-04-04T16:30:00Z,final,nhl-det,nhl-nyr,DET,NYR,1,4,Madison Square Garden,REG,N,1
+2025021208,20252026,regular,2026-04-04,2026-04-04T17:00:00Z,final,nhl-min,nhl-ott,MIN,OTT,4,1,Canadian Tire Centre,REG,N,1
+2025021209,20252026,regular,2026-04-04,2026-04-04T19:00:00Z,final,nhl-col,nhl-dal,COL,DAL,2,0,American Airlines Center,REG,N,1
+2025021210,20252026,regular,2026-04-04,2026-04-04T21:00:00Z,final,nhl-bos,nhl-tbl,BOS,TBL,1,3,Benchmark International Arena,REG,N,1
+2025021211,20252026,regular,2026-04-04,2026-04-04T21:00:00Z,final,nhl-fla,nhl-pit,FLA,PIT,4,9,PPG Paints Arena,REG,N,1
+2025021212,20252026,regular,2026-04-04,2026-04-04T23:00:00Z,final,nhl-mtl,nhl-njd,MTL,NJD,4,3,Prudential Center,SO,N,1
+2025021213,20252026,regular,2026-04-04,2026-04-04T23:00:00Z,final,nhl-buf,nhl-wsh,BUF,WSH,2,6,Capital One Arena,REG,N,1
+2025021214,20252026,regular,2026-04-04,2026-04-04T23:00:00Z,final,nhl-nyi,nhl-car,NYI,CAR,3,4,Lenovo Center,REG,N,1
+2025021215,20252026,regular,2026-04-04,2026-04-04T23:00:00Z,final,nhl-wpg,nhl-cbj,WPG,CBJ,2,1,Nationwide Arena,REG,N,1
+2025021216,20252026,regular,2026-04-04,2026-04-04T23:00:00Z,final,nhl-uta,nhl-van,UTA,VAN,7,4,Rogers Arena,REG,N,1
+2025021217,20252026,regular,2026-04-04,2026-04-04T23:00:00Z,final,nhl-tor,nhl-lak,TOR,LAK,6,7,Crypto.com Arena,OT,N,1
+2025021218,20252026,regular,2026-04-04,2026-04-05T02:00:00Z,final,nhl-vgk,nhl-edm,VGK,EDM,5,1,Rogers Place,REG,N,1
+2025021219,20252026,regular,2026-04-04,2026-04-05T02:00:00Z,final,nhl-cgy,nhl-ana,CGY,ANA,5,3,Honda Center,REG,N,1
+2025021220,20252026,regular,2026-04-04,2026-04-05T02:00:00Z,final,nhl-nsh,nhl-sjs,NSH,SJS,6,3,SAP Center at San Jose,REG,N,1
+2025021221,20252026,regular,2026-04-04,2026-04-05T02:00:00Z,final,nhl-chi,nhl-sea,CHI,SEA,4,2,Climate Pledge Arena,REG,N,1
+2025021222,20252026,regular,2026-04-05,2026-04-05T17:00:00Z,final,nhl-min,nhl-det,MIN,DET,5,4,Little Caesars Arena,REG,N,1
+2025021223,20252026,regular,2026-04-05,2026-04-05T19:00:00Z,final,nhl-fla,nhl-pit,FLA,PIT,2,5,PPG Paints Arena,REG,N,1
+2025021224,20252026,regular,2026-04-05,2026-04-05T19:30:00Z,final,nhl-bos,nhl-phi,BOS,PHI,1,2,Xfinity Mobile Arena,OT,N,1
+2025021225,20252026,regular,2026-04-05,2026-04-05T21:00:00Z,final,nhl-car,nhl-ott,CAR,OTT,3,6,Canadian Tire Centre,REG,N,1
+2025021226,20252026,regular,2026-04-05,2026-04-05T23:00:00Z,final,nhl-njd,nhl-mtl,NJD,MTL,3,0,Centre Bell,REG,N,1
+2025021227,20252026,regular,2026-04-05,2026-04-05T23:00:00Z,final,nhl-wsh,nhl-nyr,WSH,NYR,1,8,Madison Square Garden,REG,N,1
+2025021228,20252026,regular,2026-04-05,2026-04-06T01:30:00Z,final,nhl-stl,nhl-col,STL,COL,3,2,Ball Arena,REG,N,1
+2025021229,20252026,regular,2026-04-06,2026-04-06T23:00:00Z,final,nhl-tbl,nhl-buf,TBL,BUF,2,4,KeyBank Center,REG,N,1
+2025021230,20252026,regular,2026-04-06,2026-04-06T23:30:00Z,final,nhl-sea,nhl-wpg,SEA,WPG,2,6,Canada Life Centre,REG,N,1
+2025021231,20252026,regular,2026-04-06,2026-04-07T02:00:00Z,final,nhl-chi,nhl-sjs,CHI,SJS,2,3,SAP Center at San Jose,REG,N,1
+2025021232,20252026,regular,2026-04-06,2026-04-07T02:30:00Z,final,nhl-nsh,nhl-lak,NSH,LAK,2,3,Crypto.com Arena,SO,N,1
+2025021233,20252026,regular,2026-04-07,2026-04-07T23:00:00Z,final,nhl-fla,nhl-mtl,FLA,MTL,3,4,Centre Bell,SO,N,1
+2025021234,20252026,regular,2026-04-07,2026-04-07T23:00:00Z,final,nhl-tbl,nhl-ott,TBL,OTT,2,6,Canadian Tire Centre,REG,N,1
+2025021235,20252026,regular,2026-04-07,2026-04-07T23:00:00Z,final,nhl-cbj,nhl-det,CBJ,DET,4,3,Little Caesars Arena,SO,N,1
+2025021236,20252026,regular,2026-04-07,2026-04-07T23:00:00Z,final,nhl-phi,nhl-njd,PHI,NJD,5,1,Prudential Center,REG,N,1
+2025021237,20252026,regular,2026-04-07,2026-04-07T23:00:00Z,final,nhl-bos,nhl-car,BOS,CAR,5,6,Lenovo Center,OT,N,1
+2025021238,20252026,regular,2026-04-07,2026-04-08T00:00:00Z,final,nhl-col,nhl-stl,COL,STL,3,1,Enterprise Center,REG,N,1
+2025021239,20252026,regular,2026-04-07,2026-04-08T00:00:00Z,final,nhl-cgy,nhl-dal,CGY,DAL,3,4,American Airlines Center,OT,N,1
+2025021240,20252026,regular,2026-04-07,2026-04-08T00:00:00Z,final,nhl-sea,nhl-min,SEA,MIN,2,5,Grand Casino Arena,REG,N,1
+2025021241,20252026,regular,2026-04-07,2026-04-08T01:30:00Z,final,nhl-edm,nhl-uta,EDM,UTA,5,6,Delta Center,OT,N,1
+2025021242,20252026,regular,2026-04-07,2026-04-08T02:00:00Z,final,nhl-vgk,nhl-van,VGK,VAN,2,1,Rogers Arena,REG,N,1
+2025021243,20252026,regular,2026-04-07,2026-04-08T02:00:00Z,final,nhl-nsh,nhl-ana,NSH,ANA,5,0,Honda Center,REG,N,1
+2025021244,20252026,regular,2026-04-08,2026-04-08T23:00:00Z,final,nhl-buf,nhl-nyr,BUF,NYR,5,3,Madison Square Garden,REG,N,1
+2025021245,20252026,regular,2026-04-08,2026-04-08T23:30:00Z,final,nhl-wsh,nhl-tor,WSH,TOR,4,0,Scotiabank Arena,REG,N,1
+2025021246,20252026,regular,2026-04-08,2026-04-09T02:00:00Z,final,nhl-edm,nhl-sjs,EDM,SJS,5,2,SAP Center at San Jose,REG,N,1
+2025021247,20252026,regular,2026-04-09,2026-04-09T23:00:00Z,final,nhl-cbj,nhl-buf,CBJ,BUF,0,5,KeyBank Center,REG,N,1
+2025021248,20252026,regular,2026-04-09,2026-04-09T23:00:00Z,final,nhl-tbl,nhl-mtl,TBL,MTL,1,2,Centre Bell,REG,N,1
+2025021249,20252026,regular,2026-04-09,2026-04-09T23:00:00Z,final,nhl-fla,nhl-ott,FLA,OTT,1,5,Canadian Tire Centre,REG,N,1
+2025021250,20252026,regular,2026-04-09,2026-04-09T23:00:00Z,final,nhl-phi,nhl-det,PHI,DET,3,6,Little Caesars Arena,REG,N,1
+2025021251,20252026,regular,2026-04-09,2026-04-09T23:00:00Z,final,nhl-pit,nhl-njd,PIT,NJD,5,2,Prudential Center,REG,N,1
+2025021252,20252026,regular,2026-04-09,2026-04-09T22:45:00Z,final,nhl-tor,nhl-nyi,TOR,NYI,3,5,UBS Arena,REG,N,1
+2025021253,20252026,regular,2026-04-09,2026-04-10T00:00:00Z,final,nhl-wpg,nhl-stl,WPG,STL,3,2,Enterprise Center,REG,N,1
+2025021254,20252026,regular,2026-04-09,2026-04-10T01:00:00Z,final,nhl-min,nhl-dal,MIN,DAL,4,5,American Airlines Center,REG,N,1
+2025021255,20252026,regular,2026-04-09,2026-04-10T00:30:00Z,final,nhl-car,nhl-chi,CAR,CHI,7,2,United Center,REG,N,1
+2025021256,20252026,regular,2026-04-09,2026-04-10T01:00:00Z,final,nhl-cgy,nhl-col,CGY,COL,1,3,Ball Arena,REG,N,1
+2025021257,20252026,regular,2026-04-09,2026-04-10T01:00:00Z,final,nhl-nsh,nhl-uta,NSH,UTA,1,4,Delta Center,REG,N,1
+2025021258,20252026,regular,2026-04-09,2026-04-10T02:00:00Z,final,nhl-sjs,nhl-ana,SJS,ANA,1,6,Honda Center,REG,N,1
+2025021259,20252026,regular,2026-04-09,2026-04-10T02:00:00Z,final,nhl-vgk,nhl-sea,VGK,SEA,3,4,Climate Pledge Arena,SO,N,1
+2025021260,20252026,regular,2026-04-09,2026-04-10T02:30:00Z,final,nhl-van,nhl-lak,VAN,LAK,1,4,Crypto.com Arena,REG,N,1
+2025021261,20252026,regular,2026-04-11,2026-04-11T16:30:00Z,final,nhl-tbl,nhl-bos,TBL,BOS,2,1,TD Garden,REG,N,1
+2025021262,20252026,regular,2026-04-11,2026-04-11T17:00:00Z,final,nhl-ott,nhl-nyi,OTT,NYI,3,0,UBS Arena,REG,N,1
+2025021263,20252026,regular,2026-04-11,2026-04-11T19:00:00Z,final,nhl-wsh,nhl-pit,WSH,PIT,6,3,PPG Paints Arena,REG,N,1
+2025021264,20252026,regular,2026-04-11,2026-04-11T20:00:00Z,final,nhl-edm,nhl-lak,EDM,LAK,0,1,Crypto.com Arena,REG,N,1
+2025021265,20252026,regular,2026-04-11,2026-04-11T21:00:00Z,final,nhl-njd,nhl-det,NJD,DET,5,3,Little Caesars Arena,REG,N,1
+2025021266,20252026,regular,2026-04-11,2026-04-11T21:00:00Z,final,nhl-stl,nhl-chi,STL,CHI,5,3,United Center,REG,N,1
+2025021267,20252026,regular,2026-04-11,2026-04-11T21:00:00Z,final,nhl-min,nhl-nsh,MIN,NSH,1,2,Bridgestone Arena,REG,N,1
+2025021268,20252026,regular,2026-04-11,2026-04-11T21:00:00Z,final,nhl-nyr,nhl-dal,NYR,DAL,0,2,American Airlines Center,REG,N,1
+2025021269,20252026,regular,2026-04-11,2026-04-11T21:00:00Z,final,nhl-car,nhl-uta,CAR,UTA,4,1,Delta Center,REG,N,1
+2025021270,20252026,regular,2026-04-11,2026-04-11T23:00:00Z,final,nhl-fla,nhl-tor,FLA,TOR,6,2,Scotiabank Arena,REG,N,1
+2025021271,20252026,regular,2026-04-11,2026-04-11T23:00:00Z,final,nhl-cbj,nhl-mtl,CBJ,MTL,5,2,Centre Bell,REG,N,1
+2025021272,20252026,regular,2026-04-11,2026-04-11T23:00:00Z,final,nhl-phi,nhl-wpg,PHI,WPG,7,1,Canada Life Centre,REG,N,1
+2025021273,20252026,regular,2026-04-11,2026-04-11T23:00:00Z,final,nhl-cgy,nhl-sea,CGY,SEA,1,4,Climate Pledge Arena,REG,N,1
+2025021274,20252026,regular,2026-04-11,2026-04-12T00:00:00Z,final,nhl-vgk,nhl-col,VGK,COL,3,2,Ball Arena,OT,N,1
+2025021275,20252026,regular,2026-04-11,2026-04-12T02:00:00Z,final,nhl-van,nhl-sjs,VAN,SJS,4,3,SAP Center at San Jose,SO,N,1
+2025021276,20252026,regular,2026-04-12,2026-04-12T19:00:00Z,final,nhl-pit,nhl-wsh,PIT,WSH,0,3,Capital One Arena,REG,N,1
+2025021277,20252026,regular,2026-04-12,2026-04-12T22:00:00Z,final,nhl-mtl,nhl-nyi,MTL,NYI,4,1,UBS Arena,REG,N,1
+2025021278,20252026,regular,2026-04-12,2026-04-12T22:00:00Z,final,nhl-bos,nhl-cbj,BOS,CBJ,3,2,Nationwide Arena,REG,N,1
+2025021279,20252026,regular,2026-04-12,2026-04-12T23:00:00Z,final,nhl-ott,nhl-njd,OTT,NJD,3,4,Prudential Center,OT,N,1
+2025021280,20252026,regular,2026-04-12,2026-04-13T00:00:00Z,final,nhl-van,nhl-ana,VAN,ANA,4,3,Honda Center,OT,N,1
+2025021281,20252026,regular,2026-04-12,2026-04-13T01:00:00Z,final,nhl-uta,nhl-cgy,UTA,CGY,1,4,Scotiabank Saddledome,REG,N,1
+2025021282,20252026,regular,2026-04-13,2026-04-13T23:00:00Z,final,nhl-det,nhl-tbl,DET,TBL,3,4,Benchmark International Arena,OT,N,1
+2025021283,20252026,regular,2026-04-13,2026-04-13T23:00:00Z,final,nhl-nyr,nhl-fla,NYR,FLA,2,3,Amerant Bank Arena,REG,N,1
+2025021284,20252026,regular,2026-04-13,2026-04-13T23:00:00Z,final,nhl-car,nhl-phi,CAR,PHI,2,3,Xfinity Mobile Arena,SO,N,1
+2025021285,20252026,regular,2026-04-13,2026-04-13T23:30:00Z,final,nhl-dal,nhl-tor,DAL,TOR,6,5,Scotiabank Arena,REG,N,1
+2025021286,20252026,regular,2026-04-13,2026-04-14T00:00:00Z,final,nhl-min,nhl-stl,MIN,STL,3,6,Enterprise Center,REG,N,1
+2025021287,20252026,regular,2026-04-13,2026-04-14T00:00:00Z,final,nhl-sjs,nhl-nsh,SJS,NSH,3,2,Bridgestone Arena,REG,N,1
+2025021288,20252026,regular,2026-04-13,2026-04-14T00:30:00Z,final,nhl-buf,nhl-chi,BUF,CHI,5,1,United Center,REG,N,1
+2025021289,20252026,regular,2026-04-13,2026-04-14T01:30:00Z,final,nhl-col,nhl-edm,COL,EDM,2,1,Rogers Place,SO,N,1
+2025021290,20252026,regular,2026-04-13,2026-04-14T02:00:00Z,final,nhl-wpg,nhl-vgk,WPG,VGK,2,6,T-Mobile Arena,REG,N,1
+2025021291,20252026,regular,2026-04-13,2026-04-14T01:30:00Z,final,nhl-lak,nhl-sea,LAK,SEA,5,3,Climate Pledge Arena,REG,N,1
+2025021292,20252026,regular,2026-04-14,2026-04-14T23:00:00Z,final,nhl-njd,nhl-bos,NJD,BOS,0,4,TD Garden,REG,N,1
+2025021293,20252026,regular,2026-04-14,2026-04-14T23:00:00Z,final,nhl-car,nhl-nyi,CAR,NYI,2,1,UBS Arena,REG,N,1
+2025021294,20252026,regular,2026-04-14,2026-04-14T23:00:00Z,final,nhl-mtl,nhl-phi,MTL,PHI,2,4,Xfinity Mobile Arena,REG,N,1
+2025021295,20252026,regular,2026-04-14,2026-04-14T23:00:00Z,final,nhl-wsh,nhl-cbj,WSH,CBJ,2,1,Nationwide Arena,REG,N,1
+2025021296,20252026,regular,2026-04-14,2026-04-15T00:00:00Z,final,nhl-ana,nhl-min,ANA,MIN,2,3,Grand Casino Arena,REG,N,1
+2025021297,20252026,regular,2026-04-14,2026-04-15T01:00:00Z,final,nhl-wpg,nhl-uta,WPG,UTA,3,5,Delta Center,REG,N,1
+2025021298,20252026,regular,2026-04-14,2026-04-15T01:00:00Z,final,nhl-col,nhl-cgy,COL,CGY,3,1,Scotiabank Saddledome,REG,N,1
+2025021299,20252026,regular,2026-04-14,2026-04-15T01:30:00Z,final,nhl-pit,nhl-stl,PIT,STL,5,7,Enterprise Center,REG,N,1
+2025021300,20252026,regular,2026-04-14,2026-04-15T02:00:00Z,final,nhl-lak,nhl-van,LAK,VAN,3,4,Rogers Arena,OT,N,1
+2025021301,20252026,regular,2026-04-15,2026-04-15T23:00:00Z,final,nhl-dal,nhl-buf,DAL,BUF,4,3,KeyBank Center,SO,N,1
+2025021302,20252026,regular,2026-04-15,2026-04-15T23:00:00Z,final,nhl-nyr,nhl-tbl,NYR,TBL,4,2,Benchmark International Arena,REG,N,1
+2025021303,20252026,regular,2026-04-15,2026-04-15T23:00:00Z,final,nhl-det,nhl-fla,DET,FLA,1,8,Amerant Bank Arena,REG,N,1
+2025021304,20252026,regular,2026-04-15,2026-04-15T23:30:00Z,final,nhl-tor,nhl-ott,TOR,OTT,1,3,Canadian Tire Centre,REG,N,1
+2025021305,20252026,regular,2026-04-15,2026-04-16T00:30:00Z,final,nhl-sjs,nhl-chi,SJS,CHI,2,5,United Center,REG,N,1
+2025021306,20252026,regular,2026-04-15,2026-04-16T02:00:00Z,final,nhl-sea,nhl-vgk,SEA,VGK,1,4,T-Mobile Arena,REG,N,1
+2025021307,20252026,regular,2026-04-16,2026-04-17T00:00:00Z,final,nhl-ana,nhl-nsh,ANA,NSH,5,4,Bridgestone Arena,REG,N,1
+2025021308,20252026,regular,2026-04-16,2026-04-17T00:00:00Z,final,nhl-sjs,nhl-wpg,SJS,WPG,6,1,Canada Life Centre,REG,N,1
+2025021309,20252026,regular,2026-04-16,2026-04-16T23:30:00Z,final,nhl-stl,nhl-uta,STL,UTA,5,3,Delta Center,REG,N,1
+2025021310,20252026,regular,2026-04-16,2026-04-17T01:00:00Z,final,nhl-lak,nhl-cgy,LAK,CGY,1,3,Scotiabank Saddledome,REG,N,1
+2025021311,20252026,regular,2026-04-16,2026-04-17T01:00:00Z,final,nhl-van,nhl-edm,VAN,EDM,1,6,Rogers Place,REG,N,1
+2025021312,20252026,regular,2026-04-16,2026-04-17T02:00:00Z,final,nhl-sea,nhl-col,SEA,COL,0,2,Ball Arena,REG,N,1
+2025030131,20252026,playoffs,2026-04-18,2026-04-18T19:00:00Z,final,nhl-ott,nhl-car,OTT,CAR,0,2,Lenovo Center,REG,N,1
+2025030141,20252026,playoffs,2026-04-18,2026-04-19T00:00:00Z,final,nhl-phi,nhl-pit,PHI,PIT,3,2,PPG Paints Arena,REG,N,1
+2025030161,20252026,playoffs,2026-04-18,2026-04-18T21:30:00Z,final,nhl-min,nhl-dal,MIN,DAL,6,1,American Airlines Center,REG,N,1
+2025030111,20252026,playoffs,2026-04-19,2026-04-19T23:30:00Z,final,nhl-bos,nhl-buf,BOS,BUF,3,4,KeyBank Center,REG,N,1
+2025030121,20252026,playoffs,2026-04-19,2026-04-19T21:45:00Z,final,nhl-mtl,nhl-tbl,MTL,TBL,4,3,Benchmark International Arena,OT,N,1
+2025030151,20252026,playoffs,2026-04-19,2026-04-19T19:00:00Z,final,nhl-lak,nhl-col,LAK,COL,1,2,Ball Arena,REG,N,1
+2025030171,20252026,playoffs,2026-04-19,2026-04-20T02:00:00Z,final,nhl-uta,nhl-vgk,UTA,VGK,2,4,T-Mobile Arena,REG,N,1
+2025030132,20252026,playoffs,2026-04-20,2026-04-20T23:30:00Z,final,nhl-ott,nhl-car,OTT,CAR,2,3,Lenovo Center,OT,N,1
+2025030142,20252026,playoffs,2026-04-20,2026-04-20T23:00:00Z,final,nhl-phi,nhl-pit,PHI,PIT,3,0,PPG Paints Arena,REG,N,1
+2025030162,20252026,playoffs,2026-04-20,2026-04-21T01:30:00Z,final,nhl-min,nhl-dal,MIN,DAL,2,4,American Airlines Center,REG,N,1
+2025030181,20252026,playoffs,2026-04-20,2026-04-21T02:00:00Z,final,nhl-ana,nhl-edm,ANA,EDM,3,4,Rogers Place,REG,N,1
+2025030112,20252026,playoffs,2026-04-21,2026-04-21T23:30:00Z,final,nhl-bos,nhl-buf,BOS,BUF,4,2,KeyBank Center,REG,N,1
+2025030122,20252026,playoffs,2026-04-21,2026-04-21T23:00:00Z,final,nhl-mtl,nhl-tbl,MTL,TBL,2,3,Benchmark International Arena,OT,N,1
+2025030152,20252026,playoffs,2026-04-21,2026-04-22T02:00:00Z,final,nhl-lak,nhl-col,LAK,COL,1,2,Ball Arena,OT,N,1
+2025030172,20252026,playoffs,2026-04-21,2026-04-22T01:30:00Z,final,nhl-uta,nhl-vgk,UTA,VGK,3,2,T-Mobile Arena,REG,N,1
+2025030143,20252026,playoffs,2026-04-22,2026-04-22T23:00:00Z,final,nhl-pit,nhl-phi,PIT,PHI,2,5,Xfinity Mobile Arena,REG,N,1
+2025030163,20252026,playoffs,2026-04-22,2026-04-23T01:30:00Z,final,nhl-dal,nhl-min,DAL,MIN,4,3,Grand Casino Arena,OT,N,1
+2025030182,20252026,playoffs,2026-04-22,2026-04-23T02:00:00Z,final,nhl-ana,nhl-edm,ANA,EDM,6,4,Rogers Place,REG,N,1
+2025030113,20252026,playoffs,2026-04-23,2026-04-23T23:00:00Z,final,nhl-buf,nhl-bos,BUF,BOS,3,1,TD Garden,REG,N,1
+2025030133,20252026,playoffs,2026-04-23,2026-04-23T23:30:00Z,final,nhl-car,nhl-ott,CAR,OTT,2,1,Canadian Tire Centre,REG,N,1
+2025030153,20252026,playoffs,2026-04-23,2026-04-24T02:00:00Z,final,nhl-col,nhl-lak,COL,LAK,4,2,Crypto.com Arena,REG,N,1
+2025030123,20252026,playoffs,2026-04-24,2026-04-24T23:00:00Z,final,nhl-tbl,nhl-mtl,TBL,MTL,2,3,Centre Bell,OT,N,1
+2025030173,20252026,playoffs,2026-04-24,2026-04-25T01:30:00Z,final,nhl-vgk,nhl-uta,VGK,UTA,2,4,Delta Center,REG,N,1
+2025030183,20252026,playoffs,2026-04-24,2026-04-25T02:00:00Z,final,nhl-edm,nhl-ana,EDM,ANA,4,7,Honda Center,REG,N,1
+2025030134,20252026,playoffs,2026-04-25,2026-04-25T19:00:00Z,final,nhl-car,nhl-ott,CAR,OTT,4,2,Canadian Tire Centre,REG,N,1
+2025030144,20252026,playoffs,2026-04-25,2026-04-26T00:00:00Z,final,nhl-pit,nhl-phi,PIT,PHI,4,2,Xfinity Mobile Arena,REG,N,1
+2025030164,20252026,playoffs,2026-04-25,2026-04-25T21:30:00Z,final,nhl-dal,nhl-min,DAL,MIN,2,3,Grand Casino Arena,OT,N,1
+2025030114,20252026,playoffs,2026-04-26,2026-04-26T18:00:00Z,final,nhl-buf,nhl-bos,BUF,BOS,6,1,TD Garden,REG,N,1
+2025030124,20252026,playoffs,2026-04-26,2026-04-26T23:00:00Z,final,nhl-tbl,nhl-mtl,TBL,MTL,3,2,Centre Bell,REG,N,1
+2025030154,20252026,playoffs,2026-04-26,2026-04-26T20:30:00Z,final,nhl-col,nhl-lak,COL,LAK,5,1,Crypto.com Arena,REG,N,1
+2025030184,20252026,playoffs,2026-04-26,2026-04-27T01:30:00Z,final,nhl-edm,nhl-ana,EDM,ANA,3,4,Honda Center,OT,N,1
+2025030145,20252026,playoffs,2026-04-27,2026-04-27T23:00:00Z,final,nhl-phi,nhl-pit,PHI,PIT,2,3,PPG Paints Arena,REG,N,1
+2025030174,20252026,playoffs,2026-04-27,2026-04-28T01:30:00Z,final,nhl-vgk,nhl-uta,VGK,UTA,5,4,Delta Center,OT,N,1
+2025030115,20252026,playoffs,2026-04-28,2026-04-28T23:30:00Z,final,nhl-bos,nhl-buf,BOS,BUF,2,1,KeyBank Center,OT,N,1
+2025030165,20252026,playoffs,2026-04-28,2026-04-29T00:00:00Z,final,nhl-min,nhl-dal,MIN,DAL,4,2,American Airlines Center,REG,N,1
+2025030185,20252026,playoffs,2026-04-28,2026-04-29T02:00:00Z,final,nhl-ana,nhl-edm,ANA,EDM,1,4,Rogers Place,REG,N,1
+2025030125,20252026,playoffs,2026-04-29,2026-04-29T23:00:00Z,final,nhl-mtl,nhl-tbl,MTL,TBL,3,2,Benchmark International Arena,REG,N,1
+2025030146,20252026,playoffs,2026-04-29,2026-04-29T23:30:00Z,final,nhl-pit,nhl-phi,PIT,PHI,0,1,Xfinity Mobile Arena,OT,N,1
+2025030175,20252026,playoffs,2026-04-29,2026-04-30T02:00:00Z,final,nhl-uta,nhl-vgk,UTA,VGK,4,5,T-Mobile Arena,OT,N,1
+2025030166,20252026,playoffs,2026-04-30,2026-04-30T23:30:00Z,final,nhl-dal,nhl-min,DAL,MIN,2,5,Grand Casino Arena,REG,N,1
+2025030186,20252026,playoffs,2026-04-30,2026-05-01T02:00:00Z,final,nhl-edm,nhl-ana,EDM,ANA,2,5,Honda Center,REG,N,1
+2025030116,20252026,playoffs,2026-05-01,2026-05-01T23:30:00Z,final,nhl-buf,nhl-bos,BUF,BOS,4,1,TD Garden,REG,N,1
+2025030126,20252026,playoffs,2026-05-01,2026-05-01T23:00:00Z,final,nhl-tbl,nhl-mtl,TBL,MTL,1,0,Centre Bell,OT,N,1
+2025030176,20252026,playoffs,2026-05-01,2026-05-02T02:00:00Z,final,nhl-vgk,nhl-uta,VGK,UTA,5,1,Delta Center,REG,N,1
+2025030221,20252026,playoffs,2026-05-02,2026-05-03T00:00:00Z,final,nhl-phi,nhl-car,PHI,CAR,0,3,Lenovo Center,REG,N,1
+2025030127,20252026,playoffs,2026-05-03,2026-05-03T22:00:00Z,final,nhl-mtl,nhl-tbl,MTL,TBL,2,1,Benchmark International Arena,REG,N,1
+2025030231,20252026,playoffs,2026-05-03,2026-05-04T01:00:00Z,final,nhl-min,nhl-col,MIN,COL,6,9,Ball Arena,REG,N,1
+2025030222,20252026,playoffs,2026-05-04,2026-05-04T23:00:00Z,final,nhl-phi,nhl-car,PHI,CAR,2,3,Lenovo Center,OT,N,1
+2025030241,20252026,playoffs,2026-05-04,2026-05-05T01:30:00Z,final,nhl-ana,nhl-vgk,ANA,VGK,1,3,T-Mobile Arena,REG,N,1
+2025030232,20252026,playoffs,2026-05-05,2026-05-06T00:00:00Z,final,nhl-min,nhl-col,MIN,COL,2,5,Ball Arena,REG,N,1
+2025030211,20252026,playoffs,2026-05-06,2026-05-06T23:00:00Z,final,nhl-mtl,nhl-buf,MTL,BUF,2,4,KeyBank Center,REG,N,1
+2025030242,20252026,playoffs,2026-05-06,2026-05-07T01:30:00Z,final,nhl-ana,nhl-vgk,ANA,VGK,3,1,T-Mobile Arena,REG,N,1
+2025030223,20252026,playoffs,2026-05-07,2026-05-08T00:00:00Z,final,nhl-car,nhl-phi,CAR,PHI,4,1,Xfinity Mobile Arena,REG,N,1
+2025030212,20252026,playoffs,2026-05-08,2026-05-08T23:00:00Z,final,nhl-mtl,nhl-buf,MTL,BUF,5,1,KeyBank Center,REG,N,1
+2025030243,20252026,playoffs,2026-05-08,2026-05-09T01:30:00Z,final,nhl-vgk,nhl-ana,VGK,ANA,6,2,Honda Center,REG,N,1
+2025030224,20252026,playoffs,2026-05-09,2026-05-09T22:00:00Z,final,nhl-car,nhl-phi,CAR,PHI,3,2,Xfinity Mobile Arena,OT,N,1
+2025030233,20252026,playoffs,2026-05-09,2026-05-10T01:00:00Z,final,nhl-col,nhl-min,COL,MIN,1,5,Grand Casino Arena,REG,N,1
+2025030213,20252026,playoffs,2026-05-10,2026-05-10T23:00:00Z,final,nhl-buf,nhl-mtl,BUF,MTL,2,6,Centre Bell,REG,N,1
+2025030244,20252026,playoffs,2026-05-10,2026-05-11T01:30:00Z,final,nhl-vgk,nhl-ana,VGK,ANA,3,4,Honda Center,REG,N,1
+2025030234,20252026,playoffs,2026-05-11,2026-05-12T00:00:00Z,final,nhl-col,nhl-min,COL,MIN,5,2,Grand Casino Arena,REG,N,1
+2025030214,20252026,playoffs,2026-05-12,2026-05-12T23:00:00Z,final,nhl-buf,nhl-mtl,BUF,MTL,3,2,Centre Bell,REG,N,1
+2025030245,20252026,playoffs,2026-05-12,2026-05-13T01:30:00Z,final,nhl-ana,nhl-vgk,ANA,VGK,2,3,T-Mobile Arena,OT,N,1
+2025030235,20252026,playoffs,2026-05-13,2026-05-14T00:00:00Z,final,nhl-min,nhl-col,MIN,COL,3,4,Ball Arena,OT,N,1
+2025030215,20252026,playoffs,2026-05-14,2026-05-14T23:00:00Z,final,nhl-mtl,nhl-buf,MTL,BUF,6,3,KeyBank Center,REG,N,1
+2025030246,20252026,playoffs,2026-05-14,2026-05-15T01:30:00Z,final,nhl-vgk,nhl-ana,VGK,ANA,5,1,Honda Center,REG,N,1
+2025030216,20252026,playoffs,2026-05-16,2026-05-17T00:00:00Z,final,nhl-buf,nhl-mtl,BUF,MTL,8,3,Centre Bell,REG,N,1
+2025030217,20252026,playoffs,2026-05-18,2026-05-18T23:30:00Z,final,nhl-mtl,nhl-buf,MTL,BUF,3,2,KeyBank Center,OT,N,1
+2025030321,20252026,playoffs,2026-05-20,2026-05-21T00:00:00Z,final,nhl-vgk,nhl-col,VGK,COL,4,2,Ball Arena,REG,N,1
+2025030311,20252026,playoffs,2026-05-21,2026-05-22T00:00:00Z,final,nhl-mtl,nhl-car,MTL,CAR,6,2,Lenovo Center,REG,N,1
+2025030322,20252026,playoffs,2026-05-22,2026-05-23T00:00:00Z,final,nhl-vgk,nhl-col,VGK,COL,3,1,Ball Arena,REG,N,1
+2025030312,20252026,playoffs,2026-05-23,2026-05-23T23:00:00Z,final,nhl-mtl,nhl-car,MTL,CAR,2,3,Lenovo Center,OT,N,1
+2025030323,20252026,playoffs,2026-05-24,2026-05-25T00:00:00Z,final,nhl-col,nhl-vgk,COL,VGK,3,5,T-Mobile Arena,REG,N,1
+2025030313,20252026,playoffs,2026-05-25,2026-05-26T00:00:00Z,final,nhl-car,nhl-mtl,CAR,MTL,3,2,Centre Bell,OT,N,1
+2025030324,20252026,playoffs,2026-05-26,2026-05-27T01:00:00Z,final,nhl-col,nhl-vgk,COL,VGK,1,2,T-Mobile Arena,REG,N,1
+2025030314,20252026,playoffs,2026-05-27,2026-05-28T00:00:00Z,final,nhl-car,nhl-mtl,CAR,MTL,4,0,Centre Bell,REG,N,1
+2025030315,20252026,playoffs,2026-05-29,2026-05-30T00:00:00Z,final,nhl-mtl,nhl-car,MTL,CAR,1,6,Lenovo Center,REG,N,1
+2025030411,20252026,playoffs,2026-06-02,2026-06-03T00:00:00Z,final,nhl-vgk,nhl-car,VGK,CAR,5,4,Lenovo Center,REG,N,1
+2025030412,20252026,playoffs,2026-06-04,2026-06-05T00:00:00Z,final,nhl-vgk,nhl-car,VGK,CAR,3,4,Lenovo Center,OT,N,1
+2025030413,20252026,playoffs,2026-06-06,2026-06-07T00:00:00Z,final,nhl-car,nhl-vgk,CAR,VGK,4,5,T-Mobile Arena,OT,N,1
+2025030414,20252026,playoffs,2026-06-09,2026-06-10T00:00:00Z,final,nhl-car,nhl-vgk,CAR,VGK,5,3,T-Mobile Arena,REG,N,1
+2025030415,20252026,playoffs,2026-06-11,2026-06-12T00:00:00Z,final,nhl-vgk,nhl-car,VGK,CAR,2,4,Lenovo Center,REG,N,1
+2025030416,20252026,playoffs,2026-06-14,2026-06-15T00:00:00Z,final,nhl-car,nhl-vgk,CAR,VGK,3,0,T-Mobile Arena,REG,N,1

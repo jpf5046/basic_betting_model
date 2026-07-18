@@ -220,6 +220,11 @@ def main(argv: list[str] | None = None) -> None:
                    help="skip odds fetch + edge even if ODDS_API_KEY is set")
     p.add_argument("--offline", action="store_true",
                    help="ingest from cached raw feeds instead of hitting the APIs")
+    p.add_argument("--allow-partial", action="store_true",
+                   help="don't fail the run when only SOME sports' ingest fails "
+                        "(an off-season or unreachable feed) — the failure is still "
+                        "reported. Still fails if every sport's ingest fails, or if a "
+                        "later stage (grade/predict/odds/edge) fails on a fetched sport")
     args = p.parse_args(argv)
 
     on = date.fromisoformat(args.date) if args.date else datetime.now(EASTERN).date()
@@ -233,9 +238,28 @@ def main(argv: list[str] | None = None) -> None:
     print(f"\nreport -> {report}")
 
     failures = [r for r in results if r.status == "failed"]
-    if failures:
-        stages = ", ".join(f"{r.stage} {r.sport}" for r in failures)
-        sys.exit(f"{len(failures)} stage(s) failed: {stages}")
+    if not failures:
+        return
+
+    if args.allow_partial:
+        # An ingest failure is a dead/off-season/unreachable feed for one sport —
+        # tolerated so the sports that DID fetch still publish and commit. But a
+        # total feed outage (every sport's ingest failed) still deserves an alert,
+        # as does any later-stage failure, which signals a real code/data bug on a
+        # sport that fetched fine rather than a missing feed.
+        ingest_fails = [r for r in failures if r.stage == "ingest"]
+        all_ingest_failed = len(ingest_fails) == len(sports)
+        tolerated = [] if all_ingest_failed else ingest_fails
+        fatal = [r for r in failures if r not in tolerated]
+        if tolerated:
+            note = ", ".join(f"{r.sport}" for r in tolerated)
+            print(f"tolerated {len(tolerated)} ingest failure(s) (--allow-partial): {note}")
+        if not fatal:
+            return
+        failures = fatal
+
+    stages = ", ".join(f"{r.stage} {r.sport}" for r in failures)
+    sys.exit(f"{len(failures)} stage(s) failed: {stages}")
 
 
 if __name__ == "__main__":

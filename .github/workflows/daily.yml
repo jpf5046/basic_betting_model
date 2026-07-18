@@ -46,10 +46,26 @@ jobs:
       - name: Run the offline test suite first
         run: python3 -m unittest discover -s tests
 
+      # Prints whether the two optional inputs reached the run — length only,
+      # never the value (and GitHub masks secret values in logs anyway). If
+      # either says MISSING, it's a repo-settings problem, not a code one:
+      # the secret must live under Settings → Secrets and variables → Actions
+      # → Repository secrets (not an Environment / Dependabot / org scope).
+      - name: Check pipeline secrets are visible to this run
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY || vars.ODDS_API_KEY }}
+        run: |
+          if [ -n "$ODDS_API_KEY" ]; then echo "ODDS_API_KEY: present (${#ODDS_API_KEY} chars)"; else echo "ODDS_API_KEY: MISSING — odds + edge stages will be skipped"; fi
+          if [ -n "$DATABASE_URL" ]; then echo "DATABASE_URL: present"; else echo "DATABASE_URL: MISSING — Postgres mirror will be skipped (SQLite used locally)"; fi
+
+      # --allow-partial: an off-season or unreachable feed for one sport (e.g.
+      # NBA in July) is reported but does not red the whole run — the sports
+      # that fetched still publish and commit. A total feed outage (every sport
+      # fails) or a later-stage bug still fails the run and emails you.
       - name: Run the daily pipeline
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY || vars.ODDS_API_KEY }}
-        run: python3 run_daily.py
+        run: python3 run_daily.py --allow-partial
 
       # Idempotent full-season rebuild: keeps the labeled canonical frame in
       # sync with the finals that today's ingest just fetched.
@@ -78,6 +94,10 @@ jobs:
         run: |
           git config user.name "daily-pipeline[bot]"
           git config user.email "daily-pipeline@users.noreply.github.com"
-          git add data/predictions data/reports data/frames data/*/games_*.csv || true
+          # -A over the whole data/ tree: stages new + modified + deleted and,
+          # crucially, never aborts on a not-yet-existent subdir (data/frames
+          # before the first backfill) the way an explicit pathspec list does.
+          # .gitignore keeps data/raw/ and data/model.db out.
+          git add -A data || true
           git diff --cached --quiet || git commit -m "daily run $(date -u +%F)"
           git push

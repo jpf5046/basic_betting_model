@@ -4,3 +4,8 @@ __pycache__/
 data/raw/
 # local SQLite database mirror (rebuildable from the CSVs; absent when DATABASE_URL is set)
 data/model.db
+# console config lifecycle state (saved configs, live map, promotion history) —
+# single-user local state written by pipeline/api, not source
+data/configs/
+# python virtualenv for the console API layer
+.venv/

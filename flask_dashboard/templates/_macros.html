@@ -1,0 +1,112 @@
+{# Reusable snippets shared across pages. #}
+
+{% macro stat(value, label, tone="") %}
+<div class="card stat-card h-100 {{ tone }}">
+  <div class="card-body py-3">
+    <div class="stat-value">{{ value }}</div>
+    <div class="stat-label">{{ label }}</div>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro result_badge(result) %}
+  {%- if result == "WIN" -%}<span class="badge text-bg-success">WIN</span>
+  {%- elif result == "LOSS" -%}<span class="badge text-bg-danger">LOSS</span>
+  {%- elif result == "PUSH" -%}<span class="badge text-bg-secondary">PUSH</span>
+  {%- elif result == "VOID" -%}<span class="badge text-bg-light border">VOID</span>
+  {%- elif result == "PENDING" -%}<span class="badge text-bg-warning">PENDING</span>
+  {%- else -%}<span class="text-secondary">{{ result }}</span>{%- endif -%}
+{% endmacro %}
+
+{% macro status_badge(status) %}
+  {%- if status == "final" -%}<span class="badge text-bg-dark">final</span>
+  {%- elif status == "scheduled" -%}<span class="badge text-bg-info">scheduled</span>
+  {%- elif status == "postponed" -%}<span class="badge text-bg-warning">postponed</span>
+  {%- else -%}<span class="badge text-bg-light border">{{ status }}</span>{%- endif -%}
+{% endmacro %}
+
+{% macro pred_cell(p) %}
+  {%- if not p -%}
+    <span class="text-secondary small">no prediction</span>
+  {%- elif p.status != "ok" -%}
+    <span class="text-secondary small">couldn't run</span>
+  {%- else -%}
+    <div class="small">
+      <span class="fw-semibold">{{ p.winner_abbrev or "—" }}</span>
+      {% if p.win_prob is not none %}
+        <span class="text-secondary">{{ (p.win_prob * 100) | round(0, 'common') | int }}%</span>
+      {% endif %}
+      {% if p.disp_away is not none and p.disp_home is not none %}
+        <span class="text-secondary">· {{ p.disp_away }}-{{ p.disp_home }}</span>
+      {% endif %}
+      <div>
+        {% if p.ml_lean and p.ml_lean != "TOSS-UP" %}
+          <span class="badge rounded-pill text-bg-primary">{{ p.ml_lean }}</span>
+        {% elif p.ml_lean == "TOSS-UP" %}
+          <span class="badge rounded-pill text-bg-light border">toss-up</span>
+        {% endif %}
+        {% if p.total_lean and p.total_lean != "PASS" %}
+          <span class="badge rounded-pill text-bg-secondary">{{ p.total_lean }}</span>
+        {% endif %}
+        {% if p.published_ml or p.published_total %}
+          <span class="badge rounded-pill text-bg-success" title="published as a bet">● pick</span>
+        {% endif %}
+      </div>
+    </div>
+  {%- endif -%}
+{% endmacro %}
+
+{% macro games_table(rows, show_pred=False) %}
+<div class="table-responsive">
+  <table class="table table-sm table-hover table-tight align-middle mb-0">
+    <thead class="table-light">
+      <tr>
+        <th>Date</th>
+        <th>Matchup</th>
+        <th class="text-center">Score</th>
+        <th>Status</th>
+        <th>Venue</th>
+        {% if show_pred %}<th>Model</th>{% endif %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for g in rows %}
+      <tr>
+        <td class="text-nowrap"><code>{{ g.date }}</code></td>
+        <td class="text-nowrap">
+          <span title="{{ g.away_name }}">{{ g.away_abbrev }}</span>
+          <span class="text-secondary">@</span>
+          <span title="{{ g.home_name }}">{{ g.home_abbrev }}</span>
+          {% if g.doubleheader == "Y" %}<span class="badge text-bg-light border ms-1">DH</span>{% endif %}
+        </td>
+        <td class="text-center text-nowrap">
+          {% if g.away_score is not none and g.home_score is not none %}
+            {{ g.away_score }}–{{ g.home_score }}
+            {% if g.ot %}<span class="text-secondary small">({{ g.ot }})</span>{% endif %}
+          {% else %}<span class="text-secondary">—</span>{% endif %}
+        </td>
+        <td>{{ status_badge(g.status) }}</td>
+        <td class="small text-secondary text-truncate" style="max-width:14rem">{{ g.venue }}</td>
+        {% if show_pred %}<td>{{ pred_cell(g.prediction) }}</td>{% endif %}
+      </tr>
+      {% else %}
+      <tr><td colspan="{{ 6 if show_pred else 5 }}" class="text-center text-secondary py-4">No games.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endmacro %}
+
+{% macro record_row(name, b) %}
+<tr>
+  <td class="fw-semibold">{{ name }}</td>
+  <td class="text-center">{{ b.wins }}-{{ b.losses }}{% if b.pushes %}-{{ b.pushes }}{% endif %}</td>
+  <td class="text-center">{{ b.graded }}</td>
+  <td class="text-end {{ 'text-success' if b.pnl > 0 else ('text-danger' if b.pnl < 0 else '') }}">
+    {{ b.pnl | money }}
+  </td>
+  <td class="text-end {{ 'text-success' if b.roi and b.roi > 0 else ('text-danger' if b.roi and b.roi < 0 else '') }}">
+    {{ b.roi | pct }}
+  </td>
+</tr>
+{% endmacro %}

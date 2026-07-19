@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+{% from "_macros.html" import stat, record_row, pred_cell, status_badge %}
+{% block title %}Overview · Model Dashboard{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-wrap justify-content-between align-items-end mb-3">
+  <div>
+    <h1 class="h3 mb-1">Overview</h1>
+    <p class="text-secondary mb-0">Everything the pipeline knows, at a glance.</p>
+  </div>
+</div>
+
+{% set o = perf.overall %}
+{% set total_games = counts | sum(attribute='total') %}
+{% set today_games = counts | sum(attribute='today') %}
+
+<div class="row g-3 mb-4">
+  <div class="col-6 col-lg-2">{{ stat(today_games, "Games today") }}</div>
+  <div class="col-6 col-lg-2">{{ stat("{:,}".format(total_games), "Games on file") }}</div>
+  <div class="col-6 col-lg-2">
+    {{ stat("%d-%d%s" % (o.wins, o.losses, ("-%d" % o.pushes) if o.pushes else ""), "Pick record") }}
+  </div>
+  <div class="col-6 col-lg-2">
+    {{ stat(o.roi | pct, "ROI (flat $100)", "border-success" if o.roi and o.roi > 0 else ("border-danger" if o.roi and o.roi < 0 else "")) }}
+  </div>
+  <div class="col-6 col-lg-2">{{ stat(o.pnl | money, "Net P&L") }}</div>
+  <div class="col-6 col-lg-2">{{ stat(accuracy.overall.pct | pct, "Winner accuracy") }}</div>
+</div>
+
+<div class="row g-4">
+  <!-- P&L curve -->
+  <div class="col-12 col-xl-7">
+    <div class="card h-100">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <span class="fw-semibold">Cumulative P&amp;L</span>
+        <a class="small" href="/performance">Full performance →</a>
+      </div>
+      <div class="card-body">
+        {% if spark.empty %}
+          <p class="text-secondary mb-0">No graded picks yet — the curve appears once
+          yesterday's picks are scored.</p>
+        {% else %}
+          {% include "_sparkline.html" %}
+          <p class="text-secondary small mb-0 mt-2">
+            {{ o.graded }} graded pick(s) across {{ perf.curve | length }} settled bets.
+          </p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Games on file per sport -->
+  <div class="col-12 col-xl-5">
+    <div class="card h-100">
+      <div class="card-header fw-semibold">Games on file</div>
+      <div class="table-responsive">
+        <table class="table table-sm table-tight align-middle mb-0">
+          <thead class="table-light">
+            <tr><th>Sport</th><th class="text-end">Total</th><th class="text-end">Past</th>
+                <th class="text-end">Today</th><th class="text-end">Future</th><th>Range</th></tr>
+          </thead>
+          <tbody>
+            {% for c in counts %}
+            <tr>
+              <td><a href="/games?sport={{ c.sport }}&when=today">{{ c.sport }}</a></td>
+              <td class="text-end">{{ "{:,}".format(c.total) }}</td>
+              <td class="text-end">{{ "{:,}".format(c.final) }}</td>
+              <td class="text-end fw-semibold">{{ c.today }}</td>
+              <td class="text-end">{{ "{:,}".format(c.scheduled) }}</td>
+              <td class="small text-secondary text-nowrap">{{ c.first_date }} → {{ c.last_date }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Record by sport -->
+  <div class="col-12 col-lg-6">
+    <div class="card h-100">
+      <div class="card-header fw-semibold">Record by sport</div>
+      <div class="table-responsive">
+        <table class="table table-sm table-tight align-middle mb-0">
+          <thead class="table-light">
+            <tr><th>Sport</th><th class="text-center">W-L</th><th class="text-center">Graded</th>
+                <th class="text-end">P&amp;L</th><th class="text-end">ROI</th></tr>
+          </thead>
+          <tbody>
+            {% for sport, b in perf.by_sport.items() %}
+              {{ record_row(sport, b) }}
+            {% else %}
+            <tr><td colspan="5" class="text-center text-secondary py-3">No graded picks yet.</td></tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recent runs -->
+  <div class="col-12 col-lg-6">
+    <div class="card h-100">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <span class="fw-semibold">Recent daily runs</span>
+        <a class="small" href="/runs">All runs →</a>
+      </div>
+      <ul class="list-group list-group-flush">
+        {% for r in runs %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <a href="/runs?date={{ r.date }}"><code>{{ r.date }}</code></a>
+          <span>
+            <span class="badge text-bg-secondary">{{ r.sports | join(", ") }}</span>
+            <span class="text-success">{{ r.tally.ok }} ok</span>
+            {% if r.tally.failed %}<span class="text-danger">{{ r.tally.failed }} failed</span>{% endif %}
+            <span class="text-secondary small">{{ r.picks }} picks</span>
+          </span>
+        </li>
+        {% else %}
+        <li class="list-group-item text-secondary">No runs recorded yet.</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Today's slate preview -->
+<h2 class="h5 mt-4 mb-3">Today's slate <span class="text-secondary fw-normal">({{ today }})</span></h2>
+{% if todays %}
+<div class="row g-3">
+  {% for block in todays %}
+  <div class="col-12 col-lg-6">
+    <div class="card">
+      <div class="card-header d-flex justify-content-between">
+        <span class="fw-semibold">{{ block.sport }}</span>
+        <span class="text-secondary small">{{ block.games | length }} game(s)</span>
+      </div>
+      <ul class="list-group list-group-flush">
+        {% for g in block.games %}
+        <li class="list-group-item d-flex justify-content-between align-items-center py-2">
+          <span>{{ g.away_abbrev }} <span class="text-secondary">@</span> {{ g.home_abbrev }}
+            {{ status_badge(g.status) }}</span>
+          <span>{{ pred_cell(g.prediction) }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<div class="alert alert-secondary">No games scheduled today across the tracked sports.</div>
+{% endif %}
+
+<!-- DB status -->
+<div class="card mt-4">
+  <div class="card-body d-flex flex-wrap justify-content-between align-items-center">
+    <div>
+      <span class="fw-semibold">Database mirror:</span>
+      {% if db.ok %}
+        <span class="text-secondary">{{ db.target }}</span>
+        {% for t, n in db.counts.items() %}
+          <span class="badge text-bg-light border ms-1">{{ t }}: {{ "{:,}".format(n) }}</span>
+        {% endfor %}
+      {% else %}
+        <span class="text-secondary">not built — {{ db.error }}</span>
+      {% endif %}
+    </div>
+    <a class="small" href="/database">Schema &amp; relationships →</a>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% from "_macros.html" import stat, record_row %}
+{% block title %}Performance · Model Dashboard{% endblock %}
+
+{% block content %}
+<h1 class="h3 mb-1">Performance</h1>
+<p class="text-secondary">How the published picks have actually done, graded at market
+prices for a flat $100 stake. Only settled bets (WIN/LOSS/PUSH) count toward the record
+and ROI; VOID/PENDING are shown but never distort the numbers.</p>
+
+{% set o = perf.overall %}
+{% if not perf.has_grades %}
+  <div class="alert alert-warning">No graded picks yet. Numbers appear here once the
+  pipeline scores a day's published picks against the finals.</div>
+{% endif %}
+
+<div class="row g-3 mb-4">
+  <div class="col-6 col-lg-2">{{ stat("%d-%d%s" % (o.wins, o.losses, ("-%d" % o.pushes) if o.pushes else ""), "Record (W-L-P)") }}</div>
+  <div class="col-6 col-lg-2">{{ stat(o.graded, "Settled bets") }}</div>
+  <div class="col-6 col-lg-2">{{ stat(o.roi | pct, "ROI") }}</div>
+  <div class="col-6 col-lg-2">{{ stat(o.pnl | money, "Net P&L") }}</div>
+  <div class="col-6 col-lg-2">{{ stat(accuracy.overall.pct | pct, "Winner accuracy") }}</div>
+  <div class="col-6 col-lg-2">{{ stat(o.pending + o.voids, "Void / pending") }}</div>
+</div>
+
+<div class="card mb-4">
+  <div class="card-header fw-semibold">Cumulative P&amp;L</div>
+  <div class="card-body">
+    {% if spark.empty %}
+      <p class="text-secondary mb-0">No settled bets yet.</p>
+    {% else %}
+      {% include "_sparkline.html" %}
+    {% endif %}
+  </div>
+</div>
+
+<div class="row g-4">
+  <div class="col-12 col-lg-6">
+    <div class="card h-100">
+      <div class="card-header fw-semibold">By sport</div>
+      <div class="table-responsive">
+        <table class="table table-sm table-tight align-middle mb-0">
+          <thead class="table-light"><tr><th>Sport</th><th class="text-center">W-L</th>
+            <th class="text-center">Graded</th><th class="text-end">P&amp;L</th><th class="text-end">ROI</th></tr></thead>
+          <tbody>
+            {% for k, b in perf.by_sport.items() %}{{ record_row(k, b) }}
+            {% else %}<tr><td colspan="5" class="text-center text-secondary py-3">No data.</td></tr>{% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 col-lg-6">
+    <div class="card h-100">
+      <div class="card-header fw-semibold">By bet type</div>
+      <div class="table-responsive">
+        <table class="table table-sm table-tight align-middle mb-0">
+          <thead class="table-light"><tr><th>Bet</th><th class="text-center">W-L</th>
+            <th class="text-center">Graded</th><th class="text-end">P&amp;L</th><th class="text-end">ROI</th></tr></thead>
+          <tbody>
+            {% for k, b in perf.by_bet_type.items() %}{{ record_row(k, b) }}
+            {% else %}<tr><td colspan="5" class="text-center text-secondary py-3">No data.</td></tr>{% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 col-lg-6">
+    <div class="card h-100">
+      <div class="card-header fw-semibold">By confidence tier</div>
+      <div class="table-responsive">
+        <table class="table table-sm table-tight align-middle mb-0">
+          <thead class="table-light"><tr><th>Tier</th><th class="text-center">W-L</th>
+            <th class="text-center">Graded</th><th class="text-end">P&amp;L</th><th class="text-end">ROI</th></tr></thead>
+          <tbody>
+            {% for k, b in perf.by_confidence.items() %}{{ record_row(k, b) }}
+            {% else %}<tr><td colspan="5" class="text-center text-secondary py-3">No data.</td></tr>{% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 col-lg-6">
+    <div class="card h-100">
+      <div class="card-header fw-semibold">Winner accuracy by sport
+        <span class="text-secondary fw-normal small">— did the predicted winner win?</span></div>
+      <div class="table-responsive">
+        <table class="table table-sm table-tight align-middle mb-0">
+          <thead class="table-light"><tr><th>Sport</th><th class="text-center">Correct</th>
+            <th class="text-center">Games</th><th class="text-end">Accuracy</th></tr></thead>
+          <tbody>
+            {% for k, a in accuracy.by_sport.items() %}
+            <tr><td class="fw-semibold">{{ k }}</td><td class="text-center">{{ a.correct }}</td>
+              <td class="text-center">{{ a.total }}</td><td class="text-end">{{ a.pct | pct }}</td></tr>
+            {% else %}<tr><td colspan="4" class="text-center text-secondary py-3">
+              No finished predicted games yet.</td></tr>{% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="text-secondary small mt-3">Source: <code>data/predictions/&lt;sport&gt;/grades_*.csv</code>
+(ROI &amp; record) and predicted-vs-final joins (accuracy). Same numbers the pipeline's grader writes.</p>
+{% endblock %}

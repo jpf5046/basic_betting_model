@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% from "_macros.html" import status_badge %}
+{% block title %}Daily Runs · Model Dashboard{% endblock %}
+
+{% block content %}
+<h1 class="h3 mb-1">Daily Runs</h1>
+<p class="text-secondary">Each morning the pipeline ingests scores, grades yesterday's picks,
+predicts today, and pulls odds. Every run leaves a report under
+<code>data/reports/</code>; this is that history.</p>
+
+<div class="row g-4">
+  <div class="col-12 col-lg-4">
+    <div class="card">
+      <div class="card-header fw-semibold">Runs ({{ runs | length }})</div>
+      <div class="list-group list-group-flush">
+        {% for r in runs %}
+        <a class="list-group-item list-group-item-action {{ 'active' if r.date == selected }}"
+           href="/runs?date={{ r.date }}">
+          <div class="d-flex justify-content-between">
+            <code class="{{ 'text-white' if r.date == selected }}">{{ r.date }}</code>
+            <span class="small">
+              <span class="{{ '' if r.date == selected else 'text-success' }}">{{ r.tally.ok }} ok</span>
+              {% if r.tally.failed %}· <span class="{{ '' if r.date == selected else 'text-danger' }}">{{ r.tally.failed }} fail</span>{% endif %}
+            </span>
+          </div>
+          <div class="small {{ 'text-white-50' if r.date == selected else 'text-secondary' }}">
+            {{ r.sports | join(", ") }} · {{ r.picks }} picks · {{ r.predictions }} predictions
+          </div>
+        </a>
+        {% else %}
+        <div class="list-group-item text-secondary">No runs recorded yet.</div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 col-lg-8">
+    {% if not selected %}
+      <div class="alert alert-secondary">Select a run to see its stage log and outputs.</div>
+    {% else %}
+      <div class="card mb-3">
+        <div class="card-header d-flex justify-content-between">
+          <span class="fw-semibold">Run {{ detail.date }}</span>
+          <span class="text-secondary small">{{ detail.generated }}</span>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-sm table-tight align-middle mb-0">
+            <thead class="table-light">
+              <tr><th>Sport</th>{% for st in ["ingest","grade","predict","odds","edge"] %}
+                <th class="text-center">{{ st }}</th>{% endfor %}</tr>
+            </thead>
+            <tbody>
+              {% for sport, stages in detail.grid.items() %}
+              <tr>
+                <td class="fw-semibold">{{ sport }}</td>
+                {% for st in ["ingest","grade","predict","odds","edge"] %}
+                <td class="text-center">
+                  {% set cell = stages.get(st) %}
+                  {% if cell %}
+                    {%- if cell.status == 'ok' -%}<span class="badge text-bg-success">ok</span>
+                    {%- elif cell.status == 'failed' -%}<span class="badge text-bg-danger">fail</span>
+                    {%- elif cell.status == 'skipped' -%}<span class="badge text-bg-light border">skip</span>
+                    {%- else -%}<span class="badge text-bg-secondary">{{ cell.status }}</span>{%- endif -%}
+                  {% else %}<span class="text-secondary">·</span>{% endif %}
+                </td>
+                {% endfor %}
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {% set section_titles = {"grade": "Yesterday's grade card", "predict": "Today's pick sheet", "edge": "Model vs market (edge)"} %}
+      {% for key in ["grade", "predict", "edge"] %}
+        {% if detail.sections[key] %}
+        <div class="card mb-3">
+          <div class="card-header fw-semibold">{{ section_titles[key] }}</div>
+          <div class="card-body">
+            {% for block in detail.sections[key] %}
+              <div class="text-secondary small mb-1">{{ block.sport }}</div>
+              <pre class="bg-body-tertiary border rounded p-2 mb-3"><code>{{ block.output }}</code></pre>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+      {% endfor %}
+
+      {% if detail.failures %}
+      <div class="card mb-3 border-danger">
+        <div class="card-header fw-semibold text-danger">Failures ({{ detail.failures | length }})</div>
+        <div class="card-body">
+          {% for f in detail.failures %}
+            <div class="fw-semibold small">{{ f.title }}</div>
+            <pre class="bg-body-tertiary border rounded p-2 mb-3"><code>{{ f.output }}</code></pre>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

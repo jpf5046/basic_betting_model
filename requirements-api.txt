@@ -1,0 +1,10 @@
+# Console API layer dependencies (PLAN.md §8) — the ONLY third-party
+# packages in the repo. The pipeline itself stays stdlib-only; these are
+# needed solely to serve `pipeline/api`.
+#
+#   python3 -m venv .venv && . .venv/bin/activate
+#   pip install -r requirements-api.txt
+#   uvicorn pipeline.api:app          # then open http://127.0.0.1:8000
+#
+fastapi==0.115.6
+uvicorn[standard]==0.34.0

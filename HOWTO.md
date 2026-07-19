@@ -309,12 +309,69 @@ the live odds adapter writes them, so `pipeline.odds.edge` and
 python3 -m unittest discover -s tests          # all (offline, no network)
 python3 -m unittest tests.test_my_model -v     # one suite
 python3 -m unittest tests.test_backfill tests.test_db tests.test_backfill_external -v
+python3 -m unittest tests.test_api -v          # console file-parsing/store layer (no fastapi needed)
 ```
 
 All suites run from committed fixture feeds — no fetch required. The
 Postgres-specific test (`tests.test_db.TestPostgres`) is skipped unless
 `TEST_DATABASE_URL` points at a reachable PostgreSQL — it's a real round-trip
 against the live server, not a mock, so it needs one.
+
+---
+
+## 9. The console (web UI) — watch and drive the pipeline
+
+Everything above is a CLI. The **My Model console** (PLAN.md §8) is a
+single-user web app that reads the very same artifacts under `data/` and can
+trigger the same CLIs — it never re-implements any model logic, so the console
+and the command line can never disagree.
+
+It is the one part of the repo that takes third-party dependencies. The
+pipeline itself stays stdlib-only; the console's `fastapi` + `uvicorn` live in
+`requirements-api.txt`.
+
+```bash
+python3 -m venv .venv && . .venv/bin/activate
+pip install -r requirements-api.txt
+
+uvicorn pipeline.api:app                 # then open http://127.0.0.1:8000
+#   or, equivalently:
+python3 -m pipeline.api --port 8000      # add --reload while developing
+```
+
+Point it at this repo's `data/` (it reads there by default) and you get nine
+screens, all backed by real files — never fabricated numbers:
+
+| Screen | What it shows / does | Reads |
+|---|---|---|
+| **Parameters** | the config editor (weight sliders + Σ/renormalize, adjustments, gates), validated by the real `validate_params` | `pipeline/models/config.py` |
+| **Backtest** | gated behind an honest "not yet available" state until `python -m pipeline backtest` exists (PLAN.md §6/§9) | — |
+| **Configs** | list / duplicate / load / set-live / archive real config files, with the live map, diffs, and promotion history | `data/configs/` |
+| **Live** | today's real pick sheet per sport + the grade summary; off-season cards where there's no slate | `picks_/predictions_<date>.csv`, grades |
+| **Runs** | every `daily_<date>.md` — per-sport stage grid, row counts, expandable failure tracebacks; **triggers a daily run** | `data/reports/` |
+| **Picks & Predictions** | full predictions table (incl. TOSS-UP/PASS non-picks), team names resolved, with a per-row **reasoning ingredients** drawer | predictions CSV + `data/frames/` |
+| **Database** | `pipeline.db status` row counts and a paginated, read-only view of `teams`/`games`/`frames`; **loads the DB** | `data/model.db` (or `DATABASE_URL`) |
+| **Performance / ROI** | cumulative P&L, record, ROI, and breakdowns — empty-state until grades exist | `grades_<date>.csv` |
+| **Model weights** | the active weights + every tunable constant per sport, as a read-only summary | live config / factory defaults |
+
+**Reasoning drawer.** `method_details` is empty in the predictions CSV today,
+so the drawer reconstructs the *reasoning ingredients* from what's on disk: the
+active config's five weights (as a stacked bar), this matchup's frame features
+(season scoring, common opponents, L10 form, H2H, home adv, travel), and the
+model's predicted score / win-prob / confidence. When a run does record
+`method_details`, it's shown; when it doesn't, you get a clear
+"detailed reasoning not recorded for this run" note — never a blank or a crash.
+
+**Triggering jobs.** The Runs and Database screens can kick off the real CLIs
+(`run_daily.py`, `pipeline.db load`, `pipeline.backfill`, `pipeline.models
+predict`) as background subprocesses; the UI polls a job-status endpoint and
+auto-refreshes the affected screen when the job finishes. Every parameter is
+whitelisted (date format, known sport keys) before a command line is built —
+nothing the browser sends reaches a shell.
+
+Config lifecycle files (`data/configs/`) and the SQLite mirror
+(`data/model.db`) are single-user local state and are gitignored, exactly like
+the raw feed cache.
 
 ---
 
@@ -369,6 +426,8 @@ we're ready. Still open from §7: standings snapshots.
 | `data/reports/daily_<date>.md` | the orchestrator's daily report | regenerated (commit if you want history) |
 | `data/frames/<sport>_<season>.csv` | labeled canonical frame (backfill) | regenerated |
 | `data/model.db` | local SQLite mirror of teams/games/frames | no (gitignored) — absent when `DATABASE_URL` is set |
+| `data/configs/` | console config lifecycle (saved configs, live map, promotion history) | no (gitignored) — single-user local state written by `pipeline/api` |
+| `pipeline/api/` | the console: FastAPI app + static SPA (§9) | yes — the only package with third-party deps (`requirements-api.txt`) |
 
 ## Troubleshooting
 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Model — Console</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230B0E13'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='monospace' font-size='15' font-weight='700' fill='%234C8DFF'%3EMM%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div id="app">
+    <nav class="sidebar">
+      <div class="wordmark">
+        <div class="mm">MY <b>MODEL</b></div>
+        <div class="sub">researcher console</div>
+      </div>
+      <div class="nav-group">
+        <div class="label">Researcher</div>
+        <div id="nav-researcher"></div>
+      </div>
+      <div class="nav-group">
+        <div class="label">Observability</div>
+        <div id="nav-observ"></div>
+      </div>
+      <div class="nav-live">
+        <div class="label">Live configs</div>
+        <div id="nav-live-list"></div>
+      </div>
+    </nav>
+    <main>
+      <header class="topbar">
+        <div class="title">
+          <h1 id="screen-title">Loading…</h1>
+          <p id="screen-sub"></p>
+        </div>
+        <div class="chips" id="live-chips"></div>
+      </header>
+      <div class="content" id="content"></div>
+    </main>
+  </div>
+  <div id="toasts"></div>
+  <div id="modal-root"></div>
+  <script src="/app.js"></script>
+</body>
+</html>

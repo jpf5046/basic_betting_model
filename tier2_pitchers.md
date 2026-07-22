@@ -146,3 +146,67 @@ once ace-vs-scrub games are distinguishable?), and totals hit-rate. Tune
 5. **Backtest** — A/B vs v2; tune; report against the coin-flip baseline.
 6. **Wire-up** — daily fetch writes probables; dashboard shows the pitching
    matchup + factors.
+
+---
+
+# Next steps once this PR is merged
+
+Concrete actions, in order. Items marked **[you]** need a networked machine
+(the sandbox blocks `statsapi.mlb.com`); the rest I can do here.
+
+## 1. Start getting value from v2 now (optional, low effort)
+The Tier 1 work is usable immediately — v2 fixes the OVER bias and makes the
+totals marginally profitable. To run the daily pipeline with it:
+
+```
+python3 -m pipeline.models predict --sport MLB \
+    --model my_model_v2 --config configs/mlb_v2.json
+```
+
+Decide whether to switch the scheduled daily run over to `my_model_v2`
+(`.github/workflows/daily.yml` / `run_daily.py`) or keep running v1 alongside
+it for a live head-to-head. My recommendation: run both for a couple of weeks
+and compare graded results before cutting over.
+
+## 2. Capture two real API samples **[you]** — unblocks Phase 1
+This is the one thing that makes the pitcher ingest correct on the first pass
+instead of the second. On a networked machine, save these two responses and
+commit them as fixtures:
+
+```
+# one day of the schedule with probable pitchers
+curl -s "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-06-01&hydrate=probablePitcher" \
+    > tests/fixtures/mlb_schedule_pp_sample.json
+
+# one pitcher's game log (pick any starter's people id, e.g. 592789)
+curl -s "https://statsapi.mlb.com/api/v1/people/592789/stats?stats=gameLog&group=pitching&season=2026" \
+    > tests/fixtures/mlb_pitcher_gamelog_sample.json
+```
+
+Commit them to a new branch (or hand them to me) and I'll build Phase 1
+(ingest + parsers + offline tests) against the real shapes.
+
+## 3. Backfill the season's starter data **[you]** — enables the Tier 2 backtest
+Once the ingest exists, run it on a networked machine to produce
+`data/mlb/game_starters_2026.csv` and `data/mlb/pitcher_starts_2026.csv` for
+the full season. Without this the Tier 2 A/B can't run (the harness needs
+historical starters to replay).
+
+## 4. Then Phases 2–5 (I build, here)
+Context extension → `starter_strength` feature → the `w_starter` multiplier in
+v2 → harness A/B. The gate to ship: **ML accuracy above 51.3% and Brier/
+log-loss below the coin-flip line (0.25 / 0.6931).** If pitchers don't clear
+that bar, we stop and reconsider rather than ship noise.
+
+## 5. Tune and re-tune **[you or me]**
+`configs/mlb_v2.json` (and the new `w_starter` / `prior_ip`) are data, not
+code — rerun `python3 -m pipeline.backtest` as the season progresses and
+adjust. The park factors in particular are approximate first-pass values and
+should be fit against results.
+
+## Not in scope here (future tiers, noted so they aren't forgotten)
+- **Bullpen** strength / recent usage — starters cover only ~5 IP.
+- **Weather** (wind, temperature) and **lineup/injury** data.
+- **FIP** instead of RA9, and park/opponent-neutralizing the starter rate.
+- Replacing the hand-weighted blend with a fitted model (Elo / Poisson
+  regression / gradient boosting) once there are enough real features.

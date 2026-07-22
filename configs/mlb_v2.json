@@ -1,0 +1,23 @@
+{
+  "_comment": "Tuned parameters for my_model_v2 (MLB), produced by pipeline.backtest over the 2026 season. Deep-merges over the factory defaults in pipeline/models/config.py. v1 (my_model) is unaffected — it never reads nb_dispersion or park_factors, and it keeps the my_model.md totals thresholds. Regenerate/retune whenever the backtest window changes. Usage: python3 -m pipeline.backtest --sport MLB --model my_model_v2 --config configs/mlb_v2.json",
+
+  "MLB": {
+    "nb_dispersion": 2.0,
+
+    "totals": {"over": 9.5, "under": 8.5},
+
+    "park_factors": {
+      "mlb-col": 1.15,
+      "mlb-cin": 1.05,
+      "mlb-bos": 1.03,
+      "mlb-kc": 1.02,
+      "mlb-phi": 1.02,
+      "mlb-cle": 0.98,
+      "mlb-nym": 0.97,
+      "mlb-mia": 0.96,
+      "mlb-sd": 0.95,
+      "mlb-sf": 0.93,
+      "mlb-sea": 0.93
+    }
+  }
+}

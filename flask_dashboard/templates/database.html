@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+{% block title %}Database · Model Dashboard{% endblock %}
+
+{% block content %}
+<h1 class="h3 mb-1">Database</h1>
+<p class="text-secondary">What the storage layer holds, column by column, and how the pieces
+connect. The flat CSVs under <code>data/</code> are the source of truth; the SQL tables are an
+optional queryable mirror (<code>python3 -m pipeline.db load</code>).</p>
+
+<!-- Live mirror status -->
+<div class="alert {{ 'alert-success' if db.ok else 'alert-secondary' }} d-flex flex-wrap gap-2 align-items-center">
+  <span class="fw-semibold">Mirror:</span>
+  {% if db.ok %}
+    <span>{{ db.target }}</span>
+    {% for t, n in db.counts.items() %}
+      <span class="badge text-bg-dark">{{ t }} · {{ "{:,}".format(n) }} rows</span>
+    {% endfor %}
+  {% else %}
+    <span>Not built yet — {{ db.error }}. The schema below is still accurate; the mirror is
+    optional.</span>
+  {% endif %}
+</div>
+
+<!-- ER diagram (inline SVG, no JS) -->
+<div class="card mb-4">
+  <div class="card-header fw-semibold">Relationship diagram <span class="text-secondary fw-normal small">— one-to-many links</span></div>
+  <div class="card-body">
+    <div class="table-responsive">
+    <svg viewBox="0 0 880 400" width="100%" style="min-width:640px; max-width:900px"
+         role="img" aria-label="Entity relationship diagram">
+      <defs>
+        <style>
+          .box { fill: var(--bs-body-bg); stroke: var(--bs-border-color); }
+          .box-db { stroke: #6f42c1; stroke-width: 2; }
+          .box-csv { stroke: #0d6efd; stroke-width: 2; stroke-dasharray: 5 3; }
+          .t { fill: var(--bs-body-color); font: 600 14px var(--bs-font-sans-serif); }
+          .s { fill: var(--bs-secondary-color); font: 11px var(--bs-font-monospace); }
+          .rel { stroke: var(--bs-secondary-color); stroke-width: 1.5; fill: none; }
+          .card-lbl { fill: var(--bs-secondary-color); font: 11px var(--bs-font-sans-serif); }
+        </style>
+      </defs>
+
+      <!-- links (drawn first, under the boxes) -->
+      <line class="rel" x1="170" y1="185" x2="250" y2="70"/>
+      <line class="rel" x1="170" y1="215" x2="250" y2="320"/>
+      <line class="rel" x1="325" y1="110" x2="325" y2="280"/>
+      <line class="rel" x1="400" y1="70"  x2="460" y2="70"/>
+      <line class="rel" x1="630" y1="70"  x2="690" y2="70"/>
+      <line class="rel" x1="765" y1="110" x2="765" y2="280"/>
+      <!-- crow's-foot-ish cardinality labels -->
+      <text class="card-lbl" x="182" y="180">1</text><text class="card-lbl" x="232" y="82">N</text>
+      <text class="card-lbl" x="182" y="230">1</text><text class="card-lbl" x="232" y="312">N</text>
+      <text class="card-lbl" x="330" y="135">1</text><text class="card-lbl" x="330" y="275">1</text>
+      <text class="card-lbl" x="405" y="62">1</text><text class="card-lbl" x="447" y="62">N</text>
+      <text class="card-lbl" x="635" y="62">1</text><text class="card-lbl" x="677" y="62">N</text>
+      <text class="card-lbl" x="770" y="135">1</text><text class="card-lbl" x="770" y="275">1</text>
+
+      <!-- boxes -->
+      <g>
+        <rect class="box box-db" x="20"  y="150" width="150" height="100" rx="8"/>
+        <text class="t" x="95" y="185" text-anchor="middle">teams</text>
+        <text class="s" x="95" y="205" text-anchor="middle">PK team_id</text>
+        <text class="card-lbl" x="95" y="230" text-anchor="middle">the hub</text>
+      </g>
+      <g>
+        <rect class="box box-db" x="250" y="30" width="150" height="80" rx="8"/>
+        <text class="t" x="325" y="62" text-anchor="middle">games</text>
+        <text class="s" x="325" y="82" text-anchor="middle">PK sport,game_id</text>
+      </g>
+      <g>
+        <rect class="box box-db" x="250" y="280" width="150" height="80" rx="8"/>
+        <text class="t" x="325" y="312" text-anchor="middle">frames</text>
+        <text class="s" x="325" y="332" text-anchor="middle">features (JSON)</text>
+      </g>
+      <g>
+        <rect class="box box-csv" x="460" y="30" width="170" height="80" rx="8"/>
+        <text class="t" x="545" y="62" text-anchor="middle">predictions</text>
+        <text class="s" x="545" y="82" text-anchor="middle">CSV · by date</text>
+      </g>
+      <g>
+        <rect class="box box-csv" x="690" y="30" width="150" height="80" rx="8"/>
+        <text class="t" x="765" y="62" text-anchor="middle">picks</text>
+        <text class="s" x="765" y="82" text-anchor="middle">CSV · published</text>
+      </g>
+      <g>
+        <rect class="box box-csv" x="690" y="280" width="150" height="80" rx="8"/>
+        <text class="t" x="765" y="312" text-anchor="middle">grades</text>
+        <text class="s" x="765" y="332" text-anchor="middle">CSV · scored</text>
+      </g>
+    </svg>
+    </div>
+    <div class="small text-secondary mt-2">
+      <span class="badge badge-pk">&nbsp;</span> solid = SQL table &nbsp;·&nbsp;
+      <span class="badge badge-fk">&nbsp;</span> dashed = CSV dataset (not yet a table) &nbsp;·&nbsp;
+      <strong>1 → N</strong> reads "one parent, many children".
+    </div>
+  </div>
+</div>
+
+<!-- Relationship list -->
+<div class="card mb-4">
+  <div class="card-header fw-semibold">How the tables connect</div>
+  <ul class="list-group list-group-flush rel-row">
+    {% for r in relationships %}
+    <li class="list-group-item">
+      <code>{{ r.parent }}.{{ r.parent_col }}</code>
+      <span class="badge text-bg-primary mx-1">{{ r.kind }}</span>
+      <code>{{ r.child }}.{{ r.child_col }}</code>
+      <span class="text-secondary ms-2">— {{ r.desc }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<!-- SQL tables -->
+<h2 class="h5 mb-3">SQL tables <span class="badge badge-pk">database</span></h2>
+<div class="row g-3 mb-4">
+  {% for t in tables %}
+  <div class="col-12 col-lg-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <code class="fw-semibold">{{ t.name }}</code>
+        <span class="text-secondary small float-end">{{ t.columns | length }} cols</span>
+      </div>
+      <div class="card-body py-2">
+        {% if t.note %}<p class="small text-secondary">{{ t.note }}</p>{% endif %}
+        <table class="table table-sm schema-cols mb-0">
+          <tbody>
+            {% for c in t.columns %}
+            <tr>
+              <td class="col-name">{{ c.name }}
+                {% if c.pk %}<span class="badge badge-pk">PK</span>{% endif %}
+                {% if "team.team_id" in c.note or "→" in c.note %}<span class="badge badge-fk">FK</span>{% endif %}
+              </td>
+              <td class="text-secondary small">{{ c.type }}</td>
+              <td class="text-secondary small">{{ c.note }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- CSV datasets -->
+<h2 class="h5 mb-3">CSV datasets <span class="badge badge-fk">source of truth</span></h2>
+<p class="text-secondary small">The model/grader outputs. They key off <code>game_id</code>
+back into the tables above, and land in the database when the backtester ships (PLAN §1).</p>
+<div class="row g-3">
+  {% for d in datasets %}
+  <div class="col-12 col-lg-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <code class="fw-semibold">{{ d.name }}</code>
+        <span class="text-secondary small float-end">{{ d.file_count }} file(s)</span>
+      </div>
+      <div class="card-body py-2">
+        <p class="small text-secondary mb-1">{{ d.note }}</p>
+        <p class="small mb-2"><span class="text-secondary">Links via:</span> <code>{{ d.key }}</code></p>
+        {% if d.columns %}
+        <table class="table table-sm schema-cols mb-1">
+          <tbody>
+            {% for c in d.columns %}
+            <tr><td class="col-name">{{ c.name }}</td>
+                <td class="text-secondary small">{{ c.note }}</td></tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <div class="small text-secondary">e.g. <code>{{ d.example }}</code></div>
+        {% else %}
+        <p class="small text-secondary mb-0">No files on disk yet.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

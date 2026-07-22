@@ -1,0 +1,9 @@
+# Flask utility dashboard (flask_dashboard/) — a separate, additive front end.
+# The pipeline itself stays stdlib-only; this is needed solely to serve the
+# read-only dashboard. Independent of requirements-api.txt (the FastAPI console).
+#
+#   python3 -m venv .venv && . .venv/bin/activate
+#   pip install -r requirements-web.txt
+#   python3 -m flask_dashboard            # then open http://127.0.0.1:5000
+#
+Flask==3.1.0

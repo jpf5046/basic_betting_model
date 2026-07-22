@@ -1,0 +1,30 @@
+/* A few small tweaks on top of Bootstrap. No frameworks, no JS. */
+
+.stat-card .stat-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.stat-card .stat-label {
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--bs-secondary-color);
+}
+
+code { font-size: .85em; }
+
+/* Monospace-ish, tight tables for the data-heavy pages. */
+.table-tight td, .table-tight th { padding: .35rem .5rem; font-size: .875rem; }
+
+.sparkline { max-width: 100%; height: auto; }
+
+/* Schema page: a simple column list inside each table card. */
+.schema-cols { font-size: .85rem; }
+.schema-cols .col-name { font-family: var(--bs-font-monospace); }
+.badge-pk { background: #6f42c1; }
+.badge-fk { background: #0d6efd; }
+
+/* Relationship diagram rows. */
+.rel-row { font-size: .9rem; }
+.rel-row .card { border-left: 3px solid var(--bs-primary); }

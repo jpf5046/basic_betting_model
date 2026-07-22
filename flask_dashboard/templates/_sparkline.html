@@ -1,0 +1,11 @@
+{# Inline-SVG cumulative-P&L line. No JS. Expects `spark` in context. #}
+<svg class="sparkline" viewBox="0 0 {{ spark.width }} {{ spark.height }}"
+     width="100%" preserveAspectRatio="none" role="img"
+     aria-label="Cumulative profit and loss over time">
+  <line x1="0" x2="{{ spark.width }}" y1="{{ spark.zero_y }}" y2="{{ spark.zero_y }}"
+        stroke="currentColor" stroke-opacity="0.25" stroke-dasharray="4 4"/>
+  <path d="{{ spark.path }}" fill="none" stroke-width="2"
+        stroke="{{ '#198754' if spark.up else '#dc3545' }}"/>
+  <circle cx="{{ spark.last[0] }}" cy="{{ spark.last[1] }}" r="3.5"
+          fill="{{ '#198754' if spark.up else '#dc3545' }}"/>
+</svg>

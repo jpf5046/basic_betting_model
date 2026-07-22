@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% from "_macros.html" import games_table %}
+{% block title %}Browse Games · Model Dashboard{% endblock %}
+
+{% block content %}
+<h1 class="h3 mb-1">Browse Games</h1>
+<p class="text-secondary">Past, present, and future — the full schedule/score feed
+straight from <code>data/&lt;sport&gt;/games_*.csv</code>.</p>
+
+<!-- Sport + window pickers (plain links, no JS) -->
+<div class="mb-3">
+  <div class="btn-group me-3 mb-2" role="group" aria-label="Sport">
+    {% for c in counts %}
+    <a class="btn btn-sm {{ 'btn-primary' if c.sport == sport else 'btn-outline-primary' }}"
+       href="/games?sport={{ c.sport }}&when={{ when }}">{{ c.sport }}</a>
+    {% endfor %}
+  </div>
+  <div class="btn-group mb-2" role="group" aria-label="When">
+    {% for key, label in [("today","Today"),("future","Upcoming"),("past","Past"),("all","All")] %}
+    <a class="btn btn-sm {{ 'btn-dark' if key == when else 'btn-outline-dark' }}"
+       href="/games?sport={{ sport }}&when={{ key }}">{{ label }}</a>
+    {% endfor %}
+  </div>
+</div>
+
+{% for c in counts if c.sport == sport %}
+<div class="row g-2 mb-3">
+  <div class="col-6 col-md-3"><div class="card stat-card"><div class="card-body py-2">
+    <div class="stat-value fs-4">{{ "{:,}".format(c.total) }}</div><div class="stat-label">Total games</div></div></div></div>
+  <div class="col-6 col-md-3"><div class="card stat-card"><div class="card-body py-2">
+    <div class="stat-value fs-4">{{ "{:,}".format(c.final) }}</div><div class="stat-label">Played (final)</div></div></div></div>
+  <div class="col-6 col-md-3"><div class="card stat-card"><div class="card-body py-2">
+    <div class="stat-value fs-4">{{ c.today }}</div><div class="stat-label">Today</div></div></div></div>
+  <div class="col-6 col-md-3"><div class="card stat-card"><div class="card-body py-2">
+    <div class="stat-value fs-4">{{ "{:,}".format(c.scheduled) }}</div><div class="stat-label">Upcoming</div></div></div></div>
+</div>
+{% endfor %}
+
+<div class="card">
+  <div class="card-header d-flex justify-content-between align-items-center">
+    <span class="fw-semibold">{{ sport }} · {{ when | capitalize }}</span>
+    <span class="text-secondary small">
+      Showing {{ view.rows | length }} of {{ "{:,}".format(view.total) }}
+      {% if view.truncated %}(capped at {{ view.limit }}){% endif %}
+    </span>
+  </div>
+  {{ games_table(view.rows) }}
+</div>
+{% if view.truncated %}
+<p class="text-secondary small mt-2">Only the first {{ view.limit }} rows are shown to keep the
+page light. Narrow the window (Today / Upcoming / Past) to see a focused list.</p>
+{% endif %}
+{% endblock %}

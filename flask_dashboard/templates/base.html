@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Betting Model Dashboard{% endblock %}</title>
+  <!-- Bootstrap 5 vendored locally (no CDN) so the dashboard works fully offline. -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="bg-body-tertiary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-body">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-semibold" href="/">
+      <span class="text-info">⚾</span> Model Dashboard
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#nav" aria-controls="nav" aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        {% for key, label, href in nav_items %}
+        <li class="nav-item">
+          <a class="nav-link {% if page == key %}active fw-semibold{% endif %}"
+             href="{{ href }}">{{ label }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      <span class="navbar-text small">Today (US/Eastern): <code class="text-info">{{ today }}</code></span>
+    </div>
+  </div>
+</nav>
+
+<main class="container-fluid px-3 px-lg-4 py-4">
+  {% block content %}{% endblock %}
+</main>
+
+<footer class="container-fluid px-3 px-lg-4 py-4 text-secondary small border-top">
+  <p class="mb-1">
+    A read-only view of the pipeline's artifacts under <code>data/</code>.
+    Nothing here changes the model or the data.
+  </p>
+  <p class="mb-0">
+    The separate <em>Researcher Console</em> (FastAPI, <code>pipeline/api</code>)
+    is untouched and unrelated.
+  </p>
+</footer>
+
+<!-- Bootstrap's own JS (for the responsive navbar toggle only) — no app JS. -->
+<script src="{{ url_for('static', filename='vendor/bootstrap.min.js') }}"></script>
+</body>
+</html>

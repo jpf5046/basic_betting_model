@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% from "_macros.html" import games_table %}
+{% block title %}Today's Games · Model Dashboard{% endblock %}
+
+{% block content %}
+<h1 class="h3 mb-1">Today's Games</h1>
+<p class="text-secondary">Every game on today's slate ({{ today }}), with the model's
+prediction where the pipeline produced one. A <span class="badge rounded-pill text-bg-success">● pick</span>
+badge marks a game that cleared the confidence gate and was published as a bet.</p>
+
+{% if todays %}
+  {% for block in todays %}
+  <div class="card mb-4">
+    <div class="card-header d-flex justify-content-between align-items-center">
+      <span class="fw-semibold fs-5">{{ block.sport }}</span>
+      <span>
+        <span class="text-secondary small">{{ block.games | length }} game(s)</span>
+        <a class="ms-2 small" href="/predictions?sport={{ block.sport }}&date={{ today }}">Prediction detail →</a>
+      </span>
+    </div>
+    {{ games_table(block.games, show_pred=True) }}
+  </div>
+  {% endfor %}
+{% else %}
+  <div class="alert alert-secondary">No games are scheduled today across the tracked sports
+  (MLB, NHL, NBA, WNBA).</div>
+{% endif %}
+{% endblock %}

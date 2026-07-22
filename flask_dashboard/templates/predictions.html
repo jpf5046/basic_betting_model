@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block title %}Predictions · Model Dashboard{% endblock %}
+
+{% block content %}
+<h1 class="h3 mb-1">Predictions</h1>
+<p class="text-secondary">The full model output for a given sport and date — predicted score,
+win probability, and the ML/TOTAL leans, with published picks flagged.</p>
+
+<!-- Sport picker -->
+<div class="mb-2">
+  <div class="btn-group" role="group" aria-label="Sport">
+    {% for s, ds in dates_all.items() %}
+    <a class="btn btn-sm {{ 'btn-primary' if s == sport else 'btn-outline-primary' }}
+              {{ 'disabled' if not ds }}"
+       href="/predictions?sport={{ s }}&date={{ (ds or [''])[0] }}">{{ s }}
+       <span class="badge text-bg-light border">{{ ds | length }}</span></a>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- Date picker for the chosen sport -->
+{% set dates = dates_all.get(sport) or [] %}
+<div class="mb-3">
+  {% if dates %}
+    <span class="text-secondary small me-2">Date:</span>
+    {% for d in dates %}
+    <a class="btn btn-sm {{ 'btn-dark' if d == date else 'btn-outline-dark' }} mb-1"
+       href="/predictions?sport={{ sport }}&date={{ d }}"><code
+       class="{{ 'text-white' if d == date }}">{{ d }}</code></a>
+    {% endfor %}
+  {% else %}
+    <span class="text-secondary">No prediction files exist for {{ sport }} yet.</span>
+  {% endif %}
+</div>
+
+{% if table %}
+{% set c = table.counts %}
+<div class="row g-2 mb-3">
+  <div class="col-6 col-md-3"><div class="card stat-card"><div class="card-body py-2">
+    <div class="stat-value fs-4">{{ c.games }}</div><div class="stat-label">Games predicted</div></div></div></div>
+  <div class="col-6 col-md-3"><div class="card stat-card"><div class="card-body py-2">
+    <div class="stat-value fs-4">{{ c.published }}</div><div class="stat-label">Published picks</div></div></div></div>
+  <div class="col-6 col-md-3"><div class="card stat-card"><div class="card-body py-2">
+    <div class="stat-value fs-4">{{ c.toss_up }}</div><div class="stat-label">Toss-ups</div></div></div></div>
+  <div class="col-6 col-md-3"><div class="card stat-card"><div class="card-body py-2">
+    <div class="stat-value fs-4">{{ c.no_prediction }}</div><div class="stat-label">Couldn't run</div></div></div></div>
+</div>
+
+<div class="card">
+  <div class="card-header fw-semibold">{{ sport }} predictions · <code>{{ date }}</code></div>
+  <div class="table-responsive">
+    <table class="table table-sm table-hover table-tight align-middle mb-0">
+      <thead class="table-light">
+        <tr>
+          <th>Matchup</th><th class="text-center">Pred score</th><th>Pick (ML)</th>
+          <th class="text-end">Win %</th><th class="text-end">Total</th><th>Total lean</th>
+          <th>Conf.</th><th>Published</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for p in table.predictions %}
+        <tr class="{{ 'table-warning' if p.status != 'ok' }}">
+          <td class="text-nowrap"><span title="{{ p.away.name }}">{{ p.away.abbrev }}</span>
+            <span class="text-secondary">@</span>
+            <span title="{{ p.home.name }}">{{ p.home.abbrev }}</span></td>
+          {% if p.status == 'ok' %}
+          <td class="text-center">{{ p.disp_away }}–{{ p.disp_home }}</td>
+          <td>{% if p.ml_lean == 'TOSS-UP' %}<span class="badge text-bg-light border">toss-up</span>
+              {% else %}<span class="fw-semibold">{{ p.winner_abbrev }}</span>
+              <span class="badge text-bg-primary">{{ p.ml_lean }}</span>{% endif %}</td>
+          <td class="text-end">{{ (p.win_prob * 100) | round(0, 'common') | int if p.win_prob is not none else '—' }}{{ '%' if p.win_prob is not none }}</td>
+          <td class="text-end">{{ p.pred_total | round(1) if p.pred_total is not none else '—' }}</td>
+          <td>{% if p.total_lean and p.total_lean != 'PASS' %}
+              <span class="badge text-bg-secondary">{{ p.total_lean }}</span>
+              {% else %}<span class="text-secondary small">pass</span>{% endif %}</td>
+          <td class="small">{{ p.pred_confidence or '—' }}</td>
+          <td>{% if p.published_ml %}<span class="badge text-bg-success">ML</span>{% endif %}
+              {% if p.published_total %}<span class="badge text-bg-success">TOTAL</span>{% endif %}</td>
+          {% else %}
+          <td colspan="7" class="text-secondary small">no prediction — {{ p.method_details or 'insufficient data' }}</td>
+          {% endif %}
+        </tr>
+        {% else %}
+        <tr><td colspan="8" class="text-center text-secondary py-4">No predictions for this date.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% elif dates %}
+<div class="alert alert-secondary">Pick a date above to see its predictions.</div>
+{% endif %}
+{% endblock %}

@@ -233,5 +233,45 @@ class TestExitPolicy(unittest.TestCase):
         self.assertNotIn("ingest NBA", msg)    # the tolerated feed isn't in the exit
 
 
+class TestMirrorRefresh(unittest.TestCase):
+    """run_daily.py refreshes the DB mirror the dashboard reads from, as a
+    best-effort post-run step that never affects the exit code."""
+
+    def test_refresh_mirror_runs_the_load_cli(self):
+        runner = FakeRunner()
+        with contextlib.redirect_stdout(io.StringIO()):
+            res = orchestrator.refresh_mirror(["MLB", "WNBA"], runner=runner)
+        self.assertEqual(runner.calls,
+                         [["pipeline.db", "load", "--sports", "MLB,WNBA"]])
+        self.assertEqual(res.status, "ok")
+
+    def test_refresh_mirror_failure_is_nonfatal(self):
+        runner = FakeRunner(fail_prefixes=("pipeline.db",))
+        with contextlib.redirect_stdout(io.StringIO()):
+            res = orchestrator.refresh_mirror(["MLB"], runner=runner)
+        self.assertEqual(res.status, "failed")
+        self.assertIn("CSVs unaffected", res.detail)
+
+    def _run_main(self, argv):
+        results = [StageResult("ingest", "MLB", "ok")]
+        with mock.patch.object(orchestrator, "daily", return_value=results), \
+             mock.patch.object(orchestrator, "write_report", return_value=Path("x.md")), \
+             mock.patch.object(orchestrator, "refresh_mirror") as rm, \
+             contextlib.redirect_stdout(io.StringIO()):
+            try:
+                orchestrator.main(argv)
+            except SystemExit:
+                pass
+        return rm
+
+    def test_main_refreshes_mirror_by_default(self):
+        rm = self._run_main(["--sports", "MLB"])
+        rm.assert_called_once_with(["MLB"])
+
+    def test_skip_db_load_suppresses_refresh(self):
+        rm = self._run_main(["--sports", "MLB", "--skip-db-load"])
+        rm.assert_not_called()
+
+
 if __name__ == "__main__":
     unittest.main()

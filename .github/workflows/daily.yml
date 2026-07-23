@@ -62,10 +62,15 @@ jobs:
       # NBA in July) is reported but does not red the whole run — the sports
       # that fetched still publish and commit. A total feed outage (every sport
       # fails) or a later-stage bug still fails the run and emails you.
+      # --skip-db-load: run_daily.py normally refreshes the DB mirror at the
+      # end (for local dashboard use), but CI mirrors to Postgres in its own
+      # dedicated step below — which runs after the frame rebuild and installs
+      # psycopg first — so the built-in refresh is skipped here to avoid a
+      # driver-missing error and a redundant double-load.
       - name: Run the daily pipeline
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY || vars.ODDS_API_KEY }}
-        run: python3 run_daily.py --allow-partial
+        run: python3 run_daily.py --allow-partial --skip-db-load
 
       # Idempotent full-season rebuild: keeps the labeled canonical frame in
       # sync with the finals that today's ingest just fetched.

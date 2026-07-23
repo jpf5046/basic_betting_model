@@ -12,6 +12,8 @@ stages, per sport, each safe to re-run for any date:
                  (skipped when ODDS_API_KEY is not set or --skip-odds)
     5. REPORT    write data/reports/daily_<date>.md — grade card, pick
                  sheet, edge report, and the stage log — and print a summary
+    6. MIRROR    reload the CSVs into the DB mirror the dashboard reads from
+                 (best-effort, non-fatal; skipped with --skip-db-load)
 
 Usage (from the repo root — both entry points are identical):
 
@@ -164,6 +166,24 @@ def daily(on: date, sports: list[str], skip_odds: bool = False,
     return results
 
 
+def refresh_mirror(sports: list[str], runner=run_cli) -> StageResult:
+    """Reload the CSVs into the SQLite/Postgres mirror the dashboard reads.
+
+    Runs after the report so ``run_daily.py`` leaves the dashboard showing the
+    day's fresh predictions / picks / grades without a manual
+    ``python3 -m pipeline.db load``. Best-effort and non-fatal: the flat CSVs
+    stay the source of truth, so a mirror hiccup (e.g. DATABASE_URL set but no
+    psycopg driver) is reported but never reds the run."""
+    code, out = runner(["pipeline.db", "load", "--sports", ",".join(sports)])
+    status = "ok" if code == 0 else "failed"
+    if code == 0:
+        detail = out.splitlines()[-1] if out else "mirror refreshed"
+    else:
+        detail = f"exit {code} — mirror not refreshed (CSVs unaffected)"
+    print(f"[{STATUS_MARK[status]}] {'db load':<8} {detail}")
+    return StageResult("db-load", "all", status, detail, out)
+
+
 def write_report(on: date, results: list[StageResult]) -> Path:
     """Render the daily report (PLAN.md §7 wish list) as markdown."""
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
@@ -220,6 +240,11 @@ def main(argv: list[str] | None = None) -> None:
                    help="skip odds fetch + edge even if ODDS_API_KEY is set")
     p.add_argument("--offline", action="store_true",
                    help="ingest from cached raw feeds instead of hitting the APIs")
+    p.add_argument("--skip-db-load", action="store_true",
+                   help="don't refresh the DB mirror after the run. The dashboard "
+                        "reads predictions/results from the mirror; the flat CSVs "
+                        "stay the source of truth either way. CI sets this because "
+                        "it mirrors to Postgres in its own dedicated step")
     p.add_argument("--allow-partial", action="store_true",
                    help="don't fail the run when only SOME sports' ingest fails "
                         "(an off-season or unreachable feed) — the failure is still "
@@ -236,6 +261,11 @@ def main(argv: list[str] | None = None) -> None:
     results = daily(on, sports, skip_odds=args.skip_odds, offline=args.offline)
     report = write_report(on, results)
     print(f"\nreport -> {report}")
+
+    # Refresh the dashboard's DB mirror (non-fatal — see refresh_mirror). Runs
+    # even when a stage failed so the mirror reflects whatever CSVs exist.
+    if not args.skip_db_load:
+        refresh_mirror(sports)
 
     failures = [r for r in results if r.status == "failed"]
     if not failures:

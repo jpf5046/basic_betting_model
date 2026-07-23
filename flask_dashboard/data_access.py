@@ -1,10 +1,16 @@
 """The dashboard's read-only data layer.
 
-Everything the pages need, assembled from artifacts under ``data/``. It
+Everything the pages need, assembled from the pipeline's artifacts. It
 leans on the existing ``pipeline.api`` service/parsers layer for anything
 that already exists there (performance, predictions, runs) and only adds
 what that layer does not expose: a plain reader over the per-sport games
 CSVs, and a straight-up "did the predicted winner win" accuracy join.
+
+Predictions / picks / grades are read **from the SQLite/Postgres mirror
+first** (``pipeline.db``) and fall back to the flat CSVs when the mirror is
+absent or has no rows for the requested key — both paths shape through the
+same ``service`` helpers, so the templates never see a difference. Build the
+mirror with ``python3 -m pipeline.db load``.
 
 Nothing here writes; nothing here touches ``pipeline/api``'s own modules
 beyond importing and calling them.
@@ -14,11 +20,11 @@ from __future__ import annotations
 
 import csv
 import glob
-from datetime import datetime
+from datetime import datetime, timedelta
 from functools import lru_cache
 from pathlib import Path
 
-from pipeline.api import service
+from pipeline.api import parsers, service
 from pipeline.api.paths import SPORTS, default_data_dir
 from pipeline.api.teams import TeamRegistry
 from pipeline.ingest.core import EASTERN, REPO_ROOT
@@ -52,6 +58,30 @@ class DataAccess:
 
     def today(self) -> str:
         return datetime.now(EASTERN).date().isoformat()
+
+    # ------------------------------------------------------------------- db
+
+    def _db_query(self, sql: str, params: tuple = ()) -> list[dict] | None:
+        """Read rows from the SQLite/Postgres mirror as plain dicts, or return
+        ``None`` when there is no usable mirror (no DB on disk, or the table
+        does not exist yet) so callers transparently fall back to the CSVs.
+
+        Read-only: like ``db_status`` it never creates the SQLite file just to
+        query it, and never runs ``init_schema``."""
+        import os
+
+        from pipeline.db.core import DEFAULT_SQLITE_PATH, Db
+
+        if not os.environ.get("DATABASE_URL") and not DEFAULT_SQLITE_PATH.exists():
+            return None
+        try:
+            with Db.connect() as db:
+                cur = db.execute(sql, params)
+                cols = [d[0] for d in cur.description]
+                return [dict(zip(cols, row)) for row in cur.fetchall()]
+        except Exception:
+            # Missing table / unreadable DB — fall back to the flat files.
+            return None
 
     @property
     def sports(self) -> tuple[str, ...]:
@@ -186,7 +216,7 @@ class DataAccess:
                         teams: TeamRegistry) -> dict[str, dict]:
         """game_id -> a compact prediction summary for a sport+date."""
         try:
-            data = service.read_predictions(self.data_dir, sport, date, teams)
+            data = self.predictions(sport, date)
         except Exception:
             return {}
         out = {}
@@ -208,14 +238,166 @@ class DataAccess:
     # ---------------------------------------------------- predictions / dates
 
     def prediction_dates(self, sport: str) -> list[str]:
-        return service.available_dates(self.data_dir, sport.upper())
+        """Dates with predictions, newest first — from the DB mirror when it
+        has them, otherwise the prediction CSVs."""
+        sport = sport.upper()
+        rows = self._db_query(
+            "SELECT DISTINCT date FROM predictions WHERE sport = ? "
+            "ORDER BY date DESC", (sport,))
+        if rows:
+            return [r["date"] for r in rows]
+        return service.available_dates(self.data_dir, sport)
 
     def prediction_dates_all(self) -> dict[str, list[str]]:
-        return {s: service.available_dates(self.data_dir, s) for s in SPORTS}
+        return {s: self.prediction_dates(s) for s in SPORTS}
 
     def predictions(self, sport: str, date: str) -> dict:
-        return service.read_predictions(self.data_dir, sport.upper(), date,
-                                        self.teams)
+        """The full prediction table + published-pick overlay for a date.
+
+        Reads from the DB mirror when it holds predictions for the date and
+        falls back to the CSVs otherwise, but shapes both through the same
+        service helper so the templates see an identical structure."""
+        sport = sport.upper()
+        pred_rows = self._db_query(
+            "SELECT * FROM predictions WHERE sport = ? AND date = ?",
+            (sport, date))
+        if pred_rows:
+            pick_rows = self._db_query(
+                "SELECT * FROM picks WHERE sport = ? AND date = ?",
+                (sport, date)) or []
+            return service.shape_predictions(pred_rows, pick_rows, sport, date,
+                                             self.teams)
+        return service.read_predictions(self.data_dir, sport, date, self.teams)
+
+    # --------------------------------------------------------------- results
+
+    def yesterday(self) -> str:
+        """The calendar day before ``today`` (US/Eastern)."""
+        return (datetime.now(EASTERN).date() - timedelta(days=1)).isoformat()
+
+    def graded_dates(self, sport: str) -> list[str]:
+        """Settled-result dates for a sport (newest first) — DB mirror first,
+        then the grades CSVs."""
+        sport = sport.upper()
+        rows = self._db_query(
+            "SELECT DISTINCT date FROM grades WHERE sport = ? "
+            "ORDER BY date DESC", (sport,))
+        if rows:
+            return [r["date"] for r in rows]
+        return service.graded_dates(self.data_dir, sport)
+
+    def graded_dates_all(self) -> dict[str, list[str]]:
+        """Per sport, the settled-result dates (newest first). These are the
+        days the Results page can look back on."""
+        return {s: self.graded_dates(s) for s in SPORTS}
+
+    def _grades(self, sport: str, date: str) -> list[dict]:
+        """Settled picks for a sport+date — DB mirror first, else the CSV."""
+        sport = sport.upper()
+        rows = self._db_query(
+            "SELECT * FROM grades WHERE sport = ? AND date = ?", (sport, date))
+        if rows:
+            return service.shape_grades(rows)
+        return service.read_grades(self.data_dir, sport, date)
+
+    def _selection_label(self, grade: dict, teams: TeamRegistry) -> str:
+        """A human-readable description of what was bet, e.g. ``BOS`` for a
+        moneyline on Boston or ``OVER 9.2`` for a total."""
+        bet = grade["bet_type"]
+        if bet == "ML":
+            team = teams.get(grade["selection"]) if grade["selection"] else None
+            return team["abbrev"] if team and team["abbrev"] else grade["selection"]
+        if bet == "TOTAL":
+            line = grade["line"]
+            return f"{grade['selection']} {line}".strip() if line else grade["selection"]
+        return grade["selection"] or bet
+
+    def results(self, sport: str, date: str) -> dict:
+        """A plain-English scorecard for one sport+date: every settled pick
+        with its result and profit/loss, grouped under its game, plus a
+        day summary (record, net P&L, ROI, straight-up winner accuracy).
+
+        This is the "what did we call yesterday and how did it land" view."""
+        sport = sport.upper()
+        teams = self.teams
+        grades = self._grades(sport, date)
+
+        # Prediction context (matchup names, the model's straight-up winner).
+        try:
+            pred_data = self.predictions(sport, date)
+        except Exception:
+            pred_data = {"predictions": []}
+        pred_by_game = {p["game_id"]: p for p in pred_data["predictions"]}
+
+        # Group the settled picks under their game, keeping slate order.
+        games: dict[str, dict] = {}
+        for g in grades:
+            gid = g["game_id"]
+            slot = games.get(gid)
+            if slot is None:
+                pred = pred_by_game.get(gid)
+                away_id = pred["away_team_id"] if pred else ""
+                home_id = pred["home_team_id"] if pred else ""
+                actual_away = _num(g["actual_away"])
+                actual_home = _num(g["actual_home"])
+                final = g["game_status"] == "final" and \
+                    actual_away is not None and actual_home is not None
+
+                # Did the model's straight-up winner call actually happen?
+                winner_correct = None
+                if pred and pred.get("winner_team_id") and final and \
+                        actual_away != actual_home:
+                    actual_winner = home_id if actual_home > actual_away else away_id
+                    winner_correct = pred["winner_team_id"] == actual_winner
+
+                slot = {
+                    "game_id": gid,
+                    "away_abbrev": teams.get(away_id)["abbrev"] if away_id else "",
+                    "home_abbrev": teams.get(home_id)["abbrev"] if home_id else "",
+                    "away_name": teams.get(away_id)["name"] if away_id else "",
+                    "home_name": teams.get(home_id)["name"] if home_id else "",
+                    "actual_away": actual_away,
+                    "actual_home": actual_home,
+                    "final": final,
+                    "pred_winner_abbrev": (
+                        teams.get(pred["winner_team_id"])["abbrev"]
+                        if pred and pred.get("winner_team_id") else ""),
+                    "winner_correct": winner_correct,
+                    "picks": [],
+                    "game_pnl": 0.0,
+                }
+                games[gid] = slot
+            slot["picks"].append({
+                "bet_type": g["bet_type"],
+                "selection": self._selection_label(g, teams),
+                "confidence": g["confidence"],
+                "result": g["result"],
+                "pnl": g["pnl"],
+                "settled": g["result"] in ("WIN", "LOSS", "PUSH"),
+            })
+            if g["result"] in ("WIN", "LOSS", "PUSH"):
+                slot["game_pnl"] = round(slot["game_pnl"] + g["pnl"], 2)
+
+        game_list = sorted(games.values(),
+                           key=lambda s: (s["away_abbrev"], s["game_id"]))
+
+        # Day summary: record + ROI over the settled picks, and how many
+        # straight-up winner calls we got right.
+        summary = parsers.performance(grades)["overall"]
+        decided = [s for s in game_list if s["winner_correct"] is not None]
+        summary["winner_correct"] = sum(1 for s in decided if s["winner_correct"])
+        summary["winner_total"] = len(decided)
+        summary["winner_pct"] = (
+            round(100.0 * summary["winner_correct"] / len(decided), 1)
+            if decided else None)
+
+        return {
+            "sport": sport,
+            "date": date,
+            "games": game_list,
+            "summary": summary,
+            "has_grades": bool(grades),
+        }
 
     # ----------------------------------------------------------- performance
 
@@ -235,7 +417,7 @@ class DataAccess:
         for sport in SPORTS:
             finals = {g["game_id"]: g for g in self._games(sport)
                       if g["status"] == "final"} if sport in _GAME_SPORTS else {}
-            for date in service.available_dates(self.data_dir, sport):
+            for date in self.prediction_dates(sport):
                 try:
                     data = self.predictions(sport, date)
                 except Exception:

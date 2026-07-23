@@ -30,6 +30,7 @@ from pipeline.models.config import FACTORY_DEFAULTS
 
 _REPORT_DATE_RE = re.compile(r"daily_(\d{4}-\d{2}-\d{2})\.md$")
 _PRED_DATE_RE = re.compile(r"predictions_(\d{4}-\d{2}-\d{2})\.csv$")
+_GRADE_DATE_RE = re.compile(r"grades_(\d{4}-\d{2}-\d{2})\.csv$")
 
 
 def _read_csv(path: Path) -> list[dict]:
@@ -78,6 +79,42 @@ def available_dates(data_dir: Path, sport: str) -> list[str]:
     return sorted(out, reverse=True)
 
 
+def graded_dates(data_dir: Path, sport: str) -> list[str]:
+    """Dates (newest first) for which a grades file exists — i.e. days whose
+    published picks have been settled against the finals."""
+    d = predictions_dir(data_dir, sport)
+    out = []
+    for p in d.glob("grades_*.csv") if d.exists() else []:
+        m = _GRADE_DATE_RE.search(p.name)
+        if m:
+            out.append(m.group(1))
+    return sorted(out, reverse=True)
+
+
+def read_grades(data_dir: Path, sport: str, on: str) -> list[dict]:
+    """Settled picks for a sport+date, typed and de-duplicated, read from the
+    CSV on disk."""
+    return shape_grades(_read_csv(grades_path(data_dir, sport, on)))
+
+
+def shape_grades(raw: list[dict]) -> list[dict]:
+    """Shape raw grade rows (from CSV *or* the DB mirror) into typed,
+    de-duplicated settled picks.
+
+    Doubleheader feeds can repeat an identical grade row; the daily card
+    should show each settled bet once, so exact duplicates are dropped."""
+    seen: set = set()
+    unique: list[dict] = []
+    for r in raw:
+        shaped = parsers.shape_grade(r)
+        key = tuple(sorted(shaped.items()))
+        if key in seen:
+            continue
+        seen.add(key)
+        unique.append(shaped)
+    return unique
+
+
 def _frame_index(data_dir: Path, sport: str) -> dict[str, list[dict]]:
     """All frame rows for a sport (across seasons) indexed by game_id."""
     index: dict[str, list[dict]] = {}
@@ -98,10 +135,21 @@ def _frame_for(index: dict, game_id: str, on: str) -> dict | None:
 
 def read_predictions(data_dir: Path, sport: str, on: str,
                      teams: TeamRegistry) -> dict:
-    """Full prediction table for a date + published-pick overlay."""
-    pred_rows = [parsers.shape_prediction(r) for r in
-                 _read_csv(predictions_path(data_dir, sport, on))]
-    pick_rows = _read_csv(picks_path(data_dir, sport, on))
+    """Full prediction table for a date + published-pick overlay, read from
+    the CSVs on disk."""
+    return shape_predictions(
+        _read_csv(predictions_path(data_dir, sport, on)),
+        _read_csv(picks_path(data_dir, sport, on)),
+        sport, on, teams,
+    )
+
+
+def shape_predictions(pred_raw: list[dict], pick_rows: list[dict], sport: str,
+                      on: str, teams: TeamRegistry) -> dict:
+    """Shape raw prediction + pick rows (from CSV *or* the DB mirror) into the
+    console-ready table. Kept separate from the file read so the dashboard's
+    database-backed path can reuse the exact same shaping/dedup/counts."""
+    pred_rows = [parsers.shape_prediction(r) for r in pred_raw]
 
     # Which (game_id, bet_type) pairs were actually published.
     published = {(p["game_id"], p["bet_type"]) for p in pick_rows}

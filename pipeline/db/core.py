@@ -91,6 +91,63 @@ SCHEMA = [
         PRIMARY KEY (sport, game_id)
     )
     """,
+    # The model + grader per-date outputs. Values are kept as TEXT so the
+    # tables round-trip the source CSVs exactly (the console's shaping layer
+    # types them on read). A game can be predicted on more than one date, so
+    # date is part of every key; picks/grades add bet_type (ML vs TOTAL).
+    """
+    CREATE TABLE IF NOT EXISTS predictions (
+        sport           TEXT NOT NULL,
+        game_id         TEXT NOT NULL,
+        date            TEXT NOT NULL,
+        status          TEXT,
+        ml_lean         TEXT,
+        total_lean      TEXT,
+        away_team_id    TEXT,
+        home_team_id    TEXT,
+        pred_away       TEXT,
+        pred_home       TEXT,
+        disp_away       TEXT,
+        disp_home       TEXT,
+        pred_total      TEXT,
+        pred_spread     TEXT,
+        win_prob        TEXT,
+        winner_team_id  TEXT,
+        pred_confidence TEXT,
+        method_details  TEXT,
+        PRIMARY KEY (sport, game_id, date)
+    )
+    """,
+    """
+    CREATE TABLE IF NOT EXISTS picks (
+        sport      TEXT NOT NULL,
+        game_id    TEXT NOT NULL,
+        date       TEXT NOT NULL,
+        bet_type   TEXT NOT NULL,
+        selection  TEXT,
+        confidence TEXT,
+        line       TEXT,
+        PRIMARY KEY (sport, game_id, date, bet_type)
+    )
+    """,
+    """
+    CREATE TABLE IF NOT EXISTS grades (
+        sport          TEXT NOT NULL,
+        game_id        TEXT NOT NULL,
+        date           TEXT NOT NULL,
+        bet_type       TEXT NOT NULL,
+        selection      TEXT,
+        confidence     TEXT,
+        line           TEXT,
+        game_status    TEXT,
+        actual_away    TEXT,
+        actual_home    TEXT,
+        result         TEXT,
+        pnl            TEXT,
+        price_american TEXT,
+        PRIMARY KEY (sport, game_id, date, bet_type)
+    )
+    """,
 ]
 
 
@@ -141,7 +198,8 @@ class Db:
 
     def counts(self) -> dict[str, int]:
         out = {}
-        for table in ("teams", "games", "frames"):
+        for table in ("teams", "games", "frames",
+                      "predictions", "picks", "grades"):
             out[table] = self.execute(f"SELECT COUNT(*) FROM {table}").fetchone()[0]
         return out
 

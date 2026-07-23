@@ -6,8 +6,8 @@ Two kinds of things get shown, clearly labelled:
     (``pipeline.db.core.SCHEMA``). Parsed live from that constant so this
     page can never drift from the actual schema.
   * **CSV datasets** — the flat files under ``data/`` that are the source
-    of truth the DB mirrors (predictions / picks / grades never land in a
-    table yet, so they are described from their real CSV headers).
+    of truth the DB mirrors (each dataset is also described from its real
+    CSV headers so the on-disk shape stays visible).
 
 Plus the logical relationships between them (the one-to-many links the
 user asked to see), since the SQLite schema keeps foreign keys implicit.
@@ -88,6 +88,13 @@ _TABLE_NOTES = {
     "frames": "The labelled canonical row the model trains/predicts on: identity + "
               "the point-in-time feature vector (stored as JSON) + the actual "
               "outcome. Mirrors data/frames/<sport>_<season>.csv.",
+    "predictions": "One row per game the model predicted on a date: predicted score, "
+                   "win probability, ML/TOTAL leans and confidence. Mirrors "
+                   "data/predictions/<sport>/predictions_<date>.csv.",
+    "picks": "The subset of predictions that cleared the confidence gate and were "
+             "published as bets for a date. Mirrors picks_<date>.csv.",
+    "grades": "Published picks scored once the finals are in — WIN/LOSS/PUSH/VOID "
+              "and P&L at market price. The ROI source. Mirrors grades_<date>.csv.",
 }
 
 _COLUMN_NOTES = {
@@ -103,6 +110,14 @@ _COLUMN_NOTES = {
     ("frames", "winner"): "Actual winner team id (label).",
     ("frames", "away_team_id"): "→ teams.team_id",
     ("frames", "home_team_id"): "→ teams.team_id",
+    ("predictions", "game_id"): "→ games.game_id (PK also includes date).",
+    ("predictions", "win_prob"): "Model win probability for the predicted winner.",
+    ("predictions", "winner_team_id"): "→ teams.team_id (predicted winner).",
+    ("picks", "game_id"): "→ predictions / games.game_id.",
+    ("picks", "bet_type"): "ML or TOTAL (part of the key).",
+    ("grades", "game_id"): "→ picks / games.game_id.",
+    ("grades", "result"): "WIN / LOSS / PUSH / VOID / PENDING.",
+    ("grades", "pnl"): "Profit/loss for a flat $100 stake at the market price.",
 }
 
 
@@ -122,8 +137,9 @@ def db_tables() -> list[dict]:
 
 # ------------------------------------------------------------- CSV datasets
 
-# Model / grader outputs that live only as CSVs today (PLAN §1: these tables
-# land with the backtester). Columns are read from a real file so they stay true.
+# Model / grader outputs. These are mirrored into like-named DB tables (above),
+# but the flat CSVs remain the source of truth; columns are read from a real
+# file so they stay true.
 _CSV_DATASETS = [
     {
         "name": "predictions",

@@ -63,7 +63,9 @@ def main(argv: list[str] | None = None) -> None:
             for sport in sports:
                 r = report[sport]
                 note = "" if r["frames"] else "   (no frame CSV — run python3 -m pipeline.backfill?)"
-                print(f"  {sport}: {r['games']} games, {r['frames']} frame rows{note}")
+                print(f"  {sport}: {r['games']} games, {r['frames']} frame rows, "
+                      f"{r['predictions']} predictions, {r['picks']} picks, "
+                      f"{r['grades']} grades{note}")
 
 
 if __name__ == "__main__":

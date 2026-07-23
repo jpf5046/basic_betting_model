@@ -129,6 +129,35 @@ def create_app(data_dir=None) -> Flask:
             table=table,
         )
 
+    # -------------------------------------------------------------- results
+
+    @app.route("/results")
+    def results():
+        graded_all = data.graded_dates_all()
+        sport = (request.args.get("sport") or "").upper()
+        date = request.args.get("date") or ""
+
+        # Default to the sport that actually has settled results.
+        if not sport or not valid_sport(sport):
+            sport = next((s for s, ds in graded_all.items() if ds), "MLB")
+        dates = graded_all.get(sport) or []
+
+        # Default to yesterday when it has results, else the latest graded day.
+        if not date or not valid_date(date):
+            yday = data.yesterday()
+            date = yday if yday in dates else (dates[0] if dates else "")
+
+        table = data.results(sport, date) if date else None
+        return render_template(
+            "results.html",
+            page="results",
+            graded_all=graded_all,
+            sport=sport,
+            date=date,
+            yesterday=data.yesterday(),
+            table=table,
+        )
+
     # ----------------------------------------------------------------- runs
 
     @app.route("/runs")
@@ -167,6 +196,7 @@ _NAV = [
     ("overview", "Overview", "/"),
     ("today", "Today's Games", "/today"),
     ("games", "Browse Games", "/games"),
+    ("results", "Results", "/results"),
     ("performance", "Performance", "/performance"),
     ("predictions", "Predictions", "/predictions"),
     ("runs", "Daily Runs", "/runs"),

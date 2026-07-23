@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% from "_macros.html" import result_badge %}
+{% block title %}Results · Model Dashboard{% endblock %}
+
+{% block content %}
+<h1 class="h3 mb-1">Results</h1>
+<p class="text-secondary">Look back at a day's predictions: every published pick, whether it
+<span class="badge text-bg-success">WON</span> or <span class="badge text-bg-danger">LOST</span>,
+and the profit/loss it booked at a flat $100 stake. Defaults to yesterday
+(<code>{{ yesterday }}</code>) so you can see how last night landed.</p>
+
+<!-- Sport picker -->
+<div class="mb-2">
+  <div class="btn-group" role="group" aria-label="Sport">
+    {% for s, ds in graded_all.items() %}
+    <a class="btn btn-sm {{ 'btn-primary' if s == sport else 'btn-outline-primary' }}
+              {{ 'disabled' if not ds }}"
+       href="/results?sport={{ s }}">{{ s }}
+       <span class="badge text-bg-light border">{{ ds | length }}</span></a>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- Date picker for the chosen sport -->
+{% set dates = graded_all.get(sport) or [] %}
+<div class="mb-3">
+  {% if dates %}
+    <span class="text-secondary small me-2">Result day:</span>
+    {% for d in dates %}
+    <a class="btn btn-sm {{ 'btn-dark' if d == date else 'btn-outline-dark' }} mb-1"
+       href="/results?sport={{ sport }}&date={{ d }}"><code
+       class="{{ 'text-white' if d == date }}">{{ d }}</code>{% if d == yesterday %}
+       <span class="badge text-bg-info ms-1">yesterday</span>{% endif %}</a>
+    {% endfor %}
+  {% else %}
+    <span class="text-secondary">No settled results for {{ sport }} yet — they appear here
+    once the pipeline grades a day's picks against the finals.</span>
+  {% endif %}
+</div>
+
+{% if table and table.has_grades %}
+{% set s = table.summary %}
+<!-- Day summary -->
+<div class="row g-2 mb-4">
+  <div class="col-6 col-md-3 col-lg">
+    <div class="card stat-card h-100"><div class="card-body py-3">
+      <div class="stat-value">{{ s.wins }}-{{ s.losses }}{% if s.pushes %}-{{ s.pushes }}{% endif %}</div>
+      <div class="stat-label">Record (W-L{{ '-P' if s.pushes }})</div></div></div>
+  </div>
+  <div class="col-6 col-md-3 col-lg">
+    <div class="card stat-card h-100"><div class="card-body py-3">
+      <div class="stat-value {{ 'text-success' if s.pnl > 0 else ('text-danger' if s.pnl < 0 else '') }}">{{ s.pnl | money }}</div>
+      <div class="stat-label">Net P&amp;L</div></div></div>
+  </div>
+  <div class="col-6 col-md-3 col-lg">
+    <div class="card stat-card h-100"><div class="card-body py-3">
+      <div class="stat-value {{ 'text-success' if s.roi and s.roi > 0 else ('text-danger' if s.roi and s.roi < 0 else '') }}">{{ s.roi | pct }}</div>
+      <div class="stat-label">ROI</div></div></div>
+  </div>
+  <div class="col-6 col-md-3 col-lg">
+    <div class="card stat-card h-100"><div class="card-body py-3">
+      <div class="stat-value">{{ s.graded }}</div>
+      <div class="stat-label">Settled bets</div></div></div>
+  </div>
+  <div class="col-6 col-md-3 col-lg">
+    <div class="card stat-card h-100"><div class="card-body py-3">
+      <div class="stat-value">{{ s.winner_correct }}/{{ s.winner_total }}</div>
+      <div class="stat-label">Winner picks right</div></div></div>
+  </div>
+</div>
+
+<!-- Per-game results -->
+<div class="card">
+  <div class="card-header fw-semibold">{{ sport }} results · <code>{{ date }}</code>
+    <span class="text-secondary fw-normal small">— each pick, right or wrong, with its P&amp;L</span></div>
+  <div class="table-responsive">
+    <table class="table table-sm table-hover table-tight align-middle mb-0">
+      <thead class="table-light">
+        <tr>
+          <th>Matchup</th><th class="text-center">Final</th><th>Bet</th><th>Our pick</th>
+          <th class="text-center">Result</th><th class="text-end">P&amp;L</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for g in table.games %}
+        {% set outer = loop %}
+        {% for pick in g.picks %}
+        <tr class="{{ 'border-top border-2' if loop.first and not outer.first }}">
+          {% if loop.first %}
+          <td rowspan="{{ g.picks | length }}" class="text-nowrap align-middle">
+            <span title="{{ g.away_name }}">{{ g.away_abbrev or '—' }}</span>
+            <span class="text-secondary">@</span>
+            <span title="{{ g.home_name }}">{{ g.home_abbrev or '—' }}</span>
+            {% if g.winner_correct is not none %}
+              {% if g.winner_correct %}<span class="text-success ms-1" title="Model's winner pick was correct">✓</span>
+              {% else %}<span class="text-danger ms-1" title="Model's winner pick was wrong">✗</span>{% endif %}
+            {% endif %}
+          </td>
+          <td rowspan="{{ g.picks | length }}" class="text-center text-nowrap align-middle">
+            {% if g.final %}{{ g.actual_away }}–{{ g.actual_home }}
+            {% else %}<span class="text-secondary small">pending</span>{% endif %}
+          </td>
+          {% endif %}
+          <td><span class="badge {{ 'text-bg-primary' if pick.bet_type == 'ML' else 'text-bg-secondary' }}">{{ pick.bet_type }}</span></td>
+          <td class="fw-semibold">{{ pick.selection }}
+            {% if pick.confidence %}<span class="badge text-bg-light border fw-normal">{{ pick.confidence }}</span>{% endif %}</td>
+          <td class="text-center">{{ result_badge(pick.result) }}</td>
+          <td class="text-end fw-semibold {{ 'text-success' if pick.pnl > 0 else ('text-danger' if pick.pnl < 0 else 'text-secondary') }}">
+            {% if pick.settled %}{{ pick.pnl | money }}{% else %}<span class="text-secondary">—</span>{% endif %}</td>
+        </tr>
+        {% endfor %}
+        {% else %}
+        <tr><td colspan="6" class="text-center text-secondary py-4">No settled picks for this date.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+<p class="text-secondary small mt-3">A <span class="text-success">✓</span> / <span class="text-danger">✗</span>
+by a matchup marks whether the model's straight-up winner call was right. Settled bets are graded
+at market prices for a flat $100 stake; PUSH returns the stake (P&amp;L $0), VOID/PENDING don't count.
+Source: <code>data/predictions/{{ sport | lower }}/grades_{{ date }}.csv</code>.</p>
+{% elif dates and date %}
+<div class="alert alert-secondary">No settled results for <code>{{ date }}</code> yet.</div>
+{% endif %}
+{% endblock %}

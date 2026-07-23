@@ -30,6 +30,7 @@ from pipeline.models.config import FACTORY_DEFAULTS
 
 _REPORT_DATE_RE = re.compile(r"daily_(\d{4}-\d{2}-\d{2})\.md$")
 _PRED_DATE_RE = re.compile(r"predictions_(\d{4}-\d{2}-\d{2})\.csv$")
+_GRADE_DATE_RE = re.compile(r"grades_(\d{4}-\d{2}-\d{2})\.csv$")
 
 
 def _read_csv(path: Path) -> list[dict]:
@@ -76,6 +77,36 @@ def available_dates(data_dir: Path, sport: str) -> list[str]:
         if m:
             out.append(m.group(1))
     return sorted(out, reverse=True)
+
+
+def graded_dates(data_dir: Path, sport: str) -> list[str]:
+    """Dates (newest first) for which a grades file exists — i.e. days whose
+    published picks have been settled against the finals."""
+    d = predictions_dir(data_dir, sport)
+    out = []
+    for p in d.glob("grades_*.csv") if d.exists() else []:
+        m = _GRADE_DATE_RE.search(p.name)
+        if m:
+            out.append(m.group(1))
+    return sorted(out, reverse=True)
+
+
+def read_grades(data_dir: Path, sport: str, on: str) -> list[dict]:
+    """Settled picks for a sport+date, typed and de-duplicated.
+
+    Doubleheader feeds can repeat an identical grade row; the daily card
+    should show each settled bet once, so exact duplicates are dropped."""
+    rows = [parsers.shape_grade(r) for r in
+            _read_csv(grades_path(data_dir, sport, on))]
+    seen: set = set()
+    unique: list[dict] = []
+    for r in rows:
+        key = tuple(sorted(r.items()))
+        if key in seen:
+            continue
+        seen.add(key)
+        unique.append(r)
+    return unique
 
 
 def _frame_index(data_dir: Path, sport: str) -> dict[str, list[dict]]:

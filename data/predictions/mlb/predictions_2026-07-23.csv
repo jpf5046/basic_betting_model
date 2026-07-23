@@ -1,0 +1,7 @@
+status,ml_lean,total_lean,game_id,sport,date,away_team_id,home_team_id,pred_away,pred_home,disp_away,disp_home,pred_total,pred_spread,win_prob,winner_team_id,pred_confidence,method_details
+ok,TOSS-UP,PASS,823042,MLB,2026-07-23,mlb-ari,mlb-stl,4.4763,4.379,5,4,8.8552,0.0973,0.51,mlb-ari,HIGH,
+ok,LEAN,PASS,824893,MLB,2026-07-23,mlb-sd,mlb-atl,3.9554,4.7271,4,5,8.6825,-0.7716,0.58,mlb-atl,HIGH,
+ok,TOSS-UP,PASS,824406,MLB,2026-07-23,mlb-min,mlb-cle,4.2752,4.7142,4,5,8.9895,-0.439,0.54,mlb-cle,HIGH,
+ok,LEAN,PASS,822785,MLB,2026-07-23,mlb-tb,mlb-tor,4.5786,4.0119,5,4,8.5905,0.5667,0.56,mlb-tb,HIGH,
+ok,TOSS-UP,PASS,823042,MLB,2026-07-23,mlb-ari,mlb-stl,4.4763,4.379,5,4,8.8552,0.0973,0.51,mlb-ari,HIGH,
+ok,LEAN,PASS,824247,MLB,2026-07-23,mlb-kc,mlb-det,4.0594,4.7904,4,5,8.8498,-0.7309,0.57,mlb-det,HIGH,

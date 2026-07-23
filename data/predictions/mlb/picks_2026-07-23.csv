@@ -1,0 +1,4 @@
+game_id,sport,date,bet_type,selection,confidence,line
+824893,MLB,2026-07-23,ML,mlb-atl,LEAN,0.55
+822785,MLB,2026-07-23,ML,mlb-tb,LEAN,0.55
+824247,MLB,2026-07-23,ML,mlb-det,LEAN,0.55

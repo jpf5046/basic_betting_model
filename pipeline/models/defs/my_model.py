@@ -21,79 +21,22 @@ from __future__ import annotations
 
 import math
 
-from pipeline.models.base import Prediction, gather_features
+from pipeline.models.base import Prediction
+from pipeline.models.blend import REQUIRED_FEATURES, blend_scores
 from pipeline.models.config import TIEBREAK_SPORTS
 from pipeline.models.registry import register_model
 
 
 @register_model("my_model")
 class MyModel:
-    required_features = [
-        "season_scoring", "common_opponents", "last10_form",
-        "head_to_head", "games_played",
-    ]
+    required_features = REQUIRED_FEATURES
 
     def predict(self, ctx, game, params) -> Prediction | None:
-        f = gather_features(ctx, game, self.required_features)
-        ss_a, ss_h = f["away"]["season_scoring"], f["home"]["season_scoring"]
-        if ss_a is None or ss_h is None:
+        blend = blend_scores(ctx, game, params)
+        if blend is None:
             return None  # couldn't run: no season baseline for a team
-
-        # Method 1 — season averages (also the fallback baseline).
-        base_away = (ss_a["spg"] + ss_h["sapg"]) / 2
-        base_home = (ss_h["spg"] + ss_a["sapg"]) / 2
-
-        # Method 2 — common opponents.
-        co_a, co_h = f["away"]["common_opponents"], f["home"]["common_opponents"]
-        if co_a and co_h:
-            common_away = (co_a["wrf"] + co_h["wra"]) / 2
-            common_home = (co_h["wrf"] + co_a["wra"]) / 2
-            common_weight = params["weights"]["common"]
-        else:
-            common_away, common_home = base_away, base_home
-            common_weight = 0.0
-
-        # Method 3 — recent form (0.5 L10_pct when a team has no data).
-        l10_a, l10_h = f["away"]["last10_form"], f["home"]["last10_form"]
-        pct_a = l10_a["l10_pct"] if l10_a else 0.5
-        pct_h = l10_h["l10_pct"] if l10_h else 0.5
-        form_a = params["form_base"] + pct_a * params["form_range"]
-        form_h = params["form_base"] + pct_h * params["form_range"]
-        form_away = base_away * form_a / form_h
-        form_home = base_home * form_h / form_a
-
-        # Method 4 — home-field adjustment.
-        home_adj_away = base_away - params["home_adv"] / 2
-        home_adj_home = base_home + params["home_adv"]
-
-        # Method 5 — head-to-head, away team's perspective (my_model.md §2).
-        h2h_a = f["away"]["head_to_head"]
-        if h2h_a:
-            h2h_away, h2h_home = h2h_a["avg_scored"], h2h_a["avg_allowed"]
-            h2h_weight = params["weights"]["h2h"]
-        else:
-            h2h_away, h2h_home = base_away, base_home
-            h2h_weight = 0.0
-
-        # Blend with dropped weights renormalized to sum to 1.
-        weights = {
-            "season": params["weights"]["season"],
-            "common": common_weight,
-            "form": params["weights"]["form"],
-            "home": params["weights"]["home"],
-            "h2h": h2h_weight,
-        }
-        total_w = sum(weights.values())
-        norm = {k: v / total_w for k, v in weights.items()}
-        estimates = {
-            "season": (base_away, base_home),
-            "common": (common_away, common_home),
-            "form": (form_away, form_home),
-            "home": (home_adj_away, home_adj_home),
-            "h2h": (h2h_away, h2h_home),
-        }
-        pred_away = sum(estimates[k][0] * norm[k] for k in norm)
-        pred_home = sum(estimates[k][1] * norm[k] for k in norm)
+        pred_away, pred_home = blend["pred_away"], blend["pred_home"]
+        estimates, norm, f = blend["estimates"], blend["weights"], blend["features"]
 
         # Win probability from the margin (my_model.md §3).
         p_away = 1.0 / (1.0 + math.exp(-(pred_away - pred_home) * params["k"]))

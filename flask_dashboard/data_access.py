@@ -1,10 +1,16 @@
 """The dashboard's read-only data layer.
 
-Everything the pages need, assembled from artifacts under ``data/``. It
+Everything the pages need, assembled from the pipeline's artifacts. It
 leans on the existing ``pipeline.api`` service/parsers layer for anything
 that already exists there (performance, predictions, runs) and only adds
 what that layer does not expose: a plain reader over the per-sport games
 CSVs, and a straight-up "did the predicted winner win" accuracy join.
+
+Predictions / picks / grades are read **from the SQLite/Postgres mirror
+first** (``pipeline.db``) and fall back to the flat CSVs when the mirror is
+absent or has no rows for the requested key — both paths shape through the
+same ``service`` helpers, so the templates never see a difference. Build the
+mirror with ``python3 -m pipeline.db load``.
 
 Nothing here writes; nothing here touches ``pipeline/api``'s own modules
 beyond importing and calling them.
@@ -52,6 +58,30 @@ class DataAccess:
 
     def today(self) -> str:
         return datetime.now(EASTERN).date().isoformat()
+
+    # ------------------------------------------------------------------- db
+
+    def _db_query(self, sql: str, params: tuple = ()) -> list[dict] | None:
+        """Read rows from the SQLite/Postgres mirror as plain dicts, or return
+        ``None`` when there is no usable mirror (no DB on disk, or the table
+        does not exist yet) so callers transparently fall back to the CSVs.
+
+        Read-only: like ``db_status`` it never creates the SQLite file just to
+        query it, and never runs ``init_schema``."""
+        import os
+
+        from pipeline.db.core import DEFAULT_SQLITE_PATH, Db
+
+        if not os.environ.get("DATABASE_URL") and not DEFAULT_SQLITE_PATH.exists():
+            return None
+        try:
+            with Db.connect() as db:
+                cur = db.execute(sql, params)
+                cols = [d[0] for d in cur.description]
+                return [dict(zip(cols, row)) for row in cur.fetchall()]
+        except Exception:
+            # Missing table / unreadable DB — fall back to the flat files.
+            return None
 
     @property
     def sports(self) -> tuple[str, ...]:
@@ -186,7 +216,7 @@ class DataAccess:
                         teams: TeamRegistry) -> dict[str, dict]:
         """game_id -> a compact prediction summary for a sport+date."""
         try:
-            data = service.read_predictions(self.data_dir, sport, date, teams)
+            data = self.predictions(sport, date)
         except Exception:
             return {}
         out = {}
@@ -208,14 +238,36 @@ class DataAccess:
     # ---------------------------------------------------- predictions / dates
 
     def prediction_dates(self, sport: str) -> list[str]:
-        return service.available_dates(self.data_dir, sport.upper())
+        """Dates with predictions, newest first — from the DB mirror when it
+        has them, otherwise the prediction CSVs."""
+        sport = sport.upper()
+        rows = self._db_query(
+            "SELECT DISTINCT date FROM predictions WHERE sport = ? "
+            "ORDER BY date DESC", (sport,))
+        if rows:
+            return [r["date"] for r in rows]
+        return service.available_dates(self.data_dir, sport)
 
     def prediction_dates_all(self) -> dict[str, list[str]]:
-        return {s: service.available_dates(self.data_dir, s) for s in SPORTS}
+        return {s: self.prediction_dates(s) for s in SPORTS}
 
     def predictions(self, sport: str, date: str) -> dict:
-        return service.read_predictions(self.data_dir, sport.upper(), date,
-                                        self.teams)
+        """The full prediction table + published-pick overlay for a date.
+
+        Reads from the DB mirror when it holds predictions for the date and
+        falls back to the CSVs otherwise, but shapes both through the same
+        service helper so the templates see an identical structure."""
+        sport = sport.upper()
+        pred_rows = self._db_query(
+            "SELECT * FROM predictions WHERE sport = ? AND date = ?",
+            (sport, date))
+        if pred_rows:
+            pick_rows = self._db_query(
+                "SELECT * FROM picks WHERE sport = ? AND date = ?",
+                (sport, date)) or []
+            return service.shape_predictions(pred_rows, pick_rows, sport, date,
+                                             self.teams)
+        return service.read_predictions(self.data_dir, sport, date, self.teams)
 
     # --------------------------------------------------------------- results
 
@@ -223,10 +275,30 @@ class DataAccess:
         """The calendar day before ``today`` (US/Eastern)."""
         return (datetime.now(EASTERN).date() - timedelta(days=1)).isoformat()
 
+    def graded_dates(self, sport: str) -> list[str]:
+        """Settled-result dates for a sport (newest first) — DB mirror first,
+        then the grades CSVs."""
+        sport = sport.upper()
+        rows = self._db_query(
+            "SELECT DISTINCT date FROM grades WHERE sport = ? "
+            "ORDER BY date DESC", (sport,))
+        if rows:
+            return [r["date"] for r in rows]
+        return service.graded_dates(self.data_dir, sport)
+
     def graded_dates_all(self) -> dict[str, list[str]]:
         """Per sport, the settled-result dates (newest first). These are the
         days the Results page can look back on."""
-        return {s: service.graded_dates(self.data_dir, s) for s in SPORTS}
+        return {s: self.graded_dates(s) for s in SPORTS}
+
+    def _grades(self, sport: str, date: str) -> list[dict]:
+        """Settled picks for a sport+date — DB mirror first, else the CSV."""
+        sport = sport.upper()
+        rows = self._db_query(
+            "SELECT * FROM grades WHERE sport = ? AND date = ?", (sport, date))
+        if rows:
+            return service.shape_grades(rows)
+        return service.read_grades(self.data_dir, sport, date)
 
     def _selection_label(self, grade: dict, teams: TeamRegistry) -> str:
         """A human-readable description of what was bet, e.g. ``BOS`` for a
@@ -248,11 +320,11 @@ class DataAccess:
         This is the "what did we call yesterday and how did it land" view."""
         sport = sport.upper()
         teams = self.teams
-        grades = service.read_grades(self.data_dir, sport, date)
+        grades = self._grades(sport, date)
 
         # Prediction context (matchup names, the model's straight-up winner).
         try:
-            pred_data = service.read_predictions(self.data_dir, sport, date, teams)
+            pred_data = self.predictions(sport, date)
         except Exception:
             pred_data = {"predictions": []}
         pred_by_game = {p["game_id"]: p for p in pred_data["predictions"]}
@@ -345,7 +417,7 @@ class DataAccess:
         for sport in SPORTS:
             finals = {g["game_id"]: g for g in self._games(sport)
                       if g["status"] == "final"} if sport in _GAME_SPORTS else {}
-            for date in service.available_dates(self.data_dir, sport):
+            for date in self.prediction_dates(sport):
                 try:
                     data = self.predictions(sport, date)
                 except Exception:

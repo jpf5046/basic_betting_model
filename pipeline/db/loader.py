@@ -12,6 +12,7 @@ import json
 from datetime import date
 from pathlib import Path
 
+from pipeline.api.paths import default_data_dir, predictions_dir
 from pipeline.backfill import OUTCOME_COLS, frame_csv_path
 from pipeline.db.core import Db, upsert_sql
 from pipeline.features.context import ADAPTERS, default_season
@@ -29,6 +30,23 @@ FRAME_FIXED = ["sport", "game_id", "season", "season_type", "date", "as_of_date"
 
 # Frame CSV columns that are NOT part of the per-game feature vector.
 _NON_FEATURE = set(FRAME_FIXED) - {"features"}
+
+# The per-date model/grader CSVs. Each entry: (table, file prefix, columns, pk).
+# Columns/pk match pipeline.db.core's CREATE TABLE for a byte-faithful mirror.
+PRED_COLS = ["sport", "game_id", "date", "status", "ml_lean", "total_lean",
+             "away_team_id", "home_team_id", "pred_away", "pred_home",
+             "disp_away", "disp_home", "pred_total", "pred_spread", "win_prob",
+             "winner_team_id", "pred_confidence", "method_details"]
+PICK_COLS = ["sport", "game_id", "date", "bet_type", "selection", "confidence", "line"]
+GRADE_COLS = ["sport", "game_id", "date", "bet_type", "selection", "confidence",
+              "line", "game_status", "actual_away", "actual_home", "result",
+              "pnl", "price_american"]
+
+_DATED = [
+    ("predictions", PRED_COLS, ["sport", "game_id", "date"]),
+    ("picks", PICK_COLS, ["sport", "game_id", "date", "bet_type"]),
+    ("grades", GRADE_COLS, ["sport", "game_id", "date", "bet_type"]),
+]
 
 
 def _int_or_none(value: str):
@@ -88,15 +106,38 @@ def load_frames(db: Db, sport: str, season: str) -> int:
     return n
 
 
+def load_dated(db: Db, sport: str, name: str, cols: list[str], pk: list[str],
+               data_dir: Path | None = None) -> int:
+    """Upsert every dated CSV (``<name>_<date>.csv``) for a sport.
+
+    Covers predictions / picks / grades, which are organised per run date
+    rather than per season. Values are stored verbatim (TEXT) so the table
+    mirrors the CSV exactly; identical repeated rows collapse on the key."""
+    d = predictions_dir(data_dir or default_data_dir(), sport)
+    if not d.exists():
+        return 0
+    total = 0
+    for path in sorted(d.glob(f"{name}_*.csv")):
+        with open(path, newline="") as f:
+            rows = [tuple((r.get(c) or "") for c in cols) for r in csv.DictReader(f)]
+        total += db.executemany(upsert_sql(name, cols, pk), rows)
+    db.commit()
+    return total
+
+
 def load_all(db: Db, sports: list[str], season_override: str | None,
-             on: date) -> dict[str, dict[str, int]]:
-    """Init schema, then upsert teams + each sport's games and frame rows."""
+             on: date, data_dir: Path | None = None) -> dict[str, dict[str, int]]:
+    """Init schema, then upsert teams + each sport's games, frames, and the
+    per-date predictions / picks / grades outputs."""
     db.init_schema()
     report: dict[str, dict[str, int]] = {"teams": {"all": load_teams(db)}}
     for sport in sports:
         season = season_override or default_season(sport, on)
-        report[sport] = {
+        stats = {
             "games": load_games(db, sport, season),
             "frames": load_frames(db, sport, season),
         }
+        for name, cols, pk in _DATED:
+            stats[name] = load_dated(db, sport, name, cols, pk, data_dir)
+        report[sport] = stats
     return report

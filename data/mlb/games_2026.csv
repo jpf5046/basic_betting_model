@@ -1553,8 +1553,8 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 824166,2026,regular,2026-07-22,2026-07-23T00:10:00Z,final,mlb-mia,mlb-hou,MIA,HOU,2,5,Daikin Park,,N,1
 824650,2026,regular,2026-07-22,2026-07-23T00:10:00Z,final,mlb-det,mlb-chc,DET,CHC,5,1,Wrigley Field,,N,1
 823042,2026,regular,2026-07-23,2026-06-25T23:45:00Z,postponed,mlb-ari,mlb-stl,ARI,STL,,,Busch Stadium,,N,1
-824893,2026,regular,2026-07-23,2026-07-23T16:15:00Z,scheduled,mlb-sd,mlb-atl,SD,ATL,,,Truist Park,,N,1
-824406,2026,regular,2026-07-23,2026-07-23T17:10:00Z,scheduled,mlb-min,mlb-cle,MIN,CLE,,,Progressive Field,,N,1
+824893,2026,regular,2026-07-23,2026-07-23T16:15:00Z,live,mlb-sd,mlb-atl,SD,ATL,,,Truist Park,,N,1
+824406,2026,regular,2026-07-23,2026-07-23T17:10:00Z,live,mlb-min,mlb-cle,MIN,CLE,,,Progressive Field,,N,1
 822785,2026,regular,2026-07-23,2026-07-23T19:07:00Z,scheduled,mlb-tb,mlb-tor,TB,TOR,,,Rogers Centre,,N,1
 823042,2026,regular,2026-07-23,2026-07-23T21:15:00Z,scheduled,mlb-ari,mlb-stl,ARI,STL,,,Busch Stadium,,N,1
 824247,2026,regular,2026-07-23,2026-07-23T22:40:00Z,scheduled,mlb-kc,mlb-det,KC,DET,,,Comerica Park,,N,1

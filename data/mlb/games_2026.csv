@@ -1553,11 +1553,11 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 824166,2026,regular,2026-07-22,2026-07-23T00:10:00Z,final,mlb-mia,mlb-hou,MIA,HOU,2,5,Daikin Park,,N,1
 824650,2026,regular,2026-07-22,2026-07-23T00:10:00Z,final,mlb-det,mlb-chc,DET,CHC,5,1,Wrigley Field,,N,1
 823042,2026,regular,2026-07-23,2026-06-25T23:45:00Z,postponed,mlb-ari,mlb-stl,ARI,STL,,,Busch Stadium,,N,1
-824893,2026,regular,2026-07-23,2026-07-23T16:15:00Z,live,mlb-sd,mlb-atl,SD,ATL,,,Truist Park,,N,1
-824406,2026,regular,2026-07-23,2026-07-23T17:10:00Z,live,mlb-min,mlb-cle,MIN,CLE,,,Progressive Field,,N,1
-822785,2026,regular,2026-07-23,2026-07-23T19:07:00Z,scheduled,mlb-tb,mlb-tor,TB,TOR,,,Rogers Centre,,N,1
-823042,2026,regular,2026-07-23,2026-07-23T21:15:00Z,scheduled,mlb-ari,mlb-stl,ARI,STL,,,Busch Stadium,,N,1
-824247,2026,regular,2026-07-23,2026-07-23T22:40:00Z,scheduled,mlb-kc,mlb-det,KC,DET,,,Comerica Park,,N,1
+824893,2026,regular,2026-07-23,2026-07-23T16:15:00Z,final,mlb-sd,mlb-atl,SD,ATL,5,6,Truist Park,,N,1
+824406,2026,regular,2026-07-23,2026-07-23T17:10:00Z,final,mlb-min,mlb-cle,MIN,CLE,3,1,Progressive Field,,N,1
+822785,2026,regular,2026-07-23,2026-07-23T19:07:00Z,final,mlb-tb,mlb-tor,TB,TOR,1,3,Rogers Centre,,N,1
+823042,2026,regular,2026-07-23,2026-07-23T21:15:00Z,final,mlb-ari,mlb-stl,ARI,STL,10,6,Busch Stadium,,N,1
+824247,2026,regular,2026-07-23,2026-07-23T22:40:00Z,final,mlb-kc,mlb-det,KC,DET,3,4,Comerica Park,,N,1
 823759,2026,regular,2026-07-24,2026-07-24T20:10:00Z,scheduled,mlb-col,mlb-mil,COL,MIL,,,American Family Field,,N,1
 823352,2026,regular,2026-07-24,2026-07-24T22:40:00Z,scheduled,mlb-chc,mlb-pit,CHC,PIT,,,PNC Park,,N,1
 824248,2026,regular,2026-07-24,2026-07-24T22:40:00Z,scheduled,mlb-kc,mlb-det,KC,DET,,,Comerica Park,,N,1

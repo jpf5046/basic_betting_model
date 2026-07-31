@@ -1647,16 +1647,16 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 824002,2026,regular,2026-07-29,2026-07-30T01:38:00Z,final,mlb-hou,mlb-laa,HOU,LAA,7,4,Angel Stadium,,N,1
 824973,2026,regular,2026-07-29,2026-07-30T01:40:00Z,final,mlb-bos,mlb-ath,BOS,ATH,4,2,Sutter Health Park,,N,1
 823924,2026,regular,2026-07-29,2026-07-30T02:10:00Z,final,mlb-sea,mlb-lad,SEA,LAD,2,4,UNIQLO Field at Dodger Stadium,,N,1
-822946,2026,regular,2026-07-30,2026-07-30T16:10:00Z,scheduled,mlb-tex,mlb-tb,TEX,TB,,,Tropicana Field,,N,1
-823674,2026,regular,2026-07-30,2026-07-30T17:40:00Z,scheduled,mlb-kc,mlb-min,KC,MIN,,,Target Field,,N,1
-824568,2026,regular,2026-07-30,2026-07-30T18:10:00Z,scheduled,mlb-nyy,mlb-cws,NYY,CWS,,,Rate Field,,N,1
-823023,2026,regular,2026-07-30,2026-07-30T18:15:00Z,scheduled,mlb-chc,mlb-stl,CHC,STL,,,Busch Stadium,,N,1
-823595,2026,regular,2026-07-30,2026-07-30T23:10:00Z,scheduled,mlb-mia,mlb-nym,MIA,NYM,,,Citi Field,,N,1
-824488,2026,regular,2026-07-30,2026-07-30T23:10:00Z,scheduled,mlb-pit,mlb-cin,PIT,CIN,,,Great American Ball Park,,N,1
-824894,2026,regular,2026-07-30,2026-07-30T23:15:00Z,scheduled,mlb-wsh,mlb-atl,WSH,ATL,,,Truist Park,,N,1
-823271,2026,regular,2026-07-30,2026-07-31T01:40:00Z,scheduled,mlb-sf,mlb-sd,SF,SD,,,Petco Park,,N,1
-824974,2026,regular,2026-07-30,2026-07-31T01:40:00Z,scheduled,mlb-bos,mlb-ath,BOS,ATH,,,Sutter Health Park,,N,1
-823921,2026,regular,2026-07-30,2026-07-31T02:10:00Z,scheduled,mlb-sea,mlb-lad,SEA,LAD,,,UNIQLO Field at Dodger Stadium,,N,1
+822946,2026,regular,2026-07-30,2026-07-30T16:10:00Z,final,mlb-tex,mlb-tb,TEX,TB,2,3,Tropicana Field,,N,1
+823674,2026,regular,2026-07-30,2026-07-30T17:40:00Z,final,mlb-kc,mlb-min,KC,MIN,3,4,Target Field,,N,1
+824568,2026,regular,2026-07-30,2026-07-30T18:10:00Z,final,mlb-nyy,mlb-cws,NYY,CWS,1,2,Rate Field,,N,1
+823023,2026,regular,2026-07-30,2026-07-30T18:15:00Z,final,mlb-chc,mlb-stl,CHC,STL,4,2,Busch Stadium,,N,1
+823595,2026,regular,2026-07-30,2026-07-30T23:10:00Z,final,mlb-mia,mlb-nym,MIA,NYM,2,4,Citi Field,,N,1
+824488,2026,regular,2026-07-30,2026-07-30T23:10:00Z,final,mlb-pit,mlb-cin,PIT,CIN,2,3,Great American Ball Park,,N,1
+824894,2026,regular,2026-07-30,2026-07-30T23:15:00Z,final,mlb-wsh,mlb-atl,WSH,ATL,4,5,Truist Park,,N,1
+823271,2026,regular,2026-07-30,2026-07-31T01:40:00Z,final,mlb-sf,mlb-sd,SF,SD,4,1,Petco Park,,N,1
+824974,2026,regular,2026-07-30,2026-07-31T01:40:00Z,final,mlb-bos,mlb-ath,BOS,ATH,5,4,Sutter Health Park,,N,1
+823921,2026,regular,2026-07-30,2026-07-31T02:10:00Z,final,mlb-sea,mlb-lad,SEA,LAD,2,6,UNIQLO Field at Dodger Stadium,,N,1
 824651,2026,regular,2026-07-31,2026-07-31T18:20:00Z,scheduled,mlb-nyy,mlb-chc,NYY,CHC,,,Wrigley Field,,N,1
 824486,2026,regular,2026-07-31,2026-07-31T22:10:00Z,scheduled,mlb-pit,mlb-cin,PIT,CIN,,,Great American Ball Park,,N,1
 824809,2026,regular,2026-07-31,2026-07-31T23:05:00Z,scheduled,mlb-phi,mlb-bal,PHI,BAL,,,Oriole Park at Camden Yards,,N,1

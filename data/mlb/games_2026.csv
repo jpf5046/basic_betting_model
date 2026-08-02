@@ -1672,21 +1672,21 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 823272,2026,regular,2026-07-31,2026-08-01T01:45:00Z,final,mlb-sf,mlb-sd,SF,SD,0,7,Petco Park,,N,1
 823111,2026,regular,2026-07-31,2026-08-01T02:10:00Z,final,mlb-min,mlb-sea,MIN,SEA,5,3,T-Mobile Park,,N,1
 823922,2026,regular,2026-07-31,2026-08-01T02:10:00Z,final,mlb-bos,mlb-lad,BOS,LAD,9,4,UNIQLO Field at Dodger Stadium,,N,1
-822781,2026,regular,2026-08-01,2026-08-01T19:07:00Z,scheduled,mlb-stl,mlb-tor,STL,TOR,,,Rogers Centre,,N,1
-822944,2026,regular,2026-08-01,2026-08-01T20:10:00Z,scheduled,mlb-cws,mlb-tb,CWS,TB,,,Tropicana Field,,N,1
-823109,2026,regular,2026-08-01,2026-08-01T20:10:00Z,scheduled,mlb-min,mlb-sea,MIN,SEA,,,T-Mobile Park,,N,1
-823594,2026,regular,2026-08-01,2026-08-01T20:10:00Z,scheduled,mlb-mia,mlb-nym,MIA,NYM,,,Citi Field,,N,1
-824485,2026,regular,2026-08-01,2026-08-01T22:40:00Z,scheduled,mlb-pit,mlb-cin,PIT,CIN,,,Great American Ball Park,,N,1
-824808,2026,regular,2026-08-01,2026-08-01T23:05:00Z,scheduled,mlb-phi,mlb-bal,PHI,BAL,,,Oriole Park at Camden Yards,,N,1
-824162,2026,regular,2026-08-01,2026-08-01T23:10:00Z,scheduled,mlb-tex,mlb-hou,TEX,HOU,,,Daikin Park,,N,1
-824405,2026,regular,2026-08-01,2026-08-01T23:15:00Z,scheduled,mlb-ari,mlb-cle,ARI,CLE,,,Progressive Field,,N,1
-824649,2026,regular,2026-08-01,2026-08-01T23:15:00Z,scheduled,mlb-nyy,mlb-chc,NYY,CHC,,,Wrigley Field,,N,1
-824890,2026,regular,2026-08-01,2026-08-01T23:15:00Z,scheduled,mlb-wsh,mlb-atl,WSH,ATL,,,Truist Park,,N,1
-824326,2026,regular,2026-08-01,2026-08-02T00:10:00Z,scheduled,mlb-kc,mlb-col,KC,COL,,,Coors Field,,N,1
-823269,2026,regular,2026-08-01,2026-08-02T00:40:00Z,scheduled,mlb-sf,mlb-sd,SF,SD,,,Petco Park,,N,1
-823920,2026,regular,2026-08-01,2026-08-02T01:10:00Z,scheduled,mlb-bos,mlb-lad,BOS,LAD,,,UNIQLO Field at Dodger Stadium,,N,1
-824000,2026,regular,2026-08-01,2026-08-02T01:38:00Z,scheduled,mlb-mil,mlb-laa,MIL,LAA,,,Angel Stadium,,N,1
-824972,2026,regular,2026-08-01,2026-08-02T01:40:00Z,scheduled,mlb-det,mlb-ath,DET,ATH,,,Sutter Health Park,,N,1
+822781,2026,regular,2026-08-01,2026-08-01T19:07:00Z,final,mlb-stl,mlb-tor,STL,TOR,1,5,Rogers Centre,,N,1
+822944,2026,regular,2026-08-01,2026-08-01T20:10:00Z,final,mlb-cws,mlb-tb,CWS,TB,0,1,Tropicana Field,,N,1
+823109,2026,regular,2026-08-01,2026-08-01T20:10:00Z,final,mlb-min,mlb-sea,MIN,SEA,3,4,T-Mobile Park,,N,1
+823594,2026,regular,2026-08-01,2026-08-01T20:10:00Z,final,mlb-mia,mlb-nym,MIA,NYM,6,2,Citi Field,,N,1
+824485,2026,regular,2026-08-01,2026-08-01T22:40:00Z,final,mlb-pit,mlb-cin,PIT,CIN,4,1,Great American Ball Park,,N,1
+824808,2026,regular,2026-08-01,2026-08-01T23:05:00Z,final,mlb-phi,mlb-bal,PHI,BAL,5,0,Oriole Park at Camden Yards,,N,1
+824162,2026,regular,2026-08-01,2026-08-01T23:10:00Z,final,mlb-tex,mlb-hou,TEX,HOU,4,5,Daikin Park,,N,1
+824405,2026,regular,2026-08-01,2026-08-01T23:15:00Z,final,mlb-ari,mlb-cle,ARI,CLE,12,8,Progressive Field,,N,1
+824649,2026,regular,2026-08-01,2026-08-01T23:15:00Z,final,mlb-nyy,mlb-chc,NYY,CHC,2,5,Wrigley Field,,N,1
+824890,2026,regular,2026-08-01,2026-08-01T23:15:00Z,final,mlb-wsh,mlb-atl,WSH,ATL,3,8,Truist Park,,N,1
+824326,2026,regular,2026-08-01,2026-08-02T00:10:00Z,final,mlb-kc,mlb-col,KC,COL,6,12,Coors Field,,N,1
+823269,2026,regular,2026-08-01,2026-08-02T00:40:00Z,final,mlb-sf,mlb-sd,SF,SD,5,6,Petco Park,,N,1
+823920,2026,regular,2026-08-01,2026-08-02T01:10:00Z,final,mlb-bos,mlb-lad,BOS,LAD,3,2,UNIQLO Field at Dodger Stadium,,N,1
+824000,2026,regular,2026-08-01,2026-08-02T01:38:00Z,final,mlb-mil,mlb-laa,MIL,LAA,3,1,Angel Stadium,,N,1
+824972,2026,regular,2026-08-01,2026-08-02T01:40:00Z,final,mlb-det,mlb-ath,DET,ATH,8,6,Sutter Health Park,,N,1
 824807,2026,regular,2026-08-02,2026-08-02T17:35:00Z,scheduled,mlb-phi,mlb-bal,PHI,BAL,,,Oriole Park at Camden Yards,,N,1
 824891,2026,regular,2026-08-02,2026-08-02T17:35:00Z,scheduled,mlb-wsh,mlb-atl,WSH,ATL,,,Truist Park,,N,1
 822783,2026,regular,2026-08-02,2026-08-02T17:37:00Z,scheduled,mlb-stl,mlb-tor,STL,TOR,,,Rogers Centre,,N,1

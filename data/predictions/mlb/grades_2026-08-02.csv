@@ -1,0 +1,7 @@
+game_id,sport,date,bet_type,selection,confidence,line,game_status,actual_away,actual_home,result,pnl,price_american
+824891,MLB,2026-08-02,ML,mlb-atl,LEAN,0.55,final,2,4,WIN,100,
+824891,MLB,2026-08-02,TOTAL,OVER,,9.2,final,2,4,LOSS,-100,
+824483,MLB,2026-08-02,TOTAL,OVER,,9.2,final,2,10,WIN,100,
+824323,MLB,2026-08-02,TOTAL,OVER,,9.2,final,1,8,LOSS,-100,
+823996,MLB,2026-08-02,ML,mlb-mil,STRONG,0.6,final,0,3,LOSS,-100,
+824971,MLB,2026-08-02,ML,mlb-det,STRONG,0.6,final,11,0,WIN,100,

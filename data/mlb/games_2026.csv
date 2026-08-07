@@ -1741,17 +1741,17 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 823106,2026,regular,2026-08-05,2026-08-06T01:40:00Z,final,mlb-det,mlb-sea,DET,SEA,2,4,T-Mobile Park,,N,1
 825052,2026,regular,2026-08-05,2026-08-06T01:40:00Z,final,mlb-sd,mlb-ari,SD,ARI,4,10,Chase Field,,N,1
 824664,2026,regular,2026-08-06,2026-06-21T18:20:00Z,postponed,mlb-tor,mlb-chc,TOR,CHC,,,Wrigley Field,,N,1
-824804,2026,regular,2026-08-06,2026-08-06T16:35:00Z,scheduled,mlb-laa,mlb-bal,LAA,BAL,,,Oriole Park at Camden Yards,,N,1
-824481,2026,regular,2026-08-06,2026-08-06T16:40:00Z,scheduled,mlb-ath,mlb-cin,ATH,CIN,,,Great American Ball Park,,N,1
-824401,2026,regular,2026-08-06,2026-08-06T17:10:00Z,scheduled,mlb-nym,mlb-cle,NYM,CLE,,,Progressive Field,,N,1
-823754,2026,regular,2026-08-06,2026-08-06T18:10:00Z,scheduled,mlb-pit,mlb-mil,PIT,MIL,,,American Family Field,,N,1
-824664,2026,regular,2026-08-06,2026-08-06T18:20:00Z,scheduled,mlb-tor,mlb-chc,TOR,CHC,,,Wrigley Field,,N,1
-823105,2026,regular,2026-08-06,2026-08-06T20:10:00Z,scheduled,mlb-det,mlb-sea,DET,SEA,,,T-Mobile Park,,N,1
-823430,2026,regular,2026-08-06,2026-08-06T22:05:00Z,scheduled,mlb-wsh,mlb-phi,WSH,PHI,,,Citizens Bank Park,,N,1
-824729,2026,regular,2026-08-06,2026-08-06T23:10:00Z,scheduled,mlb-cws,mlb-bos,CWS,BOS,,,Fenway Park,,N,1
-824885,2026,regular,2026-08-06,2026-08-06T23:15:00Z,scheduled,mlb-mia,mlb-atl,MIA,ATL,,,Truist Park,,N,1
-824080,2026,regular,2026-08-06,2026-08-06T23:40:00Z,scheduled,mlb-min,mlb-kc,MIN,KC,,,Kauffman Stadium,,N,1
-825053,2026,regular,2026-08-06,2026-08-07T01:40:00Z,scheduled,mlb-sd,mlb-ari,SD,ARI,,,Chase Field,,N,1
+824804,2026,regular,2026-08-06,2026-08-06T16:35:00Z,final,mlb-laa,mlb-bal,LAA,BAL,4,1,Oriole Park at Camden Yards,,N,1
+824481,2026,regular,2026-08-06,2026-08-06T16:40:00Z,final,mlb-ath,mlb-cin,ATH,CIN,5,6,Great American Ball Park,,N,1
+824401,2026,regular,2026-08-06,2026-08-06T17:10:00Z,final,mlb-nym,mlb-cle,NYM,CLE,13,6,Progressive Field,,N,1
+823754,2026,regular,2026-08-06,2026-08-06T18:10:00Z,final,mlb-pit,mlb-mil,PIT,MIL,2,5,American Family Field,,N,1
+824664,2026,regular,2026-08-06,2026-08-06T18:20:00Z,final,mlb-tor,mlb-chc,TOR,CHC,2,3,Wrigley Field,,N,1
+823105,2026,regular,2026-08-06,2026-08-06T20:10:00Z,final,mlb-det,mlb-sea,DET,SEA,11,0,T-Mobile Park,,N,1
+823430,2026,regular,2026-08-06,2026-08-06T22:05:00Z,final,mlb-wsh,mlb-phi,WSH,PHI,3,7,Citizens Bank Park,,N,1
+824729,2026,regular,2026-08-06,2026-08-06T23:10:00Z,final,mlb-cws,mlb-bos,CWS,BOS,11,12,Fenway Park,,N,1
+824885,2026,regular,2026-08-06,2026-08-06T23:15:00Z,final,mlb-mia,mlb-atl,MIA,ATL,3,11,Truist Park,,N,1
+824080,2026,regular,2026-08-06,2026-08-06T23:40:00Z,final,mlb-min,mlb-kc,MIN,KC,4,3,Kauffman Stadium,,N,1
+825053,2026,regular,2026-08-06,2026-08-07T01:40:00Z,final,mlb-sd,mlb-ari,SD,ARI,5,1,Chase Field,,N,1
 823349,2026,regular,2026-08-07,2026-08-07T22:40:00Z,scheduled,mlb-nym,mlb-pit,NYM,PIT,,,PNC Park,,N,1
 823428,2026,regular,2026-08-07,2026-08-07T22:40:00Z,scheduled,mlb-tor,mlb-phi,TOR,PHI,,,Citizens Bank Park,,N,1
 822699,2026,regular,2026-08-07,2026-08-07T22:45:00Z,scheduled,mlb-cin,mlb-wsh,CIN,WSH,,,Nationals Park,,N,1

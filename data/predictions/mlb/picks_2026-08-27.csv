@@ -1,0 +1,7 @@
+game_id,sport,date,bet_type,selection,confidence,line
+822694,MLB,2026-08-27,ML,mlb-wsh,LEAN,0.55
+822694,MLB,2026-08-27,TOTAL,OVER,,9.2
+823503,MLB,2026-08-27,ML,mlb-nyy,LEAN,0.55
+822771,MLB,2026-08-27,ML,mlb-tor,LEAN,0.55
+823581,MLB,2026-08-27,ML,mlb-mil,LEAN,0.55
+824879,MLB,2026-08-27,ML,mlb-atl,LEAN,0.55

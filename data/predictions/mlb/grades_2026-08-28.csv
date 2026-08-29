@@ -1,0 +1,11 @@
+game_id,sport,date,bet_type,selection,confidence,line,game_status,actual_away,actual_home,result,pnl,price_american
+824638,MLB,2026-08-28,ML,mlb-chc,LEAN,0.55,scheduled,,,PENDING,0,
+822691,MLB,2026-08-28,TOTAL,OVER,,9.2,scheduled,,,PENDING,0,
+824877,MLB,2026-08-28,ML,mlb-atl,STRONG,0.6,scheduled,,,PENDING,0,
+824877,MLB,2026-08-28,TOTAL,OVER,,9.2,scheduled,,,PENDING,0,
+823744,MLB,2026-08-28,ML,mlb-mil,STRONG,0.6,scheduled,,,PENDING,0,
+823666,MLB,2026-08-28,TOTAL,OVER,,9.2,scheduled,,,PENDING,0,
+823013,MLB,2026-08-28,TOTAL,OVER,,9.2,scheduled,,,PENDING,0,
+823985,MLB,2026-08-28,ML,mlb-phi,LEAN,0.55,scheduled,,,PENDING,0,
+824960,MLB,2026-08-28,ML,mlb-bal,LEAN,0.55,scheduled,,,PENDING,0,
+824960,MLB,2026-08-28,TOTAL,OVER,,9.2,scheduled,,,PENDING,0,

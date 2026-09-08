@@ -503,7 +503,7 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020437,20262027,regular,2026-12-01,2026-12-02T00:30:00Z,scheduled,nhl-sjs,nhl-njd,SJS,NJD,,,Prudential Center,,N,1
 2026020438,20262027,regular,2026-12-01,2026-12-02T00:00:00Z,scheduled,nhl-fla,nhl-nyi,FLA,NYI,,,UBS Arena,,N,1
 2026020439,20262027,regular,2026-12-01,2026-12-02T00:00:00Z,scheduled,nhl-van,nhl-wsh,VAN,WSH,,,Capital One Arena,,N,1
-2026020440,20262027,regular,2026-12-01,2026-12-02T00:30:00Z,scheduled,nhl-col,nhl-bos,COL,BOS,,,TD Garden,,N,1
+2026020440,20262027,regular,2026-12-01,2026-12-02T01:00:00Z,scheduled,nhl-col,nhl-bos,COL,BOS,,,TD Garden,,N,1
 2026020441,20262027,regular,2026-12-01,2026-12-02T01:00:00Z,scheduled,nhl-buf,nhl-edm,BUF,EDM,,,Rogers Place,,N,1
 2026020442,20262027,regular,2026-12-01,2026-12-02T02:40:00Z,scheduled,nhl-dal,nhl-sea,DAL,SEA,,,Climate Pledge Arena,,N,1
 2026020443,20262027,regular,2026-12-01,2026-12-02T03:00:00Z,scheduled,nhl-min,nhl-ana,MIN,ANA,,,Honda Center,,N,1

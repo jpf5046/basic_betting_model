@@ -385,14 +385,35 @@ python3 run_daily.py --skip-odds           # odds-blind (or just leave ODDS_API_
 ```
 
 `run_daily.py` (identical: `python3 -m pipeline daily`) is the PLAN.md §7
-orchestrator. Per sport it chains **ingest → grade yesterday → predict
-today → odds fetch → edge report**, then writes a markdown daily report —
-stage log, grade card, pick sheet, edge table — to
-`data/reports/daily_<date>.md`. Stages are isolated and idempotent: a
-sport with no games today is SKIPPED ("off-season"), not an error; a
-failing stage is recorded (and makes the run exit nonzero) without
-stopping the other sports; re-running a date is always safe. Odds stages
-skip themselves when `ODDS_API_KEY` isn't set.
+orchestrator. Per sport it chains **ingest → fresh → grade yesterday →
+regrade stragglers → predict today → odds fetch → edge report**, then
+writes a markdown daily report — stage log, grade card, pick sheet, edge
+table — to `data/reports/daily_<date>.md`. Stages are isolated and
+idempotent: a sport with no games today is SKIPPED ("off-season"), not an
+error; a failing stage is recorded (and makes the run exit nonzero)
+without stopping the other sports; re-running a date is always safe. Odds
+stages skip themselves when `ODDS_API_KEY` isn't set.
+
+Two of those stages exist because of a month-long silent outage. The MLB
+ingest started failing on 2026-08-11 (one game referenced a statsapi team
+id missing from `data/teams.csv`, which aborted the whole season fetch),
+and nothing went red for 28 days: **the games CSV survives a failed
+fetch**, so `predict` kept publishing picks off a stale-but-complete
+forward schedule and `grade` kept writing grade cards where every row was
+PENDING. Picks accumulated, the leaderboard quietly stopped moving, and
+`--allow-partial` swallowed the ingest failure as if MLB were off-season.
+
+* **fresh** compares the schedule's recent slate against its own finals.
+  Games the feed never resolved (more than `STALE_TOLERANCE` of them over
+  `FRESHNESS_LOOKBACK_DAYS`) fail the stage — the one signal no individual
+  exit code can see. Postponed/suspended/cancelled don't count.
+* **regrade** re-runs earlier dates whose grade card still has PENDING
+  rows (bounded by `REGRADE_LOOKBACK_DAYS`), so a feed that comes back
+  also settles everything it stranded instead of leaving those bets out of
+  the record forever.
+* `--allow-partial` now tolerates an ingest failure only when the sport
+  has **no games on its schedule** — a genuinely dead off-season feed. A
+  sport that is playing reds the run.
 
 Step by step, the same loop by hand is:
 
@@ -444,7 +465,9 @@ we're ready. Still open from §7: standings snapshots.
 | `no <SPORT> games on <date>` | Off-season or an off day — check `today --date` on a known game day |
 | `NO PREDICTION (insufficient data)` | A team has no completed regular-season games yet (early season); the model refuses to guess |
 | `picks_<date>.csv not found` when grading | `predict` was never run for that date — the grader only grades what was actually published |
-| Grades stuck on `PENDING` | The games CSV predates the final — run the sport's `fetch` again, then re-grade |
+| Grades stuck on `PENDING` | The games CSV predates the final — run the sport's `fetch` again, then re-grade. The daily run's `regrade` stage does this automatically for the last `REGRADE_LOOKBACK_DAYS` |
+| `fresh` stage FAILED, "games ... never went final" | The sport's `fetch` has been failing (or returning a stale feed) while `predict`/`grade` kept running off the old games CSV. Fix the fetch; `regrade` then settles the backlog |
+| `skipped N regular season/playoff game(s) with unmapped statsapi team ids` | The MLB feed has a team missing from `data/teams.csv` `external_ids`. Those games are dropped, not guessed — add the mapping. Past `MAX_UNMAPPED_GAMES` the fetch refuses outright, on the grounds that it's a mapping regression rather than one odd game |
 | `no API key: set ODDS_API_KEY…` | `export ODDS_API_KEY=...` before any odds command |
 | `unmapped team names (add to NAME_ALIASES?)` | The Odds API spells a team differently — add the alias in `pipeline/odds/normalize.py` |
 | `AMBIGUOUS: … multiple candidates` | Doubleheader whose start times couldn't break the tie — check the games CSV has `start_time_utc` for both games |

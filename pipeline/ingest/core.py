@@ -260,14 +260,22 @@ def print_games(games: list[Game]) -> None:
         print(f"{g.date}  {g.away_abbrev:>4} @ {g.home_abbrev:<4} {score:>12}  {when}  {g.venue}{dh}")
 
 
-def make_parser(prog: str, description: str, season_default: str, season_help: str) -> argparse.ArgumentParser:
-    """The CLI shared by every adapter: fetch / today / scores / common-opponents."""
+def make_parser(prog: str, description: str, season_default: str, season_help: str,
+                strict_help: str | None = None) -> argparse.ArgumentParser:
+    """The CLI shared by every adapter: fetch / today / scores / common-opponents.
+
+    `strict_help` opts an adapter into a `fetch --strict` flag. Only adapters
+    that tolerate something by default have one to offer, so the flag is
+    absent (rather than silently ignored) everywhere else.
+    """
     p = argparse.ArgumentParser(prog=prog, description=description)
     p.add_argument("--season", default=season_default, help=season_help)
     sub = p.add_subparsers(dest="cmd", required=True)
 
     f = sub.add_parser("fetch", help="download the schedule feed(s) and write games CSV")
     f.add_argument("--offline", action="store_true", help="parse the newest cached raw file(s)")
+    if strict_help:
+        f.add_argument("--strict", action="store_true", help=strict_help)
 
     t = sub.add_parser("today", help="show games on a date (default: today, US/Eastern)")
     t.add_argument("--date", help="YYYY-MM-DD")

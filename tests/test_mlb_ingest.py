@@ -10,11 +10,13 @@ from datetime import date
 from pathlib import Path
 
 from pipeline.ingest.mlb import (
+    SkippedGame,
     UnmappedTeamError,
     common_opponents,
     completed_regular_season,
     load_team_maps,
     parse_games,
+    summarize_skipped,
     team_log,
     todays_games,
 )
@@ -79,13 +81,65 @@ class TestParse(unittest.TestCase):
         # 23:10Z would already be June 2 in UTC; officialDate keeps it June 1.
         self.assertEqual(by_id["813001"].date, "2026-06-01")
 
-    def test_unmapped_regular_season_team_is_fatal(self):
+    def test_unmapped_regular_season_team_is_fatal_under_strict(self):
+        doc, by_mlb_id = self.with_unmapped_home_team(99999)
+        with self.assertRaises(UnmappedTeamError):
+            parse_games(doc, by_mlb_id, strict=True)
+
+    def test_unmapped_regular_season_team_is_skipped_not_fatal(self):
+        """The 2026-08-11 outage: one unmappable game (statsapi id 4944) took
+        the whole season fetch down with it for 28 days."""
+        doc, by_mlb_id = self.with_unmapped_home_team(4944)
+        skipped = []
+        games = parse_games(doc, by_mlb_id, skipped=skipped)
+
+        self.assertEqual(len(games), len(self.games) - 1)
+        self.assertNotIn("813001", {g.game_id for g in games})
+        self.assertEqual([s.team_id for s in skipped], [4944])
+        self.assertEqual(skipped[0].season_type, "regular")
+
+    def test_skipped_games_are_not_reported_to_callers_that_dont_ask(self):
+        doc, by_mlb_id = self.with_unmapped_home_team(4944)
+        self.assertEqual(len(parse_games(doc, by_mlb_id)), len(self.games) - 1)
+
+    def test_unmapped_exhibition_team_is_skipped_silently(self):
+        """All-star squads were never ours to model — not a mapping gap."""
+        doc = copy.deepcopy(self.doc)
+        spring = doc["dates"][0]["games"][0]
+        self.assertEqual(spring["gameType"], "S")
+        spring["teams"]["home"]["team"]["id"] = 4944
+        skipped = []
+        parse_games(doc, load_team_maps()[0], skipped=skipped)
+        self.assertEqual(skipped, [])
+
+    def test_wholesale_mapping_regression_still_fails(self):
+        """A club changing id, or the feed moving its id scheme, must not
+        quietly drain the season one skipped game at a time."""
+        doc = copy.deepcopy(self.doc)
+        for day in doc["dates"]:
+            for g in day["games"]:
+                g["gameType"] = "R"
+                g["teams"]["home"]["team"]["id"] = 99999
+        by_mlb_id, _ = load_team_maps()
+        with self.assertRaises(UnmappedTeamError) as ctx:
+            parse_games(doc, by_mlb_id)
+        self.assertIn("mapping regression", str(ctx.exception))
+
+    def test_summarize_skipped_counts_each_unmapped_id(self):
+        rows = [
+            SkippedGame("1", "2026-08-11", "regular", 4944, "Athletics"),
+            SkippedGame("2", "2026-08-12", "regular", 4944, "Athletics"),
+            SkippedGame("3", "2026-08-12", "regular", 4950, ""),
+        ]
+        self.assertEqual(summarize_skipped(rows), '4944 "Athletics" x2; 4950 x1')
+
+    def with_unmapped_home_team(self, team_id):
+        """The fixture with one regular-season game's home team unmappable."""
         doc = copy.deepcopy(self.doc)
         bad = doc["dates"][2]["games"][0]  # first regular-season game
-        bad["teams"]["home"]["team"]["id"] = 99999
-        by_mlb_id, _ = load_team_maps()
-        with self.assertRaises(UnmappedTeamError):
-            parse_games(doc, by_mlb_id)
+        self.assertEqual(bad["gamePk"], 813001)
+        bad["teams"]["home"]["team"]["id"] = team_id
+        return doc, load_team_maps()[0]
 
 
 class TestQueries(unittest.TestCase):

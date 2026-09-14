@@ -1,0 +1,5 @@
+game_id,sport,date,bet_type,selection,confidence,line
+824465,MLB,2026-09-14,ML,mlb-lad,LEAN,0.55
+822765,MLB,2026-09-14,ML,mlb-det,LEAN,0.55
+824308,MLB,2026-09-14,ML,mlb-sd,LEAN,0.55
+824308,MLB,2026-09-14,TOTAL,OVER,,9.2

@@ -111,11 +111,11 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020045,20262027,regular,2026-10-06,2026-10-06T23:00:00Z,scheduled,nhl-car,nhl-mtl,CAR,MTL,,,Centre Bell,,N,1
 2026020046,20262027,regular,2026-10-06,2026-10-06T23:00:00Z,scheduled,nhl-ott,nhl-det,OTT,DET,,,Little Caesars Arena,,N,1
 2026020047,20262027,regular,2026-10-06,2026-10-06T23:00:00Z,scheduled,nhl-uta,nhl-njd,UTA,NJD,,,Prudential Center,,N,1
-2026020048,20262027,regular,2026-10-06,2026-10-07T00:00:00Z,scheduled,nhl-nyi,nhl-nyr,NYI,NYR,,,Madison Square Garden,,N,1
+2026020048,20262027,regular,2026-10-06,2026-10-06T23:30:00Z,scheduled,nhl-nyi,nhl-nyr,NYI,NYR,,,Madison Square Garden,,N,1
 2026020049,20262027,regular,2026-10-06,2026-10-06T23:00:00Z,scheduled,nhl-min,nhl-buf,MIN,BUF,,,KeyBank Center,,N,1
 2026020050,20262027,regular,2026-10-06,2026-10-07T00:00:00Z,scheduled,nhl-stl,nhl-chi,STL,CHI,,,United Center,,N,1
 2026020051,20262027,regular,2026-10-06,2026-10-07T01:40:00Z,scheduled,nhl-vgk,nhl-sea,VGK,SEA,,,Climate Pledge Arena,,N,1
-2026020052,20262027,regular,2026-10-06,2026-10-07T02:30:00Z,scheduled,nhl-fla,nhl-lak,FLA,LAK,,,Crypto.com Arena,,N,1
+2026020052,20262027,regular,2026-10-06,2026-10-07T02:00:00Z,scheduled,nhl-fla,nhl-lak,FLA,LAK,,,Crypto.com Arena,,N,1
 2026020053,20262027,regular,2026-10-07,2026-10-07T23:30:00Z,scheduled,nhl-pit,nhl-wsh,PIT,WSH,,,Capital One Arena,,N,1
 2026020054,20262027,regular,2026-10-07,2026-10-07T23:30:00Z,scheduled,nhl-col,nhl-wpg,COL,WPG,,,Canada Life Centre,,N,1
 2026020055,20262027,regular,2026-10-07,2026-10-08T02:00:00Z,scheduled,nhl-edm,nhl-ana,EDM,ANA,,,Honda Center,,N,1
@@ -1012,7 +1012,7 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020946,20262027,regular,2027-02-17,2027-02-18T00:30:00Z,scheduled,nhl-lak,nhl-wpg,LAK,WPG,,,Canada Life Centre,,N,1
 2026020947,20262027,regular,2027-02-17,2027-02-18T02:00:00Z,scheduled,nhl-cbj,nhl-uta,CBJ,UTA,,,Delta Center,,N,1
 2026020948,20262027,regular,2027-02-17,2027-02-18T02:00:00Z,scheduled,nhl-bos,nhl-cgy,BOS,CGY,,,Scotiabank Saddledome,,N,1
-2026020949,20262027,regular,2027-02-17,2027-02-18T01:30:00Z,scheduled,nhl-col,nhl-edm,COL,EDM,,,Rogers Place,,N,1
+2026020949,20262027,regular,2027-02-17,2027-02-18T02:00:00Z,scheduled,nhl-col,nhl-edm,COL,EDM,,,Rogers Place,,N,1
 2026020950,20262027,regular,2027-02-17,2027-02-18T02:40:00Z,scheduled,nhl-ott,nhl-sea,OTT,SEA,,,Climate Pledge Arena,,N,1
 2026020951,20262027,regular,2027-02-18,2027-02-19T00:00:00Z,scheduled,nhl-car,nhl-buf,CAR,BUF,,,KeyBank Center,,N,1
 2026020952,20262027,regular,2027-02-18,2027-02-19T00:00:00Z,scheduled,nhl-mtl,nhl-det,MTL,DET,,,Little Caesars Arena,,N,1

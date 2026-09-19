@@ -1,0 +1,8 @@
+status,ml_lean,total_lean,game_id,sport,date,away_team_id,home_team_id,pred_away,pred_home,disp_away,disp_home,pred_total,pred_spread,win_prob,winner_team_id,pred_confidence,method_details
+no_prediction,,,2026010001,NHL,2026-09-19,nhl-dal,nhl-stl,,,,,,,,,,
+no_prediction,,,2026010002,NHL,2026-09-19,nhl-vgk,nhl-lak,,,,,,,,,,
+no_prediction,,,2026010003,NHL,2026-09-19,nhl-wpg,nhl-edm,,,,,,,,,,
+no_prediction,,,2026010004,NHL,2026-09-19,nhl-chi,nhl-min,,,,,,,,,,
+no_prediction,,,2026010005,NHL,2026-09-19,nhl-van,nhl-sea,,,,,,,,,,
+no_prediction,,,2026010006,NHL,2026-09-19,nhl-mtl,nhl-tor,,,,,,,,,,
+no_prediction,,,2026010007,NHL,2026-09-19,nhl-tor,nhl-mtl,,,,,,,,,,

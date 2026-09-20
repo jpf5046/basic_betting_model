@@ -1,11 +1,11 @@
 game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,away_abbrev,home_abbrev,away_score,home_score,venue,ot,doubleheader,game_number
-2026010001,20262027,preseason,2026-09-19,2026-09-19T23:00:00Z,scheduled,nhl-dal,nhl-stl,DAL,STL,,,Enterprise Center,,N,1
-2026010002,20262027,preseason,2026-09-19,2026-09-20T01:00:00Z,scheduled,nhl-vgk,nhl-lak,VGK,LAK,,,Toyota Arena,,N,1
-2026010003,20262027,preseason,2026-09-19,2026-09-20T00:00:00Z,scheduled,nhl-wpg,nhl-edm,WPG,EDM,,,Rogers Place,,N,1
-2026010004,20262027,preseason,2026-09-19,2026-09-20T00:00:00Z,scheduled,nhl-chi,nhl-min,CHI,MIN,,,Grand Casino Arena,,N,1
-2026010005,20262027,preseason,2026-09-19,2026-09-20T01:00:00Z,scheduled,nhl-van,nhl-sea,VAN,SEA,,,Climate Pledge Arena,,N,1
-2026010006,20262027,preseason,2026-09-19,2026-09-19T23:00:00Z,scheduled,nhl-mtl,nhl-tor,MTL,TOR,,,Scotiabank Arena,,N,1
-2026010007,20262027,preseason,2026-09-19,2026-09-19T23:00:00Z,scheduled,nhl-tor,nhl-mtl,TOR,MTL,,,Centre Bell,,N,1
+2026010001,20262027,preseason,2026-09-19,2026-09-19T23:00:00Z,final,nhl-dal,nhl-stl,DAL,STL,2,1,Enterprise Center,REG,N,1
+2026010002,20262027,preseason,2026-09-19,2026-09-20T01:00:00Z,final,nhl-vgk,nhl-lak,VGK,LAK,4,2,Toyota Arena,REG,N,1
+2026010003,20262027,preseason,2026-09-19,2026-09-20T00:00:00Z,final,nhl-wpg,nhl-edm,WPG,EDM,2,5,Rogers Place,REG,N,1
+2026010004,20262027,preseason,2026-09-19,2026-09-20T00:00:00Z,final,nhl-chi,nhl-min,CHI,MIN,2,3,Grand Casino Arena,OT,N,1
+2026010005,20262027,preseason,2026-09-19,2026-09-20T01:00:00Z,final,nhl-van,nhl-sea,VAN,SEA,2,4,Climate Pledge Arena,REG,N,1
+2026010006,20262027,preseason,2026-09-19,2026-09-19T23:00:00Z,final,nhl-mtl,nhl-tor,MTL,TOR,4,1,Scotiabank Arena,REG,N,1
+2026010007,20262027,preseason,2026-09-19,2026-09-19T23:00:00Z,final,nhl-tor,nhl-mtl,TOR,MTL,3,4,Centre Bell,OT,N,1
 2026010008,20262027,preseason,2026-09-20,2026-09-20T17:00:00Z,scheduled,nhl-nyi,nhl-njd,NYI,NJD,,,Prudential Center,,N,1
 2026010009,20262027,preseason,2026-09-20,2026-09-20T20:00:00Z,scheduled,nhl-sjs,nhl-ana,SJS,ANA,,,Honda Center,,N,1
 2026010010,20262027,preseason,2026-09-20,2026-09-20T23:00:00Z,scheduled,nhl-car,nhl-fla,CAR,FLA,,,Amerant Bank Arena,,N,1

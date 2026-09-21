@@ -6,13 +6,13 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026010005,20262027,preseason,2026-09-19,2026-09-20T01:00:00Z,final,nhl-van,nhl-sea,VAN,SEA,2,4,Climate Pledge Arena,REG,N,1
 2026010006,20262027,preseason,2026-09-19,2026-09-19T23:00:00Z,final,nhl-mtl,nhl-tor,MTL,TOR,4,1,Scotiabank Arena,REG,N,1
 2026010007,20262027,preseason,2026-09-19,2026-09-19T23:00:00Z,final,nhl-tor,nhl-mtl,TOR,MTL,3,4,Centre Bell,OT,N,1
-2026010008,20262027,preseason,2026-09-20,2026-09-20T17:00:00Z,scheduled,nhl-nyi,nhl-njd,NYI,NJD,,,Prudential Center,,N,1
-2026010009,20262027,preseason,2026-09-20,2026-09-20T20:00:00Z,scheduled,nhl-sjs,nhl-ana,SJS,ANA,,,Honda Center,,N,1
-2026010010,20262027,preseason,2026-09-20,2026-09-20T23:00:00Z,scheduled,nhl-car,nhl-fla,CAR,FLA,,,Amerant Bank Arena,,N,1
-2026010011,20262027,preseason,2026-09-20,2026-09-20T21:00:00Z,scheduled,nhl-nsh,nhl-tbl,NSH,TBL,,,Benchmark International Arena,,N,1
-2026010012,20262027,preseason,2026-09-20,2026-09-20T23:00:00Z,scheduled,nhl-uta,nhl-col,UTA,COL,,,Ball Arena,,N,1
-2026010013,20262027,preseason,2026-09-20,2026-09-20T21:00:00Z,scheduled,nhl-wsh,nhl-bos,WSH,BOS,,,TD Garden,,N,1
-2026010014,20262027,preseason,2026-09-20,2026-09-21T00:00:00Z,scheduled,nhl-sea,nhl-cgy,SEA,CGY,,,Scotiabank Saddledome,,N,1
+2026010008,20262027,preseason,2026-09-20,2026-09-20T17:00:00Z,final,nhl-nyi,nhl-njd,NYI,NJD,1,2,Prudential Center,REG,N,1
+2026010009,20262027,preseason,2026-09-20,2026-09-20T20:00:00Z,final,nhl-sjs,nhl-ana,SJS,ANA,2,6,Honda Center,REG,N,1
+2026010010,20262027,preseason,2026-09-20,2026-09-20T23:00:00Z,final,nhl-car,nhl-fla,CAR,FLA,3,6,Amerant Bank Arena,REG,N,1
+2026010011,20262027,preseason,2026-09-20,2026-09-20T21:00:00Z,final,nhl-nsh,nhl-tbl,NSH,TBL,1,2,Benchmark International Arena,REG,N,1
+2026010012,20262027,preseason,2026-09-20,2026-09-20T23:00:00Z,final,nhl-uta,nhl-col,UTA,COL,1,4,Ball Arena,REG,N,1
+2026010013,20262027,preseason,2026-09-20,2026-09-20T21:00:00Z,final,nhl-wsh,nhl-bos,WSH,BOS,2,3,TD Garden,SO,N,1
+2026010014,20262027,preseason,2026-09-20,2026-09-21T00:00:00Z,final,nhl-sea,nhl-cgy,SEA,CGY,4,2,Scotiabank Saddledome,REG,N,1
 2026010015,20262027,preseason,2026-09-21,2026-09-22T00:00:00Z,scheduled,nhl-col,nhl-wpg,COL,WPG,,,Canada Life Centre,,N,1
 2026010016,20262027,preseason,2026-09-21,2026-09-21T23:00:00Z,scheduled,nhl-buf,nhl-pit,BUF,PIT,,,PPG Paints Arena,,N,1
 2026010017,20262027,preseason,2026-09-21,2026-09-21T23:00:00Z,scheduled,nhl-det,nhl-cbj,DET,CBJ,,,Nationwide Arena,,N,1

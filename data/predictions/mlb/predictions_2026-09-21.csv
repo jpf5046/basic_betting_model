@@ -1,0 +1,4 @@
+status,ml_lean,total_lean,game_id,sport,date,away_team_id,home_team_id,pred_away,pred_home,disp_away,disp_home,pred_total,pred_spread,win_prob,winner_team_id,pred_confidence,method_details
+ok,TOSS-UP,PASS,824787,MLB,2026-09-21,mlb-tor,mlb-bal,4.4038,4.4958,4,5,8.8996,-0.092,0.51,mlb-bal,HIGH,
+ok,LEAN,OVER,824221,MLB,2026-09-21,mlb-wsh,mlb-det,4.4731,4.9881,4,5,9.4612,-0.515,0.55,mlb-det,HIGH,
+ok,TOSS-UP,OVER,823169,MLB,2026-09-21,mlb-min,mlb-sf,4.663,4.5591,6,5,9.2221,0.1039,0.51,mlb-min,HIGH,

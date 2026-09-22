@@ -1,0 +1,4 @@
+game_id,sport,date,bet_type,selection,confidence,line,game_status,actual_away,actual_home,result,pnl,price_american
+824221,MLB,2026-09-21,ML,mlb-det,LEAN,0.55,scheduled,,,PENDING,0,
+824221,MLB,2026-09-21,TOTAL,OVER,,9.2,scheduled,,,PENDING,0,
+823169,MLB,2026-09-21,TOTAL,OVER,,9.2,scheduled,,,PENDING,0,

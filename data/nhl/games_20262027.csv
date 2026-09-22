@@ -13,14 +13,14 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026010012,20262027,preseason,2026-09-20,2026-09-20T23:00:00Z,final,nhl-uta,nhl-col,UTA,COL,1,4,Ball Arena,REG,N,1
 2026010013,20262027,preseason,2026-09-20,2026-09-20T21:00:00Z,final,nhl-wsh,nhl-bos,WSH,BOS,2,3,TD Garden,SO,N,1
 2026010014,20262027,preseason,2026-09-20,2026-09-21T00:00:00Z,final,nhl-sea,nhl-cgy,SEA,CGY,4,2,Scotiabank Saddledome,REG,N,1
-2026010015,20262027,preseason,2026-09-21,2026-09-22T00:00:00Z,scheduled,nhl-col,nhl-wpg,COL,WPG,,,Canada Life Centre,,N,1
-2026010016,20262027,preseason,2026-09-21,2026-09-21T23:00:00Z,scheduled,nhl-buf,nhl-pit,BUF,PIT,,,PPG Paints Arena,,N,1
-2026010017,20262027,preseason,2026-09-21,2026-09-21T23:00:00Z,scheduled,nhl-det,nhl-cbj,DET,CBJ,,,Nationwide Arena,,N,1
-2026010018,20262027,preseason,2026-09-21,2026-09-22T00:00:00Z,scheduled,nhl-min,nhl-chi,MIN,CHI,,,United Center,,N,1
-2026010019,20262027,preseason,2026-09-21,2026-09-21T23:00:00Z,scheduled,nhl-nyr,nhl-njd,NYR,NJD,,,Prudential Center,,N,1
-2026010020,20262027,preseason,2026-09-21,2026-09-21T23:00:00Z,scheduled,nhl-phi,nhl-wsh,PHI,WSH,,,GIANT Center,,N,1
-2026010021,20262027,preseason,2026-09-21,2026-09-22T00:00:00Z,scheduled,nhl-stl,nhl-dal,STL,DAL,,,American Airlines Center,,N,1
-2026010022,20262027,preseason,2026-09-21,2026-09-21T23:00:00Z,scheduled,nhl-ott,nhl-mtl,OTT,MTL,,,Colisée Vidéotron,,N,1
+2026010015,20262027,preseason,2026-09-21,2026-09-22T00:00:00Z,final,nhl-col,nhl-wpg,COL,WPG,1,3,Canada Life Centre,REG,N,1
+2026010016,20262027,preseason,2026-09-21,2026-09-21T23:00:00Z,final,nhl-buf,nhl-pit,BUF,PIT,1,4,PPG Paints Arena,REG,N,1
+2026010017,20262027,preseason,2026-09-21,2026-09-21T23:00:00Z,final,nhl-det,nhl-cbj,DET,CBJ,0,1,Nationwide Arena,SO,N,1
+2026010018,20262027,preseason,2026-09-21,2026-09-22T00:00:00Z,final,nhl-min,nhl-chi,MIN,CHI,3,4,United Center,OT,N,1
+2026010019,20262027,preseason,2026-09-21,2026-09-21T23:00:00Z,final,nhl-nyr,nhl-njd,NYR,NJD,2,3,Prudential Center,REG,N,1
+2026010020,20262027,preseason,2026-09-21,2026-09-21T23:00:00Z,final,nhl-phi,nhl-wsh,PHI,WSH,2,5,GIANT Center,REG,N,1
+2026010021,20262027,preseason,2026-09-21,2026-09-22T00:00:00Z,final,nhl-stl,nhl-dal,STL,DAL,1,2,American Airlines Center,REG,N,1
+2026010022,20262027,preseason,2026-09-21,2026-09-21T23:00:00Z,final,nhl-ott,nhl-mtl,OTT,MTL,2,3,Colisée Vidéotron,OT,N,1
 2026010023,20262027,preseason,2026-09-22,2026-09-23T00:00:00Z,scheduled,nhl-edm,nhl-wpg,EDM,WPG,,,Canada Life Centre,,N,1
 2026010024,20262027,preseason,2026-09-22,2026-09-22T23:00:00Z,scheduled,nhl-cbj,nhl-buf,CBJ,BUF,,,KeyBank Center,,N,1
 2026010025,20262027,preseason,2026-09-22,2026-09-22T23:00:00Z,scheduled,nhl-det,nhl-pit,DET,PIT,,,PPG Paints Arena,,N,1

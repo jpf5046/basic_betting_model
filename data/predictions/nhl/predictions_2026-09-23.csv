@@ -1,0 +1,5 @@
+status,ml_lean,total_lean,game_id,sport,date,away_team_id,home_team_id,pred_away,pred_home,disp_away,disp_home,pred_total,pred_spread,win_prob,winner_team_id,pred_confidence,method_details
+no_prediction,,,2026010033,NHL,2026-09-23,nhl-lak,nhl-ana,,,,,,,,,,
+no_prediction,,,2026010034,NHL,2026-09-23,nhl-min,nhl-dal,,,,,,,,,,
+no_prediction,,,2026010035,NHL,2026-09-23,nhl-ott,nhl-tor,,,,,,,,,,
+no_prediction,,,2026010036,NHL,2026-09-23,nhl-tor,nhl-ott,,,,,,,,,,

@@ -1,0 +1,12 @@
+game_id,sport,date,bet_type,selection,confidence,line,game_status,actual_away,actual_home,result,pnl,price_american
+824220,MLB,2026-09-25,ML,mlb-det,LEAN,0.55,scheduled,,,PENDING,0,
+824220,MLB,2026-09-25,TOTAL,OVER,,9.2,scheduled,,,PENDING,0,
+822681,MLB,2026-09-25,TOTAL,OVER,,9.2,scheduled,,,PENDING,0,
+823491,MLB,2026-09-25,ML,mlb-nyy,LEAN,0.55,scheduled,,,PENDING,0,
+823816,MLB,2026-09-25,ML,mlb-atl,LEAN,0.55,scheduled,,,PENDING,0,
+823735,MLB,2026-09-25,ML,mlb-mil,LEAN,0.55,scheduled,,,PENDING,0,
+824544,MLB,2026-09-25,ML,mlb-cws,LEAN,0.55,scheduled,,,PENDING,0,
+824544,MLB,2026-09-25,TOTAL,OVER,,9.2,scheduled,,,PENDING,0,
+824947,MLB,2026-09-25,ML,mlb-hou,LEAN,0.55,scheduled,,,PENDING,0,
+824947,MLB,2026-09-25,TOTAL,OVER,,9.2,scheduled,,,PENDING,0,
+823167,MLB,2026-09-25,ML,mlb-lad,LEAN,0.55,scheduled,,,PENDING,0,

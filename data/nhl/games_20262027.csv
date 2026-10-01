@@ -69,9 +69,9 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020003,20262027,regular,2026-09-29,2026-09-30T00:00:00Z,final,nhl-nyr,nhl-bos,NYR,BOS,0,3,TD Garden,REG,N,1
 2026020004,20262027,regular,2026-09-29,2026-09-30T02:00:00Z,final,nhl-van,nhl-edm,VAN,EDM,6,5,Rogers Place,OT,N,1
 2026020005,20262027,regular,2026-09-29,2026-09-30T02:30:00Z,final,nhl-chi,nhl-vgk,CHI,VGK,2,5,T-Mobile Arena,REG,N,1
-2026020006,20262027,regular,2026-09-30,2026-09-30T23:30:00Z,scheduled,nhl-pit,nhl-phi,PIT,PHI,,,Xfinity Mobile Arena,,N,1
-2026020007,20262027,regular,2026-09-30,2026-10-01T02:00:00Z,scheduled,nhl-lak,nhl-col,LAK,COL,,,Ball Arena,,N,1
-2026020008,20262027,regular,2026-09-30,2026-09-30T23:30:00Z,scheduled,nhl-nyi,nhl-tor,NYI,TOR,,,Scotiabank Arena,,N,1
+2026020006,20262027,regular,2026-09-30,2026-09-30T23:30:00Z,final,nhl-pit,nhl-phi,PIT,PHI,7,0,Xfinity Mobile Arena,REG,N,1
+2026020007,20262027,regular,2026-09-30,2026-10-01T02:00:00Z,final,nhl-lak,nhl-col,LAK,COL,4,8,Ball Arena,REG,N,1
+2026020008,20262027,regular,2026-09-30,2026-09-30T23:30:00Z,final,nhl-nyi,nhl-tor,NYI,TOR,1,2,Scotiabank Arena,REG,N,1
 2026020009,20262027,regular,2026-10-01,2026-10-01T23:00:00Z,scheduled,nhl-phi,nhl-njd,PHI,NJD,,,Prudential Center,,N,1
 2026020010,20262027,regular,2026-10-01,2026-10-01T23:00:00Z,scheduled,nhl-tbl,nhl-nyr,TBL,NYR,,,Madison Square Garden,,N,1
 2026020011,20262027,regular,2026-10-01,2026-10-01T23:00:00Z,scheduled,nhl-buf,nhl-cbj,BUF,CBJ,,,Nationwide Arena,,N,1

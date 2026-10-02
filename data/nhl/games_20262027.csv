@@ -72,14 +72,14 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020006,20262027,regular,2026-09-30,2026-09-30T23:30:00Z,final,nhl-pit,nhl-phi,PIT,PHI,7,0,Xfinity Mobile Arena,REG,N,1
 2026020007,20262027,regular,2026-09-30,2026-10-01T02:00:00Z,final,nhl-lak,nhl-col,LAK,COL,4,8,Ball Arena,REG,N,1
 2026020008,20262027,regular,2026-09-30,2026-09-30T23:30:00Z,final,nhl-nyi,nhl-tor,NYI,TOR,1,2,Scotiabank Arena,REG,N,1
-2026020009,20262027,regular,2026-10-01,2026-10-01T23:00:00Z,scheduled,nhl-phi,nhl-njd,PHI,NJD,,,Prudential Center,,N,1
-2026020010,20262027,regular,2026-10-01,2026-10-01T23:00:00Z,scheduled,nhl-tbl,nhl-nyr,TBL,NYR,,,Madison Square Garden,,N,1
-2026020011,20262027,regular,2026-10-01,2026-10-01T23:00:00Z,scheduled,nhl-buf,nhl-cbj,BUF,CBJ,,,Nationwide Arena,,N,1
-2026020012,20262027,regular,2026-10-01,2026-10-02T00:00:00Z,scheduled,nhl-min,nhl-nsh,MIN,NSH,,,Bridgestone Arena,,N,1
-2026020013,20262027,regular,2026-10-01,2026-10-02T01:30:00Z,scheduled,nhl-chi,nhl-uta,CHI,UTA,,,Delta Center,,N,1
-2026020014,20262027,regular,2026-10-01,2026-10-02T01:00:00Z,scheduled,nhl-sea,nhl-cgy,SEA,CGY,,,Scotiabank Saddledome,,N,1
-2026020015,20262027,regular,2026-10-01,2026-10-02T02:00:00Z,scheduled,nhl-edm,nhl-van,EDM,VAN,,,Rogers Arena,,N,1
-2026020016,20262027,regular,2026-10-01,2026-10-02T02:00:00Z,scheduled,nhl-fla,nhl-sjs,FLA,SJS,,,SAP Center at San Jose,,N,1
+2026020009,20262027,regular,2026-10-01,2026-10-01T23:00:00Z,final,nhl-phi,nhl-njd,PHI,NJD,2,3,Prudential Center,OT,N,1
+2026020010,20262027,regular,2026-10-01,2026-10-01T23:00:00Z,final,nhl-tbl,nhl-nyr,TBL,NYR,1,5,Madison Square Garden,REG,N,1
+2026020011,20262027,regular,2026-10-01,2026-10-01T23:00:00Z,final,nhl-buf,nhl-cbj,BUF,CBJ,3,6,Nationwide Arena,REG,N,1
+2026020012,20262027,regular,2026-10-01,2026-10-02T00:00:00Z,final,nhl-min,nhl-nsh,MIN,NSH,3,1,Bridgestone Arena,REG,N,1
+2026020013,20262027,regular,2026-10-01,2026-10-02T01:30:00Z,final,nhl-chi,nhl-uta,CHI,UTA,0,6,Delta Center,REG,N,1
+2026020014,20262027,regular,2026-10-01,2026-10-02T01:00:00Z,final,nhl-sea,nhl-cgy,SEA,CGY,6,1,Scotiabank Saddledome,REG,N,1
+2026020015,20262027,regular,2026-10-01,2026-10-02T02:00:00Z,final,nhl-edm,nhl-van,EDM,VAN,9,7,Rogers Arena,REG,N,1
+2026020016,20262027,regular,2026-10-01,2026-10-02T02:00:00Z,final,nhl-fla,nhl-sjs,FLA,SJS,3,4,SAP Center at San Jose,OT,N,1
 2026020017,20262027,regular,2026-10-02,2026-10-02T22:30:00Z,scheduled,nhl-nyr,nhl-det,NYR,DET,,,Little Caesars Arena,,N,1
 2026020018,20262027,regular,2026-10-02,2026-10-02T23:00:00Z,scheduled,nhl-wsh,nhl-car,WSH,CAR,,,Lenovo Center,,N,1
 2026020019,20262027,regular,2026-10-02,2026-10-03T00:00:00Z,scheduled,nhl-bos,nhl-wpg,BOS,WPG,,,Canada Life Centre,,N,1

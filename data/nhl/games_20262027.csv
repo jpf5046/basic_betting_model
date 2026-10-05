@@ -98,11 +98,11 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020032,20262027,regular,2026-10-03,2026-10-04T01:00:00Z,final,nhl-stl,nhl-col,STL,COL,1,6,Ball Arena,REG,N,1
 2026020033,20262027,regular,2026-10-03,2026-10-04T02:00:00Z,final,nhl-cgy,nhl-van,CGY,VAN,1,4,Rogers Arena,REG,N,1
 2026020034,20262027,regular,2026-10-03,2026-10-04T02:00:00Z,final,nhl-lak,nhl-sjs,LAK,SJS,4,5,SAP Center at San Jose,OT,N,1
-2026020035,20262027,regular,2026-10-04,2026-10-04T17:00:00Z,scheduled,nhl-wpg,nhl-det,WPG,DET,,,Little Caesars Arena,,N,1
-2026020036,20262027,regular,2026-10-04,2026-10-04T22:00:00Z,scheduled,nhl-uta,nhl-nyr,UTA,NYR,,,Madison Square Garden,,N,1
-2026020037,20262027,regular,2026-10-04,2026-10-05T00:00:00Z,scheduled,nhl-fla,nhl-ana,FLA,ANA,,,Honda Center,,N,1
-2026020038,20262027,regular,2026-10-04,2026-10-05T00:00:00Z,scheduled,nhl-cgy,nhl-sea,CGY,SEA,,,Climate Pledge Arena,,N,1
-2026020039,20262027,regular,2026-10-04,2026-10-05T01:00:00Z,scheduled,nhl-vgk,nhl-van,VGK,VAN,,,Rogers Arena,,N,1
+2026020035,20262027,regular,2026-10-04,2026-10-04T17:00:00Z,final,nhl-wpg,nhl-det,WPG,DET,3,2,Little Caesars Arena,REG,N,1
+2026020036,20262027,regular,2026-10-04,2026-10-04T22:00:00Z,final,nhl-uta,nhl-nyr,UTA,NYR,2,4,Madison Square Garden,REG,N,1
+2026020037,20262027,regular,2026-10-04,2026-10-05T00:00:00Z,final,nhl-fla,nhl-ana,FLA,ANA,2,3,Honda Center,OT,N,1
+2026020038,20262027,regular,2026-10-04,2026-10-05T00:00:00Z,final,nhl-cgy,nhl-sea,CGY,SEA,1,6,Climate Pledge Arena,REG,N,1
+2026020039,20262027,regular,2026-10-04,2026-10-05T01:00:00Z,final,nhl-vgk,nhl-van,VGK,VAN,3,2,Rogers Arena,REG,N,1
 2026020040,20262027,regular,2026-10-05,2026-10-05T23:00:00Z,scheduled,nhl-phi,nhl-tbl,PHI,TBL,,,Benchmark International Arena,,N,1
 2026020041,20262027,regular,2026-10-05,2026-10-05T23:30:00Z,scheduled,nhl-ott,nhl-bos,OTT,BOS,,,TD Garden,,N,1
 2026020042,20262027,regular,2026-10-05,2026-10-05T23:30:00Z,scheduled,nhl-wpg,nhl-pit,WPG,PIT,,,PPG Paints Arena,,N,1

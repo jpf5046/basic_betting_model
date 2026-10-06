@@ -103,10 +103,10 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020037,20262027,regular,2026-10-04,2026-10-05T00:00:00Z,final,nhl-fla,nhl-ana,FLA,ANA,2,3,Honda Center,OT,N,1
 2026020038,20262027,regular,2026-10-04,2026-10-05T00:00:00Z,final,nhl-cgy,nhl-sea,CGY,SEA,1,6,Climate Pledge Arena,REG,N,1
 2026020039,20262027,regular,2026-10-04,2026-10-05T01:00:00Z,final,nhl-vgk,nhl-van,VGK,VAN,3,2,Rogers Arena,REG,N,1
-2026020040,20262027,regular,2026-10-05,2026-10-05T23:00:00Z,scheduled,nhl-phi,nhl-tbl,PHI,TBL,,,Benchmark International Arena,,N,1
-2026020041,20262027,regular,2026-10-05,2026-10-05T23:30:00Z,scheduled,nhl-ott,nhl-bos,OTT,BOS,,,TD Garden,,N,1
-2026020042,20262027,regular,2026-10-05,2026-10-05T23:30:00Z,scheduled,nhl-wpg,nhl-pit,WPG,PIT,,,PPG Paints Arena,,N,1
-2026020043,20262027,regular,2026-10-05,2026-10-06T00:00:00Z,scheduled,nhl-sjs,nhl-dal,SJS,DAL,,,American Airlines Center,,N,1
+2026020040,20262027,regular,2026-10-05,2026-10-05T23:00:00Z,final,nhl-phi,nhl-tbl,PHI,TBL,1,4,Benchmark International Arena,REG,N,1
+2026020041,20262027,regular,2026-10-05,2026-10-05T23:30:00Z,final,nhl-ott,nhl-bos,OTT,BOS,4,1,TD Garden,REG,N,1
+2026020042,20262027,regular,2026-10-05,2026-10-05T23:30:00Z,final,nhl-wpg,nhl-pit,WPG,PIT,3,2,PPG Paints Arena,REG,N,1
+2026020043,20262027,regular,2026-10-05,2026-10-06T00:00:00Z,final,nhl-sjs,nhl-dal,SJS,DAL,0,5,American Airlines Center,REG,N,1
 2026020044,20262027,regular,2026-10-06,2026-10-06T23:00:00Z,scheduled,nhl-nsh,nhl-tor,NSH,TOR,,,Scotiabank Arena,,N,1
 2026020045,20262027,regular,2026-10-06,2026-10-06T23:00:00Z,scheduled,nhl-car,nhl-mtl,CAR,MTL,,,Centre Bell,,N,1
 2026020046,20262027,regular,2026-10-06,2026-10-06T23:00:00Z,scheduled,nhl-ott,nhl-det,OTT,DET,,,Little Caesars Arena,,N,1

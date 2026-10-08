@@ -116,9 +116,9 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020050,20262027,regular,2026-10-06,2026-10-07T00:00:00Z,final,nhl-stl,nhl-chi,STL,CHI,2,4,United Center,REG,N,1
 2026020051,20262027,regular,2026-10-06,2026-10-07T01:40:00Z,final,nhl-vgk,nhl-sea,VGK,SEA,6,2,Climate Pledge Arena,REG,N,1
 2026020052,20262027,regular,2026-10-06,2026-10-07T02:00:00Z,final,nhl-fla,nhl-lak,FLA,LAK,2,1,Crypto.com Arena,REG,N,1
-2026020053,20262027,regular,2026-10-07,2026-10-07T23:30:00Z,scheduled,nhl-pit,nhl-wsh,PIT,WSH,,,Capital One Arena,,N,1
-2026020054,20262027,regular,2026-10-07,2026-10-07T23:30:00Z,scheduled,nhl-col,nhl-wpg,COL,WPG,,,Canada Life Centre,,N,1
-2026020055,20262027,regular,2026-10-07,2026-10-08T02:00:00Z,scheduled,nhl-edm,nhl-ana,EDM,ANA,,,Honda Center,,N,1
+2026020053,20262027,regular,2026-10-07,2026-10-07T23:30:00Z,final,nhl-pit,nhl-wsh,PIT,WSH,3,5,Capital One Arena,REG,N,1
+2026020054,20262027,regular,2026-10-07,2026-10-07T23:30:00Z,final,nhl-col,nhl-wpg,COL,WPG,2,3,Canada Life Centre,REG,N,1
+2026020055,20262027,regular,2026-10-07,2026-10-08T02:00:00Z,final,nhl-edm,nhl-ana,EDM,ANA,5,2,Honda Center,REG,N,1
 2026020056,20262027,regular,2026-10-08,2026-10-08T23:00:00Z,scheduled,nhl-uta,nhl-bos,UTA,BOS,,,TD Garden,,N,1
 2026020057,20262027,regular,2026-10-08,2026-10-08T23:00:00Z,scheduled,nhl-dal,nhl-buf,DAL,BUF,,,KeyBank Center,,N,1
 2026020058,20262027,regular,2026-10-08,2026-10-08T23:00:00Z,scheduled,nhl-nsh,nhl-mtl,NSH,MTL,,,Centre Bell,,N,1

@@ -151,8 +151,8 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020085,20262027,regular,2026-10-11,2026-10-11T22:00:00Z,final,nhl-van,nhl-nyr,VAN,NYR,2,6,Madison Square Garden,REG,N,1
 2026020086,20262027,regular,2026-10-11,2026-10-11T23:00:00Z,final,nhl-car,nhl-phi,CAR,PHI,4,1,Xfinity Mobile Arena,REG,N,1
 2026020087,20262027,regular,2026-10-12,2026-10-12T17:00:00Z,final,nhl-fla,nhl-buf,FLA,BUF,3,5,KeyBank Center,REG,N,1
-2026020088,20262027,regular,2026-10-12,2026-10-12T23:00:00Z,scheduled,nhl-ott,nhl-njd,OTT,NJD,,,Prudential Center,,N,1
-2026020089,20262027,regular,2026-10-12,2026-10-13T00:00:00Z,scheduled,nhl-vgk,nhl-min,VGK,MIN,,,Grand Casino Arena,,N,1
+2026020088,20262027,regular,2026-10-12,2026-10-12T23:00:00Z,final,nhl-ott,nhl-njd,OTT,NJD,4,1,Prudential Center,REG,N,1
+2026020089,20262027,regular,2026-10-12,2026-10-13T00:00:00Z,final,nhl-vgk,nhl-min,VGK,MIN,2,4,Grand Casino Arena,REG,N,1
 2026020090,20262027,regular,2026-10-13,2026-10-13T22:00:00Z,scheduled,nhl-njd,nhl-det,NJD,DET,,,Little Caesars Arena,,N,1
 2026020091,20262027,regular,2026-10-13,2026-10-13T22:15:00Z,scheduled,nhl-fla,nhl-cbj,FLA,CBJ,,,Nationwide Arena,,N,1
 2026020092,20262027,regular,2026-10-13,2026-10-13T22:30:00Z,scheduled,nhl-buf,nhl-mtl,BUF,MTL,,,Centre Bell,,N,1

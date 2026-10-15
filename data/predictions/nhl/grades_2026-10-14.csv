@@ -1,0 +1,4 @@
+game_id,sport,date,bet_type,selection,confidence,line,game_status,actual_away,actual_home,result,pnl,price_american
+2026020106,NHL,2026-10-14,ML,nhl-wsh,STRONG,0.6,final,4,5,WIN,100,
+2026020106,NHL,2026-10-14,TOTAL,OVER,,6.3,final,4,5,WIN,100,
+2026020107,NHL,2026-10-14,ML,nhl-col,STRONG,0.6,final,3,2,LOSS,-100,

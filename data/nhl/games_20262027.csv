@@ -169,8 +169,8 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020103,20262027,regular,2026-10-13,2026-10-14T01:45:00Z,final,nhl-cgy,nhl-ana,CGY,ANA,4,2,Honda Center,REG,N,1
 2026020104,20262027,regular,2026-10-13,2026-10-14T02:30:00Z,final,nhl-edm,nhl-lak,EDM,LAK,4,1,Crypto.com Arena,REG,N,1
 2026020105,20262027,regular,2026-10-13,2026-10-14T03:00:00Z,final,nhl-bos,nhl-sjs,BOS,SJS,6,3,SAP Center at San Jose,REG,N,1
-2026020106,20262027,regular,2026-10-14,2026-10-14T23:30:00Z,scheduled,nhl-mtl,nhl-wsh,MTL,WSH,,,Capital One Arena,,N,1
-2026020107,20262027,regular,2026-10-14,2026-10-15T00:30:00Z,scheduled,nhl-dal,nhl-col,DAL,COL,,,Ball Arena,,N,1
+2026020106,20262027,regular,2026-10-14,2026-10-14T23:30:00Z,final,nhl-mtl,nhl-wsh,MTL,WSH,4,5,Capital One Arena,REG,N,1
+2026020107,20262027,regular,2026-10-14,2026-10-15T00:30:00Z,final,nhl-dal,nhl-col,DAL,COL,3,2,Ball Arena,SO,N,1
 2026020108,20262027,regular,2026-10-15,2026-10-15T23:00:00Z,scheduled,nhl-buf,nhl-tor,BUF,TOR,,,Scotiabank Arena,,N,1
 2026020109,20262027,regular,2026-10-15,2026-10-15T23:00:00Z,scheduled,nhl-nyi,nhl-ott,NYI,OTT,,,Canadian Tire Centre,,N,1
 2026020110,20262027,regular,2026-10-15,2026-10-15T23:30:00Z,scheduled,nhl-phi,nhl-det,PHI,DET,,,Little Caesars Arena,,N,1

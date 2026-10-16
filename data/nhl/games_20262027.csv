@@ -171,17 +171,17 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020105,20262027,regular,2026-10-13,2026-10-14T03:00:00Z,final,nhl-bos,nhl-sjs,BOS,SJS,6,3,SAP Center at San Jose,REG,N,1
 2026020106,20262027,regular,2026-10-14,2026-10-14T23:30:00Z,final,nhl-mtl,nhl-wsh,MTL,WSH,4,5,Capital One Arena,REG,N,1
 2026020107,20262027,regular,2026-10-14,2026-10-15T00:30:00Z,final,nhl-dal,nhl-col,DAL,COL,3,2,Ball Arena,SO,N,1
-2026020108,20262027,regular,2026-10-15,2026-10-15T23:00:00Z,scheduled,nhl-buf,nhl-tor,BUF,TOR,,,Scotiabank Arena,,N,1
-2026020109,20262027,regular,2026-10-15,2026-10-15T23:00:00Z,scheduled,nhl-nyi,nhl-ott,NYI,OTT,,,Canadian Tire Centre,,N,1
-2026020110,20262027,regular,2026-10-15,2026-10-15T23:30:00Z,scheduled,nhl-phi,nhl-det,PHI,DET,,,Little Caesars Arena,,N,1
-2026020111,20262027,regular,2026-10-15,2026-10-15T23:00:00Z,scheduled,nhl-sea,nhl-tbl,SEA,TBL,,,Benchmark International Arena,,N,1
-2026020112,20262027,regular,2026-10-15,2026-10-15T23:00:00Z,scheduled,nhl-van,nhl-fla,VAN,FLA,,,Amerant Bank Arena,,N,1
-2026020113,20262027,regular,2026-10-15,2026-10-15T23:00:00Z,scheduled,nhl-nyr,nhl-njd,NYR,NJD,,,Prudential Center,,N,1
-2026020114,20262027,regular,2026-10-15,2026-10-16T00:00:00Z,scheduled,nhl-wpg,nhl-chi,WPG,CHI,,,United Center,,N,1
-2026020115,20262027,regular,2026-10-15,2026-10-16T00:00:00Z,scheduled,nhl-sjs,nhl-nsh,SJS,NSH,,,Bridgestone Arena,,N,1
-2026020116,20262027,regular,2026-10-15,2026-10-16T00:00:00Z,scheduled,nhl-stl,nhl-min,STL,MIN,,,Grand Casino Arena,,N,1
-2026020117,20262027,regular,2026-10-15,2026-10-16T01:00:00Z,scheduled,nhl-uta,nhl-edm,UTA,EDM,,,Rogers Place,,N,1
-2026020118,20262027,regular,2026-10-15,2026-10-16T02:00:00Z,scheduled,nhl-cgy,nhl-vgk,CGY,VGK,,,T-Mobile Arena,,N,1
+2026020108,20262027,regular,2026-10-15,2026-10-15T23:00:00Z,final,nhl-buf,nhl-tor,BUF,TOR,5,4,Scotiabank Arena,OT,N,1
+2026020109,20262027,regular,2026-10-15,2026-10-15T23:00:00Z,final,nhl-nyi,nhl-ott,NYI,OTT,1,2,Canadian Tire Centre,SO,N,1
+2026020110,20262027,regular,2026-10-15,2026-10-15T23:30:00Z,final,nhl-phi,nhl-det,PHI,DET,1,2,Little Caesars Arena,REG,N,1
+2026020111,20262027,regular,2026-10-15,2026-10-15T23:00:00Z,final,nhl-sea,nhl-tbl,SEA,TBL,3,4,Benchmark International Arena,OT,N,1
+2026020112,20262027,regular,2026-10-15,2026-10-15T23:00:00Z,final,nhl-van,nhl-fla,VAN,FLA,2,3,Amerant Bank Arena,OT,N,1
+2026020113,20262027,regular,2026-10-15,2026-10-15T23:00:00Z,final,nhl-nyr,nhl-njd,NYR,NJD,1,7,Prudential Center,REG,N,1
+2026020114,20262027,regular,2026-10-15,2026-10-16T00:00:00Z,final,nhl-wpg,nhl-chi,WPG,CHI,3,4,United Center,OT,N,1
+2026020115,20262027,regular,2026-10-15,2026-10-16T00:00:00Z,final,nhl-sjs,nhl-nsh,SJS,NSH,3,2,Bridgestone Arena,SO,N,1
+2026020116,20262027,regular,2026-10-15,2026-10-16T00:00:00Z,final,nhl-stl,nhl-min,STL,MIN,4,5,Grand Casino Arena,REG,N,1
+2026020117,20262027,regular,2026-10-15,2026-10-16T01:00:00Z,final,nhl-uta,nhl-edm,UTA,EDM,4,2,Rogers Place,REG,N,1
+2026020118,20262027,regular,2026-10-15,2026-10-16T02:00:00Z,final,nhl-cgy,nhl-vgk,CGY,VGK,2,6,T-Mobile Arena,REG,N,1
 2026020119,20262027,regular,2026-10-16,2026-10-17T01:00:00Z,scheduled,nhl-pit,nhl-col,PIT,COL,,,Ball Arena,,N,1
 2026020120,20262027,regular,2026-10-16,2026-10-17T02:00:00Z,scheduled,nhl-bos,nhl-ana,BOS,ANA,,,Honda Center,,N,1
 2026020121,20262027,regular,2026-10-17,2026-10-17T17:00:00Z,scheduled,nhl-njd,nhl-wsh,NJD,WSH,,,Capital One Arena,,N,1

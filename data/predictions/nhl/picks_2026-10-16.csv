@@ -1,0 +1,3 @@
+game_id,sport,date,bet_type,selection,confidence,line
+2026020119,NHL,2026-10-16,ML,nhl-col,LEAN,0.55
+2026020120,NHL,2026-10-16,ML,nhl-ana,LEAN,0.55

@@ -1,0 +1,3 @@
+status,ml_lean,total_lean,game_id,sport,date,away_team_id,home_team_id,pred_away,pred_home,disp_away,disp_home,pred_total,pred_spread,win_prob,winner_team_id,pred_confidence,method_details
+ok,STRONG,OVER,2026020135,NHL,2026-10-18,nhl-cbj,nhl-min,2.86,3.8077,3,4,6.6676,-0.9477,0.66,nhl-min,LOW,
+ok,STRONG,OVER,2026020136,NHL,2026-10-18,nhl-car,nhl-cgy,5.0828,1.8362,5,2,6.919,3.2466,0.91,nhl-car,LOW,

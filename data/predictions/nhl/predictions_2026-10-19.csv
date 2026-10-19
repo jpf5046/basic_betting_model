@@ -1,0 +1,5 @@
+status,ml_lean,total_lean,game_id,sport,date,away_team_id,home_team_id,pred_away,pred_home,disp_away,disp_home,pred_total,pred_spread,win_prob,winner_team_id,pred_confidence,method_details
+ok,TOSS-UP,UNDER,2026020137,NHL,2026-10-19,nhl-ana,nhl-nyr,2.5784,2.6134,3,4,5.1918,-0.035,0.51,nhl-nyr,LOW,
+ok,STRONG,OVER,2026020138,NHL,2026-10-19,nhl-col,nhl-phi,4.8538,1.7088,5,2,6.5626,3.145,0.9,nhl-col,LOW,
+ok,TOSS-UP,OVER,2026020139,NHL,2026-10-19,nhl-sjs,nhl-tor,3.2996,3.4448,3,4,6.7445,-0.1452,0.53,nhl-tor,LOW,
+ok,STRONG,OVER,2026020140,NHL,2026-10-19,nhl-pit,nhl-uta,2.4361,4.0898,2,4,6.5259,-1.6536,0.76,nhl-uta,LOW,

@@ -198,8 +198,8 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020132,20262027,regular,2026-10-17,2026-10-18T01:00:00Z,final,nhl-bos,nhl-lak,BOS,LAK,4,1,Crypto.com Arena,REG,N,1
 2026020133,20262027,regular,2026-10-17,2026-10-18T02:00:00Z,final,nhl-edm,nhl-uta,EDM,UTA,6,2,Delta Center,REG,N,1
 2026020134,20262027,regular,2026-10-17,2026-10-18T02:00:00Z,final,nhl-pit,nhl-vgk,PIT,VGK,2,6,T-Mobile Arena,REG,N,1
-2026020135,20262027,regular,2026-10-18,2026-10-18T22:00:00Z,scheduled,nhl-cbj,nhl-min,CBJ,MIN,,,Grand Casino Arena,,N,1
-2026020136,20262027,regular,2026-10-18,2026-10-19T00:00:00Z,scheduled,nhl-car,nhl-cgy,CAR,CGY,,,Scotiabank Saddledome,,N,1
+2026020135,20262027,regular,2026-10-18,2026-10-18T22:00:00Z,final,nhl-cbj,nhl-min,CBJ,MIN,1,2,Grand Casino Arena,REG,N,1
+2026020136,20262027,regular,2026-10-18,2026-10-19T00:00:00Z,final,nhl-car,nhl-cgy,CAR,CGY,2,3,Scotiabank Saddledome,REG,N,1
 2026020137,20262027,regular,2026-10-19,2026-10-19T23:00:00Z,scheduled,nhl-ana,nhl-nyr,ANA,NYR,,,Madison Square Garden,,N,1
 2026020138,20262027,regular,2026-10-19,2026-10-19T23:00:00Z,scheduled,nhl-col,nhl-phi,COL,PHI,,,Xfinity Mobile Arena,,N,1
 2026020139,20262027,regular,2026-10-19,2026-10-19T23:30:00Z,scheduled,nhl-sjs,nhl-tor,SJS,TOR,,,Scotiabank Arena,,N,1

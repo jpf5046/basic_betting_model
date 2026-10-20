@@ -1,0 +1,12 @@
+status,ml_lean,total_lean,game_id,sport,date,away_team_id,home_team_id,pred_away,pred_home,disp_away,disp_home,pred_total,pred_spread,win_prob,winner_team_id,pred_confidence,method_details
+ok,LEAN,PASS,2026020141,NHL,2026-10-20,nhl-sjs,nhl-mtl,2.8215,3.1542,3,4,5.9757,-0.3327,0.56,nhl-mtl,LOW,
+ok,TOSS-UP,PASS,2026020142,NHL,2026-10-20,nhl-col,nhl-njd,3.1583,3.0384,4,3,6.1967,0.12,0.52,nhl-col,LOW,
+ok,LEAN,PASS,2026020143,NHL,2026-10-20,nhl-ana,nhl-nyi,2.9207,3.3059,3,4,6.2267,-0.3852,0.57,nhl-nyi,LOW,
+ok,STRONG,OVER,2026020144,NHL,2026-10-20,nhl-lak,nhl-wsh,2.3337,4.1453,2,4,6.479,-1.8116,0.78,nhl-wsh,LOW,
+ok,TOSS-UP,OVER,2026020145,NHL,2026-10-20,nhl-tor,nhl-cbj,3.4366,3.4286,4,3,6.8652,0.008,0.5,nhl-tor,LOW,
+ok,STRONG,OVER,2026020146,NHL,2026-10-20,nhl-wpg,nhl-stl,3.6481,2.9126,4,3,6.5607,0.7355,0.63,nhl-wpg,LOW,
+ok,TOSS-UP,PASS,2026020147,NHL,2026-10-20,nhl-bos,nhl-dal,2.846,2.9185,3,4,5.7646,-0.0725,0.51,nhl-dal,LOW,
+ok,STRONG,OVER,2026020148,NHL,2026-10-20,nhl-min,nhl-edm,3.002,3.5593,3,4,6.5613,-0.5573,0.6,nhl-edm,LOW,
+ok,LEAN,PASS,2026020149,NHL,2026-10-20,nhl-det,nhl-sea,2.5955,3.1223,3,4,5.7178,-0.5268,0.59,nhl-sea,LOW,
+ok,STRONG,PASS,2026020150,NHL,2026-10-20,nhl-car,nhl-van,3.4725,2.5218,4,3,5.9943,0.9507,0.66,nhl-car,LOW,
+ok,LEAN,PASS,2026020151,NHL,2026-10-20,nhl-tbl,nhl-vgk,2.8879,3.2999,3,4,6.1878,-0.412,0.57,nhl-vgk,LOW,

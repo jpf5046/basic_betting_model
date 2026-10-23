@@ -1,0 +1,2 @@
+status,ml_lean,total_lean,game_id,sport,date,away_team_id,home_team_id,pred_away,pred_home,disp_away,disp_home,pred_total,pred_spread,win_prob,winner_team_id,pred_confidence,method_details
+ok,LEAN,PASS,849805,MLB,2026-10-23,mlb-tb,mlb-mil,3.9919,4.7518,4,5,8.7436,-0.7599,0.58,mlb-mil,HIGH,

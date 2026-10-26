@@ -1,0 +1,8 @@
+game_id,sport,date,bet_type,selection,confidence,line,game_status,actual_away,actual_home,result,pnl,price_american
+2026020180,NHL,2026-10-25,ML,nhl-fla,LEAN,0.55,final,3,2,WIN,100,
+2026020181,NHL,2026-10-25,ML,nhl-dal,LEAN,0.55,final,3,6,WIN,100,
+2026020181,NHL,2026-10-25,TOTAL,UNDER,,5.7,final,3,6,LOSS,-100,
+2026020183,NHL,2026-10-25,ML,nhl-col,STRONG,0.6,final,2,6,LOSS,-100,
+2026020183,NHL,2026-10-25,TOTAL,OVER,,6.3,final,2,6,WIN,100,
+2026020184,NHL,2026-10-25,ML,nhl-min,STRONG,0.6,final,4,2,WIN,100,
+2026020184,NHL,2026-10-25,TOTAL,OVER,,6.3,final,4,2,LOSS,-100,

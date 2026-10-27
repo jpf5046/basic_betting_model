@@ -248,9 +248,9 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020182,20262027,regular,2026-10-25,2026-10-25T23:00:00Z,final,nhl-mtl,nhl-wpg,MTL,WPG,2,1,Princess Auto Stadium,REG,N,1
 2026020183,20262027,regular,2026-10-25,2026-10-26T00:00:00Z,final,nhl-col,nhl-nsh,COL,NSH,2,6,Bridgestone Arena,REG,N,1
 2026020184,20262027,regular,2026-10-25,2026-10-26T02:00:00Z,final,nhl-min,nhl-van,MIN,VAN,4,2,Rogers Arena,REG,N,1
-2026020185,20262027,regular,2026-10-26,2026-10-26T23:00:00Z,scheduled,nhl-lak,nhl-nyr,LAK,NYR,,,Madison Square Garden,,N,1
-2026020186,20262027,regular,2026-10-26,2026-10-27T00:30:00Z,scheduled,nhl-tor,nhl-cgy,TOR,CGY,,,Scotiabank Saddledome,,N,1
-2026020187,20262027,regular,2026-10-26,2026-10-27T01:30:00Z,scheduled,nhl-det,nhl-edm,DET,EDM,,,Rogers Place,,N,1
+2026020185,20262027,regular,2026-10-26,2026-10-26T23:00:00Z,final,nhl-lak,nhl-nyr,LAK,NYR,6,3,Madison Square Garden,REG,N,1
+2026020186,20262027,regular,2026-10-26,2026-10-27T00:30:00Z,final,nhl-tor,nhl-cgy,TOR,CGY,2,5,Scotiabank Saddledome,REG,N,1
+2026020187,20262027,regular,2026-10-26,2026-10-27T01:30:00Z,final,nhl-det,nhl-edm,DET,EDM,4,3,Rogers Place,SO,N,1
 2026020188,20262027,regular,2026-10-27,2026-10-27T23:00:00Z,scheduled,nhl-cbj,nhl-phi,CBJ,PHI,,,Xfinity Mobile Arena,,N,1
 2026020189,20262027,regular,2026-10-27,2026-10-28T00:00:00Z,scheduled,nhl-bos,nhl-car,BOS,CAR,,,Lenovo Center,,N,1
 2026020190,20262027,regular,2026-10-27,2026-10-28T00:00:00Z,scheduled,nhl-lak,nhl-chi,LAK,CHI,,,United Center,,N,1

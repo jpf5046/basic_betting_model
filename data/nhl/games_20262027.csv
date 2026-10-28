@@ -251,17 +251,17 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020185,20262027,regular,2026-10-26,2026-10-26T23:00:00Z,final,nhl-lak,nhl-nyr,LAK,NYR,6,3,Madison Square Garden,REG,N,1
 2026020186,20262027,regular,2026-10-26,2026-10-27T00:30:00Z,final,nhl-tor,nhl-cgy,TOR,CGY,2,5,Scotiabank Saddledome,REG,N,1
 2026020187,20262027,regular,2026-10-26,2026-10-27T01:30:00Z,final,nhl-det,nhl-edm,DET,EDM,4,3,Rogers Place,SO,N,1
-2026020188,20262027,regular,2026-10-27,2026-10-27T23:00:00Z,scheduled,nhl-cbj,nhl-phi,CBJ,PHI,,,Xfinity Mobile Arena,,N,1
-2026020189,20262027,regular,2026-10-27,2026-10-28T00:00:00Z,scheduled,nhl-bos,nhl-car,BOS,CAR,,,Lenovo Center,,N,1
-2026020190,20262027,regular,2026-10-27,2026-10-28T00:00:00Z,scheduled,nhl-lak,nhl-chi,LAK,CHI,,,United Center,,N,1
-2026020191,20262027,regular,2026-10-27,2026-10-28T00:00:00Z,scheduled,nhl-mtl,nhl-stl,MTL,STL,,,Enterprise Center,,N,1
-2026020192,20262027,regular,2026-10-27,2026-10-28T00:00:00Z,scheduled,nhl-nyi,nhl-nsh,NYI,NSH,,,Bridgestone Arena,,N,1
-2026020193,20262027,regular,2026-10-27,2026-10-28T00:00:00Z,scheduled,nhl-njd,nhl-dal,NJD,DAL,,,American Airlines Center,,N,1
-2026020194,20262027,regular,2026-10-27,2026-10-28T00:00:00Z,scheduled,nhl-fla,nhl-wpg,FLA,WPG,,,Canada Life Centre,,N,1
-2026020195,20262027,regular,2026-10-27,2026-10-28T01:00:00Z,scheduled,nhl-min,nhl-uta,MIN,UTA,,,Delta Center,,N,1
-2026020196,20262027,regular,2026-10-27,2026-10-28T02:00:00Z,scheduled,nhl-ott,nhl-vgk,OTT,VGK,,,T-Mobile Arena,,N,1
-2026020197,20262027,regular,2026-10-27,2026-10-28T02:00:00Z,scheduled,nhl-van,nhl-ana,VAN,ANA,,,Honda Center,,N,1
-2026020198,20262027,regular,2026-10-27,2026-10-28T02:30:00Z,scheduled,nhl-buf,nhl-sjs,BUF,SJS,,,SAP Center at San Jose,,N,1
+2026020188,20262027,regular,2026-10-27,2026-10-27T23:00:00Z,final,nhl-cbj,nhl-phi,CBJ,PHI,4,3,Xfinity Mobile Arena,OT,N,1
+2026020189,20262027,regular,2026-10-27,2026-10-28T00:00:00Z,final,nhl-bos,nhl-car,BOS,CAR,1,2,Lenovo Center,REG,N,1
+2026020190,20262027,regular,2026-10-27,2026-10-28T00:00:00Z,final,nhl-lak,nhl-chi,LAK,CHI,1,2,United Center,REG,N,1
+2026020191,20262027,regular,2026-10-27,2026-10-28T00:00:00Z,final,nhl-mtl,nhl-stl,MTL,STL,2,0,Enterprise Center,REG,N,1
+2026020192,20262027,regular,2026-10-27,2026-10-28T00:00:00Z,final,nhl-nyi,nhl-nsh,NYI,NSH,4,3,Bridgestone Arena,SO,N,1
+2026020193,20262027,regular,2026-10-27,2026-10-28T00:00:00Z,final,nhl-njd,nhl-dal,NJD,DAL,5,1,American Airlines Center,REG,N,1
+2026020194,20262027,regular,2026-10-27,2026-10-28T00:00:00Z,final,nhl-fla,nhl-wpg,FLA,WPG,5,1,Canada Life Centre,REG,N,1
+2026020195,20262027,regular,2026-10-27,2026-10-28T01:00:00Z,final,nhl-min,nhl-uta,MIN,UTA,3,1,Delta Center,REG,N,1
+2026020196,20262027,regular,2026-10-27,2026-10-28T02:00:00Z,final,nhl-ott,nhl-vgk,OTT,VGK,1,4,T-Mobile Arena,REG,N,1
+2026020197,20262027,regular,2026-10-27,2026-10-28T02:00:00Z,final,nhl-van,nhl-ana,VAN,ANA,6,5,Honda Center,OT,N,1
+2026020198,20262027,regular,2026-10-27,2026-10-28T02:30:00Z,final,nhl-buf,nhl-sjs,BUF,SJS,2,0,SAP Center at San Jose,REG,N,1
 2026020199,20262027,regular,2026-10-28,2026-10-28T23:30:00Z,scheduled,nhl-phi,nhl-wsh,PHI,WSH,,,Capital One Arena,,N,1
 2026020200,20262027,regular,2026-10-28,2026-10-29T00:30:00Z,scheduled,nhl-cgy,nhl-edm,CGY,EDM,,,Rogers Place,,N,1
 2026020201,20262027,regular,2026-10-28,2026-10-29T01:00:00Z,scheduled,nhl-njd,nhl-col,NJD,COL,,,Ball Arena,,N,1

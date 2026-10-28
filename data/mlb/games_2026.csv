@@ -2497,7 +2497,7 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 849805,2026,playoffs,2026-10-23,2026-10-24T00:00:00Z,final,mlb-tb,mlb-mil,TB,MIL,2,3,American Family Field,,N,1
 849802,2026,playoffs,2026-10-24,2026-10-25T00:00:00Z,final,mlb-tb,mlb-mil,TB,MIL,4,5,American Family Field,,N,1
 849804,2026,playoffs,2026-10-26,2026-10-27T00:00:00Z,final,mlb-mil,mlb-tb,MIL,TB,10,1,Tropicana Field,,N,1
-849803,2026,playoffs,2026-10-27,2026-10-28T00:00:00Z,scheduled,mlb-mil,mlb-tb,MIL,TB,,,Tropicana Field,,N,1
+849803,2026,playoffs,2026-10-27,2026-10-28T00:00:00Z,final,mlb-mil,mlb-tb,MIL,TB,3,4,Tropicana Field,,N,1
 849799,2026,playoffs,2026-10-28,2026-10-29T00:00:00Z,scheduled,mlb-mil,mlb-tb,MIL,TB,,,Tropicana Field,,N,1
 849801,2026,playoffs,2026-10-30,2026-10-31T00:00:00Z,scheduled,mlb-tb,mlb-mil,TB,MIL,,,American Family Field,,N,1
 849800,2026,playoffs,2026-10-31,2026-11-01T00:00:00Z,scheduled,mlb-tb,mlb-mil,TB,MIL,,,American Family Field,,N,1

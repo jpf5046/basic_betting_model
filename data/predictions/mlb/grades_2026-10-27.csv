@@ -1,0 +1,2 @@
+game_id,sport,date,bet_type,selection,confidence,line,game_status,actual_away,actual_home,result,pnl,price_american
+849803,MLB,2026-10-27,ML,mlb-mil,LEAN,0.55,final,3,4,LOSS,-100,

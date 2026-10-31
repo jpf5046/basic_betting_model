@@ -277,9 +277,9 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020211,20262027,regular,2026-10-29,2026-10-30T02:00:00Z,final,nhl-buf,nhl-ana,BUF,ANA,7,6,Honda Center,REG,N,1
 2026020212,20262027,regular,2026-10-29,2026-10-30T02:00:00Z,final,nhl-ott,nhl-lak,OTT,LAK,5,6,Crypto.com Arena,OT,N,1
 2026020213,20262027,regular,2026-10-29,2026-10-30T02:00:00Z,final,nhl-van,nhl-sjs,VAN,SJS,2,3,SAP Center at San Jose,REG,N,1
-2026020214,20262027,regular,2026-10-30,2026-10-30T22:00:00Z,scheduled,nhl-njd,nhl-vgk,NJD,VGK,,,T-Mobile Arena,,N,1
-2026020215,20262027,regular,2026-10-30,2026-10-30T23:00:00Z,scheduled,nhl-wpg,nhl-fla,WPG,FLA,,,Amerant Bank Arena,,N,1
-2026020216,20262027,regular,2026-10-30,2026-10-31T00:00:00Z,scheduled,nhl-sea,nhl-cgy,SEA,CGY,,,Scotiabank Saddledome,,N,1
+2026020214,20262027,regular,2026-10-30,2026-10-30T22:00:00Z,final,nhl-njd,nhl-vgk,NJD,VGK,5,2,T-Mobile Arena,REG,N,1
+2026020215,20262027,regular,2026-10-30,2026-10-30T23:00:00Z,final,nhl-wpg,nhl-fla,WPG,FLA,2,5,Amerant Bank Arena,REG,N,1
+2026020216,20262027,regular,2026-10-30,2026-10-31T00:00:00Z,final,nhl-sea,nhl-cgy,SEA,CGY,2,6,Scotiabank Saddledome,REG,N,1
 2026020217,20262027,regular,2026-10-31,2026-10-31T17:00:00Z,scheduled,nhl-chi,nhl-bos,CHI,BOS,,,TD Garden,,N,1
 2026020218,20262027,regular,2026-10-31,2026-10-31T17:00:00Z,scheduled,nhl-stl,nhl-det,STL,DET,,,Little Caesars Arena,,N,1
 2026020219,20262027,regular,2026-10-31,2026-10-31T18:00:00Z,scheduled,nhl-tbl,nhl-nsh,TBL,NSH,,,Bridgestone Arena,,N,1

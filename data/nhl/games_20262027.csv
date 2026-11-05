@@ -310,10 +310,10 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020244,20262027,regular,2026-11-03,2026-11-04T00:00:00Z,final,nhl-col,nhl-cbj,COL,CBJ,2,7,Nationwide Arena,REG,N,1
 2026020245,20262027,regular,2026-11-03,2026-11-04T01:00:00Z,final,nhl-car,nhl-nsh,CAR,NSH,1,4,Bridgestone Arena,REG,N,1
 2026020246,20262027,regular,2026-11-03,2026-11-04T02:00:00Z,final,nhl-ana,nhl-van,ANA,VAN,5,4,Rogers Arena,REG,N,1
-2026020247,20262027,regular,2026-11-04,2026-11-05T00:30:00Z,scheduled,nhl-ott,nhl-buf,OTT,BUF,,,KeyBank Center,,N,1
-2026020248,20262027,regular,2026-11-04,2026-11-05T00:30:00Z,scheduled,nhl-chi,nhl-fla,CHI,FLA,,,Amerant Bank Arena,,N,1
-2026020249,20262027,regular,2026-11-04,2026-11-05T03:00:00Z,scheduled,nhl-sjs,nhl-lak,SJS,LAK,,,Crypto.com Arena,,N,1
-2026020250,20262027,regular,2026-11-04,2026-11-05T03:00:00Z,scheduled,nhl-cgy,nhl-sea,CGY,SEA,,,Climate Pledge Arena,,N,1
+2026020247,20262027,regular,2026-11-04,2026-11-05T00:30:00Z,final,nhl-ott,nhl-buf,OTT,BUF,2,1,KeyBank Center,REG,N,1
+2026020248,20262027,regular,2026-11-04,2026-11-05T00:30:00Z,final,nhl-chi,nhl-fla,CHI,FLA,3,5,Amerant Bank Arena,REG,N,1
+2026020249,20262027,regular,2026-11-04,2026-11-05T03:00:00Z,final,nhl-sjs,nhl-lak,SJS,LAK,2,7,Crypto.com Arena,REG,N,1
+2026020250,20262027,regular,2026-11-04,2026-11-05T03:00:00Z,final,nhl-cgy,nhl-sea,CGY,SEA,1,2,Climate Pledge Arena,OT,N,1
 2026020251,20262027,regular,2026-11-05,2026-11-06T00:00:00Z,scheduled,nhl-uta,nhl-mtl,UTA,MTL,,,Centre Bell,,N,1
 2026020252,20262027,regular,2026-11-05,2026-11-06T00:00:00Z,scheduled,nhl-vgk,nhl-det,VGK,DET,,,Little Caesars Arena,,N,1
 2026020253,20262027,regular,2026-11-05,2026-11-06T00:00:00Z,scheduled,nhl-chi,nhl-tbl,CHI,TBL,,,Benchmark International Arena,,N,1

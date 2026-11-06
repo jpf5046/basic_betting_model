@@ -314,17 +314,17 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020248,20262027,regular,2026-11-04,2026-11-05T00:30:00Z,final,nhl-chi,nhl-fla,CHI,FLA,3,5,Amerant Bank Arena,REG,N,1
 2026020249,20262027,regular,2026-11-04,2026-11-05T03:00:00Z,final,nhl-sjs,nhl-lak,SJS,LAK,2,7,Crypto.com Arena,REG,N,1
 2026020250,20262027,regular,2026-11-04,2026-11-05T03:00:00Z,final,nhl-cgy,nhl-sea,CGY,SEA,1,2,Climate Pledge Arena,OT,N,1
-2026020251,20262027,regular,2026-11-05,2026-11-06T00:00:00Z,scheduled,nhl-uta,nhl-mtl,UTA,MTL,,,Centre Bell,,N,1
-2026020252,20262027,regular,2026-11-05,2026-11-06T00:00:00Z,scheduled,nhl-vgk,nhl-det,VGK,DET,,,Little Caesars Arena,,N,1
-2026020253,20262027,regular,2026-11-05,2026-11-06T00:00:00Z,scheduled,nhl-chi,nhl-tbl,CHI,TBL,,,Benchmark International Arena,,N,1
-2026020254,20262027,regular,2026-11-05,2026-11-06T00:00:00Z,scheduled,nhl-stl,nhl-njd,STL,NJD,,,Prudential Center,,N,1
-2026020255,20262027,regular,2026-11-05,2026-11-06T00:00:00Z,scheduled,nhl-car,nhl-nyi,CAR,NYI,,,UBS Arena,,N,1
-2026020256,20262027,regular,2026-11-05,2026-11-06T00:00:00Z,scheduled,nhl-phi,nhl-nyr,PHI,NYR,,,Madison Square Garden,,N,1
-2026020257,20262027,regular,2026-11-05,2026-11-06T00:00:00Z,scheduled,nhl-bos,nhl-pit,BOS,PIT,,,PPG Paints Arena,,N,1
-2026020258,20262027,regular,2026-11-05,2026-11-06T00:00:00Z,scheduled,nhl-dal,nhl-cbj,DAL,CBJ,,,Nationwide Arena,,N,1
-2026020259,20262027,regular,2026-11-05,2026-11-06T00:00:00Z,scheduled,nhl-van,nhl-wpg,VAN,WPG,,,Canada Life Centre,,N,1
-2026020260,20262027,regular,2026-11-05,2026-11-06T01:00:00Z,scheduled,nhl-ana,nhl-edm,ANA,EDM,,,Rogers Place,,N,1
-2026020261,20262027,regular,2026-11-05,2026-11-06T02:30:00Z,scheduled,nhl-nsh,nhl-col,NSH,COL,,,Ball Arena,,N,1
+2026020251,20262027,regular,2026-11-05,2026-11-06T00:00:00Z,final,nhl-uta,nhl-mtl,UTA,MTL,4,5,Centre Bell,OT,N,1
+2026020252,20262027,regular,2026-11-05,2026-11-06T00:00:00Z,final,nhl-vgk,nhl-det,VGK,DET,2,1,Little Caesars Arena,REG,N,1
+2026020253,20262027,regular,2026-11-05,2026-11-06T00:00:00Z,final,nhl-chi,nhl-tbl,CHI,TBL,1,4,Benchmark International Arena,REG,N,1
+2026020254,20262027,regular,2026-11-05,2026-11-06T00:00:00Z,final,nhl-stl,nhl-njd,STL,NJD,4,5,Prudential Center,OT,N,1
+2026020255,20262027,regular,2026-11-05,2026-11-06T00:00:00Z,final,nhl-car,nhl-nyi,CAR,NYI,5,3,UBS Arena,REG,N,1
+2026020256,20262027,regular,2026-11-05,2026-11-06T00:00:00Z,final,nhl-phi,nhl-nyr,PHI,NYR,2,3,Madison Square Garden,REG,N,1
+2026020257,20262027,regular,2026-11-05,2026-11-06T00:00:00Z,final,nhl-bos,nhl-pit,BOS,PIT,6,2,PPG Paints Arena,REG,N,1
+2026020258,20262027,regular,2026-11-05,2026-11-06T00:00:00Z,final,nhl-dal,nhl-cbj,DAL,CBJ,1,2,Nationwide Arena,SO,N,1
+2026020259,20262027,regular,2026-11-05,2026-11-06T00:00:00Z,final,nhl-van,nhl-wpg,VAN,WPG,2,6,Canada Life Centre,REG,N,1
+2026020260,20262027,regular,2026-11-05,2026-11-06T01:00:00Z,final,nhl-ana,nhl-edm,ANA,EDM,5,4,Rogers Place,REG,N,1
+2026020261,20262027,regular,2026-11-05,2026-11-06T02:30:00Z,final,nhl-nsh,nhl-col,NSH,COL,3,2,Ball Arena,OT,N,1
 2026020262,20262027,regular,2026-11-06,2026-11-07T00:00:00Z,scheduled,nhl-cbj,nhl-buf,CBJ,BUF,,,KeyBank Center,,N,1
 2026020263,20262027,regular,2026-11-06,2026-11-07T01:00:00Z,scheduled,nhl-sjs,nhl-min,SJS,MIN,,,Grand Casino Arena,,N,1
 2026020264,20262027,regular,2026-11-06,2026-11-07T01:00:00Z,scheduled,nhl-ana,nhl-cgy,ANA,CGY,,,Scotiabank Saddledome,,N,1

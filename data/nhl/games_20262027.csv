@@ -346,9 +346,9 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020280,20262027,regular,2026-11-08,2026-11-08T23:00:00Z,final,nhl-tbl,nhl-wpg,TBL,WPG,3,4,Canada Life Centre,REG,N,1
 2026020281,20262027,regular,2026-11-08,2026-11-09T00:00:00Z,final,nhl-phi,nhl-cgy,PHI,CGY,3,4,Scotiabank Saddledome,OT,N,1
 2026020282,20262027,regular,2026-11-08,2026-11-09T01:00:00Z,final,nhl-pit,nhl-ana,PIT,ANA,2,5,Honda Center,REG,N,1
-2026020283,20262027,regular,2026-11-09,2026-11-10T01:00:00Z,scheduled,nhl-nyr,nhl-edm,NYR,EDM,,,Rogers Place,,N,1
-2026020284,20262027,regular,2026-11-09,2026-11-10T02:30:00Z,scheduled,nhl-phi,nhl-van,PHI,VAN,,,Rogers Arena,,N,1
-2026020285,20262027,regular,2026-11-09,2026-11-10T03:00:00Z,scheduled,nhl-nyi,nhl-sjs,NYI,SJS,,,SAP Center at San Jose,,N,1
+2026020283,20262027,regular,2026-11-09,2026-11-10T01:00:00Z,final,nhl-nyr,nhl-edm,NYR,EDM,1,3,Rogers Place,REG,N,1
+2026020284,20262027,regular,2026-11-09,2026-11-10T02:30:00Z,final,nhl-phi,nhl-van,PHI,VAN,3,1,Rogers Arena,REG,N,1
+2026020285,20262027,regular,2026-11-09,2026-11-10T03:00:00Z,final,nhl-nyi,nhl-sjs,NYI,SJS,2,3,SAP Center at San Jose,SO,N,1
 2026020286,20262027,regular,2026-11-10,2026-11-11T00:00:00Z,scheduled,nhl-col,nhl-tor,COL,TOR,,,Scotiabank Arena,,N,1
 2026020287,20262027,regular,2026-11-10,2026-11-11T00:00:00Z,scheduled,nhl-min,nhl-mtl,MIN,MTL,,,Centre Bell,,N,1
 2026020288,20262027,regular,2026-11-10,2026-11-11T00:00:00Z,scheduled,nhl-wsh,nhl-ott,WSH,OTT,,,Canadian Tire Centre,,N,1

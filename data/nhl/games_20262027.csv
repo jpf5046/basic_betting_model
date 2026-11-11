@@ -349,13 +349,13 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020283,20262027,regular,2026-11-09,2026-11-10T01:00:00Z,final,nhl-nyr,nhl-edm,NYR,EDM,1,3,Rogers Place,REG,N,1
 2026020284,20262027,regular,2026-11-09,2026-11-10T02:30:00Z,final,nhl-phi,nhl-van,PHI,VAN,3,1,Rogers Arena,REG,N,1
 2026020285,20262027,regular,2026-11-09,2026-11-10T03:00:00Z,final,nhl-nyi,nhl-sjs,NYI,SJS,2,3,SAP Center at San Jose,SO,N,1
-2026020286,20262027,regular,2026-11-10,2026-11-11T00:00:00Z,scheduled,nhl-col,nhl-tor,COL,TOR,,,Scotiabank Arena,,N,1
-2026020287,20262027,regular,2026-11-10,2026-11-11T00:00:00Z,scheduled,nhl-min,nhl-mtl,MIN,MTL,,,Centre Bell,,N,1
-2026020288,20262027,regular,2026-11-10,2026-11-11T00:00:00Z,scheduled,nhl-wsh,nhl-ott,WSH,OTT,,,Canadian Tire Centre,,N,1
-2026020289,20262027,regular,2026-11-10,2026-11-11T00:30:00Z,scheduled,nhl-fla,nhl-cbj,FLA,CBJ,,,Nationwide Arena,,N,1
-2026020290,20262027,regular,2026-11-10,2026-11-11T01:00:00Z,scheduled,nhl-det,nhl-stl,DET,STL,,,Enterprise Center,,N,1
-2026020291,20262027,regular,2026-11-10,2026-11-11T00:00:00Z,scheduled,nhl-njd,nhl-wpg,NJD,WPG,,,Canada Life Centre,,N,1
-2026020292,20262027,regular,2026-11-10,2026-11-11T03:00:00Z,scheduled,nhl-nsh,nhl-lak,NSH,LAK,,,Crypto.com Arena,,N,1
+2026020286,20262027,regular,2026-11-10,2026-11-11T00:00:00Z,final,nhl-col,nhl-tor,COL,TOR,6,3,Scotiabank Arena,REG,N,1
+2026020287,20262027,regular,2026-11-10,2026-11-11T00:00:00Z,final,nhl-min,nhl-mtl,MIN,MTL,2,1,Centre Bell,OT,N,1
+2026020288,20262027,regular,2026-11-10,2026-11-11T00:00:00Z,final,nhl-wsh,nhl-ott,WSH,OTT,3,2,Canadian Tire Centre,OT,N,1
+2026020289,20262027,regular,2026-11-10,2026-11-11T00:30:00Z,final,nhl-fla,nhl-cbj,FLA,CBJ,4,1,Nationwide Arena,REG,N,1
+2026020290,20262027,regular,2026-11-10,2026-11-11T01:00:00Z,final,nhl-det,nhl-stl,DET,STL,2,3,Enterprise Center,REG,N,1
+2026020291,20262027,regular,2026-11-10,2026-11-11T00:00:00Z,final,nhl-njd,nhl-wpg,NJD,WPG,2,4,Canada Life Centre,REG,N,1
+2026020292,20262027,regular,2026-11-10,2026-11-11T03:00:00Z,final,nhl-nsh,nhl-lak,NSH,LAK,3,0,Crypto.com Arena,REG,N,1
 2026020293,20262027,regular,2026-11-11,2026-11-12T00:00:00Z,scheduled,nhl-tbl,nhl-buf,TBL,BUF,,,KeyBank Center,,N,1
 2026020294,20262027,regular,2026-11-11,2026-11-12T00:30:00Z,scheduled,nhl-nyr,nhl-cgy,NYR,CGY,,,Scotiabank Saddledome,,N,1
 2026020295,20262027,regular,2026-11-11,2026-11-12T02:00:00Z,scheduled,nhl-phi,nhl-edm,PHI,EDM,,,Rogers Place,,N,1

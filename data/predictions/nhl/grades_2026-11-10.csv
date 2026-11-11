@@ -1,0 +1,7 @@
+game_id,sport,date,bet_type,selection,confidence,line,game_status,actual_away,actual_home,result,pnl,price_american
+2026020286,NHL,2026-11-10,TOTAL,OVER,,6.3,final,6,3,WIN,100,
+2026020287,NHL,2026-11-10,ML,nhl-min,LEAN,0.55,final,2,1,WIN,100,
+2026020288,NHL,2026-11-10,TOTAL,OVER,,6.3,final,3,2,LOSS,-100,
+2026020291,NHL,2026-11-10,ML,nhl-njd,STRONG,0.6,final,2,4,LOSS,-100,
+2026020291,NHL,2026-11-10,TOTAL,OVER,,6.3,final,2,4,LOSS,-100,
+2026020292,NHL,2026-11-10,TOTAL,OVER,,6.3,final,3,0,LOSS,-100,

@@ -362,17 +362,17 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020296,20262027,regular,2026-11-11,2026-11-12T02:30:00Z,final,nhl-uta,nhl-vgk,UTA,VGK,3,5,T-Mobile Arena,REG,N,1
 2026020297,20262027,regular,2026-11-11,2026-11-12T03:00:00Z,final,nhl-nsh,nhl-ana,NSH,ANA,4,2,Honda Center,REG,N,1
 2026020298,20262027,regular,2026-11-11,2026-11-12T03:00:00Z,final,nhl-pit,nhl-sjs,PIT,SJS,3,2,SAP Center at San Jose,SO,N,1
-2026020299,20262027,regular,2026-11-12,2026-11-13T00:00:00Z,scheduled,nhl-mtl,nhl-bos,MTL,BOS,,,TD Garden,,N,1
-2026020300,20262027,regular,2026-11-12,2026-11-13T00:00:00Z,scheduled,nhl-min,nhl-tor,MIN,TOR,,,Scotiabank Arena,,N,1
-2026020301,20262027,regular,2026-11-12,2026-11-13T00:00:00Z,scheduled,nhl-col,nhl-ott,COL,OTT,,,Canadian Tire Centre,,N,1
-2026020302,20262027,regular,2026-11-12,2026-11-13T00:30:00Z,scheduled,nhl-det,nhl-fla,DET,FLA,,,Amerant Bank Arena,,N,1
-2026020303,20262027,regular,2026-11-12,2026-11-13T00:00:00Z,scheduled,nhl-wsh,nhl-njd,WSH,NJD,,,Prudential Center,,N,1
-2026020304,20262027,regular,2026-11-12,2026-11-13T00:00:00Z,scheduled,nhl-tbl,nhl-cbj,TBL,CBJ,,,Nationwide Arena,,N,1
-2026020305,20262027,regular,2026-11-12,2026-11-13T01:00:00Z,scheduled,nhl-buf,nhl-chi,BUF,CHI,,,United Center,,N,1
-2026020306,20262027,regular,2026-11-12,2026-11-13T01:00:00Z,scheduled,nhl-wpg,nhl-dal,WPG,DAL,,,American Airlines Center,,N,1
-2026020307,20262027,regular,2026-11-12,2026-11-13T02:00:00Z,scheduled,nhl-stl,nhl-uta,STL,UTA,,,Delta Center,,N,1
-2026020308,20262027,regular,2026-11-12,2026-11-13T03:00:00Z,scheduled,nhl-nyi,nhl-lak,NYI,LAK,,,Crypto.com Arena,,N,1
-2026020309,20262027,regular,2026-11-12,2026-11-12T17:00:00Z,live,nhl-car,nhl-sea,CAR,SEA,,,Veikkaus Arena,,N,1
+2026020299,20262027,regular,2026-11-12,2026-11-13T00:00:00Z,final,nhl-mtl,nhl-bos,MTL,BOS,5,2,TD Garden,REG,N,1
+2026020300,20262027,regular,2026-11-12,2026-11-13T00:00:00Z,final,nhl-min,nhl-tor,MIN,TOR,5,2,Scotiabank Arena,REG,N,1
+2026020301,20262027,regular,2026-11-12,2026-11-13T00:00:00Z,final,nhl-col,nhl-ott,COL,OTT,3,4,Canadian Tire Centre,OT,N,1
+2026020302,20262027,regular,2026-11-12,2026-11-13T00:30:00Z,final,nhl-det,nhl-fla,DET,FLA,4,5,Amerant Bank Arena,REG,N,1
+2026020303,20262027,regular,2026-11-12,2026-11-13T00:00:00Z,final,nhl-wsh,nhl-njd,WSH,NJD,2,5,Prudential Center,REG,N,1
+2026020304,20262027,regular,2026-11-12,2026-11-13T00:00:00Z,final,nhl-tbl,nhl-cbj,TBL,CBJ,3,1,Nationwide Arena,REG,N,1
+2026020305,20262027,regular,2026-11-12,2026-11-13T01:00:00Z,final,nhl-buf,nhl-chi,BUF,CHI,2,3,United Center,OT,N,1
+2026020306,20262027,regular,2026-11-12,2026-11-13T01:00:00Z,final,nhl-wpg,nhl-dal,WPG,DAL,8,3,American Airlines Center,REG,N,1
+2026020307,20262027,regular,2026-11-12,2026-11-13T02:00:00Z,final,nhl-stl,nhl-uta,STL,UTA,1,0,Delta Center,SO,N,1
+2026020308,20262027,regular,2026-11-12,2026-11-13T03:00:00Z,final,nhl-nyi,nhl-lak,NYI,LAK,5,2,Crypto.com Arena,REG,N,1
+2026020309,20262027,regular,2026-11-12,2026-11-12T17:00:00Z,final,nhl-car,nhl-sea,CAR,SEA,4,1,Veikkaus Arena,REG,N,1
 2026020310,20262027,regular,2026-11-13,2026-11-14T02:00:00Z,scheduled,nhl-nyr,nhl-van,NYR,VAN,,,Rogers Arena,,N,1
 2026020311,20262027,regular,2026-11-13,2026-11-14T03:00:00Z,scheduled,nhl-nsh,nhl-vgk,NSH,VGK,,,T-Mobile Arena,,N,1
 2026020312,20262027,regular,2026-11-14,2026-11-14T20:30:00Z,scheduled,nhl-wpg,nhl-chi,WPG,CHI,,,United Center,,N,1
@@ -687,7 +687,7 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020621,20262027,regular,2026-12-28,2026-12-29T00:00:00Z,scheduled,nhl-nsh,nhl-fla,NSH,FLA,,,Amerant Bank Arena,,N,1
 2026020622,20262027,regular,2026-12-28,2026-12-29T00:00:00Z,scheduled,nhl-edm,nhl-wsh,EDM,WSH,,,Capital One Arena,,N,1
 2026020623,20262027,regular,2026-12-28,2026-12-29T00:00:00Z,scheduled,nhl-tbl,nhl-car,TBL,CAR,,,Lenovo Center,,N,1
-2026020624,20262027,regular,2026-12-28,2026-12-29T00:30:00Z,scheduled,nhl-sjs,nhl-wpg,SJS,WPG,,,Canada Life Centre,,N,1
+2026020624,20262027,regular,2026-12-28,2026-12-29T00:00:00Z,scheduled,nhl-sjs,nhl-wpg,SJS,WPG,,,Canada Life Centre,,N,1
 2026020625,20262027,regular,2026-12-28,2026-12-29T02:30:00Z,scheduled,nhl-lak,nhl-van,LAK,VAN,,,Rogers Arena,,N,1
 2026020626,20262027,regular,2026-12-29,2026-12-30T00:00:00Z,scheduled,nhl-cbj,nhl-mtl,CBJ,MTL,,,Centre Bell,,N,1
 2026020627,20262027,regular,2026-12-29,2026-12-30T00:00:00Z,scheduled,nhl-dal,nhl-ott,DAL,OTT,,,Canadian Tire Centre,,N,1
@@ -853,7 +853,7 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020787,20262027,regular,2027-01-19,2027-01-20T00:00:00Z,scheduled,nhl-dal,nhl-njd,DAL,NJD,,,Prudential Center,,N,1
 2026020788,20262027,regular,2027-01-19,2027-01-20T00:00:00Z,scheduled,nhl-phi,nhl-nyr,PHI,NYR,,,Madison Square Garden,,N,1
 2026020789,20262027,regular,2027-01-19,2027-01-20T00:00:00Z,scheduled,nhl-mtl,nhl-wsh,MTL,WSH,,,Capital One Arena,,N,1
-2026020790,20262027,regular,2027-01-19,2027-01-20T00:00:00Z,scheduled,nhl-min,nhl-wpg,MIN,WPG,,,Canada Life Centre,,N,1
+2026020790,20262027,regular,2027-01-19,2027-01-20T00:30:00Z,scheduled,nhl-min,nhl-wpg,MIN,WPG,,,Canada Life Centre,,N,1
 2026020791,20262027,regular,2027-01-19,2027-01-20T03:00:00Z,scheduled,nhl-sea,nhl-lak,SEA,LAK,,,Crypto.com Arena,,N,1
 2026020792,20262027,regular,2027-01-20,2027-01-20T19:00:00Z,scheduled,nhl-van,nhl-nsh,VAN,NSH,,,Bridgestone Arena,,N,1
 2026020793,20262027,regular,2027-01-20,2027-01-21T00:00:00Z,scheduled,nhl-buf,nhl-nyi,BUF,NYI,,,UBS Arena,,N,1

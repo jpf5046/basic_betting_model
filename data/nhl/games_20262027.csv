@@ -373,8 +373,8 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020307,20262027,regular,2026-11-12,2026-11-13T02:00:00Z,final,nhl-stl,nhl-uta,STL,UTA,1,0,Delta Center,SO,N,1
 2026020308,20262027,regular,2026-11-12,2026-11-13T03:00:00Z,final,nhl-nyi,nhl-lak,NYI,LAK,5,2,Crypto.com Arena,REG,N,1
 2026020309,20262027,regular,2026-11-12,2026-11-12T17:00:00Z,final,nhl-car,nhl-sea,CAR,SEA,4,1,Veikkaus Arena,REG,N,1
-2026020310,20262027,regular,2026-11-13,2026-11-14T02:00:00Z,scheduled,nhl-nyr,nhl-van,NYR,VAN,,,Rogers Arena,,N,1
-2026020311,20262027,regular,2026-11-13,2026-11-14T03:00:00Z,scheduled,nhl-nsh,nhl-vgk,NSH,VGK,,,T-Mobile Arena,,N,1
+2026020310,20262027,regular,2026-11-13,2026-11-14T02:00:00Z,final,nhl-nyr,nhl-van,NYR,VAN,5,1,Rogers Arena,REG,N,1
+2026020311,20262027,regular,2026-11-13,2026-11-14T03:00:00Z,final,nhl-nsh,nhl-vgk,NSH,VGK,3,2,T-Mobile Arena,SO,N,1
 2026020312,20262027,regular,2026-11-14,2026-11-14T20:30:00Z,scheduled,nhl-wpg,nhl-chi,WPG,CHI,,,United Center,,N,1
 2026020313,20262027,regular,2026-11-14,2026-11-15T00:00:00Z,scheduled,nhl-min,nhl-bos,MIN,BOS,,,TD Garden,,N,1
 2026020314,20262027,regular,2026-11-14,2026-11-15T00:00:00Z,scheduled,nhl-edm,nhl-tor,EDM,TOR,,,Scotiabank Arena,,N,1

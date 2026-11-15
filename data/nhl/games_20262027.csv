@@ -375,20 +375,20 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020309,20262027,regular,2026-11-12,2026-11-12T17:00:00Z,final,nhl-car,nhl-sea,CAR,SEA,4,1,Veikkaus Arena,REG,N,1
 2026020310,20262027,regular,2026-11-13,2026-11-14T02:00:00Z,final,nhl-nyr,nhl-van,NYR,VAN,5,1,Rogers Arena,REG,N,1
 2026020311,20262027,regular,2026-11-13,2026-11-14T03:00:00Z,final,nhl-nsh,nhl-vgk,NSH,VGK,3,2,T-Mobile Arena,SO,N,1
-2026020312,20262027,regular,2026-11-14,2026-11-14T20:30:00Z,scheduled,nhl-wpg,nhl-chi,WPG,CHI,,,United Center,,N,1
-2026020313,20262027,regular,2026-11-14,2026-11-15T00:00:00Z,scheduled,nhl-min,nhl-bos,MIN,BOS,,,TD Garden,,N,1
-2026020314,20262027,regular,2026-11-14,2026-11-15T00:00:00Z,scheduled,nhl-edm,nhl-tor,EDM,TOR,,,Scotiabank Arena,,N,1
-2026020315,20262027,regular,2026-11-14,2026-11-15T00:00:00Z,scheduled,nhl-col,nhl-mtl,COL,MTL,,,Centre Bell,,N,1
-2026020316,20262027,regular,2026-11-14,2026-11-15T00:00:00Z,scheduled,nhl-det,nhl-tbl,DET,TBL,,,Benchmark International Arena,,N,1
-2026020317,20262027,regular,2026-11-14,2026-11-15T00:00:00Z,scheduled,nhl-ott,nhl-pit,OTT,PIT,,,PPG Paints Arena,,N,1
-2026020318,20262027,regular,2026-11-14,2026-11-15T00:00:00Z,scheduled,nhl-njd,nhl-wsh,NJD,WSH,,,Capital One Arena,,N,1
-2026020319,20262027,regular,2026-11-14,2026-11-15T00:00:00Z,scheduled,nhl-phi,nhl-cbj,PHI,CBJ,,,Nationwide Arena,,N,1
-2026020320,20262027,regular,2026-11-14,2026-11-15T00:00:00Z,scheduled,nhl-fla,nhl-stl,FLA,STL,,,Enterprise Center,,N,1
-2026020321,20262027,regular,2026-11-14,2026-11-14T18:00:00Z,scheduled,nhl-sea,nhl-car,SEA,CAR,,,Veikkaus Arena,,N,1
-2026020322,20262027,regular,2026-11-14,2026-11-15T01:00:00Z,scheduled,nhl-buf,nhl-dal,BUF,DAL,,,American Airlines Center,,N,1
-2026020323,20262027,regular,2026-11-14,2026-11-15T02:00:00Z,scheduled,nhl-sjs,nhl-uta,SJS,UTA,,,Delta Center,,N,1
-2026020324,20262027,regular,2026-11-14,2026-11-15T03:00:00Z,scheduled,nhl-nyi,nhl-ana,NYI,ANA,,,Honda Center,,N,1
-2026020325,20262027,regular,2026-11-14,2026-11-15T03:00:00Z,scheduled,nhl-cgy,nhl-lak,CGY,LAK,,,Crypto.com Arena,,N,1
+2026020312,20262027,regular,2026-11-14,2026-11-14T20:30:00Z,final,nhl-wpg,nhl-chi,WPG,CHI,5,4,United Center,SO,N,1
+2026020313,20262027,regular,2026-11-14,2026-11-15T00:00:00Z,final,nhl-min,nhl-bos,MIN,BOS,6,2,TD Garden,REG,N,1
+2026020314,20262027,regular,2026-11-14,2026-11-15T00:00:00Z,final,nhl-edm,nhl-tor,EDM,TOR,1,0,Scotiabank Arena,REG,N,1
+2026020315,20262027,regular,2026-11-14,2026-11-15T00:00:00Z,final,nhl-col,nhl-mtl,COL,MTL,4,1,Centre Bell,REG,N,1
+2026020316,20262027,regular,2026-11-14,2026-11-15T00:00:00Z,final,nhl-det,nhl-tbl,DET,TBL,2,0,Benchmark International Arena,REG,N,1
+2026020317,20262027,regular,2026-11-14,2026-11-15T00:00:00Z,final,nhl-ott,nhl-pit,OTT,PIT,4,1,PPG Paints Arena,REG,N,1
+2026020318,20262027,regular,2026-11-14,2026-11-15T00:00:00Z,final,nhl-njd,nhl-wsh,NJD,WSH,7,4,Capital One Arena,REG,N,1
+2026020319,20262027,regular,2026-11-14,2026-11-15T00:00:00Z,final,nhl-phi,nhl-cbj,PHI,CBJ,4,3,Nationwide Arena,REG,N,1
+2026020320,20262027,regular,2026-11-14,2026-11-15T00:00:00Z,final,nhl-fla,nhl-stl,FLA,STL,4,1,Enterprise Center,REG,N,1
+2026020321,20262027,regular,2026-11-14,2026-11-14T18:00:00Z,final,nhl-sea,nhl-car,SEA,CAR,1,5,Veikkaus Arena,REG,N,1
+2026020322,20262027,regular,2026-11-14,2026-11-15T01:00:00Z,final,nhl-buf,nhl-dal,BUF,DAL,0,2,American Airlines Center,REG,N,1
+2026020323,20262027,regular,2026-11-14,2026-11-15T02:00:00Z,final,nhl-sjs,nhl-uta,SJS,UTA,6,5,Delta Center,SO,N,1
+2026020324,20262027,regular,2026-11-14,2026-11-15T03:00:00Z,final,nhl-nyi,nhl-ana,NYI,ANA,6,2,Honda Center,REG,N,1
+2026020325,20262027,regular,2026-11-14,2026-11-15T03:00:00Z,final,nhl-cgy,nhl-lak,CGY,LAK,3,2,Crypto.com Arena,REG,N,1
 2026020326,20262027,regular,2026-11-15,2026-11-16T00:30:00Z,scheduled,nhl-edm,nhl-phi,EDM,PHI,,,Xfinity Mobile Arena,,N,1
 2026020327,20262027,regular,2026-11-15,2026-11-16T01:00:00Z,scheduled,nhl-fla,nhl-dal,FLA,DAL,,,American Airlines Center,,N,1
 2026020328,20262027,regular,2026-11-15,2026-11-16T01:00:00Z,scheduled,nhl-cgy,nhl-ana,CGY,ANA,,,Honda Center,,N,1

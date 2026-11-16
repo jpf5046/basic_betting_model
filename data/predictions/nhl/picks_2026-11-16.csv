@@ -1,0 +1,4 @@
+game_id,sport,date,bet_type,selection,confidence,line
+2026020331,NHL,2026-11-16,ML,nhl-mtl,LEAN,0.55
+2026020332,NHL,2026-11-16,ML,nhl-uta,STRONG,0.6
+2026020332,NHL,2026-11-16,TOTAL,OVER,,6.3

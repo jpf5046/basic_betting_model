@@ -407,9 +407,9 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020341,20262027,regular,2026-11-17,2026-11-18T00:00:00Z,final,nhl-ott,nhl-wpg,OTT,WPG,2,1,Canada Life Centre,REG,N,1
 2026020342,20262027,regular,2026-11-17,2026-11-18T03:00:00Z,final,nhl-dal,nhl-vgk,DAL,VGK,4,3,T-Mobile Arena,OT,N,1
 2026020343,20262027,regular,2026-11-17,2026-11-18T03:00:00Z,final,nhl-cgy,nhl-sjs,CGY,SJS,5,2,SAP Center at San Jose,REG,N,1
-2026020344,20262027,regular,2026-11-18,2026-11-19T00:30:00Z,scheduled,nhl-bos,nhl-det,BOS,DET,,,Little Caesars Arena,,N,1
-2026020345,20262027,regular,2026-11-18,2026-11-19T00:30:00Z,scheduled,nhl-mtl,nhl-njd,MTL,NJD,,,Prudential Center,,N,1
-2026020346,20262027,regular,2026-11-18,2026-11-19T03:00:00Z,scheduled,nhl-col,nhl-uta,COL,UTA,,,Delta Center,,N,1
+2026020344,20262027,regular,2026-11-18,2026-11-19T00:30:00Z,final,nhl-bos,nhl-det,BOS,DET,4,1,Little Caesars Arena,REG,N,1
+2026020345,20262027,regular,2026-11-18,2026-11-19T00:30:00Z,final,nhl-mtl,nhl-njd,MTL,NJD,3,2,Prudential Center,REG,N,1
+2026020346,20262027,regular,2026-11-18,2026-11-19T03:00:00Z,final,nhl-col,nhl-uta,COL,UTA,1,4,Delta Center,REG,N,1
 2026020347,20262027,regular,2026-11-19,2026-11-20T00:00:00Z,scheduled,nhl-lak,nhl-tor,LAK,TOR,,,Scotiabank Arena,,N,1
 2026020348,20262027,regular,2026-11-19,2026-11-20T00:00:00Z,scheduled,nhl-phi,nhl-ott,PHI,OTT,,,Canadian Tire Centre,,N,1
 2026020349,20262027,regular,2026-11-19,2026-11-20T00:30:00Z,scheduled,nhl-edm,nhl-tbl,EDM,TBL,,,Benchmark International Arena,,N,1

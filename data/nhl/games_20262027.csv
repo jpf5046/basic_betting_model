@@ -436,11 +436,11 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020370,20262027,regular,2026-11-21,2026-11-22T02:00:00Z,final,nhl-ana,nhl-uta,ANA,UTA,2,3,Delta Center,REG,N,1
 2026020371,20262027,regular,2026-11-21,2026-11-22T03:00:00Z,final,nhl-min,nhl-van,MIN,VAN,3,4,Rogers Arena,SO,N,1
 2026020372,20262027,regular,2026-11-21,2026-11-22T03:00:00Z,final,nhl-sea,nhl-sjs,SEA,SJS,3,4,SAP Center at San Jose,REG,N,1
-2026020373,20262027,regular,2026-11-22,2026-11-22T17:30:00Z,live,nhl-car,nhl-nyr,CAR,NYR,,,Madison Square Garden,,N,1
-2026020374,20262027,regular,2026-11-22,2026-11-22T22:00:00Z,scheduled,nhl-buf,nhl-tbl,BUF,TBL,,,Benchmark International Arena,,N,1
-2026020375,20262027,regular,2026-11-22,2026-11-23T00:00:00Z,scheduled,nhl-edm,nhl-stl,EDM,STL,,,Enterprise Center,,N,1
-2026020376,20262027,regular,2026-11-22,2026-11-23T00:00:00Z,scheduled,nhl-pit,nhl-dal,PIT,DAL,,,American Airlines Center,,N,1
-2026020377,20262027,regular,2026-11-22,2026-11-23T01:00:00Z,scheduled,nhl-chi,nhl-van,CHI,VAN,,,Rogers Arena,,N,1
+2026020373,20262027,regular,2026-11-22,2026-11-22T17:30:00Z,final,nhl-car,nhl-nyr,CAR,NYR,5,2,Madison Square Garden,REG,N,1
+2026020374,20262027,regular,2026-11-22,2026-11-22T22:00:00Z,final,nhl-buf,nhl-tbl,BUF,TBL,6,2,Benchmark International Arena,REG,N,1
+2026020375,20262027,regular,2026-11-22,2026-11-23T00:00:00Z,final,nhl-edm,nhl-stl,EDM,STL,4,5,Enterprise Center,SO,N,1
+2026020376,20262027,regular,2026-11-22,2026-11-23T00:00:00Z,final,nhl-pit,nhl-dal,PIT,DAL,0,1,American Airlines Center,REG,N,1
+2026020377,20262027,regular,2026-11-22,2026-11-23T01:00:00Z,final,nhl-chi,nhl-van,CHI,VAN,6,3,Rogers Arena,REG,N,1
 2026020378,20262027,regular,2026-11-23,2026-11-24T00:00:00Z,scheduled,nhl-cbj,nhl-njd,CBJ,NJD,,,Prudential Center,,N,1
 2026020379,20262027,regular,2026-11-23,2026-11-24T00:30:00Z,scheduled,nhl-lak,nhl-mtl,LAK,MTL,,,Centre Bell,,N,1
 2026020380,20262027,regular,2026-11-23,2026-11-24T00:30:00Z,scheduled,nhl-cgy,nhl-ott,CGY,OTT,,,Canadian Tire Centre,,N,1

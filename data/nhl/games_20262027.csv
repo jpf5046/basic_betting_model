@@ -441,13 +441,13 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020375,20262027,regular,2026-11-22,2026-11-23T00:00:00Z,final,nhl-edm,nhl-stl,EDM,STL,4,5,Enterprise Center,SO,N,1
 2026020376,20262027,regular,2026-11-22,2026-11-23T00:00:00Z,final,nhl-pit,nhl-dal,PIT,DAL,0,1,American Airlines Center,REG,N,1
 2026020377,20262027,regular,2026-11-22,2026-11-23T01:00:00Z,final,nhl-chi,nhl-van,CHI,VAN,6,3,Rogers Arena,REG,N,1
-2026020378,20262027,regular,2026-11-23,2026-11-24T00:00:00Z,scheduled,nhl-cbj,nhl-njd,CBJ,NJD,,,Prudential Center,,N,1
-2026020379,20262027,regular,2026-11-23,2026-11-24T00:30:00Z,scheduled,nhl-lak,nhl-mtl,LAK,MTL,,,Centre Bell,,N,1
-2026020380,20262027,regular,2026-11-23,2026-11-24T00:30:00Z,scheduled,nhl-cgy,nhl-ott,CGY,OTT,,,Canadian Tire Centre,,N,1
-2026020381,20262027,regular,2026-11-23,2026-11-24T00:30:00Z,scheduled,nhl-tor,nhl-nyi,TOR,NYI,,,UBS Arena,,N,1
-2026020382,20262027,regular,2026-11-23,2026-11-24T00:30:00Z,scheduled,nhl-uta,nhl-wpg,UTA,WPG,,,Canada Life Centre,,N,1
-2026020383,20262027,regular,2026-11-23,2026-11-24T02:40:00Z,scheduled,nhl-ana,nhl-sea,ANA,SEA,,,Climate Pledge Arena,,N,1
-2026020384,20262027,regular,2026-11-23,2026-11-24T03:00:00Z,scheduled,nhl-min,nhl-sjs,MIN,SJS,,,SAP Center at San Jose,,N,1
+2026020378,20262027,regular,2026-11-23,2026-11-24T00:00:00Z,final,nhl-cbj,nhl-njd,CBJ,NJD,2,3,Prudential Center,REG,N,1
+2026020379,20262027,regular,2026-11-23,2026-11-24T00:30:00Z,final,nhl-lak,nhl-mtl,LAK,MTL,2,1,Centre Bell,REG,N,1
+2026020380,20262027,regular,2026-11-23,2026-11-24T00:30:00Z,final,nhl-cgy,nhl-ott,CGY,OTT,1,2,Canadian Tire Centre,REG,N,1
+2026020381,20262027,regular,2026-11-23,2026-11-24T00:30:00Z,final,nhl-tor,nhl-nyi,TOR,NYI,4,2,UBS Arena,REG,N,1
+2026020382,20262027,regular,2026-11-23,2026-11-24T00:30:00Z,final,nhl-uta,nhl-wpg,UTA,WPG,2,4,Canada Life Centre,REG,N,1
+2026020383,20262027,regular,2026-11-23,2026-11-24T02:40:00Z,final,nhl-ana,nhl-sea,ANA,SEA,2,3,Climate Pledge Arena,REG,N,1
+2026020384,20262027,regular,2026-11-23,2026-11-24T03:00:00Z,final,nhl-min,nhl-sjs,MIN,SJS,5,2,SAP Center at San Jose,REG,N,1
 2026020385,20262027,regular,2026-11-24,2026-11-25T01:00:00Z,scheduled,nhl-vgk,nhl-edm,VGK,EDM,,,Rogers Place,,N,1
 2026020386,20262027,regular,2026-11-25,2026-11-26T00:00:00Z,scheduled,nhl-wpg,nhl-bos,WPG,BOS,,,TD Garden,,N,1
 2026020387,20262027,regular,2026-11-25,2026-11-26T00:00:00Z,scheduled,nhl-nyr,nhl-buf,NYR,BUF,,,KeyBank Center,,N,1

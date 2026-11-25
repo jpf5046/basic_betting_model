@@ -448,7 +448,7 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020382,20262027,regular,2026-11-23,2026-11-24T00:30:00Z,final,nhl-uta,nhl-wpg,UTA,WPG,2,4,Canada Life Centre,REG,N,1
 2026020383,20262027,regular,2026-11-23,2026-11-24T02:40:00Z,final,nhl-ana,nhl-sea,ANA,SEA,2,3,Climate Pledge Arena,REG,N,1
 2026020384,20262027,regular,2026-11-23,2026-11-24T03:00:00Z,final,nhl-min,nhl-sjs,MIN,SJS,5,2,SAP Center at San Jose,REG,N,1
-2026020385,20262027,regular,2026-11-24,2026-11-25T01:00:00Z,scheduled,nhl-vgk,nhl-edm,VGK,EDM,,,Rogers Place,,N,1
+2026020385,20262027,regular,2026-11-24,2026-11-25T01:00:00Z,final,nhl-vgk,nhl-edm,VGK,EDM,5,3,Rogers Place,REG,N,1
 2026020386,20262027,regular,2026-11-25,2026-11-26T00:00:00Z,scheduled,nhl-wpg,nhl-bos,WPG,BOS,,,TD Garden,,N,1
 2026020387,20262027,regular,2026-11-25,2026-11-26T00:00:00Z,scheduled,nhl-nyr,nhl-buf,NYR,BUF,,,KeyBank Center,,N,1
 2026020388,20262027,regular,2026-11-25,2026-11-26T00:00:00Z,scheduled,nhl-car,nhl-tbl,CAR,TBL,,,Benchmark International Arena,,N,1

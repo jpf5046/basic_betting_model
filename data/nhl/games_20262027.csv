@@ -449,20 +449,20 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020383,20262027,regular,2026-11-23,2026-11-24T02:40:00Z,final,nhl-ana,nhl-sea,ANA,SEA,2,3,Climate Pledge Arena,REG,N,1
 2026020384,20262027,regular,2026-11-23,2026-11-24T03:00:00Z,final,nhl-min,nhl-sjs,MIN,SJS,5,2,SAP Center at San Jose,REG,N,1
 2026020385,20262027,regular,2026-11-24,2026-11-25T01:00:00Z,final,nhl-vgk,nhl-edm,VGK,EDM,5,3,Rogers Place,REG,N,1
-2026020386,20262027,regular,2026-11-25,2026-11-26T00:00:00Z,scheduled,nhl-wpg,nhl-bos,WPG,BOS,,,TD Garden,,N,1
-2026020387,20262027,regular,2026-11-25,2026-11-26T00:00:00Z,scheduled,nhl-nyr,nhl-buf,NYR,BUF,,,KeyBank Center,,N,1
-2026020388,20262027,regular,2026-11-25,2026-11-26T00:00:00Z,scheduled,nhl-car,nhl-tbl,CAR,TBL,,,Benchmark International Arena,,N,1
-2026020389,20262027,regular,2026-11-25,2026-11-26T00:00:00Z,scheduled,nhl-ott,nhl-fla,OTT,FLA,,,Amerant Bank Arena,,N,1
-2026020390,20262027,regular,2026-11-25,2026-11-26T00:00:00Z,scheduled,nhl-stl,nhl-nyi,STL,NYI,,,UBS Arena,,N,1
-2026020391,20262027,regular,2026-11-25,2026-11-26T00:00:00Z,scheduled,nhl-cgy,nhl-pit,CGY,PIT,,,PPG Paints Arena,,N,1
-2026020392,20262027,regular,2026-11-25,2026-11-26T00:00:00Z,scheduled,nhl-phi,nhl-wsh,PHI,WSH,,,Capital One Arena,,N,1
-2026020393,20262027,regular,2026-11-25,2026-11-26T00:00:00Z,scheduled,nhl-njd,nhl-cbj,NJD,CBJ,,,Nationwide Arena,,N,1
-2026020394,20262027,regular,2026-11-25,2026-11-26T00:30:00Z,scheduled,nhl-van,nhl-det,VAN,DET,,,Little Caesars Arena,,N,1
-2026020395,20262027,regular,2026-11-25,2026-11-26T01:00:00Z,scheduled,nhl-nsh,nhl-dal,NSH,DAL,,,American Airlines Center,,N,1
-2026020396,20262027,regular,2026-11-25,2026-11-26T01:00:00Z,scheduled,nhl-uta,nhl-min,UTA,MIN,,,Grand Casino Arena,,N,1
-2026020397,20262027,regular,2026-11-25,2026-11-26T02:30:00Z,scheduled,nhl-mtl,nhl-col,MTL,COL,,,Ball Arena,,N,1
-2026020398,20262027,regular,2026-11-25,2026-11-26T03:00:00Z,scheduled,nhl-sjs,nhl-ana,SJS,ANA,,,Honda Center,,N,1
-2026020399,20262027,regular,2026-11-25,2026-11-26T02:40:00Z,scheduled,nhl-chi,nhl-sea,CHI,SEA,,,Climate Pledge Arena,,N,1
+2026020386,20262027,regular,2026-11-25,2026-11-26T00:00:00Z,final,nhl-wpg,nhl-bos,WPG,BOS,4,2,TD Garden,REG,N,1
+2026020387,20262027,regular,2026-11-25,2026-11-26T00:00:00Z,final,nhl-nyr,nhl-buf,NYR,BUF,1,5,KeyBank Center,REG,N,1
+2026020388,20262027,regular,2026-11-25,2026-11-26T00:00:00Z,final,nhl-car,nhl-tbl,CAR,TBL,3,1,Benchmark International Arena,REG,N,1
+2026020389,20262027,regular,2026-11-25,2026-11-26T00:00:00Z,final,nhl-ott,nhl-fla,OTT,FLA,3,5,Amerant Bank Arena,REG,N,1
+2026020390,20262027,regular,2026-11-25,2026-11-26T00:00:00Z,final,nhl-stl,nhl-nyi,STL,NYI,2,3,UBS Arena,SO,N,1
+2026020391,20262027,regular,2026-11-25,2026-11-26T00:00:00Z,final,nhl-cgy,nhl-pit,CGY,PIT,6,3,PPG Paints Arena,REG,N,1
+2026020392,20262027,regular,2026-11-25,2026-11-26T00:00:00Z,final,nhl-phi,nhl-wsh,PHI,WSH,3,7,Capital One Arena,REG,N,1
+2026020393,20262027,regular,2026-11-25,2026-11-26T00:00:00Z,final,nhl-njd,nhl-cbj,NJD,CBJ,3,2,Nationwide Arena,SO,N,1
+2026020394,20262027,regular,2026-11-25,2026-11-26T00:30:00Z,final,nhl-van,nhl-det,VAN,DET,1,5,Little Caesars Arena,REG,N,1
+2026020395,20262027,regular,2026-11-25,2026-11-26T01:00:00Z,final,nhl-nsh,nhl-dal,NSH,DAL,3,1,American Airlines Center,REG,N,1
+2026020396,20262027,regular,2026-11-25,2026-11-26T01:00:00Z,final,nhl-uta,nhl-min,UTA,MIN,4,3,Grand Casino Arena,REG,N,1
+2026020397,20262027,regular,2026-11-25,2026-11-26T02:30:00Z,final,nhl-mtl,nhl-col,MTL,COL,0,6,Ball Arena,REG,N,1
+2026020398,20262027,regular,2026-11-25,2026-11-26T03:00:00Z,final,nhl-sjs,nhl-ana,SJS,ANA,0,7,Honda Center,REG,N,1
+2026020399,20262027,regular,2026-11-25,2026-11-26T02:40:00Z,final,nhl-chi,nhl-sea,CHI,SEA,3,1,Climate Pledge Arena,REG,N,1
 2026020400,20262027,regular,2026-11-27,2026-11-27T18:00:00Z,scheduled,nhl-tor,nhl-bos,TOR,BOS,,,TD Garden,,N,1
 2026020401,20262027,regular,2026-11-27,2026-11-27T18:00:00Z,scheduled,nhl-cgy,nhl-njd,CGY,NJD,,,Prudential Center,,N,1
 2026020402,20262027,regular,2026-11-27,2026-11-27T18:00:00Z,scheduled,nhl-uta,nhl-nsh,UTA,NSH,,,Bridgestone Arena,,N,1

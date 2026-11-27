@@ -463,10 +463,10 @@ game_id,season,season_type,date,start_time_utc,status,away_team_id,home_team_id,
 2026020397,20262027,regular,2026-11-25,2026-11-26T02:30:00Z,final,nhl-mtl,nhl-col,MTL,COL,0,6,Ball Arena,REG,N,1
 2026020398,20262027,regular,2026-11-25,2026-11-26T03:00:00Z,final,nhl-sjs,nhl-ana,SJS,ANA,0,7,Honda Center,REG,N,1
 2026020399,20262027,regular,2026-11-25,2026-11-26T02:40:00Z,final,nhl-chi,nhl-sea,CHI,SEA,3,1,Climate Pledge Arena,REG,N,1
-2026020400,20262027,regular,2026-11-27,2026-11-27T18:00:00Z,scheduled,nhl-tor,nhl-bos,TOR,BOS,,,TD Garden,,N,1
-2026020401,20262027,regular,2026-11-27,2026-11-27T18:00:00Z,scheduled,nhl-cgy,nhl-njd,CGY,NJD,,,Prudential Center,,N,1
-2026020402,20262027,regular,2026-11-27,2026-11-27T18:00:00Z,scheduled,nhl-uta,nhl-nsh,UTA,NSH,,,Bridgestone Arena,,N,1
-2026020403,20262027,regular,2026-11-27,2026-11-27T19:00:00Z,scheduled,nhl-dal,nhl-stl,DAL,STL,,,Enterprise Center,,N,1
+2026020400,20262027,regular,2026-11-27,2026-11-27T18:00:00Z,live,nhl-tor,nhl-bos,TOR,BOS,,,TD Garden,,N,1
+2026020401,20262027,regular,2026-11-27,2026-11-27T18:00:00Z,live,nhl-cgy,nhl-njd,CGY,NJD,,,Prudential Center,,N,1
+2026020402,20262027,regular,2026-11-27,2026-11-27T18:00:00Z,live,nhl-uta,nhl-nsh,UTA,NSH,,,Bridgestone Arena,,N,1
+2026020403,20262027,regular,2026-11-27,2026-11-27T19:00:00Z,live,nhl-dal,nhl-stl,DAL,STL,,,Enterprise Center,,N,1
 2026020404,20262027,regular,2026-11-27,2026-11-27T20:00:00Z,scheduled,nhl-ott,nhl-tbl,OTT,TBL,,,Benchmark International Arena,,N,1
 2026020405,20262027,regular,2026-11-27,2026-11-27T20:00:00Z,scheduled,nhl-van,nhl-phi,VAN,PHI,,,Xfinity Mobile Arena,,N,1
 2026020406,20262027,regular,2026-11-27,2026-11-27T20:00:00Z,scheduled,nhl-fla,nhl-wsh,FLA,WSH,,,Capital One Arena,,N,1
